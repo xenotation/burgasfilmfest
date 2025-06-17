@@ -3,16 +3,36 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 media_folder: static/img
 public_folder: /img
+
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: "posters"
+    label: "Posters"
+    folder: "content/posters/post"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
+    slug: "{{year}}-{{title}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Size", name: "size", widget: "string", required: false }
+      - { label: "Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "films"
+    label: "Films"
+    folder: "content/films/post"
+    create: true
+    slug: "{{year}}-{{fields.film_title}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Film Title", name: "film_title", widget: "string" }
+      - { label: "Director", name: "director", widget: "string" }
+      - { label: "Country", name: "country", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Minutes", name: "minutes", widget: "number" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
