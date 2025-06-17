@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/films/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2023-12-29T11:43:54-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/films/</loc>
     <lastmod>2023-12-29T11:43:54-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/films/film-02/</loc>
