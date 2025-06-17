@@ -1,15 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
 body {
   color: #222;
+  font-family: 'Inter', sans-serif;
   font-family: sans-serif;
   line-height: 1.5;
   margin: 1rem;
-  max-width: 768px;
+  background-color: white;
 }
 
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
-}
 
 footer {
   border-top: 1px solid #222;
@@ -19,4 +18,32 @@ footer {
 a {
   color: #00e;
   text-decoration: none;
+}
+
+
+/* NAV BAR */
+.site-header {
+  margin: 0 12rem 0 12rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.logo img {
+  max-height: 50px;
+  height: auto;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+
 }
