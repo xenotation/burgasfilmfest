@@ -6,28 +6,7 @@
     <description>Recent content in Films on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Dec 2023 11:43:54 -0600</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/films/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>second</title>
-      <link>http://localhost:1313/films/film-02/</link>
-      <pubDate>Fri, 29 Dec 2023 11:43:54 -0600</pubDate>
-      <guid>http://localhost:1313/films/film-02/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>first</title>
-      <link>http://localhost:1313/films/film-01/</link>
-      <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://localhost:1313/films/film-01/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>third</title>
-      <link>http://localhost:1313/films/film-03/</link>
-      <pubDate>Fri, 29 Dec 2023 11:42:54 -0500</pubDate>
-      <guid>http://localhost:1313/films/film-03/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
