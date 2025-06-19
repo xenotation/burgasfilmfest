@@ -1,20 +1,17 @@
 ---
-film_title: Test ime
+film_title: Test ime 02
 director: Gosho Kazana
-country: Absurdistan
+country: OPAOPAOPA
 year: 2069
 minutes: 23
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. "
+description: Test za kratuk opis
 thumbnail: /img/movie-poster-credits-178.jpg
-feature_image: /img/screen__01.jpg
-
-Director: Ivan Geshev
-Producers: Prodan4o Ukovi
-Actors: Misho, Ivan, Kur4o
-Screenwriter: Pesho Gosho
-Genre: Action Comedy
-date: 2023-12-29T11:43:54-05:00
+feature_image: /img/screen__03.jpg
+date: 2023-11-29T11:43:54-05:00
 ---
+
+
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.
 

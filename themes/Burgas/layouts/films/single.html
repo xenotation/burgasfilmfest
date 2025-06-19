@@ -1,0 +1,38 @@
+{{ define "main" }}
+<article class="film-single">
+  <div class="film-inner">
+    <div class="film-top">
+      <div class="film-poster">
+        <img src="{{ .Params.thumbnail }}" alt="{{ .Params.film_title }}">
+      </div>
+
+      <div class="film-meta-single">
+        <h1 class="film-title">
+          {{ .Params.film_title }} <span class="year">({{ .Params.year }})</span>
+        </h1>
+
+        <div class="film-genre">{{ .Params.Genre }}</div>
+
+        <p class="film-details">{{ .Params.country }} · {{ .Params.minutes }} min</p>
+
+        <p class="film-description">{{ .Params.description }}</p>
+
+        <div class="film-credits-grid">
+          <div><strong>Director</strong><br>{{ .Params.Director }}</div>
+          <div><strong>Producers</strong><br>{{ .Params.Producers }}</div>
+          <div><strong>Actors</strong><br>{{ .Params.Actors }}</div>
+          <div><strong>Screenwriter</strong><br>{{ .Params.Screenwriter }}</div>
+        </div>
+
+        <div class="watch-button-wrapper">
+          <a href="#" class="watch-button">Watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="film-body">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

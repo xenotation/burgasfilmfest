@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="film-archive">
+  <h1>Archive</h1>
+
+  <div class="film-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="film-entry">
+      <div class="film-image">
+        <img src="{{ .Params.feature_image }}" alt="{{ .Params.film_title }}">
+      </div>
+      <div class="film-text">
+        <a href="{{ .RelPermalink }}">
+          <div class="film-title">{{ .Params.film_title }} ({{ .Params.year }})</div>
+        </a>
+        <div class="film-meta-list">
+            <p>{{ .Params.country }}</p>
+            <p>{{ .Params.minutes }} min</p></div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
