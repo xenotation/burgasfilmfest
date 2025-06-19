@@ -1,14 +1,20 @@
 {{ define "main" }}
 <section class="poster-archive">
-  <div class="poster-strip">
+  <div class="poster-grid">
     {{ range .Pages.ByDate.Reverse }}
-    <div class="poster-card">
-      <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}">
-      <div class="poster-text">
+    <figure class="poster-card">
+      <a
+        href="{{ .Params.thumbnail }}"
+        data-dimbox="posters"
+        data-dimbox-caption="{{ .Params.title }} ({{ .Params.year }})"
+      >
+        <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}" />
+      </a>
+      <figcaption>
         <div class="poster-title">{{ .Params.title }} ({{ .Params.year }})</div>
         <div class="poster-author">{{ .Params.author }}</div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
     {{ end }}
   </div>
 </section>

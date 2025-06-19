@@ -1,16 +1,39 @@
 {{ define "main" }}
-{{ range first 1 (where .Site.Pages "Section" "films") }}
+{{ range first 1 (where .Site.RegularPages "Section" "films") }}
 <a href="{{ .RelPermalink }}" class="hero-wrapper">
   <section class="landing-hero" style="background-image: url('{{ .Params.feature_image }}');">
     <div class="hero-overlay">
-      <div class="hero-text">
-        <h1 class="now-streaming">Now Streaming</h1>
-        <h2 class="now-title">{{ .Params.film_title }} ({{ .Params.year }})</h2>
-      </div>
+<div class="hero-text">
+    <h1 class="now-streaming">Now Streaming</h1>
+    <h2 class="now-title">{{ .Params.film_title }} ({{ .Params.year }})</h2>
+  </div>
     </div>
   </section>
 </a>
 {{ end }}
+
+
+<section class="film-archive">
+  <h1>Филмотека</h1>
+
+  <div class="film-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "films") }}
+    <article class="film-entry">
+      <div class="film-image">
+        <img src="{{ .Params.feature_image }}" alt="{{ .Params.film_title }}">
+      </div>
+      <div class="film-text">
+        <a href="{{ .RelPermalink }}">
+          <div class="film-title">{{ .Params.film_title }} ({{ .Params.year }})</div>
+        </a>
+        <div class="film-meta-list">
+            <p>{{ .Params.country }}</p>
+            <p>{{ .Params.minutes }} min</p></div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
 
 
 
