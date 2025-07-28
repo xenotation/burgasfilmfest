@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/dimbox.min.css" />
 
-<title>About | My New Hugo Site</title>
+<title>За нас | My New Hugo Site</title>
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -19,25 +19,40 @@
 
 </head>
 <body>
+  <div class="bg"></div>  
   <header>
     <header class="site-header">
-    <nav class="nav-container">
-      <a href="/" class="logo">
-        <img src="/biff_logo_site.png" alt="BIFF Logo" />
-      </a>
-      <div class="nav-links">
-        <a href="/about">About</a>
-        <a href="/films">Archive</a>
-        <a href="/posters">Posters</a>
-      </div>
-    </nav>
-  </header>
-  
+  <nav class="nav-container">
+    <a href="/" class="logo">
+      <img src="/biff_logo_site.png" alt="BIFF Logo" />
+    </a>
+
+    <div class="nav-links">
+      
+      <a href="/films"
+         class="">ФИЛМОТЕКА</a>
+
+      
+      <a href="/posters"
+         class="">ПЛАКАТИ</a>
+
+      
+      <a href="/about"
+         class="active">ЗА НАС</a>
+    </div>
+  </nav>
+</header>
+
   </header>
   <main>
     
-  <h1>About</h1>
-  <p>Your About page content goes here in <strong>Markdown</strong>.</p>
+<article class="about-wrapper">
+  <section class="about-inner">
+    <div class="about-title-section">
+      <h1 class="about-title">За нас</h1>
+    </div>
+    <div class="about-content">
+      <p>Your About page content goes here in <strong>Markdown</strong>.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.</p>
 <p>Maecenas rutrum feugiat lorem, nec tincidunt dui. Vestibulum condimentum diam sit amet orci vestibulum, sit amet accumsan arcu cursus. Nunc viverra nibh quis aliquet feugiat. Ut tincidunt gravida blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Curabitur semper sodales massa in semper.</p>
 <p>Nulla tincidunt hendrerit dolor, vitae elementum dui elementum sit amet. Etiam consectetur lobortis felis et mollis. Proin in orci eu mi bibendum lobortis sit amet in eros. Quisque porttitor scelerisque purus, blandit egestas sem condimentum eu. Duis magna eros, volutpat ut nisi quis, finibus auctor dolor. Pellentesque dictum at diam id tristique. Aliquam scelerisque auctor elit in accumsan. Mauris malesuada mi et facilisis auctor. Vestibulum congue vestibulum turpis, at mattis risus ornare in. Vivamus sit amet blandit odio, in efficitur odio.</p>
@@ -45,41 +60,74 @@
 <p>Quisque est est, tincidunt nec suscipit eget, scelerisque sit amet nisl. Etiam at bibendum augue, aliquam interdum dolor. Quisque id sapien dictum, sodales odio ornare, pulvinar erat. Integer non arcu placerat erat consequat posuere ac non tellus. Cras vel quam lobortis, tincidunt lorem in, convallis nibh. Fusce sed tempor magna, ac fringilla neque. Etiam ut tristique orci. Pellentesque eget nibh at elit blandit imperdiet. Sed pharetra fermentum nibh a vestibulum. Praesent molestie varius lectus. Nam tempus consectetur ligula in maximus. Proin risus nisl, mollis nec volutpat et, varius quis lacus. Phasellus pretium, ex cursus pulvinar rutrum, enim justo luctus nulla, vel porttitor libero orci ac arcu. Maecenas a massa condimentum ligula varius accumsan.
 Generated 5 paragraphs, 441 words, 2961 bytes of Lorem Ipsum</p>
 
-  
+    </div>
+  </section>
+</article>
 
   </main>
   <footer>
-    <footer class="simple-footer">
-    <div class="footer-inner">
-  
-      
-      <div class="footer-left">
-        <div class="footer-contact">
-          <p><a href="mailto:info@example.com">Имейл: info@example.com</a></p>
-          <p>Телефон: +359 888 888 888</p>
-          <p class="footer-bottom">2025. All rights reserved &copy;.</p>
-        </div>
-        <div class="footer-social">
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-          </div>
-      </div>
-  
-      
-      <div class="footer-partners">
-        <img src="/img/partners/logo-Placeholder.jpg" alt="Partner 2" />
-        <img src="/img/partners/images.jpg" alt="Partner 3" />
-      </div>
-  
-    </div>
-  
+    <footer class="simple-footer" role="contentinfo">
+  <div class="footer-inline">
 
-  </footer>
-  
+    
+    <nav class="footer-social" aria-label="social media">
+      <a href="#">SOUNDCLOUD ↗</a><span class="pipe">|</span>
+      <a href="#">TWITTER ↗</a><span class="pipe">|</span>
+      <a href="#">FACEBOOK ↗</a><span class="pipe">|</span>
+      <a href="#">INSTAGRAM ↗</a>
+    </nav>
+
+    
+    <div class="footer-right">
+      <span class="pipe">|</span>
+      ALL&nbsp;RIGHTS&nbsp;RESERVED&nbsp;©&nbsp;2025
+    </div>
+
+  </div>
+</footer>
 
   </footer>
 </body>
+
+<div id="partners-toggle" class="partners-label">партньори ↕</div>
+
+<div id="partners-ticker" class="ticker-wrap">
+  <div class="ticker-track">
+    
+    <div class="track-slot">
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L1" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L2" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L3" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L4" alt=""></a>
+    </div>
+
+    
+    <div class="track-slot">
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L1" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L2" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L3" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L4" alt=""></a>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const label = document.getElementById('partners-toggle');
+  const bar   = document.getElementById('partners-ticker');
+
+  if (!label || !bar) return console.warn('partners elements missing');
+
+  label.addEventListener('click', () => {
+    label.classList.toggle('open');   
+    bar.classList.toggle('open');
+  });
+});
+
+</script>
 
 <script src="/dimbox.min.js"></script>
 

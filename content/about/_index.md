@@ -1,7 +1,8 @@
 ---
-title: "About"
+title: "За нас"
 header_image: "/img/screen__01.jpg"
 date: 2023-12-29T11:43:54-05:00
+layout: single
 ---
 Your About page content goes here in **Markdown**.
 

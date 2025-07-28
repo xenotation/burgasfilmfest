@@ -1,13 +1,21 @@
 <header class="site-header">
-    <nav class="nav-container">
-      <a href="/" class="logo">
-        <img src="/biff_logo_site.png" alt="BIFF Logo" />
-      </a>
-      <div class="nav-links">
-        <a href="/about">About</a>
-        <a href="/films">Archive</a>
-        <a href="/posters">Posters</a>
-      </div>
-    </nav>
-  </header>
-  
+  <nav class="nav-container">
+    <a href="/" class="logo">
+      <img src="/biff_logo_site.png" alt="BIFF Logo" />
+    </a>
+
+    <div class="nav-links">
+      <!-- underline on /films/ and every child, e.g. /films/2024‑movie -->
+      <a href="/films"
+         class="{{ if (hasPrefix .RelPermalink "/films/") }}active{{ end }}">ФИЛМОТЕКА</a>
+
+      <!-- underline on /posters/ and its children -->
+      <a href="/posters"
+         class="{{ if (hasPrefix .RelPermalink "/posters/") }}active{{ end }}">ПЛАКАТИ</a>
+
+      <!-- underline on /about/ (no sub‑path needed here, but kept consistent) -->
+      <a href="/about"
+         class="{{ if (hasPrefix .RelPermalink "/about/") }}active{{ end }}">ЗА НАС</a>
+    </div>
+  </nav>
+</header>

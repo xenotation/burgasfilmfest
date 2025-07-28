@@ -1,15 +1,12 @@
 {{ define "main" }}
-<article class="about-container">
-  {{ with .Params.header_image }}
-  <div class="about-header-image">
-    <img src="{{ . | relURL }}" alt="About Header Image">
-  </div>
-  {{ end }}
-
-  <h1 class="about-title">{{ .Title }}</h1>
-
-  <div class="about-body">
-    {{ .Content }}
-  </div>
+<article class="about-wrapper">
+  <section class="about-inner">
+    <div class="about-title-section">
+      <h1 class="about-title">{{ .Title }}</h1>
+    </div>
+    <div class="about-content">
+      {{ .Content }}
+    </div>
+  </section>
 </article>
 {{ end }}

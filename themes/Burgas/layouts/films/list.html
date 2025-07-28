@@ -3,18 +3,24 @@
   <h1>Archive</h1>
 
   <div class="film-list">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range $index, $element := .Pages.ByDate.Reverse }}
     <article class="film-entry">
       <div class="film-image">
-        <img src="{{ .Params.feature_image }}" alt="{{ .Params.film_title }}">
+        <img src="{{ $element.Params.feature_image }}" alt="{{ $element.Params.film_title }}">
       </div>
       <div class="film-text">
-        <a href="{{ .RelPermalink }}">
-          <div class="film-title-list">{{ .Params.film_title }} ({{ .Params.year }})</div>
+        <a href="{{ $element.RelPermalink }}">
+          <div class="film-title-list">
+            {{ $element.Params.film_title }} ({{ $element.Params.year }})
+            <div class="film-author-subtext">тест от {{ lower $element.Params.text_author }}</div>
+          </div>
         </a>
-        <div class="film-meta-list">
-            <p>{{ .Params.country }}</p>
-            <p>{{ .Params.minutes }} min</p></div>
+
+        {{ if eq $index 0 }}
+          <div class="stream-label">{{ $element.Params.stream_duration }}</div>
+        {{ else }}
+          <div class="stream-label stream-label--hidden">{{ $element.Params.stream_duration }}</div>
+        {{ end }}
       </div>
     </article>
     {{ end }}

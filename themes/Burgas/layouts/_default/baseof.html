@@ -4,6 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  <div class="bg"></div>  
   <header>
     {{ partial "header.html" . }}
   </header>
@@ -14,6 +15,46 @@
     {{ partial "footer.html" . }}
   </footer>
 </body>
+<!-- ▸ 1 ▸  markup  (goes anywhere – footer is fine) -->
+<div id="partners-toggle" class="partners-label">партньори ↕</div>
+
+<div id="partners-ticker" class="ticker-wrap">
+  <div class="ticker-track">
+    <!-- slot 1 -->
+    <div class="track-slot">
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L1" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L2" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L3" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L4" alt=""></a>
+    </div>
+
+    <!-- identical copy → seamless loop -->
+    <div class="track-slot">
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L1" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L2" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L3" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L4" alt=""></a>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+// partners.js
+document.addEventListener('DOMContentLoaded', () => {
+  const label = document.getElementById('partners-toggle');
+  const bar   = document.getElementById('partners-ticker');
+
+  if (!label || !bar) return console.warn('partners elements missing');
+
+  label.addEventListener('click', () => {
+    label.classList.toggle('open');   // << add this line
+    bar.classList.toggle('open');
+  });
+});
+
+</script>
 
 <script src="/dimbox.min.js"></script>
 

@@ -8,12 +8,16 @@ description: Test za kratuk opis
 thumbnail: /img/movie-poster-credits-178.jpg
 feature_image: /img/screen__03.jpg
 date: 2023-11-29T11:43:54-05:00
+text_author: "Pisatel Teksta"
+stream_duration: "25.06-28.07"
+video_id: "2d3c0981ca7415f21955a5a7031994be"
+show_watch_button: true
 ---
 
 
-
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.
+
+![Кадър от филма](/img/movie-poster-credits-178.jpg)
 
 Maecenas rutrum feugiat lorem, nec tincidunt dui. Vestibulum condimentum diam sit amet orci vestibulum, sit amet accumsan arcu cursus. Nunc viverra nibh quis aliquet feugiat. Ut tincidunt gravida blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Curabitur semper sodales massa in semper.
 

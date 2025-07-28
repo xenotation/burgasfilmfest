@@ -19,20 +19,30 @@
 
 </head>
 <body>
+  <div class="bg"></div>  
   <header>
     <header class="site-header">
-    <nav class="nav-container">
-      <a href="/" class="logo">
-        <img src="/biff_logo_site.png" alt="BIFF Logo" />
-      </a>
-      <div class="nav-links">
-        <a href="/about">About</a>
-        <a href="/films">Archive</a>
-        <a href="/posters">Posters</a>
-      </div>
-    </nav>
-  </header>
-  
+  <nav class="nav-container">
+    <a href="/" class="logo">
+      <img src="/biff_logo_site.png" alt="BIFF Logo" />
+    </a>
+
+    <div class="nav-links">
+      
+      <a href="/films"
+         class="">ФИЛМОТЕКА</a>
+
+      
+      <a href="/posters"
+         class="active">ПЛАКАТИ</a>
+
+      
+      <a href="/about"
+         class="">ЗА НАС</a>
+    </div>
+  </nav>
+</header>
+
   </header>
   <main>
     
@@ -170,37 +180,68 @@
 
   </main>
   <footer>
-    <footer class="simple-footer">
-    <div class="footer-inner">
-  
-      
-      <div class="footer-left">
-        <div class="footer-contact">
-          <p><a href="mailto:info@example.com">Имейл: info@example.com</a></p>
-          <p>Телефон: +359 888 888 888</p>
-          <p class="footer-bottom">2025. All rights reserved &copy;.</p>
-        </div>
-        <div class="footer-social">
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-          </div>
-      </div>
-  
-      
-      <div class="footer-partners">
-        <img src="/img/partners/logo-Placeholder.jpg" alt="Partner 2" />
-        <img src="/img/partners/images.jpg" alt="Partner 3" />
-      </div>
-  
-    </div>
-  
+    <footer class="simple-footer" role="contentinfo">
+  <div class="footer-inline">
 
-  </footer>
-  
+    
+    <nav class="footer-social" aria-label="social media">
+      <a href="#">SOUNDCLOUD ↗</a><span class="pipe">|</span>
+      <a href="#">TWITTER ↗</a><span class="pipe">|</span>
+      <a href="#">FACEBOOK ↗</a><span class="pipe">|</span>
+      <a href="#">INSTAGRAM ↗</a>
+    </nav>
+
+    
+    <div class="footer-right">
+      <span class="pipe">|</span>
+      ALL&nbsp;RIGHTS&nbsp;RESERVED&nbsp;©&nbsp;2025
+    </div>
+
+  </div>
+</footer>
 
   </footer>
 </body>
+
+<div id="partners-toggle" class="partners-label">партньори ↕</div>
+
+<div id="partners-ticker" class="ticker-wrap">
+  <div class="ticker-track">
+    
+    <div class="track-slot">
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L1" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L2" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L3" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L4" alt=""></a>
+    </div>
+
+    
+    <div class="track-slot">
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L1" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L2" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L3" alt=""></a>
+      <a href="#"><img src="https://dummyimage.com/120x40/fff/000&text=L4" alt=""></a>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const label = document.getElementById('partners-toggle');
+  const bar   = document.getElementById('partners-ticker');
+
+  if (!label || !bar) return console.warn('partners elements missing');
+
+  label.addEventListener('click', () => {
+    label.classList.toggle('open');   
+    bar.classList.toggle('open');
+  });
+});
+
+</script>
 
 <script src="/dimbox.min.js"></script>
 

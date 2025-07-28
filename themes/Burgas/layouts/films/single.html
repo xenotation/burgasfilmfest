@@ -1,6 +1,7 @@
 {{ define "main" }}
 <article class="film-single">
   <div class="film-inner">
+    <!-- top section -->
     <div class="film-top">
       <div class="film-poster">
         <img src="{{ .Params.thumbnail }}" alt="{{ .Params.film_title }}">
@@ -12,24 +13,56 @@
         </h1>
 
         <div class="film-genre">{{ .Params.Genre }}</div>
-
         <p class="film-details">{{ .Params.country }} · {{ .Params.minutes }} min</p>
-
         <p class="film-description">{{ .Params.description }}</p>
 
         <div class="film-credits-grid">
+          <!-- OLD -->
+          <!--
           <div><strong>Director</strong><br>{{ .Params.Director }}</div>
-          <div><strong>Producers</strong><br>{{ .Params.Producers }}</div>
-          <div><strong>Actors</strong><br>{{ .Params.Actors }}</div>
-          <div><strong>Screenwriter</strong><br>{{ .Params.Screenwriter }}</div>
+          …
+          -->
+        
+          <!-- NEW -->
+          <div class="credit">
+            <span class="credit-label">Director</span>
+            <span class="credit-value">{{ .Params.Director }}</span>
+          </div>
+        
+          <div class="credit">
+            <span class="credit-label">Producers</span>
+            <span class="credit-value">{{ .Params.Producers }}</span>
+          </div>
+        
+          <div class="credit">
+            <span class="credit-label">Actors</span>
+            <span class="credit-value">{{ .Params.Actors }}</span>
+          </div>
+        
+          <div class="credit">
+            <span class="credit-label">Screenwriter</span>
+            <span class="credit-value">{{ .Params.Screenwriter }}</span>
+          </div>
         </div>
+        
 
+        {{ if .Params.show_watch_button }}
         <div class="watch-button-wrapper">
-          <a href="#" class="watch-button">Watch</a>
+          <!-- DimBox trigger -->
+          <a  class="watch-button"
+              href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ .Params.video_id }}/iframe?preload=true&autoplay=true"
+              data-dimbox
+              data-dimbox-type="iframe"
+              data-dimbox-ratio="16x9"
+              data-dimbox-class="fullbox">
+            Watch
+          </a>
         </div>
+        {{ end }}
       </div>
     </div>
 
+    <!-- markdown body -->
     <div class="film-body">
       {{ .Content }}
     </div>
