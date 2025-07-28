@@ -10,6 +10,7 @@ feature_image: /img/screen__02.jpg
 date: 2023-12-29T11:43:54-06:00
 stream_duration: "25.06-28.07"
 show_watch_button: true
+video_id: "2d3c0981ca7415f21955a5a7031994be"
 ---
 
 

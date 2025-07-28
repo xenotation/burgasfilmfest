@@ -300,7 +300,7 @@ filter: drop-shadow(2px 8px 4px #a4a4e7);
 
 .poster-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Always two columns */
+  grid-template-columns: 1fr 1fr 1fr; /* Always two columns */
   gap: 2rem; /* Or adjust for tighter spacing */
   margin: 6rem 0 0 0;      
 }
