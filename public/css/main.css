@@ -62,10 +62,6 @@ body {
   animation-delay: 12s; 
 }
 
-.site-header:hover {
-  filter: drop-shadow(2px 8px 4px #a4a4e7);
-  animation: none;    
-}
 
 .nav-links a.active {
   border-bottom: 2px solid var(--color-fg);
@@ -208,12 +204,30 @@ body {
   aspect-ratio: 16 / 9;
 }
 
+.film-image {
+  filter: drop-shadow(6px 6px 2px #4444dd);
+  transition: filter 0.8s ease;
+  }
+  
+  .film-image:hover {
+  filter: drop-shadow(2px 8px 4px #a4a4e7);
+}
+
 .film-text {
   margin-left: 1.2rem;
   display: flex;
   flex-direction: column;
   flex: 1; /* Let it fill remaining space */
+  filter: drop-shadow(6px 6px 2px #4444dd);
+transition: filter 0.8s ease;
 }
+
+.film-text:hover {
+filter: drop-shadow(2px 8px 4px #a4a4e7);
+}
+
+
+
 .film-list .film-title-list {
   text-transform: uppercase;
 }
@@ -415,14 +429,14 @@ body {
 .film-genre {
   font-size: var(--font-size-2);
   font-weight: 600;
-  color: var(--color-bg);
+  color: var(--color-fg);
   margin-bottom: 0.5rem;
 }
 
 .film-details {
   font-size: var(--font-size-2);
   color: var(--color-fg);
-  margin:0;
+  margin:0 0 8rem 0;
 }
 
 .film-description {
