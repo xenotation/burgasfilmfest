@@ -550,7 +550,7 @@ body {
 .about-wrapper {
   width: var(--layout-width);
   max-width: var(--layout-max-width);
-  margin: 8rem auto 0 auto;
+  margin: 8rem auto 8rem auto;
   padding: 0 1rem;
   box-sizing: border-box;
 }

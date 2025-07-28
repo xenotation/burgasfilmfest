@@ -11,10 +11,13 @@
     <loc>http://192.168.0.101:1313/</loc>
     <lastmod>2023-12-29T11:43:54-06:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.101:1313/films/2025-test-film-name/</loc>
+    <loc>http://192.168.0.101:1313/films/2025-test-film-name-copy-2/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.101:1313/about/</loc>
+    <loc>http://192.168.0.101:1313/films/2025-test-film-name-copy/</loc>
+    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.0.101:1313/films/2025-test-film-name/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.101:1313/posters/2025-test-poster-name-copy-2/</loc>
@@ -45,6 +48,9 @@
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.101:1313/posters/</loc>
+    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.0.101:1313/about/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.101:1313/films/2024-test-film-name-01/</loc>
