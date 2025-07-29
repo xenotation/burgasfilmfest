@@ -1,50 +1,44 @@
 {{ define "main" }}
-
 <div class="landing">
   {{ range first 1 (where .Site.RegularPages "Section" "films") }}
-    {{ $page := . }}            {{/* save the page object */}}
-
-    <a href="{{ $page.RelPermalink }}" class="hero-wrapper">
+    <a href="{{ .RelPermalink }}" class="hero-wrapper">
+      <!-- bg‑image removed → plain section -->
       <section class="landing-hero hero-dark">
 
-        {{ with $page.Params.hero_video_id }}
-          <video class="hero-bg-video"
-                 autoplay muted loop playsinline preload="auto"
-                 poster="{{ $page.Params.feature_image }}"
-                 controlslist="nodownload nofullscreen noremoteplayback"
-                 disablepictureinpicture>
-            <source src="https://videodelivery.net/{{ . }}/manifest/video.m3u8"
-                    type="application/x-mpegURL">
-            <source src="https://videodelivery.net/{{ . }}/downloads/default.mp4"
-                    type="video/mp4">
-          </video>
-        {{ else }}
-          <div class="hero-bg-image"
-               style="background-image:url('{{ $page.Params.feature_image }}');"></div>
-        {{ end }}
+        <!-- ▾ video fills the whole hero like a bg ▾ -->
+        <div class="hero-bg-video">
+          <iframe
+            src="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ .Params.hero_video_id }}/iframe?autoplay=true&loop=true&muted=true&controls=false&preload=true"
+            allow="autoplay; fullscreen"
+            loading="lazy"
+            title="hero promo"
+          ></iframe>
+        </div>
+        <!-- ▴ video ends ▴ -->
 
         <div class="hero-overlay">
-          <!-- ▼ bottom‑left info banner (unchanged) -->
+
+          <div class="hero-banner-wrap"> 
           <div class="hero-film-banner">
-            {{ with $page.Params.stream_duration }}
+            {{ with .Params.stream_duration }}
               <div class="stream-label-hero">от {{ . }}</div>
             {{ end }}
 
             <div class="film-title-list">
               <div class="hero-film-title">
-                {{ $page.Params.film_title }} ({{ $page.Params.year }})
+                {{ .Params.film_title }} ({{ .Params.year }})
               </div>
               <div class="film-author-subtext-hero">
                 <p class="film-details-hero">
-                  {{ $page.Params.country }} · {{ $page.Params.minutes }} мин
+                  {{ .Params.country }} · {{ .Params.minutes }} мин
                 </p>
-                тест от {{ lower $page.Params.text_author }}
+                тест от {{ lower .Params.text_author }}
               </div>
             </div>
           </div>
           <!-- ▲ banner ends -->
+</div>
         </div>
-
       </section>
     </a>
   {{ end }}

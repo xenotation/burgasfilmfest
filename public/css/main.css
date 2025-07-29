@@ -705,70 +705,89 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
   from{ transform:translateX(0); }
   to  { transform:translateX(-50%); }
 }
-/* =================================== */
-/*  bottom‑left hero information block */
-/* =================================== */
+/* ===================================== */
+/*  centred track ▸ right‑aligned banner */
+/* ===================================== */
 
-.hero-film-banner{
+.hero-banner-wrap{
   position:absolute;
+  /* 🔼 lift one more rem above footer */
+  bottom:calc(var(--footer-h) + 3rem);          /* CHANGED */
+  left:50%;
+  transform:translateX(-50%);
 
-  /* sit 1 rem above the floating footer */
-  bottom:calc(var(--footer-h) + 2rem);
-  right:calc((100% - var(--layout-width)) * 2);
+  width:var(--layout-width);
+  max-width:var(--layout-max-width);
+
+  display:flex;
+  justify-content:flex-end;
+  pointer-events:none;
+}
+
+/* ---------- banner box itself ---------- */
+.hero-film-banner{
+  pointer-events:auto;
+
+  width:fit-content;
+  max-width:calc(100% - 2rem);
+
   display:flex;
   flex-direction:column;
-  align-items:flex-start;          /* left‑align inner text */
-  text-align:left;
-    filter: drop-shadow(5px 2px 5px #7575d4);
-    transition: filter 0.4s ease;
-  }
+  align-items:flex-end;
+  text-align:right;
+  filter:drop-shadow(5px 2px 5px #7575d4);
+  transition:filter .4s ease;
+}
+.hero-film-banner:hover{
+  filter:drop-shadow(6px 3px 7px #a4a4e7);
+}
 
-  .hero-film-banner:hover {
-    filter: drop-shadow(6px 3px 7px #a4a4e7);
-  }
-
-/* ———‑‑ enlarge & style the ribbon ——— */
+/* ---------- duration ribbon ------------ */
 .hero-film-banner .stream-label-hero{
-  order:-1;                        /* appear above the title */
-  align-self:flex-end;
-  font-size:var(--font-size-3);     /* bigger text */
-  padding:.5rem 1rem;
-  border-radius:1rem 1rem 0 0;      /* soft top corners        */
-  
+  order:-1;
+  font-size:var(--font-size-3);
+  background:#4444dd;
+  color:var(--color-bg);
+  border:2px solid var(--color-fg);
+  border-radius:1rem 1rem 0 0;
 }
 
-/* ———‑‑ enlarge the title block & soften boendcorners ——— */
+.hero-film-banner {
+  padding:.5rem 1.2rem;                       /* EXTRA PADDING */
+}
+
+.stream-label-hero{
+  order:-1;
+  font-size:var(--font-size-3);
+  background:#4444dd;
+  color:var(--color-bg);
+  border:2px solid var(--color-fg);
+  border-bottom: 0;
+  border-radius:1rem 1rem 0 0;
+  padding: 0.5rem;
+}
+
+/* ---------- title card ----------------- */
 .hero-film-banner .film-title-list{
-  height:auto;
-  font-size:var(--font-size-7);     /* noticeably bigger */
-  border-radius:0 0 1rem 1rem;      /* soft bottom corners only */
-  padding:1rem 1rem;
+  display:inline-block;
+  width:fit-content;
+  max-width:40ch;
+  overflow-wrap:anywhere;
+
+  font-size:var(--font-size-7);
+  line-height:1.25;                           /* COMFY HEIGHT */
+  padding:1.2rem 1.4rem;                      /* EXTRA PADDING */
+  background:#4444dd;
+  color:var(--color-bg);
+  border:2px solid var(--color-fg);
+  border-radius:0 0 1rem 1rem;
 }
 
+/* inner text tweaks */
+.hero-film-title          { margin:0; }
+.film-details-hero        { margin:.4rem 0 0; font-size:var(--font-size-3); }
+.film-author-subtext-hero { font-size:var(--font-size-2); }
 
-.film-details-hero {
-  font-size: var(--font-size-3);
-  margin: 0
-}
-
-.hero-film-title {
-  margin: 0;
-}
-
-.film-author-subtext-hero {
-  font-size: var(--font-size-2);
-}
-
-.stream-label-hero {
-  background-color: #4444dd;
-  color: var(--color-bg);       
-
-  padding: 0.2rem 0.6rem;
-  width: fit-content;
-  border-radius: 0rem 0rem 1rem 1rem;
-  border: 2px solid var(--color-fg);
-  border-bottom: 0px;
-}
 
 /* darken only when .hero-dark is present */
 .hero-dark          { position:relative; }          /* anchor pseudo */
@@ -842,19 +861,15 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
   padding: 0;
 }
 
-
-
-
-/* 100 %‑window background video ↓ */
+/* full‑bleed hero video */
 .hero-bg-video,
-.hero-bg-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* always fill, crop safely */
-  object-position: center;
-  pointer-events: none;
+.hero-bg-video iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;   /* behave like a CSS background */
+  border:0;
+  pointer-events:none;/* keep the whole hero clickable */
+  z-index:-1;         /* sit beneath overlay + text    */
 }
-
-
