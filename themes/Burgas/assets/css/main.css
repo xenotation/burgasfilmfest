@@ -752,9 +752,7 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
   border-radius:1rem 1rem 0 0;
 }
 
-.hero-film-banner {
-  padding:.5rem 1.2rem;                       /* EXTRA PADDING */
-}
+
 
 .stream-label-hero{
   order:-1;
@@ -859,7 +857,13 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
 
 .dimbox-container {
   padding: 0;
+  z-index:10000 !important;
 }
+
+.dimbox-caption {
+  margin: 0 auto 0 auto !important;
+}
+
 
 /* full‑bleed hero video */
 .hero-bg-video,
@@ -872,4 +876,8 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
   border:0;
   pointer-events:none;/* keep the whole hero clickable */
   z-index:-1;         /* sit beneath overlay + text    */
+}
+
+.dimbox-btn-close {
+  z-index: 999999;
 }
