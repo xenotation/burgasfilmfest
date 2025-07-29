@@ -1,24 +1,54 @@
 {{ define "main" }}
 
-<div class="landing">                   <!-- ✅ added wrapper -->
-
+<div class="landing">
   {{ range first 1 (where .Site.RegularPages "Section" "films") }}
-    <a href="{{ .RelPermalink }}" class="hero-wrapper">
-      <section  class="landing-hero"
-                style="background-image:url('{{ .Params.feature_image }}');">
+    {{ $page := . }}            {{/* save the page object */}}
+
+    <a href="{{ $page.RelPermalink }}" class="hero-wrapper">
+      <section class="landing-hero hero-dark">
+
+        {{ with $page.Params.hero_video_id }}
+          <video class="hero-bg-video"
+                 autoplay muted loop playsinline preload="auto"
+                 poster="{{ $page.Params.feature_image }}"
+                 controlslist="nodownload nofullscreen noremoteplayback"
+                 disablepictureinpicture>
+            <source src="https://videodelivery.net/{{ . }}/manifest/video.m3u8"
+                    type="application/x-mpegURL">
+            <source src="https://videodelivery.net/{{ . }}/downloads/default.mp4"
+                    type="video/mp4">
+          </video>
+        {{ else }}
+          <div class="hero-bg-image"
+               style="background-image:url('{{ $page.Params.feature_image }}');"></div>
+        {{ end }}
+
         <div class="hero-overlay">
-          <div class="hero-text">
-            <h1 class="now-streaming">now streaming</h1>
-            <h2 class="now-title">
-              {{ .Params.film_title }} ({{ .Params.year }})
-            </h2>
+          <!-- ▼ bottom‑left info banner (unchanged) -->
+          <div class="hero-film-banner">
+            {{ with $page.Params.stream_duration }}
+              <div class="stream-label-hero">от {{ . }}</div>
+            {{ end }}
+
+            <div class="film-title-list">
+              <div class="hero-film-title">
+                {{ $page.Params.film_title }} ({{ $page.Params.year }})
+              </div>
+              <div class="film-author-subtext-hero">
+                <p class="film-details-hero">
+                  {{ $page.Params.country }} · {{ $page.Params.minutes }} мин
+                </p>
+                тест от {{ lower $page.Params.text_author }}
+              </div>
+            </div>
           </div>
+          <!-- ▲ banner ends -->
         </div>
+
       </section>
     </a>
   {{ end }}
-
-</div>                                   <!-- ✅ wrapper closes -->
+</div>
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {{ end }}

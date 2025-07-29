@@ -11,6 +11,12 @@
   <main>
     {{ block "main" . }}{{ end }}
   </main>
+
+  <a class="donate-button" href="https://your-donation-link.com" target="_blank">
+    дарете
+  </a>
+  
+
   <footer>
     {{ partial "footer.html" . }}
   </footer>
@@ -57,5 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script src="/dimbox.min.js"></script>
-
+<script>
+  /* disable the download button for every item */
+  dimbox.setConfig({ download:false });
+  </script>
 </html>

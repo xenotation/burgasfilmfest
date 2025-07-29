@@ -76,13 +76,13 @@ body {
 }
 
 .logo img {
-  max-height: 50px;
+  max-height: 60px;
 }
 
 .nav-links {
   display: flex;
   gap: 0.6rem;
-  font-size: var(--font-size-2); /* Adjust to footer size */
+  font-size: var(--font-size-3); /* Adjust to footer size */
   font-weight: 400;
 }
 
@@ -113,6 +113,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow:hidden; 
 }
 
 .hero-overlay {
@@ -176,7 +177,8 @@ body {
   width: var(--layout-width);
   max-width: var(--layout-max-width);
   margin: 0 auto;
-  padding-bottom: calc(var(--footer-h) + 1rem);  
+  padding-bottom: calc(var(--footer-h) + 2rem);  
+  padding-top: calc(var(--footer-h) + 6rem);  
 }
 
 .film-archive h1 {
@@ -193,7 +195,6 @@ body {
 
 .film-entry {
   display: flex;
-
   align-items: flex-start; 
 }
 
@@ -218,15 +219,13 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1; /* Let it fill remaining space */
-  filter: drop-shadow(6px 6px 2px #4444dd);
+  filter: drop-shadow(6px 6px 2px #a4a4e7);
 transition: filter 0.8s ease;
 }
 
 .film-text:hover {
-filter: drop-shadow(2px 8px 4px #a4a4e7);
+filter: drop-shadow(2px 8px 4px #d6d6ec);
 }
-
-
 
 .film-list .film-title-list {
   text-transform: uppercase;
@@ -234,7 +233,7 @@ filter: drop-shadow(2px 8px 4px #a4a4e7);
 .stream-label {
   background-color: #4444dd;
   color: var(--color-bg);       
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-2);
   padding: 0.2rem 0.6rem;
   width: fit-content;
   border-radius: 0rem 0rem 1rem 1rem;
@@ -277,17 +276,19 @@ filter: drop-shadow(2px 8px 4px #a4a4e7);
 }
 
 .film-author-subtext {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-3);
   font-weight: normal;
   text-transform: lowercase;
 }
 
-
 .film-meta-list {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-2);
   padding-right: 9rem;
 }
-
+.film-details-list {
+  font-size: var(--font-size-2);
+  margin: 0
+}
 
 /* POSTER LIST PAGE */
 .poster-archive {
@@ -295,7 +296,8 @@ filter: drop-shadow(2px 8px 4px #a4a4e7);
   max-width: calc(var(--layout-max-width) - 4rem);
   margin: 0 auto;
   padding: 2rem 0;
-  padding-bottom: calc(var(--footer-h) + 1rem);   /* bar height + 1 rem gap */
+  padding-bottom: calc(var(--footer-h) + 4rem);
+  padding-top: calc(var(--footer-h) + 1rem);
 }
 
 .poster-grid {
@@ -321,7 +323,6 @@ filter: drop-shadow(2px 8px 4px #a4a4e7);
 .poster-card:hover {
   filter: drop-shadow(2px 8px 4px #a4a4e7);
 }
-
 
 .poster-card a {
   display: block;
@@ -704,3 +705,156 @@ filter: drop-shadow(2px 8px 4px #a4a4e7);
   from{ transform:translateX(0); }
   to  { transform:translateX(-50%); }
 }
+/* =================================== */
+/*  bottom‑left hero information block */
+/* =================================== */
+
+.hero-film-banner{
+  position:absolute;
+
+  /* sit 1 rem above the floating footer */
+  bottom:calc(var(--footer-h) + 2rem);
+  right:calc((100% - var(--layout-width)) * 2);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;          /* left‑align inner text */
+  text-align:left;
+    filter: drop-shadow(5px 2px 5px #7575d4);
+    transition: filter 0.4s ease;
+  }
+
+  .hero-film-banner:hover {
+    filter: drop-shadow(6px 3px 7px #a4a4e7);
+  }
+
+/* ———‑‑ enlarge & style the ribbon ——— */
+.hero-film-banner .stream-label-hero{
+  order:-1;                        /* appear above the title */
+  align-self:flex-end;
+  font-size:var(--font-size-3);     /* bigger text */
+  padding:.5rem 1rem;
+  border-radius:1rem 1rem 0 0;      /* soft top corners        */
+  
+}
+
+/* ———‑‑ enlarge the title block & soften boendcorners ——— */
+.hero-film-banner .film-title-list{
+  height:auto;
+  font-size:var(--font-size-7);     /* noticeably bigger */
+  border-radius:0 0 1rem 1rem;      /* soft bottom corners only */
+  padding:1rem 1rem;
+}
+
+
+.film-details-hero {
+  font-size: var(--font-size-3);
+  margin: 0
+}
+
+.hero-film-title {
+  margin: 0;
+}
+
+.film-author-subtext-hero {
+  font-size: var(--font-size-2);
+}
+
+.stream-label-hero {
+  background-color: #4444dd;
+  color: var(--color-bg);       
+
+  padding: 0.2rem 0.6rem;
+  width: fit-content;
+  border-radius: 0rem 0rem 1rem 1rem;
+  border: 2px solid var(--color-fg);
+  border-bottom: 0px;
+}
+
+/* darken only when .hero-dark is present */
+.hero-dark          { position:relative; }          /* anchor pseudo */
+.hero-dark::before  { content:""; position:absolute; inset:0;
+                      background:rgba(0,0,0,.35);   /* 0–1 → tweak darkness */
+                      pointer-events:none; }
+/* =============================== */
+/*  Slide the entire hero‑overlay  */
+/* =============================== */
+@keyframes heroOverlaySlide{
+  from{ transform:translateY(120%); opacity:0; }
+  to  { transform:translateY(0);     opacity:1; }
+}
+
+/* run the animation once on page‑load */
+.hero-overlay{
+  transform:translateY(120%);
+  opacity:0;
+  animation:heroOverlaySlide .8s ease-in .1s forwards;
+}
+
+
+/* ======================== */
+/*  floating “donate” chip  */
+/* ======================== */
+
+/* pop‑in keyframes */
+@keyframes donatePop{
+  0%   { transform:scale(0);   }
+  60%  { transform:scale(1.15); }
+  80%  { transform:scale(.95);  }
+  100% { transform:scale(1);    }
+}
+
+.donate-button{
+  position:fixed;
+  right:2rem;                                   /* flush right */
+  bottom:calc(var(--footer-h) + 4.5rem);        /* floats above footer */
+  z-index:9999;                                 /* on top of everything */
+
+  background:#4444dd;
+  color:var(--color-bg);
+  border:2px solid var(--color-fg);
+  border-radius: 0 1rem 0 0;
+  padding:1rem 2rem;
+  font-size:var(--font-size-4);
+  font-weight:600;
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  
+  transform:scale(0);                           /* start invisible */
+  animation:donatePop .7s ease-out 30s forwards;/* pop in once */
+
+  filter:drop-shadow(8px 8px 4px #4444dd);
+  transition:filter .4s ease;
+}
+
+.donate-button:hover{
+  filter:drop-shadow(2px 8px 4px #a4a4e7);
+}
+
+
+.dimbox-iframe-container {
+  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dimbox-container {
+  padding: 0;
+}
+
+
+
+
+/* 100 %‑window background video ↓ */
+.hero-bg-video,
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* always fill, crop safely */
+  object-position: center;
+  pointer-events: none;
+}
+
+

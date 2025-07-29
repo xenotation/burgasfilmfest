@@ -48,29 +48,62 @@
   <main>
     
 
-<div class="landing">                   
-
+<div class="landing">
   
+                
+
     <a href="/films/2025-test-film-name-02/" class="hero-wrapper">
-      <section  class="landing-hero"
-                style="background-image:url('/img/screen__02.jpg');">
+      <section class="landing-hero hero-dark">
+
+        
+          <video class="hero-bg-video"
+                 autoplay muted loop playsinline preload="auto"
+                 poster="/img/screen__02.jpg"
+                 controlslist="nodownload nofullscreen noremoteplayback"
+                 disablepictureinpicture>
+            <source src="https://videodelivery.net/2d3c0981ca7415f21955a5a7031994be/manifest/video.m3u8"
+                    type="application/x-mpegURL">
+            <source src="https://videodelivery.net/2d3c0981ca7415f21955a5a7031994be/downloads/default.mp4"
+                    type="video/mp4">
+          </video>
+        
+
         <div class="hero-overlay">
-          <div class="hero-text">
-            <h1 class="now-streaming">now streaming</h1>
-            <h2 class="now-title">
-              Test imeime (2023)
-            </h2>
+          
+          <div class="hero-film-banner">
+            
+              <div class="stream-label-hero">от 25.06-28.07</div>
+            
+
+            <div class="film-title-list">
+              <div class="hero-film-title">
+                Test imeime (2023)
+              </div>
+              <div class="film-author-subtext-hero">
+                <p class="film-details-hero">
+                  Absurdistan, Croatia · 123 мин
+                </p>
+                тест от 
+              </div>
+            </div>
           </div>
+          
         </div>
+
       </section>
     </a>
   
-
-</div>                                   
+</div>
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   </main>
+
+  <a class="donate-button" href="https://your-donation-link.com" target="_blank">
+    дарете
+  </a>
+  
+
   <footer>
     <footer class="simple-footer" role="contentinfo">
   <div class="footer-inline">
@@ -136,5 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script src="/dimbox.min.js"></script>
-
+<script>
+   
+  dimbox.setConfig({ download:false });
+  </script>
 </html>

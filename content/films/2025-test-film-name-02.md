@@ -6,11 +6,12 @@ year: 2023
 minutes: 123
 description: Test za kratuk opisTest za kratuk opisTest za kratuk opis
 thumbnail: /img/movie-poster-credits-178.jpg
-feature_image: /img/screen__02.jpg
+feature_image: "/img/screen__02.jpg"
 date: 2023-12-29T11:43:54-06:00
 stream_duration: "25.06-28.07"
 show_watch_button: true
 video_id: "2d3c0981ca7415f21955a5a7031994be"
+hero_video_id : "2d3c0981ca7415f21955a5a7031994be"
 ---
 
 
