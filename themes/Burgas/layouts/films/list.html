@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="film-archive">
-
+  <link rel="stylesheet" href="/css/film-list.css">
   <div class="film-list">
     {{ range $index, $element := .Pages.ByDate.Reverse }}
     <article class="film-entry">
