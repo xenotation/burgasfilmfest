@@ -4,16 +4,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+{{ $main := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" crossorigin="anonymous">
+{{ $filmlist := resources.Get "css/film-list.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $filmlist.RelPermalink }}" integrity="{{ $filmlist.Data.Integrity }}" crossorigin="anonymous">
+
+
 <link rel="stylesheet" href="/dimbox.min.css" />
 <script src="/dimbox.min.js"></script>
 <script>
-/* remove Download + Full‑screen everywhere */
-dimbox.setConfig({
+  dimbox.setConfig({
     showDownloadButton: false,
-    showFullscreenButton: false   
-});
+    showFullscreenButton: true
+  });
 </script>
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+
+{{ partial "head/js.html" . }}
