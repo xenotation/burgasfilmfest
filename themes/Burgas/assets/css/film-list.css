@@ -179,7 +179,7 @@
     position: relative;
     width: 99%;
     box-sizing: border-box;
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-3);
     padding: 1rem 1rem 1.2rem;
     border: 2px solid var(--color-fg);
     border-radius: 0 0 1rem 1rem;
@@ -217,7 +217,7 @@
   /* details under the title */
   .film-details-hero,
   .film-author-subtext {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-1);
   }
 
   /* shrink the meta rows */

@@ -22,7 +22,7 @@
   
   .poster-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Always two columns */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem; /* Or adjust for tighter spacing */
     margin: 6rem 0 0 0;      
   }
@@ -75,8 +75,8 @@
 
   /* archive wrapper centres & narrows */
   .poster-archive {
-    width: 23rem;
-
+    width: 90vw;
+    margin-top: 2rem;
 
   }
 
@@ -90,9 +90,5 @@
 
 
 .simple-footer {
-  font-size: var(--font-size-3);
-}
-
-.footer-social {
-  gap: 0.5rem 5rem;
+  font-size: var(--font-size-2);
 }
