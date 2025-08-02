@@ -87,7 +87,9 @@
     margin-top: 2rem;
   }
 }
-
+.nav-links {
+  font-size: var(--font-size-2);
+}
 
 .simple-footer {
   font-size: var(--font-size-2);
