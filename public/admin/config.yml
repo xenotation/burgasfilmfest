@@ -71,8 +71,7 @@ collections:
       - { label: "Stream Duration (ribbon)", name: "stream_duration", widget: "string", required: false }
 
       # Credits (keep both forms if your templates read either)
-      - { label: "director (lowercase)", name: "director", widget: "string", required: false }
-      - { label: "Director (Capitalized)", name: "Director", widget: "string", required: false }
+      - { label: "director", name: "director", widget: "string", required: false }
       - { label: "Producers", name: "Producers", widget: "string", required: false }
       - { label: "Actors", name: "Actors", widget: "string", required: false }
       - { label: "Screenwriter", name: "Screenwriter", widget: "string", required: false }
