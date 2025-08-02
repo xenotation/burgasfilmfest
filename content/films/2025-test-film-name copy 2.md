@@ -5,8 +5,8 @@ country: "Absurdistan"
 year: 2069
 minutes: 23
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia."
-date: 2023-12-29T11:43:54-05:00
-lastmod: 2023-12-29T11:43:54-05:00
+date: 2025-07-29T11:43:54-05:00
+lastmod: 2025-07-29T11:43:54-05:00
 draft: false
 slug: "Test-Video-(169)"
 
@@ -28,7 +28,7 @@ text_author: "Pisatel Teksta"
 # Streaming/watch
 stream_duration: "25.06-28.07"
 video_id: "a721db22c82be661373fe61c3b6552ed"
-video: https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/a721db22c82be661373fe61c3b6552ed/iframe?preload=true
+hero_video_id: "a721db22c82be661373fe61c3b6552ed"
 show_watch_button: true
 
 # SEO extras

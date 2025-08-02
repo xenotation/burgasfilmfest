@@ -221,7 +221,7 @@ body {
 /* banner wrapper slides up */
 .hero-banner-wrap {
   position: absolute;
-  bottom: calc(var(--footer-h) + 3rem);
+  bottom: calc(var(--footer-h) + 2rem);
   left: 50%;
 
   width: 80rem;
@@ -234,6 +234,15 @@ body {
   transform: translate(-50%, 120%);
   opacity: 0;
   animation: heroBannerSlide .8s ease-out .1s forwards;
+}
+
+.hero-bg-video { overflow: hidden; } /* ensure cropped edges stay hidden */
+
+.hero-bg-video iframe,
+.hero-bg-video video {
+  transform: scale(1.05);
+  transform-origin: center center;
+  will-change: transform;
 }
 
 /* ---------- banner box ---------- */
