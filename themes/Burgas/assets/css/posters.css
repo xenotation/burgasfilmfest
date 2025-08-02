@@ -86,11 +86,13 @@
     gap: 1.5rem;
     margin-top: 2rem;
   }
-}
-.nav-links {
-  font-size:  0.875rem;
-}
 
-.simple-footer {
-  font-size:  0.875rem;
+  .nav-links {
+    font-size:  0.875rem;
+  }
+  
+  .simple-footer {
+    font-size:  0.875rem;
+  }
+  
 }
