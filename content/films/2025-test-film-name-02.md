@@ -1,18 +1,43 @@
 ---
-film_title: Test imeime
-director: Gosho Kazana-Kazana 
-country: Absurdistan, Croatia
+title: "Test imeime (2023)"
+film_title: "Test imeime"
+slug: "test-imeime-2023"
+draft: false
+
+# Basics shown in template
+country: "Absurdistan, Croatia"
 year: 2023
 minutes: 123
-description: Test za kratuk opisTest za kratuk opisTest za kratuk opis
-thumbnail: /img/movie-poster-credits-178.jpg
-feature_image: "/img/screen__02.jpg"
+description: "Test za kratuk opisTest za kratuk opisTest za kratuk opis"
+
+# Dates
 date: 2023-12-29T11:43:54-06:00
+lastmod: 2023-12-29T11:43:54-06:00
+
+# Images (must exist in /static)
+images:
+  - "/img/screen__02.jpg"
+  - "/img/movie-poster-credits-178.jpg"
+thumbnail: "/img/movie-poster-credits-178.jpg"
+feature_image: "/img/screen__02.jpg"
+
+# Credits — keep both cases to satisfy templates
+director: "Gosho Kazana-Kazana"
+Director: "Gosho Kazana-Kazana"
+
+# Streaming / video
 stream_duration: "25.06-28.07"
 show_watch_button: true
 video_id: "2d3c0981ca7415f21955a5a7031994be"
-hero_video_id : "2d3c0981ca7415f21955a5a7031994be"
+hero_video_id: "2d3c0981ca7415f21955a5a7031994be"
+
+# SEO hints (used by hugo-seo)
+seo:
+  type: "article"
+  twitterCard: "summary_large_image"
+  noindex: false
 ---
+
 
 
 

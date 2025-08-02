@@ -1,18 +1,35 @@
 ---
-film_title: Test ime 99 Test 99 Test 99 Test
-director: Gosho Kazana
-country: OPAOPAOPA
+title: "Test ime 99 Test 99 Test 99 Test"
+description: "Test za kratuk opis"
+date: 2023-11-29T11:43:54-05:00
+lastmod: 2023-11-29T11:43:54-05:00
+type: "films"
+
+images:
+  - "/img/screen__03.jpg"
+image: "/img/screen__03.jpg"
+
+seo:
+  title: "Test ime 99 Test 99 Test 99 Test"
+  description: "Test za kratuk opis"
+  image: "/img/screen__03.jpg"
+
+film_title: "Test ime 99 Test 99 Test 99 Test"
+director: "Gosho Kazana"
+country: "OPAOPAOPA"
 year: 2069
 minutes: 23
-description: Test za kratuk opis
-thumbnail: /img/movie-poster-credits-178.jpg
-feature_image: /img/screen__03.jpg
-date: 2023-11-29T11:43:54-05:00
+thumbnail: "/img/movie-poster-credits-178.jpg"
+feature_image: "/img/screen__03.jpg"
 text_author: "Pisatel Teksta"
 stream_duration: "25.06-28.07"
+
 video_id: "2d3c0981ca7415f21955a5a7031994be"
+video: "https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/2d3c0981ca7415f21955a5a7031994be/iframe?preload=true"
+
 show_watch_button: true
 ---
+
 # Заглавие
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.

@@ -10,6 +10,7 @@
 {{ $filmlist := resources.Get "css/film-list.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $filmlist.RelPermalink }}" integrity="{{ $filmlist.Data.Integrity }}" crossorigin="anonymous">
 
+{{ partial "seo.html" . }}
 
 <link rel="stylesheet" href="/dimbox.min.css" />
 <script src="/dimbox.min.js"></script>

@@ -6,3 +6,12 @@ theme = 'Burgas'
 [markup.goldmark]
   [markup.goldmark.renderer]
     unsafe = true
+
+[params]
+  description = "Официалният сайт на Burgas Film Festival."
+
+[params.seo]
+  site_name    = "Burgas Film Fest"
+  defaultImage = "/img/og-default.jpg"   # put the file in /static/img/og-default.jpg
+  twitterSite  = "@your_account"
+  locale       = "bg_BG"

@@ -1,23 +1,42 @@
 ---
-film_title: Test ime
-director: Gosho Kazana
-country: Absurdistan
+title: "Test ime (2069)"
+film_title: "Test ime"
+country: "Absurdistan"
 year: 2069
 minutes: 23
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. "
-thumbnail: /img/movie-poster-credits-178.jpg
-feature_image: /img/screen__01.jpg
-
-Director: Ivan Geshev
-Producers: Prodan4o Ukovi
-Actors: Misho, Ivan, Kur4o
-Screenwriter: Pesho Gosho
-Genre: Action Comedy
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia."
 date: 2023-12-29T11:43:54-05:00
+lastmod: 2023-12-29T11:43:54-05:00
+draft: false
+slug: "test-ime-2069"
+
+# Images used by hugo-seo and social cards (must exist under /static)
+images:
+  - "/img/screen__01.jpg"
+  - "/img/movie-poster-credits-178.jpg"
+thumbnail: "/img/movie-poster-credits-178.jpg"
+feature_image: "/img/screen__01.jpg"
+
+# Credits (match your template keys)
+Director: "Ivan Geshev"
+Producers: "Prodan4o Ukovi"
+Actors: "Misho, Ivan, Kur4o"
+Screenwriter: "Pesho Gosho"
+Genre: "Action Comedy"
+text_author: "Pisatel Teksta"
+
+# Streaming/watch
 stream_duration: "25.06-28.07"
 video_id: "2d3c0981ca7415f21955a5a7031994be"
 show_watch_button: true
+
+# SEO extras
+seo:
+  type: "article"
+  twitterCard: "summary_large_image"
+  noindex: false
 ---
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.
 
