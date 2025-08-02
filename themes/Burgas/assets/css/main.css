@@ -554,4 +554,67 @@ body {
   }
 
 
+  .dimbox-container {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;              /* fallback */
+    height: 100svh;             /* iOS Safari “small viewport” */
+    height: 100dvh;             /* dynamic viewport on modern browsers */
+    height: -webkit-fill-available; /* extra iOS fallback */
+    max-height: none;
+    padding:
+      env(safe-area-inset-top)
+      env(safe-area-inset-right)
+      env(safe-area-inset-bottom)
+      env(safe-area-inset-left);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.92);
+    overscroll-behavior: contain;
+  }
+
+  .dimbox-iframe-container {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+  }
+
+  .dimbox-iframe-container iframe,
+  .dimbox-iframe-container video,
+  .dimbox-iframe-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+    background: #000;
+    border: 0;
+  }
+
+  .dimbox-btn-close,
+  .dimbox-btn-fullscreen {
+    position: absolute;
+    z-index: 10001;
+    top: calc(0.75rem + env(safe-area-inset-top));
+    right: calc(0.75rem + env(safe-area-inset-right));
+  }
+
+  .dimbox-caption {
+    position: absolute;
+    left: calc(0.75rem + env(safe-area-inset-left));
+    right: calc(0.75rem + env(safe-area-inset-right));
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    margin: 0 !important;
+  }
+
+  /* Prevent background scroll when open (toggle this class from JS) */
+  html.dimbox-open,
+  body.dimbox-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
 }
