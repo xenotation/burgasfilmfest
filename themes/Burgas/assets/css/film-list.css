@@ -144,7 +144,7 @@
   .film-archive {
     width: var(--layout-width);
     max-width: var(--layout-max-width);
-    margin: 8rem auto calc(var(--footer-h) + 2rem);
+    margin: 8rem auto 2rem;
     padding: 0 1rem;
   }
 

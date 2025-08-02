@@ -51,7 +51,7 @@
     .about-wrapper {
       width: 95vw;
       max-width: 90vw;
- 
+      margin-bottom: 2rem;
       padding: 0;
       box-sizing: border-box;
     }

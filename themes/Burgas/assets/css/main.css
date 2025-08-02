@@ -444,7 +444,38 @@ body {
     --font-size-8: 2.4rem;
     --font-size-9: 2.986rem;
   }
+  .landing-hero {
+    position: relative;
+    height: 100svh; /* use svh to avoid iOS URL bar jumps */
+    overflow: hidden;
+  }
 
+  /* video container fills hero */
+  .hero-bg-video {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  /* Cloudflare Stream is inside an <iframe>; emulate object-fit: cover */
+  .hero-bg-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 16:9 cover math */
+    height: 100svh;         /* base height = hero height */
+    width: 177.78svh;       /* 100 * (16/9) */
+
+    /* ensure it still covers in very narrow/wide phones */
+    min-width: 100vw;
+    min-height: 56.25vw;    /* 100 * (9/16) */
+
+    border: 0;
+    pointer-events: none;   /* make whole hero tappable if it’s a link */
+  }
   .site-header {
     gap: 6vh;
     margin-top: .8rem;
@@ -473,9 +504,14 @@ body {
   }
 
   .simple-footer {
-    padding: .5rem 1rem;
-    font-size: var(--font-size-2);
-    width: 90vw;
+    position: static !important;   /* leave normal flow so it sits at the end of content */
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: 95vw;                   /* mirror header's mobile sizing */
+    max-width: 90vw;
+    margin: .8rem auto 1rem;       /* centered like header */
   }
 
   .footer-social {
@@ -524,6 +560,7 @@ body {
     width: 95vw;
     max-width: var(--layout-max-width);
     justify-content: flex-end;
+    bottom: 2rem;
   }
   
   
@@ -552,8 +589,5 @@ body {
   .footer-right {
     display: none;
   }
-
-
-
   
 }

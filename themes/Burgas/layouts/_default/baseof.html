@@ -20,6 +20,14 @@
   <footer>
     {{ partial "footer.html" . }}
   </footer>
+  
+  {{ if .IsHome }}
+  <style>
+  @media (max-width: 1000px) {
+    .simple-footer { display: none !important; }
+  }
+  </style>
+  {{ end }}
 </body>
 <!-- ▸ 1 ▸  markup  (goes anywhere – footer is fine) -->
 <div id="partners-toggle" class="partners-label">партньори ↕</div>
