@@ -449,7 +449,7 @@ body {
     gap: 6vh;
     margin-top: .8rem;
     width: 95vw;
-    max-width: var(--layout-max-width);
+    max-width: 90vw;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -475,13 +475,13 @@ body {
   .simple-footer {
     padding: .5rem 1rem;
     font-size: var(--font-size-3);
-    width: 95vw;
+    width: 90vw;
   }
 
   .footer-social {
     display: grid;
     grid-template-columns: repeat(2, auto);
-
+    gap: 0rem auto;
     align-items: center;
     justify-items: start;
     width: 100%;
@@ -523,7 +523,6 @@ body {
     transform: translateX(-50%) translateY(0); /* horizontal centering */
     width: 95vw;
     max-width: var(--layout-max-width);
-    bottom: 5rem;
     justify-content: flex-end;
   }
   
