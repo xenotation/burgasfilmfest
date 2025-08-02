@@ -529,18 +529,19 @@ body {
   
   .stream-label-hero {
     position: absolute;
-    top: -2.6rem;
+    top: -2.4rem;
     right: 0;
     border-radius: 1rem 0 0 0;
+    font-size: var(--font-size-2);
   }
 
   .hero-film-banner .film-title-list {
-    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
     padding: .8rem 1rem;
   }
 
   .film-details-hero {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-1);
   }
 
   .hero-bg-video,
