@@ -1,33 +1,29 @@
 ---
-title: "Test ime 99 Test 99 Test 99 Test"
-description: "Test za kratuk opis"
+title: Test ime 99 Test 99 Test 99 Test
+film_title: Test ime 99 Test 99 Test 99 Test
+country: OPAOPAOPA
+minutes: 23
 date: 2023-11-29T11:43:54-05:00
 lastmod: 2023-11-29T11:43:54-05:00
-type: "films"
-
 images:
-  - "/img/screen__03.jpg"
-image: "/img/screen__03.jpg"
-
-seo:
-  title: "Test ime 99 Test 99 Test 99 Test"
-  description: "Test za kratuk opis"
-  image: "/img/screen__03.jpg"
-
-film_title: "Test ime 99 Test 99 Test 99 Test"
-director: "Gosho Kazana"
-country: "OPAOPAOPA"
-year: 2069
-minutes: 23
-thumbnail: "/img/movie-poster-credits-178.jpg"
-feature_image: "/img/screen__03.jpg"
-text_author: "Pisatel Teksta"
-stream_duration: "25.06-28.07"
-
-video_id: "2d3c0981ca7415f21955a5a7031994be"
-video: "https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/2d3c0981ca7415f21955a5a7031994be/iframe?preload=true"
-
+  - /img/screen__03.jpg
+thumbnail: /img/movie-poster-credits-178.jpg
+feature_image: /img/screen__03.jpg
 show_watch_button: true
+video_id: 2d3c0981ca7415f21955a5a7031994be
+stream_duration: 25.06-28.07
+director: Gosho Kazana
+type: films
+video: https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/2d3c0981ca7415f21955a5a7031994be/iframe?preload=true
+image: /img/screen__03.jpg
+year: 2069
+description: Test za kratuk opis
+Actors: Gosho Kazana, Gosho Kazana, Gosho Kazana
+text_author: Pisatel Teksta
+seo:
+  title: Test ime 99 Test 99 Test 99 Test
+  description: Test za kratuk opis
+  image: /img/screen__03.jpg
 ---
 
 # Заглавие
