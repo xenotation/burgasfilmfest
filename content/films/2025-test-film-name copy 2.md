@@ -1,6 +1,6 @@
 ---
-title: "Test ime (2069)"
-film_title: "Test ime"
+title: "Test Video (169)"
+film_title: "Test Video (169)"
 country: "Absurdistan"
 year: 2069
 minutes: 23
@@ -8,7 +8,7 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas 
 date: 2023-12-29T11:43:54-05:00
 lastmod: 2023-12-29T11:43:54-05:00
 draft: false
-slug: "test-ime-2069"
+slug: "Test-Video-(169)"
 
 # Images used by hugo-seo and social cards (must exist under /static)
 images:
@@ -27,7 +27,8 @@ text_author: "Pisatel Teksta"
 
 # Streaming/watch
 stream_duration: "25.06-28.07"
-video_id: "2d3c0981ca7415f21955a5a7031994be"
+video_id: "a721db22c82be661373fe61c3b6552ed"
+video: https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/a721db22c82be661373fe61c3b6552ed/iframe?preload=true
 show_watch_button: true
 
 # SEO extras
