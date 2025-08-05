@@ -5,8 +5,8 @@ country: "Absurdistan"
 year: 2069
 minutes: 23
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia."
-date: 2025-07-29T11:43:54-05:00
-lastmod: 2025-07-29T11:43:54-05:00
+date: 2025-08-03T11:01:54-05:00
+lastmod: 2025-08-03T0:43:54-05:00
 draft: false
 slug: "Test-Video-(169)"
 
@@ -29,6 +29,8 @@ text_author: "Pisatel Teksta"
 stream_duration: "25.06-28.07"
 video_id: "a721db22c82be661373fe61c3b6552ed"
 hero_video_id: "a721db22c82be661373fe61c3b6552ed"
+signed_token: "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1ZjFmNzFkYjQyNmRkZDNkZDk4NGZjMzdlZTllOGJmIn0.eyJzdWIiOiJhNzIxZGIyMmM4MmJlNjYxMzczZmU2MWMzYjY1NTJlZCIsImtpZCI6IjM1ZjFmNzFkYjQyNmRkZDNkZDk4NGZjMzdlZTllOGJmIiwiZXhwIjoiMTc1NDQwMjcyMiIsIm5iZiI6IjE3NTQzOTE5MjQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.Pl7WuD6BtK4gxOZJxtirFWOsYEbf7b2EYjS-lPPhtePfvlH_nFZSLqAn3MQ5ANCkcOZSMqXqSP5zqK74mAEnzQwaw9rZGhI1rJn2RmlQDcOw6ch71p-rrzxovRuK15zEC96fwsidLgKj-gvyxapv7fRC8OwjJSZS8ooHSGN1LB4pofGlrKVEVWx8KIWyQkDr07fioL-dH7bTK1hxg3MIT3_7K2WYftAisXerdC5BJsEG4XF9Tl3KRVQ6_b0IjkNWG4kWXDAcc2IvVY3NX1LjDdof545sU-sumUh1m3CE0ZfyVv7sVG7PL46pWsJK5br7cl042zvWc5oWCazVuAtx1A"
+
 show_watch_button: true
 
 # SEO extras

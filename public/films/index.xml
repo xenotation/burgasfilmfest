@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Films on My New Hugo Site</title>
-    <link>http://192.168.0.101:1313/films/</link>
+    <link>http://192.168.0.103:1313/films/</link>
     <description>Recent content in Films on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Jul 2025 11:43:54 -0500</lastBuildDate>
-    <atom:link href="http://192.168.0.101:1313/films/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Dec 2025 11:43:54 -0600</lastBuildDate>
+    <atom:link href="http://192.168.0.103:1313/films/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test ime 99 Test 99 Test 99 Test</title>
+      <link>http://192.168.0.103:1313/films/2024-test-film-name-01/</link>
+      <pubDate>Sun, 03 Aug 2025 11:43:54 -0500</pubDate>
+      <guid>http://192.168.0.103:1313/films/2024-test-film-name-01/</guid>
+      <description>Заглавие Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
+    </item>
     <item>
       <title>Test Video (169)</title>
-      <link>http://192.168.0.101:1313/films/test-video-169/</link>
-      <pubDate>Tue, 29 Jul 2025 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.101:1313/films/test-video-169/</guid>
+      <link>http://192.168.0.103:1313/films/test-video-169/</link>
+      <pubDate>Sun, 03 Aug 2025 11:01:54 -0500</pubDate>
+      <guid>http://192.168.0.103:1313/films/test-video-169/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
     </item>
     <item>
       <title>Test imeime (2023)</title>
-      <link>http://192.168.0.101:1313/films/test-imeime-2023/</link>
+      <link>http://192.168.0.103:1313/films/test-imeime-2023/</link>
       <pubDate>Fri, 29 Dec 2023 11:43:54 -0600</pubDate>
-      <guid>http://192.168.0.101:1313/films/test-imeime-2023/</guid>
+      <guid>http://192.168.0.103:1313/films/test-imeime-2023/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
     </item>
     <item>
       <title>Test ime (2069)</title>
-      <link>http://192.168.0.101:1313/films/test-ime-2069/</link>
+      <link>http://192.168.0.103:1313/films/test-ime-2069/</link>
       <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.101:1313/films/test-ime-2069/</guid>
+      <guid>http://192.168.0.103:1313/films/test-ime-2069/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
     </item>
     <item>
       <title>Test ime (2069)</title>
-      <link>http://192.168.0.101:1313/films/test-ime-2069/</link>
+      <link>http://192.168.0.103:1313/films/test-ime-2069/</link>
       <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.101:1313/films/test-ime-2069/</guid>
+      <guid>http://192.168.0.103:1313/films/test-ime-2069/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
-    </item>
-    <item>
-      <title>Test ime 99 Test 99 Test 99 Test</title>
-      <link>http://192.168.0.101:1313/films/2024-test-film-name-01/</link>
-      <pubDate>Wed, 29 Nov 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.101:1313/films/2024-test-film-name-01/</guid>
-      <description>Заглавие Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
     </item>
   </channel>
 </rss>

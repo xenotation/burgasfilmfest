@@ -12,7 +12,7 @@ description: "Test za kratuk opisTest za kratuk opisTest za kratuk opis"
 
 # Dates
 date: 2023-12-29T11:43:54-06:00
-lastmod: 2023-12-29T11:43:54-06:00
+lastmod: 2025-12-29T11:43:54-06:00
 
 # Images (must exist in /static)
 images:

@@ -52,18 +52,19 @@
         
 
         {{ if .Params.show_watch_button }}
-        <div class="watch-button-wrapper">
-          <!-- DimBox trigger -->
-          <a  class="watch-button"
-          href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ .Params.video_id }}/iframe?preload=true&autoplay=true"
-          data-dimbox
-          data-dimbox-type="iframe"
-          data-dimbox-class="dimbox-full">
-        гледай
-      </a>
+        {{ $playPath := .Params.video_id }}
+        {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }}
       
+        <div class="watch-button-wrapper">
+          <a class="watch-button"
+             href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true"
+             data-dimbox
+             data-dimbox-type="iframe"
+             data-dimbox-class="dimbox-full">
+            гледай
+          </a>
         </div>
-        {{ end }}
+      {{ end }}
       </div>
     </div>
 
