@@ -52,18 +52,21 @@
         
 
         {{ if .Params.show_watch_button }}
-        {{ $playPath := .Params.video_id }}
-        {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }}
-      
-        <div class="watch-button-wrapper">
-          <a class="watch-button"
-             href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true"
-             data-dimbox
-             data-dimbox-type="iframe"
-             data-dimbox-class="dimbox-full">
-            гледай
-          </a>
-        </div>
+        {{ if .Params.signed_token }}
+          {{/* Send user to YOUR Worker. It will fetch the Stream iframe and swap in a custom page on 401. */}}
+          {{ $path := printf "%s/iframe?preload=true&autoplay=true" .Params.signed_token }}
+          <div class="watch-button-wrapper">
+            <a class="watch-button"
+               href="https://stream.yourdomain.com/embed?path={{ $path | urlquery }}"
+               data-dimbox
+               data-dimbox-type="iframe"
+               data-dimbox-class="dimbox-full">
+              гледай
+            </a>
+          </div>
+        {{ else }}
+          <div class="watch-fallback">Видеото не е достъпно в момента.</div>
+        {{ end }}
       {{ end }}
       </div>
     </div>
