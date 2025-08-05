@@ -75,7 +75,6 @@
 
 <article class="film-single">
   <div class="film-inner">
-    
     <div class="film-top">
       <div class="film-poster">
         <img src="/img/movie-poster-credits-178.jpg" alt="Test ime 99 Test 99 Test 99 Test">
@@ -85,48 +84,64 @@
         <h1 class="film-title-single">
           Test ime 99 Test 99 Test 99 Test <span class="year">(2069)</span>
         </h1>
-
-
         <p class="film-details">OPAOPAOPA · 23 min</p>
-        
         <p class="film-description">Test za kratuk opis</p>
 
         <div class="film-credits-grid">
-          
-          
-        
-          
-          <div class="credit">
-            <span class="credit-label">режисьор</span>
-            <span class="credit-value">Gosho Kazana</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">продуцент</span>
-            <span class="credit-value"></span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">актьори</span>
-            <span class="credit-value">Gosho Kazana, Gosho Kazana, Gosho Kazana</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">сценарист</span>
-            <span class="credit-value"></span>
-          </div>
+          <div class="credit"><span class="credit-label">режисьор</span><span class="credit-value">Gosho Kazana</span></div>
+          <div class="credit"><span class="credit-label">продуцент</span><span class="credit-value"></span></div>
+          <div class="credit"><span class="credit-label">актьори</span><span class="credit-value">Gosho Kazana, Gosho Kazana, Gosho Kazana</span></div>
+          <div class="credit"><span class="credit-label">сценарист</span><span class="credit-value"></span></div>
         </div>
-        
 
         
+          
+          
+          
+
+          <div class="watch-button-wrapper">
+            <button class="watch-button" type="button" id="open-player">гледай</button>
+          </div>
+
+          <div id="player-wrap" class="player-wrap" hidden>
+            <div class="player-ratio">
+              <iframe
+                id="stream-player"
+                src="https://customer-.cloudflarestream.com/2d3c0981ca7415f21955a5a7031994be/iframe?preload=true&autoplay=true"
+                style="border:none;position:absolute;inset:0;width:100%;height:100%"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowfullscreen="true">
+              </iframe>
+            </div>
+            <div id="player-fallback" class="player-fallback" hidden>
+              Видеото не е достъпно в момента.
+            </div>
+          </div>
+          <script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+          <script>
+            (function () {
+              const btn = document.getElementById('open-player');
+              const wrap = document.getElementById('player-wrap');
+              const iframe = document.getElementById('stream-player');
+              const fallback = document.getElementById('player-fallback');
+              btn?.addEventListener('click', () => { wrap.hidden = false; });
+
+              
+              const player = Stream(iframe);
+              player.addEventListener('error', () => {
+                
+                iframe.style.display = 'none';
+                fallback.hidden = false;
+                
+                fallback.setAttribute('role', 'alert');
+              });
+            })();
+          </script>
         
-          <div class="watch-fallback">Видеото не е достъпно в момента.</div>
-        
-      
+
       </div>
     </div>
 
-    
     <div class="film-body">
       <h1 id="заглавие">Заглавие</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.</p>
@@ -140,6 +155,7 @@ Generated 5 paragraphs, 441 words, 2961 bytes of Lorem Ipsum</p>
     </div>
   </div>
 </article>
+
 
   </main>
 

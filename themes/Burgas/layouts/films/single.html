@@ -5,7 +5,6 @@
 
 <article class="film-single">
   <div class="film-inner">
-    <!-- top section -->
     <div class="film-top">
       <div class="film-poster">
         <img src="{{ .Params.thumbnail }}" alt="{{ .Params.film_title }}">
@@ -15,66 +14,68 @@
         <h1 class="film-title-single">
           {{ .Params.film_title }} <span class="year">({{ .Params.year }})</span>
         </h1>
-
-
         <p class="film-details">{{ .Params.country }} · {{ .Params.minutes }} min</p>
-        {{/*  <div class="film-genre">{{ .Params.Genre }}</div>  */}}
         <p class="film-description">{{ .Params.description }}</p>
 
         <div class="film-credits-grid">
-          <!-- OLD -->
-          <!--
-          <div><strong>Director</strong><br>{{ .Params.Director }}</div>
-          …
-          -->
-        
-          <!-- NEW -->
-          <div class="credit">
-            <span class="credit-label">режисьор</span>
-            <span class="credit-value">{{ .Params.Director }}</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">продуцент</span>
-            <span class="credit-value">{{ .Params.Producers }}</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">актьори</span>
-            <span class="credit-value">{{ .Params.Actors }}</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">сценарист</span>
-            <span class="credit-value">{{ .Params.Screenwriter }}</span>
-          </div>
+          <div class="credit"><span class="credit-label">режисьор</span><span class="credit-value">{{ .Params.Director }}</span></div>
+          <div class="credit"><span class="credit-label">продуцент</span><span class="credit-value">{{ .Params.Producers }}</span></div>
+          <div class="credit"><span class="credit-label">актьори</span><span class="credit-value">{{ .Params.Actors }}</span></div>
+          <div class="credit"><span class="credit-label">сценарист</span><span class="credit-value">{{ .Params.Screenwriter }}</span></div>
         </div>
-        
 
         {{ if .Params.show_watch_button }}
-        {{ if .Params.signed_token }}
-          {{/* Send user to YOUR Worker. It will fetch the Stream iframe and swap in a custom page on 401. */}}
-          {{ $path := printf "%s/iframe?preload=true&autoplay=true" .Params.signed_token }}
+          {{/* If you have a signed token, use it; else fall back to the video_id */}}
+          {{ $src := .Params.video_id }}
+          {{ with .Params.signed_token }}{{ $src = . }}{{ end }}
+
           <div class="watch-button-wrapper">
-            <a class="watch-button"
-               href="https://stream.yourdomain.com/embed?path={{ $path | urlquery }}"
-               data-dimbox
-               data-dimbox-type="iframe"
-               data-dimbox-class="dimbox-full">
-              гледай
-            </a>
+            <button class="watch-button" type="button" id="open-player">гледай</button>
           </div>
-        {{ else }}
-          <div class="watch-fallback">Видеото не е достъпно в момента.</div>
+
+          <div id="player-wrap" class="player-wrap" hidden>
+            <div class="player-ratio">
+              <iframe
+                id="stream-player"
+                src="https://customer-{{ .Site.Params.cf_stream_customer_code }}.cloudflarestream.com/{{ $src }}/iframe?preload=true&autoplay=true"
+                style="border:none;position:absolute;inset:0;width:100%;height:100%"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowfullscreen="true">
+              </iframe>
+            </div>
+            <div id="player-fallback" class="player-fallback" hidden>
+              Видеото не е достъпно в момента.
+            </div>
+          </div>
+          <script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+          <script>
+            (function () {
+              const btn = document.getElementById('open-player');
+              const wrap = document.getElementById('player-wrap');
+              const iframe = document.getElementById('stream-player');
+              const fallback = document.getElementById('player-fallback');
+              btn?.addEventListener('click', () => { wrap.hidden = false; });
+
+              // Listen for player errors (e.g., invalid/expired token -> 401 inside player)
+              const player = Stream(iframe);
+              player.addEventListener('error', () => {
+                // Hide the iframe player and show your centered message
+                iframe.style.display = 'none';
+                fallback.hidden = false;
+                // Optional: announce to screen readers
+                fallback.setAttribute('role', 'alert');
+              });
+            })();
+          </script>
         {{ end }}
-      {{ end }}
+
       </div>
     </div>
 
-    <!-- markdown body -->
     <div class="film-body">
       {{ .Content }}
     </div>
   </div>
 </article>
+
 {{ end }}
