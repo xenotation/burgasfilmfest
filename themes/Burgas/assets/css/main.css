@@ -396,7 +396,7 @@ body {
 }
 .track-slot{ display:flex; }
 .track-slot a{ display:flex; align-items:center; padding:0 2rem; }
-.track-slot img{ height:2.2rem; width:auto; display:block; }
+.track-slot img{ height:4rem; width:auto; display:block; }
 
 /* pause scroll on hover */
 .ticker-wrap:hover .ticker-track{

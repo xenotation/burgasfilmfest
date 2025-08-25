@@ -3,54 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://192.168.0.103:1313/films/</loc>
-    <lastmod>2025-12-29T11:43:54-06:00</lastmod>
+    <lastmod>2025-08-03T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/</loc>
-    <lastmod>2025-12-29T11:43:54-06:00</lastmod>
+    <lastmod>2025-08-03T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/films/2024-test-film-name-01/</loc>
     <lastmod>2025-08-03T11:43:54-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.103:1313/films/test-video-169/</loc>
-    <lastmod>2025-08-03T00:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/films/test-imeime-2023/</loc>
-    <lastmod>2025-12-29T11:43:54-06:00</lastmod>
-  </url><url>
     <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-2/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-3/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-4/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-5/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-6/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-7/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy-8/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name-copy/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/2025-test-poster-name/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
     <loc>http://192.168.0.103:1313/posters/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/films/test-ime-2069/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/films/test-ime-2069/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/about/</loc>
