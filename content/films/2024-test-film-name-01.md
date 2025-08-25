@@ -24,6 +24,8 @@ seo:
   title: Test ime 99 Test 99 Test 99 Test
   description: Test za kratuk opis
   image: /img/screen__03.jpg
+  stream_start: 2025-06-25        # NEW
+stream_end:   2025-07-28        # NEW
 ---
 
 # Заглавие

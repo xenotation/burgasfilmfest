@@ -1,18 +1,13 @@
-<header class="site-header">
-  <nav class="nav-container">
-    <a href="/" class="logo">
-      <img src="/biff_logo_site.png" alt="BIFF Logo" />
+<header class="site-header" role="banner">
+  <nav class="nav-container" aria-label="Основна навигация">
+    <a href="/" class="logo" aria-label="Начало — Plakton.bg">
+      <img src="/biff_logo_site.png" alt="Plakton.bg лого">
     </a>
 
     <div class="nav-links">
-      <a href="/films"
-         class="{{ if (hasPrefix .RelPermalink "/films/") }}active{{ end }}">ФИЛМОТЕКА</a>
-
-      <a href="/posters"
-         class="{{ if (hasPrefix .RelPermalink "/posters/") }}active{{ end }}">ПЛАКАТИ</a>
-
-      <a href="/about"
-         class="{{ if (hasPrefix .RelPermalink "/about/") }}active{{ end }}">ЗА НАС</a>
+      <a href="/films" class="{{ if (hasPrefix .RelPermalink "/films/") }}active{{ end }}">ФИЛМОТЕКА</a>
+      <a href="/posters" class="{{ if (hasPrefix .RelPermalink "/posters/") }}active{{ end }}">ПЛАКАТИ</a>
+      <a href="/about" class="{{ if (hasPrefix .RelPermalink "/about/") }}active{{ end }}">ЗА НАС</a>
     </div>
   </nav>
 </header>

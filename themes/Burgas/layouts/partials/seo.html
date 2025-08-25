@@ -1,31 +1,34 @@
 {{- /* =========
-   SEO partial
-   Reads: title, description, images[], thumbnail, feature_image, date/lastmod
-   Optional: .Params.seo.{type,twitterCard,noindex}
-   Movie JSON-LD uses: film_title, year, minutes, Director/ director, Actors, Screenwriter, Genre
+   SEO partial (Plakton.bg)
+   - Title/description/canonical
+   - OG/Twitter
+   - JSON-LD:
+       * WebSite + SearchAction (home)
+       * BreadcrumbList
+       * Movie (+ VideoObject when stream present)
+       * ItemList for film list
+       * CollectionPage for posters grid
    ========= */ -}}
 
    {{- $site := site -}}
    {{- $p := . -}}
    
-{{- /* Title */ -}}
-{{- $title := cond .IsHome site.Title (printf "%s | %s" (or .Title .File.BaseFileName) site.Title) -}}
-
-{{- with .Params.film_title -}}
-  {{- $yearPart := "" -}}
-  {{- with $.Params.year }}{{ $yearPart = printf " (%v)" . }}{{ end -}}
-  {{- $title = printf "%s%s | %s" . $yearPart site.Title -}}
-{{- end -}}
-
+   {{/* ---------- Title ---------- */}}
+   {{- $title := cond .IsHome site.Title (printf "%s | %s" (or .Params.seo.title (or .Title .File.BaseFileName)) site.Title) -}}
+   {{- with .Params.film_title -}}
+     {{- $yearPart := "" -}}
+     {{- with $.Params.year }}{{ $yearPart = printf " (%v)" . }}{{ end -}}
+     {{- $title = printf "%s%s | %s" . $yearPart site.Title -}}
+   {{- end -}}
    
-   {{- /* Description */ -}}
-   {{- $desc := or $p.Params.description $p.Summary $site.Params.description -}}
+   {{/* ---------- Description ---------- */}}
+   {{- $desc := or $p.Params.seo.description $p.Params.description $p.Summary $site.Params.description -}}
    {{- $desc = $desc | plainify | truncate 160 -}}
    
-   {{- /* Canonical */ -}}
+   {{/* ---------- Canonical ---------- */}}
    {{- $canonical := $p.Permalink -}}
    
-   {{- /* Type, noindex, twitter card */ -}}
+   {{/* ---------- Type / robots / twitter card ---------- */}}
    {{- $seo := $p.Params.seo -}}
    {{- $type := cond $p.IsHome "website" "article" -}}
    {{- with $seo }}{{ with .type }}{{ $type = . }}{{ end }}{{ end -}}
@@ -34,23 +37,22 @@
    {{- $twitterCard := "summary_large_image" -}}
    {{- with $seo }}{{ with .twitterCard }}{{ $twitterCard = . }}{{ end }}{{ end -}}
    
-   {{- /* Images: prefer .Params.images[], else feature_image, thumbnail, else site default */ -}}
+   {{/* ---------- Images (absolute) ---------- */}}
    {{- $imgs := slice -}}
    {{- with $p.Params.images }}{{ $imgs = . }}{{ end -}}
    {{- if and (eq (len $imgs) 0) $p.Params.feature_image }}{{ $imgs = $imgs | append $p.Params.feature_image }}{{ end -}}
    {{- if and (eq (len $imgs) 0) $p.Params.thumbnail     }}{{ $imgs = $imgs | append $p.Params.thumbnail }}{{ end -}}
    {{- if and (eq (len $imgs) 0) $site.Params.seo.defaultImage }}{{ $imgs = $imgs | append $site.Params.seo.defaultImage }}{{ end -}}
    
-   {{- /* make absolute */ -}}
    {{- $absImgs := slice -}}
    {{- range $imgs }}{{ $absImgs = $absImgs | append (absURL .) }}{{ end -}}
    {{- $firstImg := cond (gt (len $absImgs) 0) (index $absImgs 0) "" -}}
    
-   {{- /* Dates */ -}}
+   {{/* ---------- Dates ---------- */}}
    {{- $published := $p.Date | time -}}
    {{- $modified  := or $p.Lastmod $p.Date | time -}}
    
-   {{- /* Locale / Twitter site */ -}}
+   {{/* ---------- Locale / Twitter ---------- */}}
    {{- $locale := or $site.Params.seo.locale $site.Language.LanguageCode -}}
    {{- $twitterSite := $site.Params.seo.twitterSite -}}
    
@@ -79,7 +81,62 @@
    <meta name="twitter:description" content="{{ $desc }}">
    {{- with $firstImg }}<meta name="twitter:image" content="{{ . }}">{{ end }}
    
-   {{- /* JSON-LD: Movie if we have film_title */ -}}
+   {{/* ---------- Author (if available) ---------- */}}
+   {{- with .Params.text_author }}<meta name="author" content="{{ . }}">{{ end }}
+   
+   {{/* ---------- If film has a playable stream, add OG video hints ---------- */}}
+   {{- $playPath := "" -}}
+   {{- with .Params.video_id }}
+     {{- $playPath = printf "https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/%s/iframe?preload=true" . -}}
+   {{- end -}}
+   {{- with .Params.video }}
+     {{- if not $playPath }}{{ $playPath = . }}{{ end -}}
+   {{- end -}}
+   {{- if $playPath }}
+     <meta property="og:video" content="{{ $playPath }}">
+     <meta property="og:video:type" content="text/html">
+     <meta property="og:video:secure_url" content="{{ $playPath }}">
+     <meta name="twitter:player" content="{{ $playPath }}">
+   {{- end }}
+   
+   {{/* ---------- JSON-LD: WebSite + SearchAction on home ---------- */}}
+   {{- if .IsHome -}}
+     {{- $org := site.Params.org -}}
+     {{- $web := dict
+           "@context" "https://schema.org"
+           "@type"    "WebSite"
+           "name"     site.Title
+           "url"      site.BaseURL
+           "potentialAction" (dict
+             "@type" "SearchAction"
+             "target" (printf "%s?q={search_term_string}" site.BaseURL)
+             "query-input" "required name=search_term_string"
+           )
+         -}}
+     {{- if $org }}
+       {{- $publisher := dict "@type" "Organization" "name" $org.name -}}
+       {{- with $org.logo }}{{ $publisher = merge $publisher (dict "logo" (absURL .)) }}{{ end -}}
+       {{- $web = merge $web (dict "publisher" $publisher) -}}
+     {{- end -}}
+     <script type="application/ld+json">{{ $web | jsonify }}</script>
+   {{- end }}
+   
+   {{/* ---------- JSON-LD: BreadcrumbList ---------- */}}
+   {{- $crumbs := slice
+         (dict "@type" "ListItem" "position" 1 "name" "Начало" "item" site.BaseURL) -}}
+   {{- with .CurrentSection }}
+     {{- $sectionURL := (absURL .RelPermalink) -}}
+     {{- $sectionName := or .Title (strings.Trim .Section "/") -}}
+     {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $sectionName "item" $sectionURL) -}}
+   {{- end -}}
+   {{- if not .IsHome }}
+     {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add 1 (len $crumbs)) "name" (or .Title .Params.film_title) "item" .Permalink) -}}
+   {{- end -}}
+   <script type="application/ld+json">
+   {{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs | jsonify }}
+   </script>
+   
+   {{/* ---------- JSON-LD: Movie (+VideoObject for stream) ---------- */}}
    {{- if $p.Params.film_title -}}
      {{- $mins := $p.Params.minutes | default 0 -}}
      {{- $duration := printf "PT%dM" $mins -}}
@@ -91,20 +148,81 @@
          {{- $actors = $actors | append (dict "@type" "Person" "name" (trim . " ")) -}}
        {{- end -}}
      {{- end -}}
-     {{- $json := dict
-         "@context" "https://schema.org"
-         "@type"   "Movie"
-         "name"    $p.Params.film_title
-         "datePublished" ($published | time.Format "2006-01-02")
-         "duration" $duration
-         "description" $desc
-         "image"  $absImgs
-       -}}
-     {{- if $dir }}{{ $json = merge $json (dict "director" (dict "@type" "Person" "name" $dir)) }}{{ end -}}
-     {{- if gt (len $actors) 0 }}{{ $json = merge $json (dict "actor" $actors) }}{{ end -}}
-     {{- with $p.Params.Genre }}{{ $json = merge $json (dict "genre" .) }}{{ end -}}
-     {{- with $p.Params.country }}{{ $json = merge $json (dict "countryOfOrigin" .) }}{{ end -}}
    
-     <script type="application/ld+json">{{ $json | jsonify }}</script>
+     {{- $movie := dict
+           "@context" "https://schema.org"
+           "@type"    "Movie"
+           "name"     $p.Params.film_title
+           "datePublished" ($published | time.Format "2006-01-02")
+           "duration" $duration
+           "description" $desc
+           "image"    $absImgs
+         -}}
+     {{- with $dir }}{{ $movie = merge $movie (dict "director" (dict "@type" "Person" "name" .)) }}{{ end -}}
+     {{- if gt (len $actors) 0 }}{{ $movie = merge $movie (dict "actor" $actors) }}{{ end -}}
+     {{- with $p.Params.Genre }}{{ $movie = merge $movie (dict "genre" .) }}{{ end -}}
+     {{- with $p.Params.country }}{{ $movie = merge $movie (dict "countryOfOrigin" .) }}{{ end -}}
+   
+     {{- if $playPath -}}
+       {{- $video := dict
+             "@type" "VideoObject"
+             "name"  (printf "%s — стрийм" $p.Params.film_title)
+             "embedUrl" $playPath
+             "thumbnailUrl" (cond (gt (len $absImgs) 0) $absImgs nil)
+             "description" $desc
+           -}}
+   
+       {{/* Optional stream window (expects YYYY-MM-DD or similar in front matter) */}}
+       {{- with $p.Params.stream_start }}{{ $video = merge $video (dict "uploadDate" .) }}{{ end -}}
+       {{- with $p.Params.stream_end   }}{{ $video = merge $video (dict "expires" .) }}{{ end -}}
+   
+       {{- $movie = merge $movie (dict
+             "potentialAction" (dict
+               "@type" "WatchAction"
+               "target" $playPath
+             )
+             "video" $video
+           ) -}}
+     {{- end -}}
+   
+     <script type="application/ld+json">{{ $movie | jsonify }}</script>
+   {{- end -}}
+   
+   {{/* ---------- JSON-LD: ItemList for film archive ---------- */}}
+   {{- if and (eq .Section "films") .IsSection -}}
+     {{- $items := slice -}}
+     {{- range .Pages.ByDate.Reverse -}}
+       {{- $items = $items | append (dict
+         "@type" "ListItem"
+         "position" (add 1 (len $items))
+         "url" (absURL .RelPermalink)
+         "name" (or .Params.film_title .Title)
+       ) -}}
+     {{- end -}}
+     <script type="application/ld+json">
+       {{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" $items | jsonify }}
+     </script>
+   {{- end -}}
+   
+   {{/* ---------- JSON-LD: CollectionPage for posters ---------- */}}
+   {{- if and (eq .Section "posters") .IsSection -}}
+     {{- $parts := slice -}}
+     {{- range .Pages.ByDate.Reverse -}}
+       {{- $img := or .Params.thumbnail (index .Params.images 0) -}}
+       {{- $parts = $parts | append (dict
+           "@type" "ImageObject"
+           "name"  .Params.title
+           "contentUrl" (absURL $img)
+           "url" (absURL .Permalink)
+         ) -}}
+     {{- end -}}
+     <script type="application/ld+json">
+       {{ dict
+         "@context" "https://schema.org"
+         "@type" "CollectionPage"
+         "name" (or .Title "Плакати")
+         "hasPart" $parts
+       | jsonify }}
+     </script>
    {{- end -}}
    

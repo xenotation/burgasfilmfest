@@ -15,3 +15,15 @@ theme = 'Burgas'
   defaultImage = "/img/og-default.jpg"   # put the file in /static/img/og-default.jpg
   twitterSite  = "@your_account"
   locale       = "bg_BG"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+  [params.org]
+  name = "Plakton"
+  url  = "https://plakton.bg/"
+  logo = "/img/logo-512.png"            # add this file under /static/img/
+  sameAs = [
+    "https://www.facebook.com/…",
+    "https://www.instagram.com/…"
+  ]
