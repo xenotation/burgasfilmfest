@@ -184,10 +184,7 @@
     border: 2px solid var(--color-fg);
     border-radius: 0 0 1rem 1rem;
   }
-  
-  .film-title-org p{
-    font-size: var(--font-size-3) !important;
-  }
+
 
 
   /* ribbon pinned top-left of the panel */

@@ -16,8 +16,10 @@
           <div class="film-title-list">
             {{ $element.Params.film_title }}
             {{ with $element.Params.film_title_org }}
-
-          {{ end }}
+              <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">
+                {{ . }}
+              </p>
+            {{ end }}
             <p class="film-details-hero">{{ $element.Params.Director }} · {{ $element.Params.year }} · {{ $element.Params.country }} · {{ $element.Params.minutes }} мин</p>
             <div class="film-author-subtext">
               текст от {{ $element.Params.text_author }}
@@ -35,6 +37,5 @@
     </article>
     {{ end }}
   </div>
-
 </section>
 {{ end }}
