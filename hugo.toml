@@ -8,7 +8,7 @@ theme = 'Burgas'
     unsafe = true
 
 [params]
-  description = "Официалният сайт на Burgas Film Festival."
+  description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
 
 [params.seo]
   site_name    = "Burgas Film Fest"
