@@ -130,7 +130,7 @@
   
   .watch-button {
     display: block;          /* not inline anymore */
-    width: 100%;             /* fill wrapper */
+
     text-align: center;      /* keep the text centered */
     background: var(--color-fg);
     color: var(--color-bg);

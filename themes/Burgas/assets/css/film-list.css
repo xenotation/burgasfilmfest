@@ -117,7 +117,7 @@
   .film-author-subtext {
     font-size: var(--font-size-3);
     font-weight: normal;
-    text-transform: lowercase;
+    text-transform:none;
   }
   
   .film-meta-list {

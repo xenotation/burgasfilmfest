@@ -15,9 +15,9 @@
         <a href="{{ $element.RelPermalink }}">
           <div class="film-title-list">
             {{ $element.Params.film_title }} ({{ $element.Params.year }})
-            <p class="film-details-hero">{{ $element.Params.country }} · {{ $element.Params.minutes }} мин</p>
+            <p class="film-details-hero">{{ $element.Params.country }} · {{ $element.Params.minutes }} мин · {{ $element.Params.Director }}</p>
             <div class="film-author-subtext">
-              текст от {{ lower $element.Params.text_author }}
+              текст от {{ $element.Params.text_author }}
             </div>
           </div>
         </a>
