@@ -8,9 +8,9 @@ minutes: 15
 date: 2025-08-03T11:43:54-05:00
 lastmod: 2025-08-03T11:43:54-05:00
 images:
-  - /img/screen__03.jpg
-thumbnail: /img/movie-poster-credits-178.jpg
-feature_image: /img/screen__03.jpg
+  - /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
+thumbnail: /img/9zxzgZbiLbHnzsf71OiTLMcM38J.webp
+feature_image: /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
 show_watch_button: true
 video_id: 2d3c0981ca7415f21955a5a7031994be
 stream_duration: 01.09.25 - 08.09.25
