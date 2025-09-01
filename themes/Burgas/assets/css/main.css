@@ -204,6 +204,10 @@ body {
   border: 0;
   pointer-events: none;
   z-index: -1;
+
+  transform: scale(1.12);
+  transform-origin: center center;
+  will-change: transform;
 }
 
 /* static dark overlay */
