@@ -28,11 +28,12 @@
 
             <div class="film-title-list">
               <div class="hero-film-title">
-                {{ .Params.film_title }} ({{ .Params.year }})
+                {{ .Params.film_title }}
               </div>
               <div class="film-author-subtext-hero">
+                <p class="film-details-hero-name">{{ .Params.Director }}</p>
                 <p class="film-details-hero">
-                  {{ .Params.country }} · {{ .Params.minutes }} мин
+                  {{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин
                 </p>
                 текст от {{ .Params.text_author }}
               </div>
