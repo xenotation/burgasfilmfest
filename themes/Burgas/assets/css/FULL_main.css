@@ -481,7 +481,7 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
 }
 
 .watch-button-wrapper {
-  margin-top: auto;
+
 }
 
 .watch-button {
@@ -492,6 +492,7 @@ filter: drop-shadow(2px 8px 4px #d6d6ec);
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s ease;
+  font-size: var(--font-size-3);
 }
 
 .watch-button:hover {
