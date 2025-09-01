@@ -22,33 +22,36 @@
         <p class="film-description">{{ .Params.description }}</p>
 
         <div class="film-credits-grid">
-          <!-- OLD -->
-          <!--
-          <div><strong>Director</strong><br>{{ .Params.Director }}</div>
-          …
-          -->
+          {{ with .Params.Director }}
+            <div class="credit">
+              <span class="credit-label">режисьор</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+            
+          {{ with .Params.Actors }}
+            <div class="credit">
+              <span class="credit-label">актьори</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
         
-          <!-- NEW -->
-          <div class="credit">
-            <span class="credit-label">режисьор</span>
-            <span class="credit-value">{{ .Params.Director }}</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">продуцент</span>
-            <span class="credit-value">{{ .Params.Producers }}</span>
-          </div>
-        
-          <div class="credit">
-            <span class="credit-label">актьори</span>
-            <span class="credit-value">{{ .Params.Actors }}</span>
-          </div>
-        
+          {{ with .Params.Screenwriter }}
+            <div class="credit">
+              <span class="credit-label">сценарист</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+
+          {{ with .Params.Production }}
           <div class="credit">
             <span class="credit-label">сценарист</span>
-            <span class="credit-value">{{ .Params.Screenwriter }}</span>
+            <span class="credit-value">{{ . }}</span>
           </div>
+        {{ end }}
+
         </div>
+        
         
 
         {{ if .Params.show_watch_button }}

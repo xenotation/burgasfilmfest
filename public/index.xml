@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Плактон</title>
     <link>http://192.168.0.103:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Плактон</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Aug 2025 11:43:54 -0500</lastBuildDate>
     <atom:link href="http://192.168.0.103:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test ime 99 Test 99 Test 99 Test</title>
+      <title>Плаване</title>
       <link>http://192.168.0.103:1313/films/2024-test-film-name-01/</link>
       <pubDate>Sun, 03 Aug 2025 11:43:54 -0500</pubDate>
       <guid>http://192.168.0.103:1313/films/2024-test-film-name-01/</guid>
-      <description>Заглавие Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et.</description>
+      <description></description>
     </item>
     <item>
       <title>Metropolis</title>

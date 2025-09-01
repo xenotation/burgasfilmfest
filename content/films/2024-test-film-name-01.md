@@ -1,8 +1,10 @@
 ---
-title: Test ime 99 Test 99 Test 99 Test
-film_title: Test ime 99 Test 99 Test 99 Test
-country: OPAOPAOPA
-minutes: 23
+title: Плаване
+film_title: Плаване
+country: Белгия
+Director: "Леви Ступс"
+Production: "Лунаниме"
+minutes: 15
 date: 2025-08-03T11:43:54-05:00
 lastmod: 2025-08-03T11:43:54-05:00
 images:
@@ -11,34 +13,22 @@ thumbnail: /img/movie-poster-credits-178.jpg
 feature_image: /img/screen__03.jpg
 show_watch_button: true
 video_id: 2d3c0981ca7415f21955a5a7031994be
-stream_duration: 25.06-28.07
-director: Gosho Kazana
+stream_duration: 01.09.25 - 08.09.25
+
 type: films
 video: https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/2d3c0981ca7415f21955a5a7031994be/iframe?preload=true
+
+hero_video_id: "14a87ae31040bff5afad85f3330ef4db"
+
 image: /img/screen__03.jpg
-year: 2069
-description: Test za kratuk opis
-Actors: Gosho Kazana, Gosho Kazana, Gosho Kazana
-text_author: Pisatel Teksta
+year: 2023
+description: "Двама души, изгубени в морето, водят кървава битка както за оцеляването си, така и за спасяването на връзката си."
+
+text_author: Дони Георгиев
 seo:
-  title: Test ime 99 Test 99 Test 99 Test
-  description: Test za kratuk opis
+  title: Drijf
+  description: "Двама души, изгубени в морето, водят кървава битка както за оцеляването си, така и за спасяването на връзката си."
   image: /img/screen__03.jpg
-  stream_start: 2025-06-25        # NEW
-stream_end:   2025-07-28        # NEW
+  stream_start: 2025-09-01        # NEW
+stream_end:   2025-09-08        # NEW
 ---
-
-# Заглавие
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis felis, porttitor et fringilla at, bibendum vitae quam. Aenean ac commodo eros. Nam eu malesuada lorem, id placerat urna. Mauris pulvinar turpis sed viverra lacinia. Duis ornare consequat libero. Donec ac elit commodo, porta lorem tempor, semper ipsum. Morbi et justo eget justo hendrerit molestie. Pellentesque rhoncus leo id dui rutrum, ut congue sem consequat. Integer dapibus quam velit, posuere hendrerit lorem fermentum et. Morbi tincidunt lacus tellus, vitae cursus tortor pulvinar in.
-
-![Кадър от филма](/img/movie-poster-credits-178.jpg)
-
-Maecenas rutrum feugiat lorem, nec tincidunt dui. Vestibulum condimentum diam sit amet orci vestibulum, sit amet accumsan arcu cursus. Nunc viverra nibh quis aliquet feugiat. Ut tincidunt gravida blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Curabitur semper sodales massa in semper.
-
-Nulla tincidunt hendrerit dolor, vitae elementum dui elementum sit amet. Etiam consectetur lobortis felis et mollis. Proin in orci eu mi bibendum lobortis sit amet in eros. Quisque porttitor scelerisque purus, blandit egestas sem condimentum eu. Duis magna eros, volutpat ut nisi quis, finibus auctor dolor. Pellentesque dictum at diam id tristique. Aliquam scelerisque auctor elit in accumsan. Mauris malesuada mi et facilisis auctor. Vestibulum congue vestibulum turpis, at mattis risus ornare in. Vivamus sit amet blandit odio, in efficitur odio.
-
-Curabitur euismod sollicitudin sem non feugiat. Quisque in volutpat magna. Vivamus eget quam neque. Sed vitae ex sed mi faucibus dictum sit amet quis enim. Duis auctor porttitor vulputate. Maecenas sit amet sapien vulputate, sodales ligula in, porta nisi. Ut et felis hendrerit, volutpat massa sit amet, porttitor risus. Mauris nec metus sem. Integer molestie tortor quis metus pretium, non cursus magna lacinia. Phasellus convallis sodales enim, sed vulputate mauris venenatis vitae. Nam feugiat, metus non dapibus auctor, dui leo tincidunt ex, vitae tempus augue lorem eu orci. Phasellus nec metus ut neque tincidunt rutrum ac sed mi. Morbi rhoncus, sem non sollicitudin cursus, tellus nibh eleifend nisi, eget porttitor turpis odio et ipsum.
-
-Quisque est est, tincidunt nec suscipit eget, scelerisque sit amet nisl. Etiam at bibendum augue, aliquam interdum dolor. Quisque id sapien dictum, sodales odio ornare, pulvinar erat. Integer non arcu placerat erat consequat posuere ac non tellus. Cras vel quam lobortis, tincidunt lorem in, convallis nibh. Fusce sed tempor magna, ac fringilla neque. Etiam ut tristique orci. Pellentesque eget nibh at elit blandit imperdiet. Sed pharetra fermentum nibh a vestibulum. Praesent molestie varius lectus. Nam tempus consectetur ligula in maximus. Proin risus nisl, mollis nec volutpat et, varius quis lacus. Phasellus pretium, ex cursus pulvinar rutrum, enim justo luctus nulla, vel porttitor libero orci ac arcu. Maecenas a massa condimentum ligula varius accumsan.
-Generated 5 paragraphs, 441 words, 2961 bytes of Lorem Ipsum

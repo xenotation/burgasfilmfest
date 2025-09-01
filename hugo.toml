@@ -1,6 +1,6 @@
 baseURL = 'https://burgas-69.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Плактон'
 theme = 'Burgas'
 
 [markup.goldmark]

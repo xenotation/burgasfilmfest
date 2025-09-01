@@ -37,8 +37,18 @@
     text-align: justify;
     column-count: 2;
     column-gap: 3rem;
+    column-fill: balance; 
   }
   
+  .about-content p {
+    /* keep each paragraph in a single column */
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid; /* Safari/Chrome */
+    page-break-inside: avoid;            /* print fallback */
+    hyphens: auto;                        /* nicer line breaks */
+  }
+  
+
   /* Responsive single column on narrow screens */
   @media (max-width: 800px) {
     .about-content {
