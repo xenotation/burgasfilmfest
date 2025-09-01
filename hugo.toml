@@ -1,6 +1,6 @@
 baseURL = 'https://burgas-69.netlify.app/'
 languageCode = 'en-us'
-title = 'Плактон'
+title = 'Планктон'
 theme = 'Burgas'
 
 [markup.goldmark]
