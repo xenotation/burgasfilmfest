@@ -12,7 +12,7 @@ images:
   - /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
 thumbnail: /img/Drijf.jpeg
 feature_image: /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
-show_watch_button: true
+show_watch_button: false
 video_id: 2d3c0981ca7415f21955a5a7031994be
 stream_duration: 01.09.25 - 08.09.25
 
