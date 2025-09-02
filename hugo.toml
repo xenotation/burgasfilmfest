@@ -25,5 +25,5 @@ theme = 'Burgas'
   logo = "/img/logo-512.png"            # add this file under /static/img/
   sameAs = [
     "https://www.facebook.com/burgasfilmfest",
-    "https://www.facebook.com/burgasfilmfest"
+    "https://www.instagram.com/plankton_space/"
   ]

@@ -308,8 +308,8 @@ body {
   z-index: -1;
   pointer-events: none;
 
-  width: 200%;
-  height: 200vh;
+  width: 500%;
+  height: 500vh;
 
   background: transparent url('https://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
   animation: bg-animation .25s steps(10) infinite;
