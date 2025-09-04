@@ -28,4 +28,8 @@ _Планктон е дигитален канал на Бургас Филм Ф
 
 **Контакт**
 <br/>
-<a href="mailto:zdrasti@plankton.bg">zdrasti@plankton.bg</a>
+<a href="mailto:d.georgiev@burgasfilmfest.com ">d.georgiev@burgasfilmfest.com </a>
+<br/>
+<a href="mailto:info@burgasfilmfest.com">info@burgasfilmfest.com</a>
+
+
