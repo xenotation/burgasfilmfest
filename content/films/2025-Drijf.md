@@ -19,14 +19,14 @@ stream_duration: 01.09.25 - 08.09.25
 type: films
 video: https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/2d3c0981ca7415f21955a5a7031994be/iframe?preload=true
 
-hero_video_id: "92d9ffb2ccbc8116844b60322e39442e"
+hero_video_id: "7a587a49c9cf21aae8842ed12565765a"
 signed_token: "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1ZjFmNzFkYjQyNmRkZDNkZDk4NGZjMzdlZTllOGJmIn0.eyJzdWIiOiI3NWQ3NDJiNDE5ZDQyZTA0ZGRhZWQ5OTMxYzhjNWY1MyIsImtpZCI6IjM1ZjFmNzFkYjQyNmRkZDNkZDk4NGZjMzdlZTllOGJmIiwiZXhwIjoiMTc1NjgwMzYzNyIsIm5iZiI6IjE3NTY3OTY0MzciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX1dfQ.ZBEf6iKdRRUQs0ZWsa9rcbIMsW2rlkfxDw7ox-Pw-JyadIv60vxgXTCmfJyMD6b4eq4LzvBillF8Z_Zkc2OSKB1SvKgYRg4s0oD4ipmGglZr7rxoaF9GREwg4wWBWCkioxLugpAMHvhm_3pFqxvN_qBAJ7Mxz4yzAGd6FKtjh0moTTHlt5sQ84C0_FcyK_QmfO04erD2Oe_YMRcRWxBN6BCeqqXV_tzYLdfJsRGokJBs-VDv_0Et_lIppMLDtpJJy9f_fzSgU_HVhK4HyxK4ys7fZACnCpuGgWTA4j9A_8ZFvlKLGlkyzBlWSzk6bV_G3EWdrsR430O2I2P8WwvUhA"
 
 image: /img/screen__03.jpg
 year: 2023
 description: "Двама души, изгубени в морето, водят кървава битка както за оцеляването си, така и за спасяването на връзката си."
 
-text_author: "интервю с Леви Ступс"
+text_author: "Леви Ступс"
 seo:
   title: Drijf
   description: "Двама души, изгубени в морето, водят кървава битка както за оцеляването си, така и за спасяването на връзката си."
