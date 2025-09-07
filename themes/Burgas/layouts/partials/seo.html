@@ -43,6 +43,7 @@
    {{- if and (eq (len $imgs) 0) $p.Params.feature_image }}{{ $imgs = $imgs | append $p.Params.feature_image }}{{ end -}}
    {{- if and (eq (len $imgs) 0) $p.Params.thumbnail     }}{{ $imgs = $imgs | append $p.Params.thumbnail }}{{ end -}}
    {{- if and (eq (len $imgs) 0) $site.Params.seo.defaultImage }}{{ $imgs = $imgs | append $site.Params.seo.defaultImage }}{{ end -}}
+   {{- if eq (len $imgs) 0 }}{{ $imgs = $imgs | append "/img/og-default.jpg" }}{{ end -}}
    
    {{- $absImgs := slice -}}
    {{- range $imgs }}{{ $absImgs = $absImgs | append (absURL .) }}{{ end -}}
@@ -172,7 +173,6 @@
              "description" $desc
            -}}
    
-       {{/* Optional stream window (expects YYYY-MM-DD or similar in front matter) */}}
        {{- with $p.Params.stream_start }}{{ $video = merge $video (dict "uploadDate" .) }}{{ end -}}
        {{- with $p.Params.stream_end   }}{{ $video = merge $video (dict "expires" .) }}{{ end -}}
    
