@@ -16,41 +16,60 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Fetch signed token (BG-only, 24h)
+      # DEBUGGED FETCH STEP – prints HTTP status + response body
+      - name: Fetch signed token (BG-only, 24h) — debug
         id: token
         env:
           ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
           VIDEO_ID:   ${{ vars.CF_VIDEO_ID }}
         run: |
-          JSON='{
-            "ttl": 1440,
-            "accessRules": [
-              { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] }
-            ]
-          }'
-          RESP=$(curl --silent --fail \
-            --request POST \
-            "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/stream/$VIDEO_ID/token" \
-            --header "Authorization: Bearer $API_TOKEN" \
-            --header "Content-Type: application/json" \
-            --data "$JSON")
-          echo "API response: $RESP"
-          TOKEN=$(echo "$RESP" | jq -r '.result.token')
-          if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
-            echo "No token found"; exit 1
+          set -e
+          JSON='{"ttl":1440,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
+          echo "Requesting token for video: $VIDEO_ID"
+          echo "Request body: $JSON"
+
+          TMP_BODY="$(mktemp)"
+          HTTP_CODE=$(
+            curl -sS -o "$TMP_BODY" -w "%{http_code}" \
+              --request POST \
+              "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/stream/$VIDEO_ID/token" \
+              --header "Authorization: Bearer $API_TOKEN" \
+              --header "Content-Type: application/json" \
+              --data "$JSON"
+          )
+
+          echo "HTTP status: $HTTP_CODE"
+          echo "Response body:"
+          cat "$TMP_BODY" || true
+          echo
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "Non-200 from Cloudflare; stopping."
+            exit 1
           fi
+
+          TOKEN=$(jq -r '.result.token' < "$TMP_BODY")
+          if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
+            echo "No token in response; stopping."
+            exit 1
+          fi
+
           echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
 
+      # Only run these if we actually have a token
       - name: Update front matter signed_token
+        if: ${{ success() && steps.token.outputs.token != '' }}
         env:
           CONTENT_FILE: ${{ vars.CONTENT_FILE_PATH }}
           TOKEN: ${{ steps.token.outputs.token }}
         run: |
-          perl -0777 -i -pe 's/(^|\n)\s*signed_token:\s*"(?:[^"\\]|\\.)*"/$1signed_token: "'$TOKEN'"/s' "$CONTENT_FILE"
+          perl -0777 -i -pe 's/(^|\n)\s*signed_token:\s*"(?:[^"\\]|\\.)*"/$1signed_token: "'$TOKEN'"/s' "$CONTENT_FILE" \
+          || (echo "Front matter replacement failed; check CONTENT_FILE_PATH." && exit 1)
           echo "Updated $CONTENT_FILE"
 
       - name: Commit & push changes
+        if: ${{ success() && steps.token.outputs.token != '' }}
         run: |
           if ! git diff --quiet; then
             git config user.name  "token-bot"
@@ -63,10 +82,12 @@ jobs:
           fi
 
       - name: Trigger Netlify build
-        if: always()
+        if: ${{ always() }}
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
           if [ -n "$NETLIFY_BUILD_HOOK" ]; then
             curl -s -X POST "$NETLIFY_BUILD_HOOK" || true
+          else
+            echo "No NETLIFY_BUILD_HOOK secret set; skipping."
           fi
