@@ -1,7 +1,7 @@
 ---
-date: 2023-12-29T11:43:54-05:00
-title: "Плаване"
+title: Drijf
+author: Levi Stoops
 year: 2023
-author: "Леви Ступс"
-thumbnail: "/img/Drijf.jpeg"
+thumbnail: /img/Drijf.jpeg
+date: 2023-12-29T11:43:54-05:00
 ---
