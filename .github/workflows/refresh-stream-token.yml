@@ -2,8 +2,15 @@ name: Refresh Cloudflare Stream Token (BG-only)
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # every 12 hours
-  workflow_dispatch:         # allow manual run
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stream-token
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -12,11 +19,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # <-- needed for rebase on main
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      # DEBUGGED FETCH STEP – prints HTTP status + response body
       - name: Fetch signed token (BG-only, 24h) — debug
         id: token
         env:
@@ -27,7 +35,6 @@ jobs:
           set -e
           JSON='{"ttl":1440,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
           echo "Requesting token for video: $VIDEO_ID"
-          echo "Request body: $JSON"
 
           TMP_BODY="$(mktemp)"
           HTTP_CODE=$(
@@ -38,56 +45,47 @@ jobs:
               --header "Content-Type: application/json" \
               --data "$JSON"
           )
-
           echo "HTTP status: $HTTP_CODE"
-          echo "Response body:"
-          cat "$TMP_BODY" || true
-          echo
-
-          if [ "$HTTP_CODE" != "200" ]; then
-            echo "Non-200 from Cloudflare; stopping."
-            exit 1
-          fi
+          cat "$TMP_BODY" || true; echo
+          [ "$HTTP_CODE" = "200" ] || exit 1
 
           TOKEN=$(jq -r '.result.token' < "$TMP_BODY")
-          if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
-            echo "No token in response; stopping."
-            exit 1
-          fi
-
+          [ -n "$TOKEN" ] && [ "$TOKEN" != "null" ] || exit 1
           echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
 
-      # Only run these if we actually have a token
       - name: Update front matter signed_token
         if: ${{ success() && steps.token.outputs.token != '' }}
         env:
           CONTENT_FILE: ${{ vars.CONTENT_FILE_PATH }}
           TOKEN: ${{ steps.token.outputs.token }}
         run: |
-          perl -0777 -i -pe 's/(^|\n)\s*signed_token:\s*"(?:[^"\\]|\\.)*"/$1signed_token: "'$TOKEN'"/s' "$CONTENT_FILE" \
-          || (echo "Front matter replacement failed; check CONTENT_FILE_PATH." && exit 1)
+          perl -0777 -i -pe 's/(^|\n)\s*signed_token:\s*"(?:[^"\\]|\\.)*"/$1signed_token: "'$TOKEN'"/s' "$CONTENT_FILE"
           echo "Updated $CONTENT_FILE"
 
-      - name: Commit & push changes
+      - name: Commit, rebase & push
         if: ${{ success() && steps.token.outputs.token != '' }}
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}   # usually 'main'
         run: |
-          if ! git diff --quiet; then
-            git config user.name  "token-bot"
-            git config user.email "actions@users.noreply.github.com"
-            git add -A
-            git commit -m "chore: refresh Cloudflare Stream signed_token (BG-only, 24h)"
-            git push
-          else
-            echo "No changes to commit."
-          fi
+          set -e
+          git config user.name  "token-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: refresh Cloudflare Stream signed_token (BG-only, 24h)" || echo "No changes to commit"
+
+          # rebase onto latest remote main to avoid non-fast-forward
+          git fetch origin "$BRANCH_NAME"
+          git pull --rebase origin "$BRANCH_NAME" || true
+          # push to the same branch
+          git push origin HEAD:"$BRANCH_NAME"
 
       - name: Trigger Netlify build
-        if: ${{ always() }}
+        if: always()
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
           if [ -n "$NETLIFY_BUILD_HOOK" ]; then
             curl -s -X POST "$NETLIFY_BUILD_HOOK" || true
           else
-            echo "No NETLIFY_BUILD_HOOK secret set; skipping."
+            echo "No NETLIFY_BUILD_HOOK; skipping."
           fi
