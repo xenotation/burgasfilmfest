@@ -1,117 +1,14 @@
-<!doctype html>
-<html lang="bg">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <!-- Optional Netlify Identity (if you use it) -->
+    <!-- Include the script that enables Netlify Identity on this page. -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Decap CMS -->
+    <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <script>
-      /* ---- Load your site CSS into the preview iframe ----
-         Make sure these files exist under /static/css/  */
-      CMS.registerPreviewStyle("/css/main.css");
-      CMS.registerPreviewStyle("/css/film-single.css");
-      CMS.registerPreviewStyle("/css/posters.css");
-      CMS.registerPreviewStyle("/css/about.css");
-
-      // Film preview that mirrors layouts/_default/single.html (film single)
-      const FilmPreview = ({ entry, widgetFor }) => {
-        const data = entry.getIn(["data"]).toJS();
-
-        const playPath =
-          (data.signed_token && String(data.signed_token).trim()) ||
-          (data.video_id || "");
-
-        const html = `
-          <article class="film-single">
-            <div class="film-inner">
-              <div class="film-top">
-                <div class="film-poster">
-                  <img src="${data.thumbnail || ""}" alt="${data.film_title || ""}">
-                </div>
-
-                <div class="film-meta-single">
-                  <h1 class="film-title-single">
-                    ${data.film_title || ""}
-                    ${
-                      data.film_title_org
-                        ? `<p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">${data.film_title_org}</p>`
-                        : ""
-                    }
-                  </h1>
-
-                  <p class="film-details">
-                    ${data.year ?? ""} · ${data.country ?? ""} · ${data.minutes ?? ""} мин.
-                  </p>
-
-                  <p class="film-description">${data.description || ""}</p>
-
-                  <div class="film-credits-grid">
-                    ${
-                      data.Director
-                        ? `<div class="credit"><span class="credit-label">режисьор</span><span class="credit-value">${data.Director}</span></div>`
-                        : ""
-                    }
-                    ${
-                      data.Actors
-                        ? `<div class="credit"><span class="credit-label">актьори</span><span class="credit-value">${data.Actors}</span></div>`
-                        : ""
-                    }
-                    ${
-                      data.Screenwriter
-                        ? `<div class="credit"><span class="credit-label">сценарист</span><span class="credit-value">${data.Screenwriter}</span></div>`
-                        : ""
-                    }
-                    ${
-                      data.Production
-                        ? `<div class="credit"><span class="credit-label">продуцент</span><span class="credit-value">${data.Production}</span></div>`
-                        : ""
-                    }
-                  </div>
-
-                  ${
-                    data.show_watch_button
-                      ? `<div class="watch-button-wrapper">
-                           <a class="watch-button"
-                              href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/${playPath}/iframe?preload=true&autoplay=true"
-                              onclick="return false;">гледай</a>
-                         </div>`
-                      : ""
-                  }
-                </div>
-              </div>
-
-              <div class="film-body">
-                ${widgetFor("body") || ""}
-              </div>
-            </div>
-          </article>
-        `;
-
-        // Return a string (Decap will inject it)
-        return html;
-      };
-
-      CMS.registerPreviewTemplate("films", FilmPreview);
-
-      // About page preview (uses your body styles)
-      CMS.registerPreviewTemplate("pages", ({ entry, widgetFor }) => {
-        const data = entry.getIn(["data"]).toJS();
-        return `
-          <section class="about-wrapper">
-            <div class="about-inner">
-              ${data.header_image ? `<img class="about-hero" src="${data.header_image}" alt="${data.title || "За нас"}">` : ""}
-              <h1 class="about-title">${data.title || "За нас"}</h1>
-              <div class="about-content">${widgetFor("body") || ""}</div>
-            </div>
-          </section>
-        `;
-      });
-    </script>
   </body>
 </html>
