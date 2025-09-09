@@ -60,18 +60,18 @@
         
 
         {{ if .Params.show_watch_button }}
-        {{ $playPath := .Params.video_id }}
-        {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }}
-      
         <div class="watch-button-wrapper">
           <a class="watch-button"
-             href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true"
+             href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ .Params.video_id }}/iframe?preload=true&autoplay=true{{ with .Params.signed_token }}&token={{ . | urlquery }}{{ end }}"
              data-dimbox
              data-dimbox-type="iframe"
              data-dimbox-class="dimbox-full">
             гледай
           </a>
         </div>
+      {{ end }}
+
+      
       {{ end }}
       </div>
     </div>
