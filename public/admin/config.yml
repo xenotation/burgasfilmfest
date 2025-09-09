@@ -31,62 +31,81 @@ collections:
     label: "Films"
     folder: "content/films"
     create: true
-    # Example: 2069-test-ime-2069
     slug: "{{year}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
       # Basics / routing
-      - { label: "Page Title", name: "title", widget: "string" }                # e.g. "Test ime (2069)"
-      - { label: "Film Title", name: "film_title", widget: "string" }           # e.g. "Test ime"
-      - { label: "URL Slug", name: "slug", widget: "string", required: false }  # optional override
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Film Title (BG)", name: "film_title", widget: "string" }
+      - { label: "Film Title (Original)", name: "film_title_org", widget: "string", required: false }
+      - { label: "URL Slug (optional)", name: "slug", widget: "string", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "Type", name: "type", widget: "hidden", default: "films" }
 
       # Canonical film info
       - { label: "Country", name: "country", widget: "string" }
-      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Director", name: "Director", widget: "string", required: false }
+      - { label: "Production", name: "Production", widget: "string", required: false }
       - { label: "Minutes", name: "minutes", widget: "number" }
+      - { label: "Year", name: "year", widget: "number" }
       - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Text Author (e.g. interview credit)", name: "text_author", widget: "string", required: false }
 
       # Dates
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Last Modified", name: "lastmod", widget: "datetime", required: false }
 
-      # Images
-      - label: "Images (array)"
+      # Images (array of image URLs)
+      - label: "Images"
         name: "images"
         widget: "list"
         allow_add: true
+        collapsed: false
         field:
           label: "Image"
-          name: "image"
+          name: "image_item"
           widget: "image"
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Feature Image", name: "feature_image", widget: "image", required: false }
+      - { label: "Fallback Image (single)", name: "image", widget: "image", required: false }
 
       # Video / streaming
-      - { label: "Watch Button Visible", name: "show_watch_button", widget: "boolean", default: true, required: false }
-      - { label: "Video ID", name: "video_id", widget: "string", required: false }
+      - { label: "Show Watch Button", name: "show_watch_button", widget: "boolean", default: true, required: false }
+      - { label: "Cloudflare Stream Video ID", name: "video_id", widget: "string", required: false }
       - { label: "Hero Video ID", name: "hero_video_id", widget: "string", required: false }
-      - { label: "Stream Duration (ribbon)", name: "stream_duration", widget: "string", required: false }
-
-      # Credits (keep both forms if your templates read either)
-      - { label: "director", name: "director", widget: "string", required: false }
-      - { label: "Producers", name: "Producers", widget: "string", required: false }
-      - { label: "Actors", name: "Actors", widget: "string", required: false }
-      - { label: "Screenwriter", name: "Screenwriter", widget: "string", required: false }
-      - { label: "Genre", name: "Genre", widget: "string", required: false }
-      - { label: "Text Author", name: "text_author", widget: "string", required: false }
+      - { label: "Iframe URL (optional)", name: "video", widget: "string", required: false }
+      - { label: "Stream Duration (ribbon text)", name: "stream_duration", widget: "string", required: false }
+      - { label: "Signed Token (JWT)", name: "signed_token", widget: "text", required: false, hint: "Paste Cloudflare Stream signed token (region/IP rules). Keep private." }
 
       # Page body
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
-      # SEO (optional, matches your front matter)
+      # SEO
       - label: "SEO"
         name: "seo"
         widget: "object"
         required: false
         fields:
-          - { label: "Type", name: "type", widget: "select", options: ["article","website","video.other"], default: "article", required: false }
-          - { label: "Twitter Card", name: "twitterCard", widget: "select", options: ["summary","summary_large_image"], default: "summary_large_image", required: false }
-          - { label: "Noindex", name: "noindex", widget: "boolean", default: false, required: false }
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Stream Start", name: "stream_start", widget: "date", required: false }
+          - { label: "Stream End", name: "stream_end", widget: "date", required: false }
+
+  # -------------------------
+  # Pages (About)
+  # -------------------------
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About"
+        file: "content/about/_index.md"
+        format: "frontmatter"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Image", name: "header_image", widget: "image", required: false }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Layout", name: "layout", widget: "string", default: "single", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
