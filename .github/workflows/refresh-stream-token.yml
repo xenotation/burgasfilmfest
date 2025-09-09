@@ -1,0 +1,72 @@
+name: Refresh Cloudflare Stream Token (BG-only)
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # every 12 hours
+  workflow_dispatch:         # allow manual run
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Fetch signed token (BG-only, 24h)
+        id: token
+        env:
+          ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+          VIDEO_ID:   ${{ vars.CF_VIDEO_ID }}
+        run: |
+          JSON='{
+            "ttl": 1440,
+            "accessRules": [
+              { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] }
+            ]
+          }'
+          RESP=$(curl --silent --fail \
+            --request POST \
+            "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/stream/$VIDEO_ID/token" \
+            --header "Authorization: Bearer $API_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data "$JSON")
+          echo "API response: $RESP"
+          TOKEN=$(echo "$RESP" | jq -r '.result.token')
+          if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
+            echo "No token found"; exit 1
+          fi
+          echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
+
+      - name: Update front matter signed_token
+        env:
+          CONTENT_FILE: ${{ vars.CONTENT_FILE_PATH }}
+          TOKEN: ${{ steps.token.outputs.token }}
+        run: |
+          perl -0777 -i -pe 's/(^|\n)\s*signed_token:\s*"(?:[^"\\]|\\.)*"/$1signed_token: "'$TOKEN'"/s' "$CONTENT_FILE"
+          echo "Updated $CONTENT_FILE"
+
+      - name: Commit & push changes
+        run: |
+          if ! git diff --quiet; then
+            git config user.name  "token-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: refresh Cloudflare Stream signed_token (BG-only, 24h)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Trigger Netlify build
+        if: always()
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -n "$NETLIFY_BUILD_HOOK" ]; then
+            curl -s -X POST "$NETLIFY_BUILD_HOOK" || true
+          fi
