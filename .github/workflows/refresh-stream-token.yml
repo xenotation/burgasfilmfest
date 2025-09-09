@@ -2,11 +2,12 @@ name: Refresh Cloudflare Stream Token (BG-only)
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */12 * * *"   # every 12 hours
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write        # commit to a branch
+  pull-requests: write   # open/merge PRs
 
 concurrency:
   group: refresh-stream-token
@@ -20,11 +21,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0        # <-- needed for rebase on main
+          fetch-depth: 0
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      # Fetch a BG-only token with TTL 24h — prints HTTP status + body for debugging
       - name: Fetch signed token (BG-only, 24h) — debug
         id: token
         env:
@@ -35,7 +37,6 @@ jobs:
           set -e
           JSON='{"ttl":1440,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
           echo "Requesting token for video: $VIDEO_ID"
-
           TMP_BODY="$(mktemp)"
           HTTP_CODE=$(
             curl -sS -o "$TMP_BODY" -w "%{http_code}" \
@@ -48,7 +49,6 @@ jobs:
           echo "HTTP status: $HTTP_CODE"
           cat "$TMP_BODY" || true; echo
           [ "$HTTP_CODE" = "200" ] || exit 1
-
           TOKEN=$(jq -r '.result.token' < "$TMP_BODY")
           [ -n "$TOKEN" ] && [ "$TOKEN" != "null" ] || exit 1
           echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
@@ -62,30 +62,42 @@ jobs:
           perl -0777 -i -pe 's/(^|\n)\s*signed_token:\s*"(?:[^"\\]|\\.)*"/$1signed_token: "'$TOKEN'"/s' "$CONTENT_FILE"
           echo "Updated $CONTENT_FILE"
 
-      - name: Commit, rebase & push
+      # Create a PR from a throwaway branch
+      - name: Create PR with changes
         if: ${{ success() && steps.token.outputs.token != '' }}
-        env:
-          BRANCH_NAME: ${{ github.ref_name }}   # usually 'main'
-        run: |
-          set -e
-          git config user.name  "token-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -A
-          git commit -m "chore: refresh Cloudflare Stream signed_token (BG-only, 24h)" || echo "No changes to commit"
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh Cloudflare Stream signed_token (BG-only, 24h)"
+          branch: chore/refresh-stream-token
+          title: "Refresh Stream signed_token (BG-only, 24h)"
+          body: |
+            Automated token refresh:
+            - Video: `${{ vars.CF_VIDEO_ID }}`
+            - File:  `${{ vars.CONTENT_FILE_PATH }}`
+            - Geo:   BG only
+            - TTL:   1440 min
+          labels: automation, cloudflare, token
+          delete-branch: true
+          draft: false
 
-          # rebase onto latest remote main to avoid non-fast-forward
-          git fetch origin "$BRANCH_NAME"
-          git pull --rebase origin "$BRANCH_NAME" || true
-          # push to the same branch
-          git push origin HEAD:"$BRANCH_NAME"
+      # Turn on auto-merge for that PR (requires repo setting "Allow auto-merge")
+      - name: Enable PR auto-merge
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
 
-      - name: Trigger Netlify build
-        if: always()
+      # (Optional) Try to merge immediately via gh if no required checks block it.
+      - name: Try immediate merge (best-effort)
+        if: ${{ steps.cpr.outputs.pull-request-url }}
         env:
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+          PR_URL: ${{ steps.cpr.outputs.pull-request-url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ -n "$NETLIFY_BUILD_HOOK" ]; then
-            curl -s -X POST "$NETLIFY_BUILD_HOOK" || true
-          else
-            echo "No NETLIFY_BUILD_HOOK; skipping."
-          fi
+          gh pr merge "$PR_URL" --squash --delete-branch --auto || true
+
+      # NOTE: We do NOT trigger Netlify here, because it would fire before merge.
+      # Netlify will build automatically after the PR merges to main (via your Git integration or webhook).
