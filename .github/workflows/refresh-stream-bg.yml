@@ -95,34 +95,24 @@ jobs:
           PY
 
       - name: Require signed URLs for this video
-  env:
-    CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-    CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-    VID: ${{ steps.pick.outputs.video_id }}
-  run: |
-    set -Eeuo pipefail
-    echo "Preflight: GET video ${VID} in account ${CF_ACCOUNT_ID}"
-    PRE=$(curl -sS \
-      -H "Authorization: Bearer ${CF_API_TOKEN}" \
-      "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}")
-    echo "$PRE" | jq .
-
-    if [ "$(echo "$PRE" | jq -r '.success')" != "true" ]; then
-      echo "::error::Video ${VID} not found in account ${CF_ACCOUNT_ID}. Update the video_id to a UID from this account."
-      exit 1
-    fi
-
-    RESP=$(curl -sS -X PATCH \
-      -H "Authorization: Bearer ${CF_API_TOKEN}" \
-      -H "Content-Type: application/json" \
-      "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
-      --data '{"requireSignedURLs": true}')
-
-    echo "$RESP" | jq .
-    echo "$RESP" | jq -e '.success == true' >/dev/null || {
-      echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
-      exit 1
-    }
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          VID: ${{ steps.pick.outputs.video_id }}
+        run: |
+          set -Eeuo pipefail
+          BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
+          echo "Request body:"; echo "$BODY" | jq .
+          RESP=$(curl -sS -X POST \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
+            --data "$BODY")
+          echo "Response:"; echo "$RESP" | jq .
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            exit 1
+          }
 
       - name: Create signed playback token (BG allowlist, 24h)
         id: sign
