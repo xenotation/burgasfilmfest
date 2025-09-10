@@ -1,11 +1,13 @@
 name: Refresh Cloudflare Stream Token (BG-only)
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   schedule:
-    - cron: "0 0 * * *"   # daily at 00:00 UTC
+    - cron: "0 5 * * *"      # daily at 05:00 UTC
   push:
-    branches: [ "main" ]
+    branches: [ test ]
+  pull_request:
+    branches: [ test ]
 
 permissions:
   contents: write
@@ -16,43 +18,29 @@ concurrency:
 
 jobs:
   refresh:
-    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    # allow schedule/manual even when not tied to a branch ref
+    if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout TEST branch content (job defined on main)
+      - name: Checkout test
         uses: actions/checkout@v4
         with:
           ref: test
-          fetch-depth: 0
-
-      - name: Ensure CLI tools (curl, jq)
-        run: |
-          set -e
-          if ! command -v curl >/dev/null 2>&1; then
-            sudo apt-get update -y
-            sudo apt-get install -y curl
-          fi
-          if ! command -v jq >/dev/null 2>&1; then
-            sudo apt-get update -y
-            sudo apt-get install -y jq
-          fi
-          echo "curl: $(curl --version | head -n1)"
-          echo "jq: $(jq --version)"
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: '3.x'
 
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      # Build newest→oldest list from TEST branch
-      - name: Build ordered film list (from test)
+      - name: Find latest film + extract video_id
+        id: pick
         run: |
           python - <<'PY'
-          import re, os, glob, yaml, datetime
+          import re, os, glob, yaml, datetime, sys
           from dateutil import parser as dp
 
           def read_front_matter(path):
@@ -62,130 +50,100 @@ jobs:
             if not m:
               return None, txt
             fm = yaml.safe_load(m.group(1)) or {}
-            return fm, txt[m.end():]
+            body = txt[m.end():]
+            return fm, body
 
-          def best_date(fm, path):
+          def file_date(fm, path):
             for k in ('date','lastmod','Date','Lastmod'):
               if k in fm:
                 try:
                   return dp.parse(str(fm[k]))
                 except Exception:
                   pass
+            bn = os.path.basename(path)
+            m = re.match(r'(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?', bn)
+            if m:
+              y = int(m.group(1)); mo = int(m.group(2) or 1); d = int(m.group(3) or 1)
+              return datetime.datetime(y, mo, d)
             return datetime.datetime.fromtimestamp(os.path.getmtime(path))
 
-          rows = []
-          for p in glob.glob('content/films/*.md'):
+          files = sorted(glob.glob('content/films/*.md'))
+          if not files:
+            print("::error::No files in content/films"); sys.exit(1)
+
+          ranked = []
+          for p in files:
             fm, _ = read_front_matter(p)
-            if not fm:
+            if fm is None:
               continue
-            vid = fm.get('video_id') or fm.get('video') or ''
-            if not vid:
-              continue
-            dt = best_date(fm, p)
-            rows.append((dt, p, vid))
+            ranked.append((file_date(fm, p), p, fm))
 
-          rows.sort(key=lambda x: x[0], reverse=True)
+          if not ranked:
+            print("::error::No front-matter files in content/films"); sys.exit(1)
 
-          with open('film_list.txt','w',encoding='utf-8') as f:
-            for dt,p,vid in rows:
-              f.write(f"{p}\t{vid}\n")
+          ranked.sort(key=lambda x: x[0], reverse=True)
+          dt, latest_path, fm = ranked[0]
 
-          print(f"Prepared {len(rows)} film entries (newest→oldest) from TEST.")
+          vid = fm.get('video_id') or fm.get('video') or ''
+          if not vid:
+            print(f"::error::Latest film {latest_path} has no video_id"); sys.exit(1)
+
+          out = os.environ["GITHUB_OUTPUT"]
+          with open(out, "a", encoding="utf-8") as fh:
+            fh.write(f"path={latest_path}\n")
+            fh.write(f"video_id={vid}\n")
+          print(f"Latest = {latest_path} (video_id={vid})")
           PY
-
-      - name: Debug list (what the job will consider)
-        run: |
-          echo "=== film_list.txt (from test) ==="
-          cat film_list.txt || true
-          echo "================================="
-
-      # Pick first UID that exists in THIS CF account
-      - name: Pick first film that exists in this CF account
-        id: pick
-        env:
-          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-        run: |
-          set -Eeuo pipefail
-          found=0
-          while IFS=$'\t' read -r PATH VID; do
-            [ -z "${VID:-}" ] && continue
-            echo "Preflight GET /accounts/${CF_ACCOUNT_ID}/stream/${VID}"
-            PRE=$(curl -sS \
-              -H "Authorization: Bearer ${CF_API_TOKEN}" \
-              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}")
-            if [ "$(echo "$PRE" | jq -r '.success')" = "true" ]; then
-              echo "Found in account: $VID ($PATH)"
-              {
-                echo "path=$PATH"
-                echo "video_id=$VID"
-              } >> "$GITHUB_OUTPUT"
-              found=1
-              break
-            else
-              echo "Skip $VID (not in this account)."
-            fi
-          done < film_list.txt
-
-          if [ "$found" != "1" ]; then
-            echo "::error::No videos from content/films (TEST) are present in account ${CF_ACCOUNT_ID}."
-            exit 1
-          fi
 
       - name: Require signed URLs for this video
         env:
-          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          VID:           ${{ steps.pick.outputs.video_id }}
+          VID: ${{ steps.pick.outputs.video_id }}
         run: |
-          set -Eeuo pipefail
-          BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
-          echo "Request body:"; echo "$BODY" | jq .
-          RESP=$(curl -sS -X PATCH \
+          RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
-            --data "$BODY")
-          echo "Response:"; echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' >/dev/null || {
+            --data '{"requireSignedURLs": true}')
+
+          echo "Cloudflare response:"
+          echo "$RESP" | jq .
+
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
 
-      - name: Create signed playback token (BG allowlist, 24h)
+      - name: Create signed playback token (BG, 24h)
         id: sign
         env:
-          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          VID:           ${{ steps.pick.outputs.video_id }}
+          VID: ${{ steps.pick.outputs.video_id }}
         run: |
-          set -Eeuo pipefail
           EXP=$(( $(date +%s) + 24*3600 ))
-          BODY=$(jq -n --argjson exp "$EXP" '
-            {
-              exp: $exp,
-              accessRules: [
-                { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] },
-                { "type": "any", "action": "block" }
-              ]
-            }')
-          echo "Request body:"; echo "$BODY" | jq .
+
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
-            --data "$BODY")
-          echo "Response:"; echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' >/dev/null || {
+            --data "{\"exp\": ${EXP}, \"restrictions\": {\"geo\": {\"allow\": [\"BG\"]}} }")
+
+          echo "Token response:"
+          echo "$RESP" | jq .
+
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
+
           echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
 
       - name: Write token into front matter (signed_token)
         env:
           FILEPATH: ${{ steps.pick.outputs.path }}
-          TOKEN:    ${{ steps.sign.outputs.token }}
+          TOKEN: ${{ steps.sign.outputs.token }}
         run: |
           python - <<'PY'
           import re, yaml, sys, os
@@ -206,19 +164,19 @@ jobs:
           print(f"Updated signed_token in {path}")
           PY
 
-      - name: Commit update back to TEST
+      - name: Commit update back to test
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(stream): requireSignedURLs + BG-allow token (24h)"
+            git commit -m "chore(stream): requireSignedURLs + BG token refresh"
             git push origin HEAD:test
           else
             echo "Nothing to commit."
           fi
 
-      - name: Trigger Netlify build (branch deploy: test)
+      - name: Trigger Netlify build (branch deploy)
         if: success()
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
