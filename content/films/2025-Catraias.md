@@ -21,7 +21,7 @@ Voiceover: "Таня Динис"
 LeadActors: "Мария Виана, Ирмина де Жезус Терросо, Ренато Круз Сантос, Руте Рибейро"
 
 thumbnail: "/img/TANITA.png"
-feature_image: "/img/Still catraias III.jpg"
+feature_image: "/img/catraias III.jpg"
 hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 
 show_watch_button: true
