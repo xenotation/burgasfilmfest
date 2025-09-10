@@ -1,5 +1,5 @@
 ---
-date: 2025-02-10 20:30:00Z+03:00
+date: 2025-02-10 20:20:00Z+03:00
 film_title: Плаване
 film_title_org: Drijf
 country: Белгия
