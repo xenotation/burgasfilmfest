@@ -94,19 +94,27 @@ jobs:
           print(f"Latest = {latest_path} (video_id={vid})")
           PY
 
-      - name: Require signed URLs for this video
+            - name: Require signed URLs for this video
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
-          RESP=$(curl -sS -X PATCH \
+
+          # Body must include the UID per docs
+          BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
+
+          echo "Request body:"; echo "$BODY" | jq .
+
+          RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
-            --data '{"requireSignedURLs": true}')
-          echo "$RESP" | jq .
+            --data "$BODY")
+
+          echo "Response:"; echo "$RESP" | jq .
+
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
