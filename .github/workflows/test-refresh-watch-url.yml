@@ -17,28 +17,62 @@ jobs:
     env:
       ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
       API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
-      CF_SUBDOMAIN: ${{ vars.CF_CUSTOMER_SUBDOMAIN }} # e.g. customer-ojfdlxwm7xyjwjmt.cloudflarestream.com
+      CF_SUBDOMAIN: ${{ vars.CF_CUSTOMER_SUBDOMAIN }}  # e.g. customer-ojfdlxwm7xyjwjmt.cloudflarestream.com
 
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
-      - name: Update watch_url for films on this branch
-        id: update
+      - name: Figure out which film files changed on this branch
+        id: files
         shell: bash
         run: |
           set -euo pipefail
-          changed=0
-          mapfile -t FILES < <(find content/films -type f \( -name '*.md' -o -name '*.markdown' \) | sort)
-          for f in "${FILES[@]}"; do
-            # must explicitly opt-in
-            grep -Eq '^[[:space:]]*show_watch_button:[[:space:]]*true[[:space:]]*$' "$f" || continue
-            PID=$(awk -F': *' '/^playback_id:/ {gsub(/"/,"",$2); print $2; exit} /^video_id:/ {gsub(/"/,"",$2); print $2; exit}' "$f")
-            [[ -n "$PID" ]] || continue
+          # Get the merge base with main, then list changed film files on this branch
+          git fetch origin main --depth=1 || true
+          BASE=$(git merge-base HEAD origin/main 2>/dev/null || echo "")
+          if [ -n "$BASE" ]; then
+            mapfile -t CHANGED < <(git diff --name-only "$BASE"...HEAD -- content/films | sort)
+          else
+            mapfile -t CHANGED < <(git ls-files "content/films/*" | sort)
+          fi
+          printf '%s\n' "${CHANGED[@]}" | jq -Rsc 'split("\n")|map(select(length>0))' > files.json
+          echo "files=$(cat files.json)" >> "$GITHUB_OUTPUT"
+          echo "Changed film files:"; cat files.json
 
+      - name: Update watch_url only for changed files with watch button
+        id: update
+        if: ${{ steps.files.outputs.files != '[]' }}
+        shell: bash
+        env:
+          FILES_JSON: ${{ steps.files.outputs.files }}
+        run: |
+          set -euo pipefail
+          changed=0
+          readarray -t FILES < <(echo "$FILES_JSON" | jq -r '.[]')
+
+          for f in "${FILES[@]}"; do
+            [ -f "$f" ] || continue
+
+            # must explicitly opt-in
+            if ! grep -Eq '^[[:space:]]*show_watch_button:[[:space:]]*true[[:space:]]*$' "$f"; then
+              echo "skip (no show_watch_button: true): $f"
+              continue
+            fi
+
+            # get playback_id (or legacy video_id)
+            PID=$(awk -F': *' '
+              BEGIN{pid=""}
+              /^[[:space:]]*playback_id:/ {gsub(/"/,"",$2); if(pid=="") pid=$2}
+              /^[[:space:]]*video_id:/    {gsub(/"/,"",$2); if(pid=="") pid=$2}
+              END{print pid}
+            ' "$f")
+            if [ -z "$PID" ]; then
+              echo "skip (no playback_id/video_id): $f"
+              continue
+            fi
+
+            # mint BG-only token for this playback id (TTL 24h)
             JSON='{"ttl":1440,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
             TMP=$(mktemp)
             CODE=$(
@@ -48,33 +82,58 @@ jobs:
                 -H "Content-Type: application/json" \
                 --data "$JSON"
             )
-            [[ "$CODE" == "200" ]] || { echo "Token request failed ($CODE) for $PID"; cat "$TMP"; continue; }
+            echo "HTTP $CODE for $PID"
+            cat "$TMP"; echo
+            [ "$CODE" = "200" ] || { echo "token mint failed for $PID (skip)"; continue; }
             TOKEN=$(jq -r '.result.token' < "$TMP")
-            [[ -n "$TOKEN" && "$TOKEN" != "null" ]] || continue
+            [ -n "$TOKEN" ] || { echo "empty token (skip)"; continue; }
 
             WATCH_URL="https://${CF_SUBDOMAIN}/${PID}/iframe?preload=true&autoplay=true&token=${TOKEN}"
 
-            if grep -q '^[[:space:]]*watch_url:' "$f"; then
-              perl -0777 -i -pe 's/(^|\n)\s*watch_url:\s*"(?:[^"\\]|\\.)*"/$1watch_url: "'$WATCH_URL'"/s' "$f"
-            else
+            # Replace existing watch_url line inside front matter, or insert after playback_id/video_id
+            awk -v url="$WATCH_URL" '
+              BEGIN{inFM=0; inserted=0}
+              # detect YAML front matter fences
+              /^---[[:space:]]*$/ { fence++; inFM = (fence==1); print; next }
+              # replace existing watch_url inside FM
+              {
+                if (inFM && $0 ~ /^[[:space:]]*watch_url:/) {
+                  print "watch_url: \"" url "\""
+                  inserted=1
+                  next
+                }
+                print
+              }
+            ' "$f" > "$f.tmp1"
+
+            # If we didn’t replace, insert after playback_id/video_id
+            if ! grep -q '^[[:space:]]*watch_url:' "$f.tmp1"; then
               awk -v url="$WATCH_URL" '
-                BEGIN{done=0}
-                { print $0
-                  if (!done && $0 ~ /^[[:space:]]*(playback_id|video_id):/) {
-                    print "watch_url: \"" url "\""; done=1
+                BEGIN{inFM=0; done=0}
+                /^---[[:space:]]*$/ { fence++; inFM = (fence==1); print; next }
+                {
+                  print
+                  if (inFM && !done && $0 ~ /^[[:space:]]*(playback_id|video_id):/) {
+                    print "watch_url: \"" url "\""
+                    done=1
                   }
-                }' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
+                }
+              ' "$f.tmp1" > "$f.tmp2"
+              mv "$f.tmp2" "$f.tmp1"
             fi
-            echo "Updated $f"
+
+            mv "$f.tmp1" "$f"
+            echo "updated watch_url in $f"
             changed=$((changed+1))
           done
+
           echo "changed=$changed" >> "$GITHUB_OUTPUT"
 
-      - name: Commit changes
+      - name: Commit changes (if any)
         if: ${{ steps.update.outputs.changed != '0' }}
         run: |
           git config user.name  "plankton-bot"
           git config user.email "actions@users.noreply.github.com"
           git add content/films
-          git commit -m "test: refresh watch_url (BG-only, 24h)"
+          git commit -m "test: refresh watch_url (BG-only) for changed files"
           git push
