@@ -3,11 +3,11 @@ name: Refresh Cloudflare Stream Token (BG-only)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/10 * * * *"     # every 10 minutes (UTC)
+    - cron: "0 0 * * *"   # once per day at 00:00 UTC
   push:
-    branches: [ "test" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "test" ]
+    branches: [ "main" ]
 
 permissions:
   contents: write
@@ -18,14 +18,15 @@ concurrency:
 
 jobs:
   refresh:
-    if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    # allow schedule/manual even when not tied to a branch ref
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout test
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
-          ref: test
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -73,7 +74,7 @@ jobs:
           ranked = []
           for p in files:
             fm, _ = read_front_matter(p)
-            if fm is None:
+            if not fm:
               continue
             ranked.append((file_date(fm, p), p, fm))
 
@@ -94,16 +95,33 @@ jobs:
           print(f"Latest = {latest_path} (video_id={vid})")
           PY
 
+      - name: Preflight GET (verify UID exists in this CF account)
+        env:
+          CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID:  ${{ secrets.CF_ACCOUNT_ID }}
+          VID:            ${{ steps.pick.outputs.video_id }}
+        run: |
+          set -Eeuo pipefail
+          echo "GET /accounts/${CF_ACCOUNT_ID}/stream/${VID}"
+          PRE=$(curl -sS \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}")
+          echo "$PRE" | jq .
+          if [ "$(echo "$PRE" | jq -r '.success')" != "true" ]; then
+            echo "::error::Video ${VID} not found in account ${CF_ACCOUNT_ID}. Update front-matter video_id to a UID that belongs to this account."
+            exit 1
+          fi
+
       - name: Require signed URLs for this video
         env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          VID: ${{ steps.pick.outputs.video_id }}
+          CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID:  ${{ secrets.CF_ACCOUNT_ID }}
+          VID:            ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
           BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
           echo "Request body:"; echo "$BODY" | jq .
-          RESP=$(curl -sS -X POST \
+          RESP=$(curl -sS -X PATCH \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
@@ -117,9 +135,9 @@ jobs:
       - name: Create signed playback token (BG allowlist, 24h)
         id: sign
         env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          VID: ${{ steps.pick.outputs.video_id }}
+          CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID:  ${{ secrets.CF_ACCOUNT_ID }}
+          VID:            ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
           EXP=$(( $(date +%s) + 24*3600 ))
@@ -147,7 +165,7 @@ jobs:
       - name: Write token into front matter (signed_token)
         env:
           FILEPATH: ${{ steps.pick.outputs.path }}
-          TOKEN: ${{ steps.sign.outputs.token }}
+          TOKEN:    ${{ steps.sign.outputs.token }}
         run: |
           python - <<'PY'
           import re, yaml, sys, os
@@ -168,19 +186,19 @@ jobs:
           print(f"Updated signed_token in {path}")
           PY
 
-      - name: Commit update back to test
+      - name: Commit update back to main
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
             git commit -m "chore(stream): requireSignedURLs + BG-allow token (24h)"
-            git push origin HEAD:test
+            git push origin HEAD:main
           else
             echo "Nothing to commit."
           fi
 
-      - name: Trigger Netlify build (branch deploy)
+      - name: Trigger Netlify build (production)
         if: success()
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
