@@ -20,10 +20,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout TEST branch content (job defined on main)
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: test
+          fetch-depth: 0
 
       - name: Ensure CLI tools (curl, jq)
         run: |
@@ -36,8 +37,8 @@ jobs:
             sudo apt-get update -y
             sudo apt-get install -y jq
           fi
-          echo "curl version: $(curl --version | head -n1)"
-          echo "jq version: $(jq --version)"
+          echo "curl: $(curl --version | head -n1)"
+          echo "jq: $(jq --version)"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -47,8 +48,8 @@ jobs:
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      # Build newest→oldest list of (path, video_id) from MAIN
-      - name: Build ordered film list
+      # Build newest→oldest list from TEST branch
+      - name: Build ordered film list (from test)
         run: |
           python - <<'PY'
           import re, os, glob, yaml, datetime
@@ -89,10 +90,16 @@ jobs:
             for dt,p,vid in rows:
               f.write(f"{p}\t{vid}\n")
 
-          print(f"Prepared {len(rows)} film entries (newest→oldest).")
+          print(f"Prepared {len(rows)} film entries (newest→oldest) from TEST.")
           PY
 
-      # Walk the list; pick the first UID that exists in the current CF account
+      - name: Debug list (what the job will consider)
+        run: |
+          echo "=== film_list.txt (from test) ==="
+          cat film_list.txt || true
+          echo "================================="
+
+      # Pick first UID that exists in THIS CF account
       - name: Pick first film that exists in this CF account
         id: pick
         env:
@@ -121,7 +128,7 @@ jobs:
           done < film_list.txt
 
           if [ "$found" != "1" ]; then
-            echo "::error::No videos from content/films are present in account ${CF_ACCOUNT_ID}."
+            echo "::error::No videos from content/films (TEST) are present in account ${CF_ACCOUNT_ID}."
             exit 1
           fi
 
@@ -199,19 +206,19 @@ jobs:
           print(f"Updated signed_token in {path}")
           PY
 
-      - name: Commit update back to main
+      - name: Commit update back to TEST
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
             git commit -m "chore(stream): requireSignedURLs + BG-allow token (24h)"
-            git push origin HEAD:main
+            git push origin HEAD:test
           else
             echo "Nothing to commit."
           fi
 
-      - name: Trigger Netlify build (production)
+      - name: Trigger Netlify build (branch deploy: test)
         if: success()
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
