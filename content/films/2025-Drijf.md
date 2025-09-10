@@ -1,27 +1,22 @@
 ---
-date: 2025-08-03T11:43:54-05:00
-
-film_title: "Плаване"
-film_title_org: "Drijf"
-country: "Белгия"
-year: "2023"
-minutes: "15"
-description: "Двама души, изгубени в морето, водят кървава битка както за оцеляването си, така и за спасяването на връзката си."
-text_author: "интервю с Леви Ступс"
+date: 2025-08-03 11:43:54-05:00
+film_title: Плаване
+film_title_org: Drijf
+country: Белгия
+year: '2023'
+minutes: '15'
+description: Двама души, изгубени в морето, водят кървава битка както за оцеляването
+  си, така и за спасяването на връзката си.
+text_author: интервю с Леви Ступс
 stream_duration: 05.09.25 - 12.09.25
-
-Director: "Леви Ступс"
-Production: "Лунаниме"
-
-
+Director: Леви Ступс
+Production: Лунаниме
 thumbnail: /img/Drijf.jpeg
 feature_image: /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
-hero_video_id: "7a587a49c9cf21aae8842ed12565765a"
-
+hero_video_id: 7a587a49c9cf21aae8842ed12565765a
 show_watch_button: true
 video_id: 6799329e49d585252f581311c19642d3
-signed_token: 
-
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1NzYxOTExMCIsIm5iZiI6IjE3NTc1MjkxMTAifQ.JpOTws-iYVeXSCfpfn2oWv6np3eiG_B85zXIosQXaNVIswqnYUVmqw-rzNHOGmYoECD9CvEvhCtVvyYDcJK41uv6ucmPgHtYCAU3sVIvXGQvUA2Qb1Z91FEZqCslzFKV9J8iffecHmEwqtZMAnIRESwZgWZdH3fd7wU_tT7g-kTZ6NBaNlXA8_k-Mvk56mubVOlPdK4UX2cCw9WoLu0pFJz6C_FMu7UetAcLulvps8_BEf0qmeJjkzA-XJnBKjMVs11gCBPKG7yqDjHfo3PrrVk6YcSy2Joe7wjdYcIJvKgk39iLJzf5JK5Gf5v7fbJoRQJTSOBeqSs1MYvMDFennA
 ---
 *Този филм съдържа сцени на насилие, кръв и/или силно плашещи елементи, които могат да бъдат обезпокоителни за някои зрители. Не се препоръчва за лица под 16 години.
 
