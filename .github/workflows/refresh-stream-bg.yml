@@ -18,11 +18,12 @@ concurrency:
 
 jobs:
   refresh:
-    # allow on schedule/manual even though not tied to a branch ref
+    # allow schedule/manual even when not tied to a branch ref
     if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout test
         uses: actions/checkout@v4
         with:
           ref: test
@@ -94,18 +95,25 @@ jobs:
           print(f"Latest = {latest_path} (video_id={vid})")
           PY
 
-      - name: Restrict video to Bulgaria (BG)
+      - name: Require signed URLs for this video
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
-          curl -sS -X PATCH \
+          RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
-            --data '{"geo":{"allow":["BG"]}}' \
-            | jq -e '.success == true' > /dev/null
+            --data '{"requireSignedURLs": true}')
+
+          echo "Cloudflare response:"
+          echo "$RESP" | jq .
+
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            exit 1
+          }
 
       - name: Create signed playback token (BG, 24h)
         id: sign
@@ -115,12 +123,21 @@ jobs:
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
           EXP=$(( $(date +%s) + 24*3600 ))
+
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
             --data "{\"exp\": ${EXP}, \"restrictions\": {\"geo\": {\"allow\": [\"BG\"]}} }")
-          echo "$RESP" | jq -e '.success == true' > /dev/null
+
+          echo "Token response:"
+          echo "$RESP" | jq .
+
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            exit 1
+          }
+
           echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
 
       - name: Write token into front matter (signed_token)
@@ -153,7 +170,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(stream): refresh BG token + geo"
+            git commit -m "chore(stream): requireSignedURLs + BG token refresh"
             git push origin HEAD:test
           else
             echo "Nothing to commit."
@@ -163,4 +180,9 @@ jobs:
         if: success()
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-        run: curl -sS -X POST -d '{}' "$HOOK" || true
+        run: |
+          if [ -n "${HOOK:-}" ]; then
+            curl -sS -X POST -d '{}' "$HOOK" || true
+          else
+            echo "NETLIFY_BUILD_HOOK not set; skipping Netlify trigger."
+          fi
