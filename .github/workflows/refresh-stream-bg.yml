@@ -3,10 +3,8 @@ name: Refresh Cloudflare Stream Token (BG-only)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"   # once per day at 00:00 UTC
+    - cron: "0 0 * * *"   # daily at 00:00 UTC
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
 
 permissions:
@@ -18,7 +16,7 @@ concurrency:
 
 jobs:
   refresh:
-    # allow schedule/manual even when not tied to a branch ref
+    # Only run on main (or manual/schedule, which we also treat as main content)
     if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
 
@@ -36,11 +34,11 @@ jobs:
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      - name: Find latest film and extract video_id
-        id: pick
+      # Build newest→oldest list of (path, video_id) only from MAIN
+      - name: Build ordered film list
         run: |
           python - <<'PY'
-          import re, os, glob, yaml, datetime, sys
+          import re, os, glob, yaml, datetime
           from dateutil import parser as dp
 
           def read_front_matter(path):
@@ -50,73 +48,76 @@ jobs:
             if not m:
               return None, txt
             fm = yaml.safe_load(m.group(1)) or {}
-            body = txt[m.end():]
-            return fm, body
+            return fm, txt[m.end():]
 
-          def file_date(fm, path):
+          def best_date(fm, path):
+            # prefer 'date', else 'lastmod', else file mtime
             for k in ('date','lastmod','Date','Lastmod'):
               if k in fm:
                 try:
                   return dp.parse(str(fm[k]))
                 except Exception:
                   pass
-            bn = os.path.basename(path)
-            m = re.match(r'(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?', bn)
-            if m:
-              y = int(m.group(1)); mo = int(m.group(2) or 1); d = int(m.group(3) or 1)
-              return datetime.datetime(y, mo, d)
             return datetime.datetime.fromtimestamp(os.path.getmtime(path))
 
-          files = sorted(glob.glob('content/films/*.md'))
-          if not files:
-            print("::error::No files in content/films"); sys.exit(1)
-
-          ranked = []
-          for p in files:
+          rows = []
+          for p in glob.glob('content/films/*.md'):
             fm, _ = read_front_matter(p)
-            if not fm:
+            if not fm: 
               continue
-            ranked.append((file_date(fm, p), p, fm))
+            vid = fm.get('video_id') or fm.get('video') or ''
+            if not vid:
+              continue
+            dt = best_date(fm, p)
+            rows.append((dt, p, vid))
 
-          if not ranked:
-            print("::error::No front-matter files in content/films"); sys.exit(1)
+          rows.sort(key=lambda x: x[0], reverse=True)
 
-          ranked.sort(key=lambda x: x[0], reverse=True)
-          dt, latest_path, fm = ranked[0]
+          with open('film_list.txt','w',encoding='utf-8') as f:
+            for dt,p,vid in rows:
+              f.write(f"{p}\t{vid}\n")
 
-          vid = fm.get('video_id') or fm.get('video') or ''
-          if not vid:
-            print(f"::error::Latest film {latest_path} has no video_id"); sys.exit(1)
-
-          out = os.environ["GITHUB_OUTPUT"]
-          with open(out, "a", encoding="utf-8") as fh:
-            fh.write(f"path={latest_path}\n")
-            fh.write(f"video_id={vid}\n")
-          print(f"Latest = {latest_path} (video_id={vid})")
+          print(f"Prepared {len(rows)} film entries (newest→oldest).")
           PY
 
-      - name: Preflight GET (verify UID exists in this CF account)
+      # Walk the list; pick the first UID that exists in the current CF account
+      - name: Pick first film that exists in this CF account
+        id: pick
         env:
-          CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID:  ${{ secrets.CF_ACCOUNT_ID }}
-          VID:            ${{ steps.pick.outputs.video_id }}
+          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           set -Eeuo pipefail
-          echo "GET /accounts/${CF_ACCOUNT_ID}/stream/${VID}"
-          PRE=$(curl -sS \
-            -H "Authorization: Bearer ${CF_API_TOKEN}" \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}")
-          echo "$PRE" | jq .
-          if [ "$(echo "$PRE" | jq -r '.success')" != "true" ]; then
-            echo "::error::Video ${VID} not found in account ${CF_ACCOUNT_ID}. Update front-matter video_id to a UID that belongs to this account."
+          found=0
+          while IFS=$'\t' read -r PATH VID; do
+            [ -z "${VID:-}" ] && continue
+            echo "Preflight GET /accounts/${CF_ACCOUNT_ID}/stream/${VID}"
+            PRE=$(curl -sS \
+              -H "Authorization: Bearer ${CF_API_TOKEN}" \
+              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}")
+            if [ "$(echo "$PRE" | jq -r '.success')" = "true" ]; then
+              echo "Found in account: $VID ($PATH)"
+              {
+                echo "path=$PATH"
+                echo "video_id=$VID"
+              } >> "$GITHUB_OUTPUT"
+              found=1
+              break
+            else
+              echo "Skip $VID (not in this account)."
+            fi
+          done < film_list.txt
+
+          if [ "$found" != "1" ]; then
+            echo "::error::No videos from content/films are present in account ${CF_ACCOUNT_ID}."
             exit 1
           fi
 
       - name: Require signed URLs for this video
         env:
-          CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID:  ${{ secrets.CF_ACCOUNT_ID }}
-          VID:            ${{ steps.pick.outputs.video_id }}
+          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          VID:           ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
           BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
@@ -127,7 +128,7 @@ jobs:
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
             --data "$BODY")
           echo "Response:"; echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+          echo "$RESP" | jq -e '.success == true' >/dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
@@ -135,9 +136,9 @@ jobs:
       - name: Create signed playback token (BG allowlist, 24h)
         id: sign
         env:
-          CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID:  ${{ secrets.CF_ACCOUNT_ID }}
-          VID:            ${{ steps.pick.outputs.video_id }}
+          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          VID:           ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
           EXP=$(( $(date +%s) + 24*3600 ))
@@ -156,7 +157,7 @@ jobs:
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
             --data "$BODY")
           echo "Response:"; echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+          echo "$RESP" | jq -e '.success == true' >/dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
