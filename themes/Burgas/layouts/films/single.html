@@ -29,33 +29,71 @@
         <div class="film-credits-grid">
           {{ with .Params.Director }}
             <div class="credit">
-              <span class="credit-label">режисьор</span>
+              <span class="credit-label">Режисьор</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-            
-          {{ with .Params.Actors }}
+        
+          {{ with .Params.Production }}
             <div class="credit">
-              <span class="credit-label">актьори</span>
+              <span class="credit-label">Продуцент</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
         
           {{ with .Params.Screenwriter }}
             <div class="credit">
-              <span class="credit-label">сценарист</span>
+              <span class="credit-label">Сценарий</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-
-          {{ with .Params.Production }}
-          <div class="credit">
-            <span class="credit-label">продуцент</span>
-            <span class="credit-value">{{ . }}</span>
-          </div>
-        {{ end }}
-
+        
+          {{ with .Params.Editing }}
+            <div class="credit">
+              <span class="credit-label">Монтаж</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+        
+          {{ $dop := .Params.Cinematography | default .Params.Operator }}
+          {{ with $dop }}
+            <div class="credit">
+              <span class="credit-label">Оператор</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+        
+          {{ with .Params.Sound }}
+            <div class="credit">
+              <span class="credit-label">Звук</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+        
+          {{ with .Params.Music }}
+            <div class="credit">
+              <span class="credit-label">Музика</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+        
+          {{ with .Params.Voiceover }}
+            <div class="credit">
+              <span class="credit-label">Глас зад кадър</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+        
+          {{ $actors := .Params.LeadActors | default .Params.Actors }}
+          {{ with $actors }}
+            <div class="credit">
+              <span class="credit-label">Главни актьори</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
         </div>
+        
+        
         
         
 

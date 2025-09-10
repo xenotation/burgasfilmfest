@@ -27,71 +27,49 @@ collections:
   # -------------------------
   # Films
   # -------------------------
-  - name: "films"
-    label: "Films"
+  collections:
+  - label: "Films"
+    name: "films"
     folder: "content/films"
     create: true
-    slug: "{{year}}-{{slug}}"
     extension: "md"
-    format: "frontmatter"
+    format: "frontmatter"        # YAML front matter + body
+    slug: "{{year}}-{{slug}}"
+    summary: "{{film_title}} ({{year}})"
     fields:
-      # Basics / routing
-      - { label: "Page Title", name: "title", widget: "string" }
-      - { label: "Film Title (BG)", name: "film_title", widget: "string" }
-      - { label: "Film Title (Original)", name: "film_title_org", widget: "string", required: false }
-      - { label: "URL Slug (optional)", name: "slug", widget: "string", required: false }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
-      - { label: "Type", name: "type", widget: "hidden", default: "films" }
+      # core
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", default: "{{now}}", picker_utc: true }
+      - { label: "Film title", name: "film_title", widget: "string", default: "" }
+      - { label: "Original title", name: "film_title_org", widget: "string", default: "" }
+      - { label: "Country", name: "country", widget: "string", default: "" }
+      - { label: "Year", name: "year", widget: "string", default: "" }
+      - { label: "Minutes", name: "minutes", widget: "string", default: "" }
+      - { label: "Description", name: "description", widget: "text", default: "" }
+      - { label: "Text author", name: "text_author", widget: "string", default: "" }
+      - { label: "Stream duration (label)", name: "stream_duration", widget: "string", default: "" }
 
-      # Canonical film info
-      - { label: "Country", name: "country", widget: "string" }
-      - { label: "Director", name: "Director", widget: "string", required: false }
-      - { label: "Production", name: "Production", widget: "string", required: false }
-      - { label: "Minutes", name: "minutes", widget: "number" }
-      - { label: "Year", name: "year", widget: "number" }
-      - { label: "Short Description", name: "description", widget: "text" }
-      - { label: "Text Author (e.g. interview credit)", name: "text_author", widget: "string", required: false }
+      # credits (all kept; preloaded)
+      - { label: "Director", name: "Director", widget: "string", default: "" }
+      - { label: "Production", name: "Production", widget: "string", default: "" }
+      - { label: "Screenwriter", name: "Screenwriter", widget: "string", default: "" }
+      - { label: "Editing", name: "Editing", widget: "string", default: "" }
+      - { label: "Cinematography", name: "Cinematography", widget: "string", default: "" }
+      - { label: "Sound", name: "Sound", widget: "string", default: "" }
+      - { label: "Music", name: "Music", widget: "string", default: "" }
+      - { label: "Voiceover", name: "Voiceover", widget: "string", default: "" }
+      - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", default: "" }
 
-      # Dates
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Last Modified", name: "lastmod", widget: "datetime", required: false }
+      # images
+      - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false }
+      - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false }
 
-      # Images (array of image URLs)
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        allow_add: true
-        collapsed: false
-        field:
-          label: "Image"
-          name: "image_item"
-          widget: "image"
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Feature Image", name: "feature_image", widget: "image", required: false }
-      - { label: "Fallback Image (single)", name: "image", widget: "image", required: false }
+      # streaming
+      - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
+      - { label: "Cloudflare video ID", name: "video_id", widget: "string", default: "" }
+      - { label: "Signed token (auto)", name: "signed_token", widget: "string", default: "", required: false }
 
-      # Video / streaming
-      - { label: "Show Watch Button", name: "show_watch_button", widget: "boolean", default: true, required: false }
-      - { label: "Cloudflare Stream Video ID", name: "video_id", widget: "string", required: false }
-      - { label: "Hero Video ID", name: "hero_video_id", widget: "string", required: false }
-      - { label: "Iframe URL (optional)", name: "video", widget: "string", required: false }
-      - { label: "Stream Duration (ribbon text)", name: "stream_duration", widget: "string", required: false }
-      - { label: "Signed Token (JWT)", name: "signed_token", widget: "text", required: false, hint: "Paste Cloudflare Stream signed token (region/IP rules). Keep private." }
-
-      # Page body
-      - { label: "Body", name: "body", widget: "markdown", required: false }
-
-      # SEO
-      - label: "SEO"
-        name: "seo"
-        widget: "object"
-        required: false
-        fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Description", name: "description", widget: "text", required: false }
-          - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Stream Start", name: "stream_start", widget: "date", required: false }
-          - { label: "Stream End", name: "stream_end", widget: "date", required: false }
+      # body
+      - { label: "Body", name: "body", widget: "markdown", default: "" }
 
   # -------------------------
   # Pages (About)

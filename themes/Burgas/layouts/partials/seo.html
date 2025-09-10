@@ -1,192 +1,86 @@
-{{- /* =========
-   SEO partial (Plakton.bg)
-   - Title/description/canonical
-   - OG/Twitter
-   - JSON-LD:
-       * WebSite + SearchAction (home)
-       * BreadcrumbList
-       * Movie (+ VideoObject when stream present)
-       * ItemList for film list
-       * CollectionPage for posters grid
-   ========= */ -}}
+{{- $p := . -}}
+{{- $site := site -}}
 
-   {{- $site := site -}}
-   {{- $p := . -}}
-   
-   {{/* ---------- Title ---------- */}}
-   {{- $title := cond .IsHome site.Title (printf "%s | %s" (or .Params.seo.title (or .Title .File.BaseFileName)) site.Title) -}}
-   {{- with .Params.film_title -}}
-     {{- $yearPart := "" -}}
-     {{- with $.Params.year }}{{ $yearPart = printf " (%v)" . }}{{ end -}}
-     {{- $title = printf "%s%s | %s" . $yearPart site.Title -}}
-   {{- end -}}
-   
-   {{/* ---------- Description ---------- */}}
-   {{- $desc := or $p.Params.seo.description $p.Params.description $p.Summary $site.Params.description -}}
-   {{- $desc = $desc | plainify | truncate 160 -}}
-   
-   {{/* ---------- Canonical ---------- */}}
-   {{- $canonical := $p.Permalink -}}
-   
-   {{/* ---------- Type / robots / twitter card ---------- */}}
-   {{- $seo := $p.Params.seo -}}
-   {{- $type := cond $p.IsHome "website" "article" -}}
-   {{- with $seo }}{{ with .type }}{{ $type = . }}{{ end }}{{ end -}}
-   {{- $noindex := false -}}
-   {{- with $seo }}{{ with .noindex }}{{ $noindex = . }}{{ end }}{{ end -}}
-   {{- $twitterCard := "summary_large_image" -}}
-   {{- with $seo }}{{ with .twitterCard }}{{ $twitterCard = . }}{{ end }}{{ end -}}
-   
-   {{/* ---------- Images (absolute) ---------- */}}
-   {{- $imgs := slice -}}
-   {{- with $p.Params.images }}{{ $imgs = . }}{{ end -}}
-   {{- if and (eq (len $imgs) 0) $p.Params.feature_image }}{{ $imgs = $imgs | append $p.Params.feature_image }}{{ end -}}
-   {{- if and (eq (len $imgs) 0) $p.Params.thumbnail     }}{{ $imgs = $imgs | append $p.Params.thumbnail }}{{ end -}}
-   {{- if and (eq (len $imgs) 0) $site.Params.seo.defaultImage }}{{ $imgs = $imgs | append $site.Params.seo.defaultImage }}{{ end -}}
-   {{- if eq (len $imgs) 0 }}{{ $imgs = $imgs | append "/img/og-default.jpg" }}{{ end -}}
-   
-   {{- $absImgs := slice -}}
-   {{- range $imgs }}{{ $absImgs = $absImgs | append (absURL .) }}{{ end -}}
-   {{- $firstImg := cond (gt (len $absImgs) 0) (index $absImgs 0) "" -}}
-   
-   {{/* ---------- Dates ---------- */}}
-   {{- $published := $p.Date | time -}}
-   {{- $modified  := or $p.Lastmod $p.Date | time -}}
-   
-   {{/* ---------- Locale / Twitter ---------- */}}
-   {{- $locale := or $site.Params.seo.locale $site.Language.LanguageCode -}}
-   {{- $twitterSite := $site.Params.seo.twitterSite -}}
-   
-   <title>{{ $title }}</title>
-   
-   <meta name="description" content="{{ $desc }}">
-   <link rel="canonical" href="{{ $canonical }}">
-   
-   {{- if $noindex }}<meta name="robots" content="noindex,follow">{{ end -}}
-   
-   <!-- Open Graph -->
-   <meta property="og:site_name" content="{{ $site.Title }}">
-   <meta property="og:title" content="{{ $title }}">
-   <meta property="og:description" content="{{ $desc }}">
-   <meta property="og:type" content="{{ $type }}">
-   <meta property="og:url" content="{{ $canonical }}">
-   {{- with $locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
-   {{- range $absImgs }}<meta property="og:image" content="{{ . }}">{{ end }}
-   {{- with $published }}<meta property="article:published_time" content="{{ . }}">{{ end }}
-   {{- with $modified  }}<meta property="article:modified_time"  content="{{ . }}">{{ end }}
-   
-   <!-- Twitter -->
-   <meta name="twitter:card" content="{{ $twitterCard }}">
-   {{- with $twitterSite }}<meta name="twitter:site" content="{{ . }}">{{ end }}
-   <meta name="twitter:title" content="{{ $title }}">
-   <meta name="twitter:description" content="{{ $desc }}">
-   {{- with $firstImg }}<meta name="twitter:image" content="{{ . }}">{{ end }}
-   
-   {{/* ---------- Author (if available) ---------- */}}
-   {{- with .Params.text_author }}<meta name="author" content="{{ . }}">{{ end }}
-   
-   {{/* ---------- If film has a playable stream, add OG video hints ---------- */}}
-   {{- $playPath := "" -}}
-   {{- with .Params.video_id }}
-     {{- $playPath = printf "https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/%s/iframe?preload=true" . -}}
-   {{- end -}}
-   {{- with .Params.video }}
-     {{- if not $playPath }}{{ $playPath = . }}{{ end -}}
-   {{- end -}}
-   {{- if $playPath }}
-     <meta property="og:video" content="{{ $playPath }}">
-     <meta property="og:video:type" content="text/html">
-     <meta property="og:video:secure_url" content="{{ $playPath }}">
-     <meta name="twitter:player" content="{{ $playPath }}">
-   {{- end }}
-   
-   {{/* ---------- JSON-LD: WebSite + SearchAction on home ---------- */}}
-   {{- if .IsHome -}}
-     {{- $org := site.Params.org -}}
-     {{- $web := dict
-           "@context" "https://schema.org"
-           "@type"    "WebSite"
-           "name"     site.Title
-           "url"      site.BaseURL
-           "potentialAction" (dict
-             "@type" "SearchAction"
-             "target" (printf "%s?q={search_term_string}" site.BaseURL)
-             "query-input" "required name=search_term_string"
-           )
-         -}}
-     {{- if $org }}
-       {{- $publisher := dict "@type" "Organization" "name" $org.name -}}
-       {{- with $org.logo }}{{ $publisher = merge $publisher (dict "logo" (absURL .)) }}{{ end -}}
-       {{- $web = merge $web (dict "publisher" $publisher) -}}
-     {{- end -}}
-     <script type="application/ld+json">{{ $web | jsonify }}</script>
-   {{- end }}
-   
-   {{/* ---------- JSON-LD: BreadcrumbList ---------- */}}
-   {{- $crumbs := slice
-         (dict "@type" "ListItem" "position" 1 "name" "Начало" "item" site.BaseURL) -}}
-   {{- with .CurrentSection }}
-     {{- $sectionURL := (absURL .RelPermalink) -}}
-     {{- $sectionName := or .Title (strings.Trim .Section "/") -}}
-     {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $sectionName "item" $sectionURL) -}}
-   {{- end -}}
-   {{- if not .IsHome }}
-     {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add 1 (len $crumbs)) "name" (or .Title .Params.film_title) "item" .Permalink) -}}
-   {{- end -}}
-   <script type="application/ld+json">
-   {{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs | jsonify }}
-   </script>
-   
-   {{/* ---------- JSON-LD: Movie (+VideoObject for stream) ---------- */}}
-   {{- if $p.Params.film_title -}}
-     {{- $mins := $p.Params.minutes | default 0 -}}
-     {{- $duration := printf "PT%dM" $mins -}}
-     {{- $dir := or $p.Params.Director $p.Params.director -}}
-     {{- $actorsCSV := $p.Params.Actors | default "" -}}
-     {{- $actors := slice -}}
-     {{- if $actorsCSV -}}
-       {{- range (split $actorsCSV ",") -}}
-         {{- $actors = $actors | append (dict "@type" "Person" "name" (trim . " ")) -}}
-       {{- end -}}
-     {{- end -}}
-   
-     {{- $movie := dict
-           "@context" "https://schema.org"
-           "@type"    "Movie"
-           "name"     $p.Params.film_title
-           "datePublished" ($published | time.Format "2006-01-02")
-           "duration" $duration
-           "description" $desc
-           "image"    $absImgs
-         -}}
-     {{- with $dir }}{{ $movie = merge $movie (dict "director" (dict "@type" "Person" "name" .)) }}{{ end -}}
-     {{- if gt (len $actors) 0 }}{{ $movie = merge $movie (dict "actor" $actors) }}{{ end -}}
-     {{- with $p.Params.Genre }}{{ $movie = merge $movie (dict "genre" .) }}{{ end -}}
-     {{- with $p.Params.country }}{{ $movie = merge $movie (dict "countryOfOrigin" .) }}{{ end -}}
-   
-     {{- if $playPath -}}
-       {{- $video := dict
-             "@type" "VideoObject"
-             "name"  (printf "%s — стрийм" $p.Params.film_title)
-             "embedUrl" $playPath
-             "thumbnailUrl" (cond (gt (len $absImgs) 0) $absImgs nil)
-             "description" $desc
-           -}}
-   
-       {{- with $p.Params.stream_start }}{{ $video = merge $video (dict "uploadDate" .) }}{{ end -}}
-       {{- with $p.Params.stream_end   }}{{ $video = merge $video (dict "expires" .) }}{{ end -}}
-   
-       {{- $movie = merge $movie (dict
-             "potentialAction" (dict
-               "@type" "WatchAction"
-               "target" $playPath
-             )
-             "video" $video
-           ) -}}
-     {{- end -}}
-   
-     <script type="application/ld+json">{{ $movie | jsonify }}</script>
-   {{- end -}}
+{{/* ---------- Title ---------- */}}
+{{- $title := cond $p.IsHome $site.Title (printf "%s | %s" (or $p.Title $p.File.BaseFileName) $site.Title) -}}
+{{- with $p.Params.film_title -}}
+  {{- $yearPart := "" -}}
+  {{- with $p.Params.year }}{{ $yearPart = printf " (%v)" . }}{{ end -}}
+  {{- $title = printf "%s%s | %s" . $yearPart $site.Title -}}
+{{- end -}}
+
+{{/* ---------- Description (only from content/site) ---------- */}}
+{{- $desc := or $p.Params.description $p.Summary $site.Params.description -}}
+{{- $desc = $desc | plainify | truncate 160 -}}
+
+{{/* ---------- Images (absolute): feature_image -> thumbnail -> site default ---------- */}}
+{{- $imgs := slice -}}
+{{- with $p.Params.feature_image }}{{ $imgs = $imgs | append . }}{{ end -}}
+{{- if and (eq (len $imgs) 0) $p.Params.thumbnail }}{{ $imgs = $imgs | append $p.Params.thumbnail }}{{ end -}}
+{{- if and (eq (len $imgs) 0) $site.Params.seo.defaultImage }}{{ $imgs = $imgs | append $site.Params.seo.defaultImage }}{{ end -}}
+{{- if eq (len $imgs) 0 }}{{ $imgs = $imgs | append "/img/og-default.jpg" }}{{ end -}}
+{{- $absImgs := slice -}}
+{{- range $imgs }}{{ $absImgs = $absImgs | append (absURL .) }}{{ end -}}
+{{- $firstImg := cond (gt (len $absImgs) 0) (index $absImgs 0) "" -}}
+
+{{/* ---------- Dates: only .Date (no lastmod, no stream_* ) ---------- */}}
+{{- $published := $p.Date | time -}}
+{{- $modified  := $p.Date | time -}}
+
+{{/* ---------- Canonical ---------- */}}
+<link rel="canonical" href="{{ $p.Permalink }}"/>
+
+{{/* ---------- Basic meta ---------- */}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}"/>
+
+{{/* ---------- Open Graph ---------- */}}
+<meta property="og:type" content="{{ if $p.IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ $p.Permalink }}">
+<meta property="og:site_name" content="{{ $site.Title }}">
+{{- with $firstImg }}<meta property="og:image" content="{{ . }}">{{ end }}
+<meta property="article:published_time" content="{{ $published.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time"  content="{{ $modified.Format  "2006-01-02T15:04:05Z07:00" }}">
+
+{{/* ---------- Twitter ---------- */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+{{- with $firstImg }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+
+{{/* ---------- JSON-LD: Movie (only allowed fields) ---------- */}}
+{{- $movieName := or $p.Params.film_title $p.Title -}}
+{{- $movie := dict "@context" "https://schema.org" "@type" "Movie" "name" $movieName -}}
+{{- with $firstImg            }}{{ $movie = merge $movie (dict "image" .) }}{{ end -}}
+{{- with $desc                }}{{ $movie = merge $movie (dict "description" .) }}{{ end -}}
+{{- with $published           }}{{ $movie = merge $movie (dict "datePublished" ($published.Format "2006-01-02T15:04:05Z07:00")) }}{{ end -}}
+{{- with $p.Params.minutes    }}{{ $movie = merge $movie (dict "duration" (printf "PT%vM" .)) }}{{ end -}}
+{{- with $p.Params.country    }}{{ $movie = merge $movie (dict "countryOfOrigin" (slice (dict "@type" "Country" "name" .))) }}{{ end -}}
+
+{{/* Directors (comma-separated string to Person[]) */}}
+{{- $directors := slice -}}
+{{- with $p.Params.Director -}}
+  {{- range (split . ",") -}}
+    {{- $directors = $directors | append (dict "@type" "Person" "name" (trim . " ")) -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt (len $directors) 0 }}{{ $movie = merge $movie (dict "director" $directors) }}{{ end -}}
+
+{{/* Actors: prefer LeadActors then Actors (comma-separated) */}}
+{{- $actorsArr := slice -}}
+{{- $actorsStr := or $p.Params.LeadActors $p.Params.Actors -}}
+{{- with $actorsStr -}}
+  {{- range (split . ",") -}}
+    {{- $actorsArr = $actorsArr | append (dict "@type" "Person" "name" (trim . " ")) -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt (len $actorsArr) 0 }}{{ $movie = merge $movie (dict "actor" $actorsArr) }}{{ end -}}
+
+<script type="application/ld+json">{{ $movie | jsonify }}</script>
+
+
    
    {{/* ---------- JSON-LD: ItemList for film archive ---------- */}}
    {{- if and (eq .Section "films") .IsSection -}}
