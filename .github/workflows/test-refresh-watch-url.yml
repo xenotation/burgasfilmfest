@@ -1,0 +1,80 @@
+name: TEST Refresh watch_url (BG-only)
+
+on:
+  push:
+    branches: ['test/*', 'test/**', 'test-**', 'test/geo']
+    paths:
+      - 'content/films/**'
+      - '.github/workflows/test-refresh-watch-url.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
+      CF_SUBDOMAIN: ${{ vars.CF_CUSTOMER_SUBDOMAIN }} # e.g. customer-ojfdlxwm7xyjwjmt.cloudflarestream.com
+
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Update watch_url for films on this branch
+        id: update
+        shell: bash
+        run: |
+          set -euo pipefail
+          changed=0
+          mapfile -t FILES < <(find content/films -type f \( -name '*.md' -o -name '*.markdown' \) | sort)
+          for f in "${FILES[@]}"; do
+            # must explicitly opt-in
+            grep -Eq '^[[:space:]]*show_watch_button:[[:space:]]*true[[:space:]]*$' "$f" || continue
+            PID=$(awk -F': *' '/^playback_id:/ {gsub(/"/,"",$2); print $2; exit} /^video_id:/ {gsub(/"/,"",$2); print $2; exit}' "$f")
+            [[ -n "$PID" ]] || continue
+
+            JSON='{"ttl":1440,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
+            TMP=$(mktemp)
+            CODE=$(
+              curl -sS -o "$TMP" -w "%{http_code}" \
+                -X POST "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/stream/${PID}/token" \
+                -H "Authorization: Bearer ${API_TOKEN}" \
+                -H "Content-Type: application/json" \
+                --data "$JSON"
+            )
+            [[ "$CODE" == "200" ]] || { echo "Token request failed ($CODE) for $PID"; cat "$TMP"; continue; }
+            TOKEN=$(jq -r '.result.token' < "$TMP")
+            [[ -n "$TOKEN" && "$TOKEN" != "null" ]] || continue
+
+            WATCH_URL="https://${CF_SUBDOMAIN}/${PID}/iframe?preload=true&autoplay=true&token=${TOKEN}"
+
+            if grep -q '^[[:space:]]*watch_url:' "$f"; then
+              perl -0777 -i -pe 's/(^|\n)\s*watch_url:\s*"(?:[^"\\]|\\.)*"/$1watch_url: "'$WATCH_URL'"/s' "$f"
+            else
+              awk -v url="$WATCH_URL" '
+                BEGIN{done=0}
+                { print $0
+                  if (!done && $0 ~ /^[[:space:]]*(playback_id|video_id):/) {
+                    print "watch_url: \"" url "\""; done=1
+                  }
+                }' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
+            fi
+            echo "Updated $f"
+            changed=$((changed+1))
+          done
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Commit changes
+        if: ${{ steps.update.outputs.changed != '0' }}
+        run: |
+          git config user.name  "plankton-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/films
+          git commit -m "test: refresh watch_url (BG-only, 24h)"
+          git push

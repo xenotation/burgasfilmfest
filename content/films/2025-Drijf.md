@@ -14,6 +14,10 @@ thumbnail: /img/Drijf.jpeg
 feature_image: /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
 show_watch_button: true
 video_id: 2d3c0981ca7415f21955a5a7031994be
+
+playback_id: "2d3c0981ca7415f21955a5a7031994be"   # one ID to rule them all
+watch_url: ""                                       # auto-filled by the action
+
 stream_duration: 05.09.25 - 12.09.25
 
 type: films

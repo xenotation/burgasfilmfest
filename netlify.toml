@@ -4,3 +4,23 @@
 
 [build.environment]
   HUGO_VERSION = "0.128.2"
+
+[context.production.environment]
+  HUGO_VERSION = "0.128.0"
+  HUGO_ENV = "production"
+  HUGO_BUILD_DRAFTS = "false"
+  HUGO_BUILD_FUTURE = "false"
+
+# Deploy Preview (PRs): include drafts
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.128.0"
+  HUGO_ENV = "development"
+  HUGO_BUILD_DRAFTS = "true"
+  HUGO_BUILD_FUTURE = "true"
+
+# Branch Deploys (branch subdomains): include drafts
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.128.0"
+  HUGO_ENV = "development"
+  HUGO_BUILD_DRAFTS = "true"
+  HUGO_BUILD_FUTURE = "true"

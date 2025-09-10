@@ -57,15 +57,10 @@
 
         </div>
         
-        
-
-        {{ if .Params.show_watch_button }}
-        {{ $playPath := .Params.video_id }}
-        {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }}
-      
+        {{ if and .Params.show_watch_button .Params.watch_url }}
         <div class="watch-button-wrapper">
           <a class="watch-button"
-             href="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true"
+             href="{{ .Params.watch_url }}"
              data-dimbox
              data-dimbox-type="iframe"
              data-dimbox-class="dimbox-full">
@@ -73,6 +68,9 @@
           </a>
         </div>
       {{ end }}
+              
+
+
       </div>
     </div>
 
