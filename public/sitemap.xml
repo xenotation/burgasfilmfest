@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.0.103:1313/films/2025-catraias/</loc>
-    <lastmod>2025-09-03T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/films/</loc>
-    <lastmod>2025-09-03T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/</loc>
-    <lastmod>2025-09-03T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/films/2025-drijf/</loc>
-    <lastmod>2025-02-03T11:43:54-05:00</lastmod>
-  </url><url>
     <loc>http://192.168.0.103:1313/posters/2025-drijf-poster/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
@@ -23,9 +11,18 @@
     <loc>http://192.168.0.103:1313/about/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
+    <loc>http://192.168.0.103:1313/</loc>
+    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.0.103:1313/films/2025-catraias/</loc>
+  </url><url>
     <loc>http://192.168.0.103:1313/films/2025-djigit/</loc>
   </url><url>
+    <loc>http://192.168.0.103:1313/films/2025-drijf/</loc>
+  </url><url>
     <loc>http://192.168.0.103:1313/categories/</loc>
+  </url><url>
+    <loc>http://192.168.0.103:1313/films/</loc>
   </url><url>
     <loc>http://192.168.0.103:1313/tags/</loc>
   </url>
