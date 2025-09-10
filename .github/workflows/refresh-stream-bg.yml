@@ -16,7 +16,6 @@ concurrency:
 
 jobs:
   refresh:
-    # Only run on main (or manual/schedule, which we also treat as main content)
     if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
 
@@ -26,6 +25,20 @@ jobs:
         with:
           ref: main
 
+      - name: Ensure CLI tools (curl, jq)
+        run: |
+          set -e
+          if ! command -v curl >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y curl
+          fi
+          if ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y jq
+          fi
+          echo "curl version: $(curl --version | head -n1)"
+          echo "jq version: $(jq --version)"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -34,7 +47,7 @@ jobs:
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      # Build newest→oldest list of (path, video_id) only from MAIN
+      # Build newest→oldest list of (path, video_id) from MAIN
       - name: Build ordered film list
         run: |
           python - <<'PY'
@@ -51,7 +64,6 @@ jobs:
             return fm, txt[m.end():]
 
           def best_date(fm, path):
-            # prefer 'date', else 'lastmod', else file mtime
             for k in ('date','lastmod','Date','Lastmod'):
               if k in fm:
                 try:
@@ -63,7 +75,7 @@ jobs:
           rows = []
           for p in glob.glob('content/films/*.md'):
             fm, _ = read_front_matter(p)
-            if not fm: 
+            if not fm:
               continue
             vid = fm.get('video_id') or fm.get('video') or ''
             if not vid:
