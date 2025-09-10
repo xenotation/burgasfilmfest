@@ -1,11 +1,11 @@
 name: Refresh Cloudflare Stream Token (BG-only)
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   schedule:
     - cron: "0 0 * * *"   # daily at 00:00 UTC
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]  # trigger by pushing to main
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout TEST branch content (job defined on main)
+      - name: Checkout TEST branch content (job file is on main)
         uses: actions/checkout@v4
         with:
           ref: test
@@ -48,7 +48,6 @@ jobs:
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      # Build newest→oldest list from TEST branch
       - name: Build ordered film list (from test)
         run: |
           python - <<'PY'
@@ -99,7 +98,6 @@ jobs:
           cat film_list.txt || true
           echo "================================="
 
-      # Pick first UID that exists in THIS CF account
       - name: Pick first film that exists in this CF account
         id: pick
         env:

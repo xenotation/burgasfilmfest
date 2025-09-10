@@ -1,0 +1,88 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  # -------------------------
+  # Posters
+  # -------------------------
+  - name: "posters"
+    label: "Posters"
+    folder: "content/posters"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Films
+  # -------------------------
+  - name: "films"
+    label: "Films"
+    folder: "content/films"
+    create: true
+    extension: "md"
+    format: "frontmatter"          # YAML front matter + body
+    slug: "{{year}}-{{slug}}"
+    summary: "{{film_title}} ({{year}})"
+    fields:
+      # core
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", default: "{{now}}", picker_utc: true }
+      - { label: "Film title", name: "film_title", widget: "string" }
+      - { label: "Original title", name: "film_title_org", widget: "string" }
+      - { label: "Country", name: "country", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string" }
+      - { label: "Minutes", name: "minutes", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Text author", name: "text_author", widget: "string", required: false }
+      - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: false }
+
+      # credits
+      - { label: "Director", name: "Director", widget: "string" }
+      - { label: "Production", name: "Production", widget: "string", required: false }
+      - { label: "Screenwriter", name: "Screenwriter", widget: "string", required: false }
+      - { label: "Editing", name: "Editing", widget: "string", required: false }
+      - { label: "Cinematography", name: "Cinematography", widget: "string", required: false }
+      - { label: "Sound", name: "Sound", widget: "string", required: false }
+      - { label: "Music", name: "Music", widget: "string", required: false }
+      - { label: "Voiceover", name: "Voiceover", widget: "string", required: false }
+      - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", required: false }
+
+      # images
+      - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false }
+      - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false }
+
+      # streaming
+      - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
+      - { label: "Cloudflare video ID", name: "video_id", widget: "string", required: false }
+      - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
+
+      # body
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Pages (About)
+  # -------------------------
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About"
+        file: "content/about/_index.md"
+        format: "frontmatter"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Image", name: "header_image", widget: "image", required: false }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Layout", name: "layout", widget: "string", default: "single", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
