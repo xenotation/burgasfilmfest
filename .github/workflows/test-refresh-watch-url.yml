@@ -1,12 +1,16 @@
-name: TEST Refresh watch_url (BG-only)
+name: Refresh Stream watch_url (BG-only)
 
 on:
-  push:
-    branches: ['test/*', 'test/**', 'test-**', 'test/geo']
-    paths:
-      - 'content/films/**'
-      - '.github/workflows/test-refresh-watch-url.yml'
-  workflow_dispatch: {}
+  # Run twice per day (01:00 and 13:00 UTC)
+  schedule:
+    - cron: "0 1,13 * * *"
+  # Run manually (optionally for a single file)
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Optional: path to a single film file (e.g. content/films/2025-geo-test.md)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -17,30 +21,32 @@ jobs:
     env:
       ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
       API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
-      CF_SUBDOMAIN: ${{ vars.CF_CUSTOMER_SUBDOMAIN }}  # e.g. customer-ojfdlxwm7xyjwjmt.cloudflarestream.com
+      CF_SUBDOMAIN: ${{ vars.CF_CUSTOMER_SUBDOMAIN }} # e.g. customer-ojfdlxwm7xyjwjmt.cloudflarestream.com
 
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
 
-      - name: Figure out which film files changed on this branch
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Build target file list
         id: files
         shell: bash
         run: |
           set -euo pipefail
-          # Get the merge base with main, then list changed film files on this branch
-          git fetch origin main --depth=1 || true
-          BASE=$(git merge-base HEAD origin/main 2>/dev/null || echo "")
-          if [ -n "$BASE" ]; then
-            mapfile -t CHANGED < <(git diff --name-only "$BASE"...HEAD -- content/films | sort)
+          if [[ -n "${{ github.event.inputs.file }}" ]]; then
+            test -f "${{ github.event.inputs.file }}" || { echo "File not found"; exit 1; }
+            printf '[%s]\n' "\"${{ github.event.inputs.file }}\"" > files.json
           else
-            mapfile -t CHANGED < <(git ls-files "content/films/*" | sort)
+            # All film files with show_watch_button: true
+            mapfile -t list < <(grep -rlE '^[[:space:]]*show_watch_button:[[:space:]]*true[[:space:]]*$' content/films | sort || true)
+            printf '%s\n' "${list[@]}" | jq -Rsc 'split("\n")|map(select(length>0))' > files.json
           fi
-          printf '%s\n' "${CHANGED[@]}" | jq -Rsc 'split("\n")|map(select(length>0))' > files.json
           echo "files=$(cat files.json)" >> "$GITHUB_OUTPUT"
-          echo "Changed film files:"; cat files.json
+          echo "Targets:"; cat files.json
 
-      - name: Update watch_url only for changed files with watch button
+      - name: Sign and update watch_url
         id: update
         if: ${{ steps.files.outputs.files != '[]' }}
         shell: bash
@@ -54,26 +60,23 @@ jobs:
           for f in "${FILES[@]}"; do
             [ -f "$f" ] || continue
 
-            # must explicitly opt-in
-            if ! grep -Eq '^[[:space:]]*show_watch_button:[[:space:]]*true[[:space:]]*$' "$f"; then
-              echo "skip (no show_watch_button: true): $f"
-              continue
-            fi
+            # must be explicitly enabled
+            grep -Eq '^[[:space:]]*show_watch_button:[[:space:]]*true[[:space:]]*$' "$f" || { echo "skip: $f (button disabled)"; continue; }
 
-            # get playback_id (or legacy video_id)
+            # get playback_id (fallback to legacy video_id)
             PID=$(awk -F': *' '
               BEGIN{pid=""}
               /^[[:space:]]*playback_id:/ {gsub(/"/,"",$2); if(pid=="") pid=$2}
               /^[[:space:]]*video_id:/    {gsub(/"/,"",$2); if(pid=="") pid=$2}
               END{print pid}
             ' "$f")
-            if [ -z "$PID" ]; then
-              echo "skip (no playback_id/video_id): $f"
-              continue
+
+            if [[ -z "$PID" ]]; then
+              echo "skip: $f (no playback_id/video_id)"; continue
             fi
 
-            # mint BG-only token for this playback id (TTL 24h)
-            JSON='{"ttl":1440,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
+            # Mint BG-only token. TTL set to 720 min (12h). Adjust if needed.
+            JSON='{"ttl":720,"accessRules":[{"type":"ip.geoip.country","action":"allow","country":["BG"]}]}'
             TMP=$(mktemp)
             CODE=$(
               curl -sS -o "$TMP" -w "%{http_code}" \
@@ -84,38 +87,38 @@ jobs:
             )
             echo "HTTP $CODE for $PID"
             cat "$TMP"; echo
-            [ "$CODE" = "200" ] || { echo "token mint failed for $PID (skip)"; continue; }
+            [[ "$CODE" == "200" ]] || { echo "token mint failed for $PID"; continue; }
+
             TOKEN=$(jq -r '.result.token' < "$TMP")
-            [ -n "$TOKEN" ] || { echo "empty token (skip)"; continue; }
+            [[ -n "$TOKEN" && "$TOKEN" != "null" ]] || { echo "empty token for $PID"; continue; }
 
             WATCH_URL="https://${CF_SUBDOMAIN}/${PID}/iframe?preload=true&autoplay=true&token=${TOKEN}"
 
-            # Replace existing watch_url line inside front matter, or insert after playback_id/video_id
+            # Replace existing watch_url (inside front matter) or insert after playback_id/video_id
             awk -v url="$WATCH_URL" '
-              BEGIN{inFM=0; inserted=0}
-              # detect YAML front matter fences
-              /^---[[:space:]]*$/ { fence++; inFM = (fence==1); print; next }
-              # replace existing watch_url inside FM
+              BEGIN{inFM=0; replaced=0}
+              /^---[[:space:]]*$/ { fence++; inFM=(fence==1); print; next }
               {
                 if (inFM && $0 ~ /^[[:space:]]*watch_url:/) {
-                  print "watch_url: \"" url "\""
-                  inserted=1
-                  next
+                  print "watch_url: \"" url "\""; replaced=1; next
                 }
                 print
               }
+              END{
+                if (!replaced) {
+                  # no-op: second pass will insert
+                }
+              }
             ' "$f" > "$f.tmp1"
 
-            # If we didn’t replace, insert after playback_id/video_id
             if ! grep -q '^[[:space:]]*watch_url:' "$f.tmp1"; then
               awk -v url="$WATCH_URL" '
                 BEGIN{inFM=0; done=0}
-                /^---[[:space:]]*$/ { fence++; inFM = (fence==1); print; next }
+                /^---[[:space:]]*$/ { fence++; inFM=(fence==1); print; next }
                 {
                   print
                   if (inFM && !done && $0 ~ /^[[:space:]]*(playback_id|video_id):/) {
-                    print "watch_url: \"" url "\""
-                    done=1
+                    print "watch_url: \"" url "\""; done=1
                   }
                 }
               ' "$f.tmp1" > "$f.tmp2"
@@ -123,7 +126,7 @@ jobs:
             fi
 
             mv "$f.tmp1" "$f"
-            echo "updated watch_url in $f"
+            echo "updated: $f"
             changed=$((changed+1))
           done
 
@@ -135,5 +138,5 @@ jobs:
           git config user.name  "plankton-bot"
           git config user.email "actions@users.noreply.github.com"
           git add content/films
-          git commit -m "test: refresh watch_url (BG-only) for changed files"
+          git commit -m "chore: refresh watch_url (BG-only, scheduled/manual)"
           git push
