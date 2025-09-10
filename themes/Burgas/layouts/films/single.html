@@ -115,9 +115,13 @@
     </div>
 
     <!-- markdown body -->
-    <div class="film-body">
-      {{ .Content }}
-    </div>
+    {{ $hasBody := ne (trim (plainify .Content) " \n\r\t") "" }}
+    {{ if $hasBody }}
+      <div class="film-body">
+        {{ .Content }}
+      </div>
+    {{ end }}
+    
   </div>
 </article>
 {{ end }}
