@@ -1,21 +1,3 @@
-name: Refresh Cloudflare Stream Token (BG-only)
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 5 * * *"    # daily, 05:00 UTC
-  push:
-    branches: [ test ]
-  pull_request:
-    branches: [ test ]
-
-permissions:
-  contents: write
-
-concurrency:
-  group: refresh-stream-bg
-  cancel-in-progress: true
-
 jobs:
   refresh:
     if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
@@ -25,12 +7,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref == 'refs/heads/test' && 'test' || 'test' }}
+          ref: test
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
+      - name: Install Python deps
+        run: pip install pyyaml python-dateutil
 
       - name: Find latest film + extract video_id
         id: pick
@@ -50,22 +35,17 @@ jobs:
             return fm, body
 
           def file_date(fm, path):
-            # priority: front matter 'date', then 'lastmod', else infer from filename
             for k in ('date','lastmod','Date','Lastmod'):
               if k in fm:
                 try:
                   return dp.parse(str(fm[k]))
                 except Exception:
                   pass
-            # filename like 2025-*, 2024-*, etc.
             bn = os.path.basename(path)
             m = re.match(r'(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?', bn)
             if m:
-              y = int(m.group(1))
-              mo = int(m.group(2) or 1)
-              d = int(m.group(3) or 1)
+              y = int(m.group(1)); mo = int(m.group(2) or 1); d = int(m.group(3) or 1)
               return datetime.datetime(y, mo, d)
-            # fallback: mtime
             return datetime.datetime.fromtimestamp(os.path.getmtime(path))
 
           files = sorted(glob.glob('content/films/*.md'))
@@ -92,9 +72,11 @@ jobs:
             print(f"::error::Latest film {latest_path} has no video_id")
             sys.exit(1)
 
-          print(f"latest_path={latest_path}")
-          print(f"::set-output name=path::{latest_path}")
-          print(f"::set-output name=video_id::{vid}")
+          out = os.environ["GITHUB_OUTPUT"]
+          with open(out, "a", encoding="utf-8") as fh:
+            fh.write(f"path={latest_path}\n")
+            fh.write(f"video_id={vid}\n")
+          print(f"Latest = {latest_path} (video_id={vid})")
           PY
 
       - name: Restrict video to Bulgaria (BG)
@@ -103,7 +85,6 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
-          # Make the video playable only in BG
           curl -sS -X PATCH \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
@@ -118,19 +99,14 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
-          # Ask Cloudflare to mint a short-lived token tied to this video.
-          # (TTL 24h; adjust if you prefer.)
           EXP=$(( $(date +%s) + 24*3600 ))
-
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
             --data "{\"exp\": ${EXP}, \"restrictions\": {\"geo\": {\"allow\": [\"BG\"]}} }")
-
           echo "$RESP" | jq -e '.success == true' > /dev/null
-          TOKEN=$(echo "$RESP" | jq -r '.result.token')
-          echo "token=${TOKEN}" >> "$GITHUB_OUTPUT"
+          echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
 
       - name: Write token into front matter (signed_token)
         env:
@@ -139,29 +115,20 @@ jobs:
         run: |
           python - <<'PY'
           import re, yaml, sys, os
-
           path = os.environ['FILEPATH']
           token = os.environ['TOKEN']
-
           with open(path, 'r', encoding='utf-8') as f:
             txt = f.read()
-
           m = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)$', txt, re.S)
           if not m:
-            print("::error::Front matter not found in", path)
-            sys.exit(1)
-
+            print("::error::Front matter not found in " + path); sys.exit(1)
           fm = yaml.safe_load(m.group(1)) or {}
           body = m.group(2)
-
           fm['signed_token'] = token
-
           new_fm = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
           new_txt = f"---\n{new_fm}\n---\n{body}"
-
           with open(path, 'w', encoding='utf-8') as f:
             f.write(new_txt)
-
           print(f"Updated signed_token in {path}")
           PY
 
@@ -181,5 +148,4 @@ jobs:
         if: success()
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-        run: |
-          curl -sS -X POST -d '{}' "$HOOK" > /dev/null || true
+        run: curl -sS -X POST -d '{}' "$HOOK" || true
