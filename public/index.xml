@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Планктон</title>
+    <link>http://192.168.0.103:1313/</link>
+    <description>Recent content on Планктон</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Sep 2025 11:43:54 -0500</lastBuildDate>
+    <atom:link href="http://192.168.0.103:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://192.168.0.103:1313/films/2025-catraias/</link>
+      <pubDate>Wed, 03 Sep 2025 11:43:54 -0500</pubDate>
+      <guid>http://192.168.0.103:1313/films/2025-catraias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://192.168.0.103:1313/films/2025-drijf/</link>
+      <pubDate>Sun, 03 Aug 2025 11:43:54 -0500</pubDate>
+      <guid>http://192.168.0.103:1313/films/2025-drijf/</guid>
+      <description>*Този филм съдържа сцени на насилие, кръв и/или силно плашещи елементи, които могат да бъдат обезпокоителни за някои зрители. Не се препоръчва за лица под 16 години.&#xA;Разговор с Леви Ступс за Drijf Дони Георгиев: Здравей, Леви, благодаря ти, че прие поканата ни за интервю. Тъй като Плаване (Drijf) е част от програмата ни „Летен залез“, която ще покажем тук, със „залязването“ на това лято през септември, исках да те попитам как беше твоето лято тази година?</description>
+    </item>
+    <item>
+      <title>Drijf</title>
+      <link>http://192.168.0.103:1313/posters/2025-drijf-poster/</link>
+      <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
+      <guid>http://192.168.0.103:1313/posters/2025-drijf-poster/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
