@@ -22,10 +22,10 @@ LeadActors: "Мария Виана, Ирмина де Жезус Терросо,
 
 thumbnail: "/img/TANITA.png"
 feature_image: "/img/Still catraias III.jpg"
-hero_video_id: "ac21c626c2f2aa493a58702da8eb6400"
+hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 
 show_watch_button: true
-video_id: "6799329e49d585252f581311c19642d3"
+video_id: 6799329e49d585252f581311c19642d3
 signed_token: ""
 
 ---
