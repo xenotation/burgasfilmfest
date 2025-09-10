@@ -3,7 +3,7 @@ name: Refresh Cloudflare Stream Token (BG-only)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 5 * * *"      # daily at 05:00 UTC
+    - cron: "0 13 * * *"      # daily at 05:00 UTC
   push:
     branches: [ "test" ]
   pull_request:
