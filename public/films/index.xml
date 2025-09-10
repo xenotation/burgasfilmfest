@@ -6,8 +6,15 @@
     <description>Recent content in Films on Планктон</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Aug 2025 11:43:54 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 03 Sep 2025 11:43:54 -0500</lastBuildDate>
     <atom:link href="http://192.168.0.103:1313/films/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEST</title>
+      <link>http://192.168.0.103:1313/films/2025-test/</link>
+      <pubDate>Wed, 03 Sep 2025 11:43:54 -0500</pubDate>
+      <guid>http://192.168.0.103:1313/films/2025-test/</guid>
+      <description>TEST</description>
+    </item>
     <item>
       <title>Плаване</title>
       <link>http://192.168.0.103:1313/films/2025-drijf/</link>

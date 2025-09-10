@@ -1,0 +1,185 @@
+name: Refresh Cloudflare Stream Token (BG-only)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *"    # daily, 05:00 UTC
+  push:
+    branches: [ test ]
+  pull_request:
+    branches: [ test ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stream-bg
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref == 'refs/heads/test' && 'test' || 'test' }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Find latest film + extract video_id
+        id: pick
+        run: |
+          python - <<'PY'
+          import re, os, glob, yaml, datetime, sys
+          from dateutil import parser as dp
+
+          def read_front_matter(path):
+            with open(path, 'r', encoding='utf-8') as f:
+              txt = f.read()
+            m = re.match(r'^---\s*\n(.*?)\n---\s*\n', txt, re.S)
+            if not m:
+              return None, txt
+            fm = yaml.safe_load(m.group(1)) or {}
+            body = txt[m.end():]
+            return fm, body
+
+          def file_date(fm, path):
+            # priority: front matter 'date', then 'lastmod', else infer from filename
+            for k in ('date','lastmod','Date','Lastmod'):
+              if k in fm:
+                try:
+                  return dp.parse(str(fm[k]))
+                except Exception:
+                  pass
+            # filename like 2025-*, 2024-*, etc.
+            bn = os.path.basename(path)
+            m = re.match(r'(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?', bn)
+            if m:
+              y = int(m.group(1))
+              mo = int(m.group(2) or 1)
+              d = int(m.group(3) or 1)
+              return datetime.datetime(y, mo, d)
+            # fallback: mtime
+            return datetime.datetime.fromtimestamp(os.path.getmtime(path))
+
+          files = sorted(glob.glob('content/films/*.md'))
+          if not files:
+            print("::error::No files in content/films")
+            sys.exit(1)
+
+          ranked = []
+          for p in files:
+            fm, _ = read_front_matter(p)
+            if fm is None:
+              continue
+            ranked.append((file_date(fm, p), p, fm))
+
+          if not ranked:
+            print("::error::No front-matter files in content/films")
+            sys.exit(1)
+
+          ranked.sort(key=lambda x: x[0], reverse=True)
+          dt, latest_path, fm = ranked[0]
+
+          vid = fm.get('video_id') or fm.get('video') or ''
+          if not vid:
+            print(f"::error::Latest film {latest_path} has no video_id")
+            sys.exit(1)
+
+          print(f"latest_path={latest_path}")
+          print(f"::set-output name=path::{latest_path}")
+          print(f"::set-output name=video_id::{vid}")
+          PY
+
+      - name: Restrict video to Bulgaria (BG)
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          VID: ${{ steps.pick.outputs.video_id }}
+        run: |
+          # Make the video playable only in BG
+          curl -sS -X PATCH \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
+            --data '{"geo":{"allow":["BG"]}}' \
+            | jq -e '.success == true' > /dev/null
+
+      - name: Create signed playback token (BG, 24h)
+        id: sign
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          VID: ${{ steps.pick.outputs.video_id }}
+        run: |
+          # Ask Cloudflare to mint a short-lived token tied to this video.
+          # (TTL 24h; adjust if you prefer.)
+          EXP=$(( $(date +%s) + 24*3600 ))
+
+          RESP=$(curl -sS -X POST \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
+            --data "{\"exp\": ${EXP}, \"restrictions\": {\"geo\": {\"allow\": [\"BG\"]}} }")
+
+          echo "$RESP" | jq -e '.success == true' > /dev/null
+          TOKEN=$(echo "$RESP" | jq -r '.result.token')
+          echo "token=${TOKEN}" >> "$GITHUB_OUTPUT"
+
+      - name: Write token into front matter (signed_token)
+        env:
+          FILEPATH: ${{ steps.pick.outputs.path }}
+          TOKEN: ${{ steps.sign.outputs.token }}
+        run: |
+          python - <<'PY'
+          import re, yaml, sys, os
+
+          path = os.environ['FILEPATH']
+          token = os.environ['TOKEN']
+
+          with open(path, 'r', encoding='utf-8') as f:
+            txt = f.read()
+
+          m = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)$', txt, re.S)
+          if not m:
+            print("::error::Front matter not found in", path)
+            sys.exit(1)
+
+          fm = yaml.safe_load(m.group(1)) or {}
+          body = m.group(2)
+
+          fm['signed_token'] = token
+
+          new_fm = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
+          new_txt = f"---\n{new_fm}\n---\n{body}"
+
+          with open(path, 'w', encoding='utf-8') as f:
+            f.write(new_txt)
+
+          print(f"Updated signed_token in {path}")
+          PY
+
+      - name: Commit update back to test
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "chore(stream): refresh BG token + geo"
+            git push origin HEAD:test
+          else
+            echo "Nothing to commit."
+          fi
+
+      - name: Trigger Netlify build (branch deploy)
+        if: success()
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          curl -sS -X POST -d '{}' "$HOOK" > /dev/null || true
