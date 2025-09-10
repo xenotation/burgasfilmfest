@@ -18,7 +18,6 @@ concurrency:
 
 jobs:
   refresh:
-    # allow schedule/manual even when not tied to a branch ref
     if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
 
@@ -107,15 +106,13 @@ jobs:
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
             --data '{"requireSignedURLs": true}')
 
-          echo "Cloudflare response:"
           echo "$RESP" | jq .
-
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
 
-      - name: Create signed playback token (BG, 24h)
+      - name: Create signed playback token (BG allowlist, 24h)
         id: sign
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -124,20 +121,28 @@ jobs:
         run: |
           EXP=$(( $(date +%s) + 24*3600 ))
 
+          # IMPORTANT: use accessRules to allow only BG, then block everyone else.
+          read -r -d '' BODY <<JSON
+          {
+            "exp": ${EXP},
+            "accessRules": [
+              { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] },
+              { "type": "any", "action": "block" }
+            ]
+          }
+          JSON
+
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
-            --data "{\"exp\": ${EXP}, \"restrictions\": {\"geo\": {\"allow\": [\"BG\"]}} }")
+            --data "$BODY")
 
-          echo "Token response:"
           echo "$RESP" | jq .
-
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
-
           echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
 
       - name: Write token into front matter (signed_token)
@@ -170,7 +175,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(stream): requireSignedURLs + BG token refresh"
+            git commit -m "chore(stream): requireSignedURLs + BG-allow token (24h)"
             git push origin HEAD:test
           else
             echo "Nothing to commit."
