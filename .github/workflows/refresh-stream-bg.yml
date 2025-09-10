@@ -1,8 +1,26 @@
+name: Refresh Cloudflare Stream Token (BG-only)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 5 * * *"      # daily at 05:00 UTC
+  push:
+    branches: [ test ]
+  pull_request:
+    branches: [ test ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stream-bg
+  cancel-in-progress: true
+
 jobs:
   refresh:
+    # allow on schedule/manual even though not tied to a branch ref
     if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,8 +68,7 @@ jobs:
 
           files = sorted(glob.glob('content/films/*.md'))
           if not files:
-            print("::error::No files in content/films")
-            sys.exit(1)
+            print("::error::No files in content/films"); sys.exit(1)
 
           ranked = []
           for p in files:
@@ -61,16 +78,14 @@ jobs:
             ranked.append((file_date(fm, p), p, fm))
 
           if not ranked:
-            print("::error::No front-matter files in content/films")
-            sys.exit(1)
+            print("::error::No front-matter files in content/films"); sys.exit(1)
 
           ranked.sort(key=lambda x: x[0], reverse=True)
           dt, latest_path, fm = ranked[0]
 
           vid = fm.get('video_id') or fm.get('video') or ''
           if not vid:
-            print(f"::error::Latest film {latest_path} has no video_id")
-            sys.exit(1)
+            print(f"::error::Latest film {latest_path} has no video_id"); sys.exit(1)
 
           out = os.environ["GITHUB_OUTPUT"]
           with open(out, "a", encoding="utf-8") as fh:
