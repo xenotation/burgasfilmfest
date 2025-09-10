@@ -112,25 +112,31 @@ jobs:
             exit 1
           }
 
-      - name: Create signed playback token (BG allowlist, 24h)
+         - name: Create signed playback token (BG allowlist, 24h)
         id: sign
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
           EXP=$(( $(date +%s) + 24*3600 ))
 
-          # IMPORTANT: use accessRules to allow only BG, then block everyone else.
-          read -r -d '' BODY <<JSON
-          {
-            "exp": ${EXP},
-            "accessRules": [
-              { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] },
-              { "type": "any", "action": "block" }
-            ]
-          }
-          JSON
+          # Build JSON safely with jq (no here-docs, no read -d '')
+          BODY=$(jq -n --arg vid "$VID" --argjson exp "$EXP" '
+            {
+              exp: $exp,
+              accessRules: [
+                { type: "ip.geoip.country", action: "allow", country: ["BG"] },
+                { type: "any", action: "block" }
+              ]
+            }')
+
+          echo "Request body:"
+          echo "$BODY" | jq .
 
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
@@ -138,11 +144,16 @@ jobs:
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
             --data "$BODY")
 
+          echo "Response:"
           echo "$RESP" | jq .
+
+          # Fail with a readable message if Cloudflare returned an error
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
-            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            echo "CF error:"
+            echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
+
           echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
 
       - name: Write token into front matter (signed_token)
