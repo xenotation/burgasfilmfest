@@ -46,49 +46,47 @@ jobs:
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      - name: Find newest film (by date/lastmod) + extract video_id
+      # ► Only 'date' is considered. No 'lastmod'.
+      #   Robust front-matter parse (accepts BOM/leading whitespace and CRLF).
+      - name: Find newest film (by date only) + extract video_id
         id: pick
         run: |
           python - <<'PY'
           import re, os, glob, yaml, sys, datetime
           from dateutil import parser as dp
 
+          # match front matter even if there's BOM/whitespace before ---
+          FM_RE = re.compile(r'^\s*\ufeff?---\s*\r?\n(.*?)\r?\n---\s*\r?\n', re.S)
+
           def read_front_matter(path):
             with open(path, 'r', encoding='utf-8') as f:
               txt = f.read()
-            m = re.match(r'^---\s*\n(.*?)\n---\s*\n', txt, re.S)
+            m = FM_RE.search(txt)
             if not m:
               return None, txt
-            fm = yaml.safe_load(m.group(1)) or {}
+            try:
+              fm = yaml.safe_load(m.group(1)) or {}
+            except Exception as e:
+              print(f"skip (YAML error): {path}: {e}")
+              return None, txt
             return fm, txt[m.end():]
 
-          def parse_dt(v):
+          def parse_date_only(fm, path):
+            v = fm.get('date')
+            if v is None:
+              print(f"skip (no 'date' in fm): {path}")
+              return None
             try:
               dt = dp.parse(str(v))
-            except Exception:
+            except Exception as e:
+              print(f"skip (bad 'date' value): {path}: {e}")
               return None
-            # normalize to UTC
+            # normalize to UTC for fair comparison
             if dt.tzinfo is None:
               dt = dt.replace(tzinfo=datetime.timezone.utc)
             else:
               dt = dt.astimezone(datetime.timezone.utc)
             return dt
-
-          def file_date(fm, path):
-            # prefer explicit front-matter
-            for k in ('date','lastmod','Date','Lastmod'):
-              if k in fm:
-                dt = parse_dt(fm[k])
-                if dt: return dt
-            # fallback: filename like 2025-09-03*.md
-            bn = os.path.basename(path)
-            m = re.match(r'^(\d{4})-(\d{2})-(\d{2})', bn)
-            if m:
-              y, mo, d = map(int, m.groups())
-              return datetime.datetime(y, mo, d, tzinfo=datetime.timezone.utc)
-            # fallback: mtime
-            mt = os.path.getmtime(path)
-            return datetime.datetime.fromtimestamp(mt, tz=datetime.timezone.utc)
 
           files = sorted(glob.glob('content/films/*.md'))
           if not files:
@@ -98,17 +96,21 @@ jobs:
           for p in files:
             fm, _ = read_front_matter(p)
             if not fm:
+              print(f"skip (no front matter): {p}")
               continue
             vid = (fm.get('video_id') or fm.get('video') or '').strip()
             if not vid:
+              print(f"skip (no video_id): {p}")
               continue
-            dt = file_date(fm, p)
+            dt = parse_date_only(fm, p)
+            if not dt:
+              continue
             candidates.append((dt, p, vid))
 
           if not candidates:
-            print("::error::No film with video_id found"); sys.exit(1)
+            print("::error::No film with valid 'date' and 'video_id' found"); sys.exit(1)
 
-          print("— Candidates (UTC):")
+          print("— Candidates (UTC, by 'date'):")
           for dt, p, vid in candidates:
             print(f"  {dt.isoformat()}  {p}  (video_id={vid})")
 
@@ -197,7 +199,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(stream): BG-only token refresh for newest film"
+            git commit -m "chore(stream): BG-only token refresh for newest film (by date)"
             git push origin HEAD:test
           else
             echo "Nothing to commit."
