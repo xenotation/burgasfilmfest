@@ -28,33 +28,4 @@ theme = 'Burgas'
     "https://www.instagram.com/plankton_space/"
   ]
 
-# Images live under static/img → reference them as /img/...
-[[params.partners]]
-url = "https://ncf.bg/bg"
-img = "/img/Copy.png"
-alt = "National Culture Fund"
-
-[[params.partners]]
-url = "https://another.example"
-img = "/img/logent.png"
-alt = "Burgas Film Fest"
-
-[[params.partners]]
-url = ""
-img = "/img/MBG_Финансирано_от_Европейския_съюз_RGB_WHITE_Outline .png"
-alt = "Euro financing"
-
-[[params.partners]]
-url = "https://ncf.bg/bg"
-img = "/img/NFK LOGO INV in PNG.png"
-alt = "National Culture Fund"
-
-[[params.partners]]
-url = ""
-img = "/img/zlogo_biff_full_transparent - 0Copy.png"
-alt = "Burgas Film Fest"
-
-[[params.partners]]
-url = ""
-img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
-alt = "Euro financing"
+  
