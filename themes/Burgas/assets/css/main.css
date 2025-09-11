@@ -333,7 +333,7 @@ body {
   border: 2px solid var(--color-fg);
   border-radius: 1rem 1rem 0 0;
   padding: 1rem 2rem;
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-2);
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
@@ -342,9 +342,9 @@ body {
   /* rotate vertical + delayed pop-in */
   transform: rotate(-90deg) scale(0);
   transform-origin: right center;
-  animation: donatePop .7s ease-out 6s forwards; /* ← show after 40s */
+  animation: donatePop .7s ease-out 36s forwards; /* ← show after 40s */
 
-  filter: drop-shadow(8px 8px 4px #4444dd);
+  filter: drop-shadow(-8px -3px 5px #4444dd);
   transition: filter .4s ease;
 }
 
