@@ -1,31 +1,212 @@
-baseURL = 'https://plankton.bg/'
-languageCode = 'en-us'
-title = 'Планктон'
-theme = 'Burgas'
+baseURL = "https://plankton.bg/"
+languageCode = "bg-bg"          # was "en-us"; set to Bulgarian locale
+title = "Планктон"
+theme = "Burgas"
 
-[markup.goldmark]
-  [markup.goldmark.renderer]
-    unsafe = true
-
-[params]
-  description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
-
-[params.seo]
-  site_name    = "Burgas Film Fest"
-  defaultImage = "/img/og-default.jpg"   # put the file in /static/img/og-default.jpg
-  twitterSite  = "@your_account"
-  locale       = "bg_BG"
+[markup.goldmark.renderer]
+unsafe = true
 
 [outputs]
-  home = ["HTML", "RSS"]
+home = ["HTML", "RSS"]
 
+[params]
+# Fallback site-wide description (used if a page has no description)
+description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
+
+  [params.seo]
+  # Used in og:site_name (falls back to .Site.Title)
+  site_name    = "Планктон"
+  # Used if page has no feature_image/thumbnail
+  defaultImage = "/img/og-default.jpg"   # ensure file exists at /static/img/og-default.jpg
+  # og:locale and Twitter settings
+  locale       = "bg_BG"
+  twitterCard  = "summary_large_image"
+  twitterSite  = "@your_account"         # e.g. @plankton_bg
+  # Optional: control crawling site-wide (can be overridden per page via .Params.seo.robots)
+  # robots      = "index,follow"
+
+  # Publisher / Organization (you can reference this in other JSON-LD if needed)
   [params.org]
-  name = "Plakton"
-  url  = "https://plakton.bg/"
-  logo = "/img/logo-512.png"            # add this file under /static/img/
+  name = "Plankton"
+  url  = "https://plankton.bg/"
+  logo = "/img/logo-512.png"             # ensure exists at /static/img/logo-512.png
   sameAs = [
     "https://www.facebook.com/burgasfilmfest",
     "https://www.instagram.com/plankton_space/"
   ]
 
-  
+# -------------------------
+# Partners ticker (used in your HTML ticker)
+# Images live under /static/img → reference them as /img/...
+# -------------------------
+
+[[params.partners]]
+url = "https://ncf.bg/bg"
+img = "/img/ncf_copy.png"
+alt = "National Culture Fund"
+
+[[params.partners]]
+url = "https://another.example"
+img = "/img/logent.png"
+alt = "Burgas Film Fest"
+
+[[params.partners]]
+url = ""
+img = "/img/mbg_eu_funded_rgb_white_outline.png"
+alt = "European Union Funding"
+
+[[params.partners]]
+url = "https://ncf.bg/bg"
+img = "/img/nfk_logo_inv.png"
+alt = "National Culture Fund (Inverse)"
+
+[[params.partners]]
+url = ""
+img = "/img/zlogo_biff_full_transparent_0copy.png"
+alt = "Burgas Film Fest"
+
+[[params.partners]]
+url = ""
+img = "/img/eu_white_outline_copy.png"
+alt = "European Union Funding (Alt)"
+
+
+# -------------------------
+# Decap CMS configuration (for editing hugo.toml)
+# -------------------------
+
+[[_cms.collections]]
+name = "config"
+label = "Site Configuration"
+delete = false
+
+  [[_cms.collections.files]]
+  label = "General Settings"
+  name  = "site"
+  file  = "hugo.toml"
+  format = "toml"
+
+    [[_cms.collections.files.fields]]
+    label = "Base URL"
+    name  = "baseURL"
+    widget = "string"
+
+    [[_cms.collections.files.fields]]
+    label = "Language Code"
+    name  = "languageCode"
+    widget = "string"
+
+    [[_cms.collections.files.fields]]
+    label = "Title"
+    name  = "title"
+    widget = "string"
+
+    [[_cms.collections.files.fields]]
+    label = "Theme"
+    name  = "theme"
+    widget = "string"
+
+    [[_cms.collections.files.fields]]
+    label = "Params"
+    name  = "params"
+    widget = "object"
+
+      [[_cms.collections.files.fields.fields]]
+      label = "Site Description"
+      name  = "description"
+      widget = "text"
+
+      [[_cms.collections.files.fields.fields]]
+      label = "SEO"
+      name  = "seo"
+      widget = "object"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Site Name (og:site_name)"
+        name  = "site_name"
+        widget = "string"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Default OG Image"
+        name  = "defaultImage"
+        widget = "image"
+        media_folder = "static/img"
+        public_folder = "/img"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "og:locale"
+        name  = "locale"
+        widget = "string"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Twitter Card"
+        name  = "twitterCard"
+        widget = "select"
+        options = ["summary", "summary_large_image"]
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Twitter @site"
+        name  = "twitterSite"
+        widget = "string"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Robots (site-wide)"
+        name  = "robots"
+        widget = "string"
+
+      [[_cms.collections.files.fields.fields]]
+      label = "Organization"
+      name  = "org"
+      widget = "object"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Name"
+        name  = "name"
+        widget = "string"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "URL"
+        name  = "url"
+        widget = "string"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Logo"
+        name  = "logo"
+        widget = "image"
+        media_folder = "static/img"
+        public_folder = "/img"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Same As (profiles)"
+        name  = "sameAs"
+        widget = "list"
+        allow_add = true
+
+          [[_cms.collections.files.fields.fields.fields.field]]
+          label = "Profile URL"
+          name  = "url"
+          widget = "string"
+
+      [[_cms.collections.files.fields.fields]]
+      label = "Partners (ticker)"
+      name  = "partners"
+      widget = "list"
+      allow_add = true
+      summary = "{{fields.alt}}"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "URL"
+        name  = "url"
+        widget = "string"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Image"
+        name  = "img"
+        widget = "image"
+        media_folder = "static/img"
+        public_folder = "/img"
+
+        [[_cms.collections.files.fields.fields.fields]]
+        label = "Alt Text"
+        name  = "alt"
+        widget = "string"
