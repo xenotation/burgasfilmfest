@@ -1,7 +1,11 @@
 baseURL = "https://plankton.bg/"
-languageCode = "bg-bg"          # was "en-us"; set to Bulgarian locale
+languageCode = "bg-bg"
 title = "Планктон"
 theme = "Burgas"
+
+[markup]
+
+[markup.goldmark]
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -10,35 +14,20 @@ unsafe = true
 home = ["HTML", "RSS"]
 
 [params]
-# Fallback site-wide description (used if a page has no description)
 description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
 
-  [params.seo]
-  # Used in og:site_name (falls back to .Site.Title)
-  site_name    = "Планктон"
-  # Used if page has no feature_image/thumbnail
-  defaultImage = "/img/og-default.jpg"   # ensure file exists at /static/img/og-default.jpg
-  # og:locale and Twitter settings
-  locale       = "bg_BG"
-  twitterCard  = "summary_large_image"
-  twitterSite  = "@your_account"         # e.g. @plankton_bg
-  # Optional: control crawling site-wide (can be overridden per page via .Params.seo.robots)
-  # robots      = "index,follow"
+[params.seo]
+site_name = "Планктон"
+defaultImage = "/img/og-default.jpg"
+locale = "bg_BG"
+twitterCard = "summary_large_image"
+twitterSite = "@your_account"
 
-  # Publisher / Organization (you can reference this in other JSON-LD if needed)
-  [params.org]
-  name = "Plankton"
-  url  = "https://plankton.bg/"
-  logo = "/img/logo-512.png"             # ensure exists at /static/img/logo-512.png
-  sameAs = [
-    "https://www.facebook.com/burgasfilmfest",
-    "https://www.instagram.com/plankton_space/"
-  ]
-
-# -------------------------
-# Partners ticker (used in your HTML ticker)
-# Images live under /static/img → reference them as /img/...
-# -------------------------
+[params.org]
+name = "Plankton"
+url = "https://plankton.bg/"
+logo = "/img/og-default.jpg"
+sameAs = ["https://www.facebook.com/burgasfilmfest", "https://www.instagram.com/plankton_space/"]
 
 [[params.partners]]
 url = "https://ncf.bg/bg"
@@ -69,8 +58,3 @@ alt = "Burgas Film Fest"
 url = ""
 img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
 alt = "European Union Funding (Alt)"
-
-
-# -------------------------
-# Decap CMS configuration (for editing hugo.toml)
-# -------------------------
