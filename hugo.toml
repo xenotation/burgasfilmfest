@@ -1,48 +1,37 @@
-baseURL = "https://plankton.bg/"
-languageCode = "bg-bg"          # was "en-us"; set to Bulgarian locale
-title = "Планктон"
-theme = "Burgas"
+baseURL = 'https://plankton.bg/'
+languageCode = 'en-us'
+title = 'Планктон'
+theme = 'Burgas'
 
-[markup.goldmark.renderer]
-unsafe = true
-
-[outputs]
-home = ["HTML", "RSS"]
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [params]
-# Fallback site-wide description (used if a page has no description)
-description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
+  description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
 
-  [params.seo]
-  # Used in og:site_name (falls back to .Site.Title)
-  site_name    = "Планктон"
-  # Used if page has no feature_image/thumbnail
-  defaultImage = "/img/og-default.jpg"   # ensure file exists at /static/img/og-default.jpg
-  # og:locale and Twitter settings
+[params.seo]
+  site_name    = "Burgas Film Fest"
+  defaultImage = "/img/og-default.jpg"   # put the file in /static/img/og-default.jpg
+  twitterSite  = "@your_account"
   locale       = "bg_BG"
-  twitterCard  = "summary_large_image"
-  twitterSite  = "@your_account"         # e.g. @plankton_bg
-  # Optional: control crawling site-wide (can be overridden per page via .Params.seo.robots)
-  # robots      = "index,follow"
 
-  # Publisher / Organization (you can reference this in other JSON-LD if needed)
+[outputs]
+  home = ["HTML", "RSS"]
+
   [params.org]
-  name = "Plankton"
-  url  = "https://plankton.bg/"
-  logo = "/img/logo-512.png"             # ensure exists at /static/img/logo-512.png
+  name = "Plakton"
+  url  = "https://plakton.bg/"
+  logo = "/img/logo-512.png"            # add this file under /static/img/
   sameAs = [
     "https://www.facebook.com/burgasfilmfest",
     "https://www.instagram.com/plankton_space/"
   ]
 
-# -------------------------
-# Partners ticker (used in your HTML ticker)
-# Images live under /static/img → reference them as /img/...
-# -------------------------
-
+# Images live under static/img → reference them as /img/...
 [[params.partners]]
 url = "https://ncf.bg/bg"
-img = "/img/ncf_copy.png"
+img = "/img/Copy.png"
 alt = "National Culture Fund"
 
 [[params.partners]]
@@ -50,24 +39,22 @@ url = "https://another.example"
 img = "/img/logent.png"
 alt = "Burgas Film Fest"
 
-# If you keep Cyrillic, avoid spaces. Prefer ASCII filenames.
 [[params.partners]]
 url = ""
-img = "/img/mbg_eu_funded_rgb_white_outline.png"
-alt = "European Union Funding"
+img = "/img/MBG_Финансирано_от_Европейския_съюз_RGB_WHITE_Outline .png"
+alt = "Euro financing"
 
 [[params.partners]]
 url = "https://ncf.bg/bg"
-img = "/img/nfk_logo_inv.png"
-alt = "National Culture Fund (Inverse)"
+img = "/img/NFK LOGO INV in PNG.png"
+alt = "National Culture Fund"
 
 [[params.partners]]
 url = ""
-img = "/img/zlogo_biff_full_transparent_0copy.png"
+img = "/img/zlogo_biff_full_transparent - 0Copy.png"
 alt = "Burgas Film Fest"
 
 [[params.partners]]
 url = ""
-img = "/img/eu_white_outline_copy.png"
-alt = "European Union Funding (Alt)"
-
+img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
+alt = "Euro financing"
