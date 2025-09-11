@@ -42,32 +42,32 @@ description = "Дигитална платформа за представяне
 
 [[params.partners]]
 url = "https://ncf.bg/bg"
-img = "/img/ncf_copy.png"
+img = "/img/NFK LOGO INV in PNG.png"
 alt = "National Culture Fund"
 
 [[params.partners]]
 url = "https://another.example"
-img = "/img/logent.png"
+img = "/img/zlogo_biff_full_transparent_0copy.png"
 alt = "Burgas Film Fest"
 
 [[params.partners]]
-url = ""
-img = "/img/mbg_eu_funded_rgb_white_outline.png"
+url = "https://another.example"
+img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
 alt = "European Union Funding"
 
 [[params.partners]]
 url = "https://ncf.bg/bg"
-img = "/img/nfk_logo_inv.png"
+img = "/img/NFK LOGO INV in PNG.png"
 alt = "National Culture Fund (Inverse)"
 
 [[params.partners]]
-url = ""
+url = "https://another.example"
 img = "/img/zlogo_biff_full_transparent_0copy.png"
 alt = "Burgas Film Fest"
 
 [[params.partners]]
 url = ""
-img = "/img/eu_white_outline_copy.png"
+img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
 alt = "European Union Funding (Alt)"
 
 

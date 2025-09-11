@@ -66,11 +66,12 @@ body {
 }
 
 @keyframes donatePop {
-  0%   { transform: scale(0);   }
-  60%  { transform: scale(1.15); }
-  80%  { transform: scale(.95);  }
-  100% { transform: scale(1);    }
+  0%   { transform: rotate(-90deg) scale(0); }
+  60%  { transform: rotate(-90deg) scale(1.15); }
+  80%  { transform: rotate(-90deg) scale(.95); }
+  100% { transform: rotate(-90deg) scale(1); }
 }
+
 
 @keyframes partners-scroll {
   from { transform: translateX(0);     }
@@ -321,31 +322,36 @@ body {
 /* ======================== */
 
 .donate-button{
-  position:fixed;
-  left:1rem;                                  
-  bottom:calc(var(--footer-h) + 4.5rem);        
-  z-index:9999;                                 
-  background:#4444dd;
-  color:var(--color-bg);
-  border:2px solid var(--color-fg);
-  border-radius: 0 0 0 1rem;
-  padding:1rem 2rem;
-  font-size:var(--font-size-4);
-  font-weight:600;
-  text-decoration:none;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  
-  transform:scale(0);                           /* start invisible */
-  animation:donatePop .7s ease-out 30s forwards;/* pop in once */
+  position: fixed;
+  right: 1.2rem;               /* stick to right edge */
+  top: 40%;               /* mid-right; tweak as you like */
 
-  filter:drop-shadow(8px 8px 4px #4444dd);
-  transition:filter .4s ease;
+  z-index: 9999;
+
+  background: #4444dd;
+  color: var(--color-bg);
+  border: 2px solid var(--color-fg);
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-4);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+
+  /* rotate vertical + delayed pop-in */
+  transform: rotate(-90deg) scale(0);
+  transform-origin: right center;
+  animation: donatePop .7s ease-out 6s forwards; /* ← show after 40s */
+
+  filter: drop-shadow(8px 8px 4px #4444dd);
+  transition: filter .4s ease;
 }
 
 .donate-button:hover{
-  filter:drop-shadow(2px 8px 4px #a4a4e7);
+  filter: drop-shadow(2px 8px 4px #a4a4e7);
 }
+
 
 /* partners.css */
 
@@ -564,8 +570,9 @@ body {
   }
 
   .partners-label {
-    left: 0.5rem;
+    left: 16rem;
     font-size: var(--font-size-2);
+    display: block !important;
   }
 
   .hero-banner-wrap {
@@ -604,4 +611,39 @@ body {
     display: none;
   }
   
+
+
+/* 2) Respect iOS bottom safe area so the bar isn’t cut off */
+.ticker-wrap {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 3) Lift the toggle by bar height (+ safe area) when open */
+.partners-label.open{
+  transform: translateY(calc(-1 * (var(--partners-bar-h) + env(safe-area-inset-bottom)) - 3px));
+}
+
+/* 4) Ensure the bar sits under the toggle but above other UI */
+.ticker-wrap { z-index: 9998 !important; }   /* toggle/donate use 9999 in your CSS */
+
+/* 5) Make toggle easier to tap */
+.partners-label{
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 6) Logo height follows the bar height variable */
+.track-slot img{ height: var(--partners-bar-h); width: auto; display: block; }
+
+/* 7) Phone-specific sizing + smoother scroll */
+@media (max-width: 1000px){
+  :root { --partners-bar-h: 3.25rem; }
+  .ticker-track { animation-duration: 24s; }  /* a bit slower on mobile */
+  .track-slot a { padding: 0 1rem; }          /* narrower gutters */
+}
+
+
 }
