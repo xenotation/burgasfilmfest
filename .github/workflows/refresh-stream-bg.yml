@@ -1,217 +1,114 @@
-name: Refresh Cloudflare Stream Token (BG-only)
+- name: Find newest film (by date only) + extract video_id
+  id: pick
+  run: |
+    python - <<'PY'
+    import re, os, glob, yaml, sys, datetime
+    from dateutil import parser as dp
 
-on:
-  workflow_dispatch: {}
-  push:
-    branches: [ "test" ]
+    # Accept BOM/ZWSP/NBSP around separators; accept EOF right after closing ---
+    def clean(s):
+        return s.replace('\ufeff','').replace('\u200b','').replace('\xa0','')
 
-permissions:
-  contents: write
-
-concurrency:
-  group: refresh-stream-bg
-  cancel-in-progress: true
-
-jobs:
-  refresh:
-    if: github.ref == 'refs/heads/test' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout test
-        uses: actions/checkout@v4
-        with:
-          ref: test
-          fetch-depth: 0
-
-      - name: Ensure curl & jq
-        run: |
-          set -e
-          if ! command -v curl >/dev/null 2>&1; then
-            sudo apt-get update -y
-            sudo apt-get install -y curl
-          fi
-          if ! command -v jq >/dev/null 2>&1; then
-            sudo apt-get update -y
-            sudo apt-get install -y jq
-          fi
-          curl --version | head -n1
-          jq --version
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install Python deps
-        run: pip install pyyaml python-dateutil
-
-      # ► Only 'date' is considered. No 'lastmod'.
-      #   Robust front-matter parse (accepts BOM/leading whitespace and CRLF).
-      - name: Find newest film (by date only) + extract video_id
-        id: pick
-        run: |
-          python - <<'PY'
-          import re, os, glob, yaml, sys, datetime
-          from dateutil import parser as dp
-
-          # match front matter even if there's BOM/whitespace before ---
-          FM_RE = re.compile(r'^\s*\ufeff?---\s*\r?\n(.*?)\r?\n---\s*\r?\n', re.S)
-
-          def read_front_matter(path):
-            with open(path, 'r', encoding='utf-8') as f:
-              txt = f.read()
-            m = FM_RE.search(txt)
-            if not m:
-              return None, txt
-            try:
-              fm = yaml.safe_load(m.group(1)) or {}
-            except Exception as e:
-              print(f"skip (YAML error): {path}: {e}")
-              return None, txt
-            return fm, txt[m.end():]
-
-          def parse_date_only(fm, path):
-            v = fm.get('date')
-            if v is None:
-              print(f"skip (no 'date' in fm): {path}")
-              return None
-            try:
-              dt = dp.parse(str(v))
-            except Exception as e:
-              print(f"skip (bad 'date' value): {path}: {e}")
-              return None
-            # normalize to UTC for fair comparison
-            if dt.tzinfo is None:
-              dt = dt.replace(tzinfo=datetime.timezone.utc)
-            else:
-              dt = dt.astimezone(datetime.timezone.utc)
-            return dt
-
-          files = sorted(glob.glob('content/films/*.md'))
-          if not files:
-            print("::error::No files in content/films"); sys.exit(1)
-
-          candidates = []
-          for p in files:
-            fm, _ = read_front_matter(p)
-            if not fm:
-              print(f"skip (no front matter): {p}")
-              continue
-            vid = (fm.get('video_id') or fm.get('video') or '').strip()
-            if not vid:
-              print(f"skip (no video_id): {p}")
-              continue
-            dt = parse_date_only(fm, p)
-            if not dt:
-              continue
-            candidates.append((dt, p, vid))
-
-          if not candidates:
-            print("::error::No film with valid 'date' and 'video_id' found"); sys.exit(1)
-
-          print("— Candidates (UTC, by 'date'):")
-          for dt, p, vid in candidates:
-            print(f"  {dt.isoformat()}  {p}  (video_id={vid})")
-
-          candidates.sort(key=lambda x: x[0], reverse=True)
-          dt, latest_path, vid = candidates[0]
-          print(f"Picked newest: {latest_path} @ {dt.isoformat()}  (video_id={vid})")
-
-          out = os.environ["GITHUB_OUTPUT"]
-          with open(out, "a", encoding="utf-8") as fh:
-            fh.write(f"path={latest_path}\n")
-            fh.write(f"video_id={vid}\n")
-          PY
-
-      - name: Require signed URLs for this video
-        env:
-          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          VID:           ${{ steps.pick.outputs.video_id }}
-        run: |
-          set -Eeuo pipefail
-          BODY='{"requireSignedURLs": true}'
-          echo "POST /accounts/${CF_ACCOUNT_ID}/stream/${VID}"
-          RESP=$(curl -sS -X POST \
-            -H "Authorization: Bearer ${CF_API_TOKEN}" \
-            -H "Content-Type: application/json" \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
-            --data "$BODY")
-          echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' >/dev/null || {
-            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
-            exit 1
-          }
-
-      - name: Create signed playback token (BG allowlist, 24h)
-        id: sign
-        env:
-          CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          VID:           ${{ steps.pick.outputs.video_id }}
-        run: |
-          set -Eeuo pipefail
-          EXP=$(( $(date +%s) + 24*3600 ))
-          BODY=$(jq -n --argjson exp "$EXP" \
-            '{ exp: $exp, restrictions: { geo: { allow: ["BG"] } } }')
-          echo "POST /accounts/${CF_ACCOUNT_ID}/stream/${VID}/token"
-          echo "Request:"; echo "$BODY" | jq .
-          RESP=$(curl -sS -X POST \
-            -H "Authorization: Bearer ${CF_API_TOKEN}" \
-            -H "Content-Type: application/json" \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
-            --data "$BODY")
-          echo "Response:"; echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' >/dev/null || {
-            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
-            exit 1
-          }
-          echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
-
-      - name: Write token into front matter (picked file only)
-        env:
-          FILEPATH: ${{ steps.pick.outputs.path }}
-          TOKEN:    ${{ steps.sign.outputs.token }}
-        run: |
-          python - <<'PY'
-          import re, yaml, sys, os
-          path = os.environ['FILEPATH']
-          token = os.environ['TOKEN']
-          with open(path, 'r', encoding='utf-8') as f:
+    def read_front_matter(path):
+        with open(path, 'r', encoding='utf-8') as f:
             txt = f.read()
-          m = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)$', txt, re.S)
-          if not m:
-            print("::error::Front matter not found in " + path); sys.exit(1)
-          fm = yaml.safe_load(m.group(1)) or {}
-          body = m.group(2)
-          fm['signed_token'] = token
-          new_fm = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
-          new_txt = f"---\n{new_fm}\n---\n{body}"
-          with open(path, 'w', encoding='utf-8') as f:
-            f.write(new_txt)
-          print(f"Updated signed_token in {path}")
-          PY
+        lines = txt.splitlines()
+        start = None
+        for i,l in enumerate(lines):
+            if clean(l).strip() == '---':
+                start = i
+                break
+        if start is None:
+            print(f"skip (no front matter): {path}")
+            return None, txt
+        end = None
+        for i in range(start+1, len(lines)):
+            if clean(lines[i]).strip() == '---':
+                end = i
+                break
+        if end is None:
+            print(f"skip (no closing ---): {path}")
+            return None, txt
+        block = '\n'.join(lines[start+1:end])
+        try:
+            fm = yaml.safe_load(block) or {}
+        except Exception as e:
+            print(f"skip (YAML error): {path}: {e}")
+            return None, txt
+        body = '\n'.join(lines[end+1:])
+        if txt.endswith('\n') and not body.endswith('\n'):
+            body += '\n'
+        return fm, body
 
-      - name: Commit update back to test
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add -A
-            git commit -m "chore(stream): BG-only token refresh for newest film (by date)"
-            git push origin HEAD:test
-          else
-            echo "Nothing to commit."
-          fi
+    # Decap date format is "YYYY-MM-DD HH:mm:ssZZ". Normalize before parsing.
+    def normalize_date_str(s):
+        s = clean(str(s)).strip()
+        # Ensure space between date and time (Decap uses space, not 'T')
+        s = re.sub(r'^(\d{4}-\d{2}-\d{2})[T\s]+(\d{2}:\d{2}:\d{2})', r'\1 \2', s)
+        # Fix accidental "Z+03:00"/"Z-03:00" → "+03:00"/"-03:00"
+        s = re.sub(r'Z([+-]\d{2}:\d{2})$', r'\1', s)
+        # Pure 'Z' → '+00:00'
+        if s.endswith('Z'):
+            s = s[:-1] + '+00:00'
+        return s
 
-      - name: Trigger Netlify build (branch deploy)
-        if: success()
-        env:
-          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-        run: |
-          if [ -n "${HOOK:-}" ]; then
-            curl -sS -X POST -d '{}' "$HOOK" || true
-          else
-            echo "NETLIFY_BUILD_HOOK not set; skipping Netlify trigger."
-          fi
+    def parse_date_only(fm, path):
+        v = fm.get('date')
+        if v is None:
+            print(f"skip (no 'date'): {path}")
+            return None
+        raw  = str(v)
+        norm = normalize_date_str(raw)
+        try:
+            # Try exact Decap format first for speed/clarity
+            dt = datetime.datetime.strptime(norm, "%Y-%m-%d %H:%M:%S%z")
+        except Exception:
+            # Fallback to dateutil for any edge cases
+            try:
+                dt = dp.parse(norm)
+            except Exception as e:
+                print(f"skip (bad 'date'): {path}: raw='{raw}' norm='{norm}' err={e}")
+                return None
+        # normalize to UTC
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        else:
+            dt = dt.astimezone(datetime.timezone.utc)
+        print(f"candidate: {path}  date_raw='{raw}'  date_norm='{norm}'  parsed='{dt.isoformat()}'")
+        return dt
+
+    files = sorted(glob.glob('content/films/*.md'))
+    if not files:
+        print("::error::No files in content/films"); sys.exit(1)
+
+    candidates = []
+    for p in files:
+        fm, _ = read_front_matter(p)
+        if not fm:
+            continue
+        vid = (fm.get('video_id') or fm.get('video') or '').strip()
+        if not vid:
+            print(f"skip (no video_id): {p}")
+            continue
+        dt = parse_date_only(fm, p)
+        if not dt:
+            continue
+        candidates.append((dt, p, vid))
+
+    if not candidates:
+        print("::error::No film with valid 'date' and 'video_id' found"); sys.exit(1)
+
+    print("— Candidates (UTC, by 'date'):")
+    for dt, p, vid in candidates:
+        print(f"  {dt.isoformat()}  {p}  (video_id={vid})")
+
+    # Sort newest first; tie-break by filename for deterministic choice
+    candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    dt, latest_path, vid = candidates[0]
+    print(f"Picked newest: {latest_path} @ {dt.isoformat()}  (video_id={vid})")
+
+    out = os.environ["GITHUB_OUTPUT"]
+    with open(out, "a", encoding="utf-8") as fh:
+        fh.write(f"path={latest_path}\n")
+        fh.write(f"video_id={vid}\n")
+    PY
