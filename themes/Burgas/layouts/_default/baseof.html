@@ -29,26 +29,30 @@
 <div id="partners-toggle" class="partners-label">партньори ↕</div>
 
 <div id="partners-ticker" class="ticker-wrap">
+  {{ $partners := .Site.Params.partners }}
+  {{ if $partners }}
   <div class="ticker-track">
     <!-- slot 1 -->
     <div class="track-slot">
-      {{ if (fileExists "static/partners") }}
-        {{ range (readDir "static/partners") }}
-          <a href="#"><img src="{{ "/partners/" | relURL }}{{ .Name }}" alt=""></a>
-        {{ end }}
+      {{ range $partners }}
+        <a href="{{ .url | default "#" }}" {{ if .url }}target="_blank" rel="noopener noreferrer"{{ end }}>
+          <img src="{{ .img | relURL }}" alt="{{ .alt | default "" }}">
+        </a>
       {{ end }}
     </div>
 
     <!-- identical copy → seamless loop -->
     <div class="track-slot">
-      {{ if (fileExists "static/partners") }}
-        {{ range (readDir "static/partners") }}
-          <a href="#"><img src="{{ "/partners/" | relURL }}{{ .Name }}" alt=""></a>
-        {{ end }}
+      {{ range $partners }}
+        <a href="{{ .url | default "#" }}" {{ if .url }}target="_blank" rel="noopener noreferrer"{{ end }}>
+          <img src="{{ .img | relURL }}" alt="{{ .alt | default "" }}">
+        </a>
       {{ end }}
     </div>
   </div>
+  {{ end }}
 </div>
+
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "За нас"
-header_image: "/img/screen__01.jpg"
+header_image: ""
 date: 2023-12-29T11:43:54-05:00
 layout: single
 ---

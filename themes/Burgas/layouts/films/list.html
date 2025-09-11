@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="film-archive">
   <div class="film-list">
-    {{ range $index, $element := .Pages.ByDate.Reverse }}
+    {{ range $index, $element := .Pages.ByDate }}
     <article class="film-entry">
 
       <!-- ○ image now links to the film page -->

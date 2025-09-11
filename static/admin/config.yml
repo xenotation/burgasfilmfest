@@ -38,17 +38,17 @@ collections:
     fields:
       # core
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", default: "{{now}}", picker_utc: true }
-      - { label: "Film title", name: "film_title", widget: "string" }
-      - { label: "Original title", name: "film_title_org", widget: "string" }
-      - { label: "Country", name: "country", widget: "string", required: false }
-      - { label: "Year", name: "year", widget: "string" }
-      - { label: "Minutes", name: "minutes", widget: "string" }
+      - { label: "Film title", name: "film_title", widget: "string", required: true}
+      - { label: "Original title", name: "film_title_org", widget: "string", required: false }
+      - { label: "Country", name: "country", widget: "string", required: true }
+      - { label: "Year", name: "year", widget: "string", required: true }
+      - { label: "Minutes", name: "minutes", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Text author", name: "text_author", widget: "string", required: false }
-      - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: false }
+      - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: true }
 
       # credits
-      - { label: "Director", name: "Director", widget: "string" }
+      - { label: "Director", name: "Director", widget: "string", required: false }
       - { label: "Production", name: "Production", widget: "string", required: false }
       - { label: "Screenwriter", name: "Screenwriter", widget: "string", required: false }
       - { label: "Editing", name: "Editing", widget: "string", required: false }
@@ -59,8 +59,8 @@ collections:
       - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", required: false }
 
       # images
-      - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false }
-      - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false }
+      - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false, required: true }
+      - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false, required: true }
 
       # streaming
       - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
@@ -83,6 +83,4 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Header Image", name: "header_image", widget: "image", required: false }
-          - { label: "Date", name: "date", widget: "datetime", required: false }
-          - { label: "Layout", name: "layout", widget: "string", default: "single", required: false }
           - { label: "Body", name: "body", widget: "markdown", required: false }

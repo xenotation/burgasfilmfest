@@ -1,6 +1,21 @@
 {{- $p := . -}}
 {{- $site := site -}}
 
+{{/* ---------- Config shortcuts ---------- */}}
+{{- $seo := $site.Params.seo | default (dict) -}}
+{{- $siteName := or $seo.site_name $site.Title -}}
+{{- $defaultImage := or $seo.defaultImage "/img/og-default.jpg" -}}
+{{- $ogLocale := or $seo.locale "bg_BG" -}}
+{{- $twitterCard := or $seo.twitterCard "summary_large_image" -}}
+{{- $twitterSite := $seo.twitterSite -}}
+{{- $robots := $seo.robots -}}
+
+{{/* Per-page overrides allowed under .Params.seo.* (optional) */}}
+{{- $pageSEO := $p.Params.seo | default (dict) -}}
+{{- $ogTypeOverride := $pageSEO.type -}}      {{/* e.g. "article" | "website" */}}
+{{- $twitterCard = or $pageSEO.twitterCard $twitterCard -}}
+{{- $twitterSite = or $pageSEO.twitterSite $twitterSite -}}
+
 {{/* ---------- Title ---------- */}}
 {{- $title := cond $p.IsHome $site.Title (printf "%s | %s" (or $p.Title $p.File.BaseFileName) $site.Title) -}}
 {{- with $p.Params.film_title -}}
@@ -9,7 +24,7 @@
   {{- $title = printf "%s%s | %s" . $yearPart $site.Title -}}
 {{- end -}}
 
-{{/* ---------- Description (only from content/site) ---------- */}}
+{{/* ---------- Description ---------- */}}
 {{- $desc := or $p.Params.description $p.Summary $site.Params.description -}}
 {{- $desc = $desc | plainify | truncate 160 -}}
 
@@ -17,13 +32,12 @@
 {{- $imgs := slice -}}
 {{- with $p.Params.feature_image }}{{ $imgs = $imgs | append . }}{{ end -}}
 {{- if and (eq (len $imgs) 0) $p.Params.thumbnail }}{{ $imgs = $imgs | append $p.Params.thumbnail }}{{ end -}}
-{{- if and (eq (len $imgs) 0) $site.Params.seo.defaultImage }}{{ $imgs = $imgs | append $site.Params.seo.defaultImage }}{{ end -}}
-{{- if eq (len $imgs) 0 }}{{ $imgs = $imgs | append "/img/og-default.jpg" }}{{ end -}}
+{{- if and (eq (len $imgs) 0) $defaultImage }}{{ $imgs = $imgs | append $defaultImage }}{{ end -}}
 {{- $absImgs := slice -}}
 {{- range $imgs }}{{ $absImgs = $absImgs | append (absURL .) }}{{ end -}}
 {{- $firstImg := cond (gt (len $absImgs) 0) (index $absImgs 0) "" -}}
 
-{{/* ---------- Dates: only .Date (no lastmod, no stream_* ) ---------- */}}
+{{/* ---------- Dates ---------- */}}
 {{- $published := $p.Date | time -}}
 {{- $modified  := $p.Date | time -}}
 
@@ -33,22 +47,25 @@
 {{/* ---------- Basic meta ---------- */}}
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $desc }}"/>
+{{- with $robots }}<meta name="robots" content="{{ . }}"/>{{ end }}
 
 {{/* ---------- Open Graph ---------- */}}
-<meta property="og:type" content="{{ if $p.IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:type" content="{{ or $ogTypeOverride (cond $p.IsHome "website" "article") }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ $p.Permalink }}">
-<meta property="og:site_name" content="{{ $site.Title }}">
+<meta property="og:site_name" content="{{ $siteName }}">
+<meta property="og:locale" content="{{ $ogLocale }}">
 {{- with $firstImg }}<meta property="og:image" content="{{ . }}">{{ end }}
 <meta property="article:published_time" content="{{ $published.Format "2006-01-02T15:04:05Z07:00" }}">
 <meta property="article:modified_time"  content="{{ $modified.Format  "2006-01-02T15:04:05Z07:00" }}">
 
 {{/* ---------- Twitter ---------- */}}
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="{{ $twitterCard }}">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $desc }}">
 {{- with $firstImg }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+{{- with $twitterSite }}<meta name="twitter:site" content="{{ . }}">{{ end }}
 
 {{/* ---------- JSON-LD: Movie (only allowed fields) ---------- */}}
 {{- $movieName := or $p.Params.film_title $p.Title -}}
@@ -80,43 +97,40 @@
 
 <script type="application/ld+json">{{ $movie | jsonify }}</script>
 
+{{/* ---------- JSON-LD: ItemList for film archive ---------- */}}
+{{- if and (eq .Section "films") .IsSection -}}
+  {{- $items := slice -}}
+  {{- range .Pages.ByDate.Reverse -}}
+    {{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" (add 1 (len $items))
+      "url" (absURL .RelPermalink)
+      "name" (or .Params.film_title .Title)
+    ) -}}
+  {{- end -}}
+  <script type="application/ld+json">
+    {{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" $items | jsonify }}
+  </script>
+{{- end -}}
 
-   
-   {{/* ---------- JSON-LD: ItemList for film archive ---------- */}}
-   {{- if and (eq .Section "films") .IsSection -}}
-     {{- $items := slice -}}
-     {{- range .Pages.ByDate.Reverse -}}
-       {{- $items = $items | append (dict
-         "@type" "ListItem"
-         "position" (add 1 (len $items))
-         "url" (absURL .RelPermalink)
-         "name" (or .Params.film_title .Title)
-       ) -}}
-     {{- end -}}
-     <script type="application/ld+json">
-       {{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" $items | jsonify }}
-     </script>
-   {{- end -}}
-   
-   {{/* ---------- JSON-LD: CollectionPage for posters ---------- */}}
-   {{- if and (eq .Section "posters") .IsSection -}}
-     {{- $parts := slice -}}
-     {{- range .Pages.ByDate.Reverse -}}
-       {{- $img := or .Params.thumbnail (index .Params.images 0) -}}
-       {{- $parts = $parts | append (dict
-           "@type" "ImageObject"
-           "name"  .Params.title
-           "contentUrl" (absURL $img)
-           "url" (absURL .Permalink)
-         ) -}}
-     {{- end -}}
-     <script type="application/ld+json">
-       {{ dict
-         "@context" "https://schema.org"
-         "@type" "CollectionPage"
-         "name" (or .Title "Плакати")
-         "hasPart" $parts
-       | jsonify }}
-     </script>
-   {{- end -}}
-   
+{{/* ---------- JSON-LD: CollectionPage for posters ---------- */}}
+{{- if and (eq .Section "posters") .IsSection -}}
+  {{- $parts := slice -}}
+  {{- range .Pages.ByDate.Reverse -}}
+    {{- $img := or .Params.thumbnail (index .Params.images 0) -}}
+    {{- $parts = $parts | append (dict
+        "@type" "ImageObject"
+        "name"  .Params.title
+        "contentUrl" (absURL $img)
+        "url" (absURL .Permalink)
+      ) -}}
+  {{- end -}}
+  <script type="application/ld+json">
+    {{ dict
+      "@context" "https://schema.org"
+      "@type" "CollectionPage"
+      "name" (or .Title "Плакати")
+      "hasPart" $parts
+    | jsonify }}
+  </script>
+{{- end -}}
