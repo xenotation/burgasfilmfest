@@ -4,13 +4,14 @@ hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 date: 2025-09-11 20:40:00Z+03:00
 film_title: Catraias
 country: Португалия
-year: '2023'
-minutes: '15'
-description: „Catraias“ е есеистичен филм, който размива границите между фикция и
-  документално. Той е свободна реинтерпретация на интимни записи, които са едновременно
-  мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна
-  етнография, която се отклонява от спомените и историята на две жени, които са изградили
-  целия си живот около морето. Или по-скоро, превърнали живота си в море.
+year: "2023"
+minutes: "15"
+description: „Catraias“ е есеистичен филм, който размива границите между фикция
+  и документално. Той е свободна реинтерпретация на интимни записи, които са
+  едновременно мимолетни и фини. Филмът се впуска в конфронтацията между тези
+  записи, в една вътрешна етнография, която се отклонява от спомените и
+  историята на две жени, които са изградили целия си живот около морето. Или
+  по-скоро, превърнали живота си в море.
 text_author: интервю с Таня Динис
 stream_duration: 12.09.25 - 19.09.25
 Director: Таня Динис
@@ -27,7 +28,7 @@ feature_image: /img/catraias III.jpg
 show_watch_button: true
 video_id: 9b489d9e94cb1951a31ab2cca339b72f
 HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/9b489d9e94cb1951a31ab2cca339b72f/manifest/video.m3u8
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI5YjQ4OWQ5ZTk0Y2IxOTUxYTMxYWIyY2NhMzM5YjcyZiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1NzgwNzYwNCIsIm5iZiI6IjE3NTc3MTc2MDQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.MU0TonjnzD-WKo_9UwtTOgqbWzuZcmh4NRUGknFu6o5wZSfHqxaldPRgBCmSea3u_Ow0UrpvK5kOfWgN1IDtf33-ba_L3W0D25i90CMwfNTqNNGY2uq0XDsqL017iuDt31WWZtZtxoQbJrps6SXMZxnufk9UcNMPV9bmLzsSjIWujATSydACLxPVQ8dD6KTif8A6r6RY8VrSRpA5nWw6h5xRTeIsO0hqoH5knXq5z_zIKJyeaL0wNW8hX_MOgNBieP1LOJAcVW4acOK5b0tLS6D4s_sLI5OE4EXo0ecfzdFpX1j6J0hc1klzRRfzGnrjGqoJtmOzp24_3lQrt5-TlA
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI5YjQ4OWQ5ZTk0Y2IxOTUxYTMxYWIyY2NhMzM5YjcyZiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1NzgwNTA1OSIsIm5iZiI6IjE3NTc3MTUwNjAiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.pVY0rQQiGS2eOKral2OR6G1vXcWm6-y4bNEd1sdNbKHD7kJopvbeK9iD06kS5rjuuJFQHdgo_7dFXdgH6AoVlBy1ONDETd5C26LeT9MQdKMdQ9oK2hp3SMyqdc4BlhU2Cuu_wyPzOtsjTUv0xEfaodDlaScPlM__bmDpCMhya9aXILddd-ly1G66vcMSKM-FA7XoZtpBZbubKWLG8patY48J9VfiKpHJQvzhsS8R9-w3dB8qMbhiO5f7ApvLNVcuRGnOKRcKZxfp727NQMy0JhLFi95g9WglBNTu3RIqkvPMArAQeaweDejj_c1Y8EIjAH2V8NQcOW0VmvodfC8KCw
 ---
 **\*** *For English scroll down.*
 
@@ -69,7 +70,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 За мен нямаше смисъл да избирам едно тълкуване пред другото, защото солта е едновременно рана и лек. Животът на тези жени е белязан от трудности и издръжливост, но също и от дълбока грижа: за децата им, за домовете им, за рибарските мрежи, за самата общност и за мястото им в обществото. Морето, с цялата си жестокост, им даваше и форма на независимост и утвърждаване. Филмът се намира в това нестабилно равновесие – между болката и благодарността.\
 Все пак това остава моят опит, моята перспектива, моето разбиране за това, което видях, проучих и интерпретирах.
 
-**С „Catraias“ изграждаш подробен, почти етнографски, поглед върху живота на жените край морето и труда, който определя ежедневието им. Как реши да се фокусираш върху тези теми и какъв беше подходът към тяхното представяне?**
+**С „Catraias“ един почти етнографски поглед върху живота на жените край морето и труда, който определя ежедневието им. Как реши да се фокусираш върху тези теми и какъв беше подходът към тяхното представяне?**
 
 Чрез работата си се стремя да изведа на преден план разкази, които са останали невидими или заглушени, забравени от историята, с особено внимание към разказите на жените и начините, по които техният труд и преживявания са били исторически маргинализирани. В този контекст архивите на жените играят централна роля в моя артистичен процес, като служат като суровина за изграждането на нови начини за четене на миналото, настоящето и бъдещето. За мен е важно да се замисля: кой избира какво да се архивира? Да се документира? Кой разказва историята? За кого я разказваме? Кой я слуша, приема, поставя под въпрос?
 
@@ -101,13 +102,13 @@ At my first encounter with Irmina, I realized that there were no family archival
 
 The film is born out of that urgency, out of that desire to transform and document these memories through cinema. I speak of an urgency for myself, as an artist focused on women’s stories and their relationship with work, but I also recognize that other stories, books, other artists, and other artworks have been and are still being created about this community.
 
-***Catraias*** has a hybrid approach, it does not strictly document but it provides space for interpretation and imagination. **When does a personal story need to be told and shown through such cinematic language?**
+***Catraias*** **has a hybrid approach, it does not strictly document but it provides space for interpretation and imagination.** **When does a personal story need to be told and shown through such cinematic language?**
 
 For me, when a personal story carries within itself something that goes beyond biography, it can be told in a more open way, one that is not limited to factual record. It is in that space between fiction and documentary that I find the freedom to work. My artistic path has always beenmarked by this intersection—between cinema, performance, and visual arts; between moving image and photography; between biography, autobiography, and collective memory.
 
 *Catraias* is a film that does not seek to provide definitive answers or to establish a “documentary truth.” What interests me is creating a space of encounter between what was lived and what is imagined, between past and present, between what memory preserves and what it transforms. The personal story, in this case, becomes a doorway into a collective experience, and cinema allows me to give form to that experience—through gesture, silence, the layering of images, and the elements of the sea and its textures in the creation of a poetic language.
 
-**Your film beautifully conveys the materiality of the sea—the textures of life and work by and with \*\***the sea**\*\*. How do you approach materiality, and what role do textures play in your storytelling?**
+**Your film beautifully conveys the materiality of the sea—the textures of life and work by and with the sea. How do you approach materiality, and what role do textures play in your storytelling?**
 
 Textures and overlays are fundamental in my work. It is important that there is space in what I propose to the viewer—space for each person to create their own film, their own interpretation within what I am presenting. In the case of the sea, textures are everywhere: in the salt embedded in the skin, in the wind that shapes the body, in the repeated sound of ropes and nets, in the roughness of the rocks, in the gestures of calloused hands. Filming *Catraias* was, in large part, about learning to listen to those textures and elements, not only with the eyes but also with the body. For this, I also relied on the perspective of the artist Renato Cruz Santos, who is from Caxinas and develops his artistic work there.
 
