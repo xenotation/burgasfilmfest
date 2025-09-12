@@ -65,7 +65,12 @@
                 <source src="{{ $hls }}" type="application/x-mpegURL" />
                 {{ with .Params.subtitles }}
                   {{ range . }}
-                    <track kind="subtitles" src="{{ .src | relURL }}" srclang="{{ .srclang }}" label="{{ .label }}" {{ if .default }}default{{ end }}>
+                    {{- $isBG := eq (lower .srclang) "bg" -}}
+                    <track kind="subtitles"
+                           src="{{ .src | relURL }}"
+                           srclang="{{ .srclang }}"
+                           label="{{ .label }}"
+                           {{ if or .default $isBG }}default{{ end }}>
                   {{ end }}
                 {{ end }}
               </video>
@@ -88,7 +93,7 @@
   display: none;
   align-items: center; justify-content: center;
   background: rgba(0,0,0,.88);
-  z-index: 2147483000; /* above everything */
+  z-index: 2147483000;
   padding: 16px;
 }
 #vjs-lightbox.show{ display: flex; }
@@ -101,7 +106,7 @@
   width: 100%;
   height: auto;
   max-height: 100%;
-  background: #000; /* no white bar */
+  background: #000;
 }
 
 /* Close button */
@@ -138,10 +143,27 @@ document.addEventListener('DOMContentLoaded', function () {
   var box  = document.getElementById('vjs-lightbox');
   if (!btn || !box) return;
 
-  // Move lightbox to <body> so fixed positioning isn't clipped by transformed ancestors
+  // Ensure overlay is at body level
   if (box.parentNode !== document.body) document.body.appendChild(box);
 
   var player, inited = false;
+
+  function pickBulgarianSubs(p){
+    try {
+      var tracks = p.textTracks();
+      var picked = false;
+      for (var i = 0; i < tracks.length; i++) {
+        var t = tracks[i];
+        var isSub = (t.kind === 'subtitles' || t.kind === 'captions');
+        var isBG  = (t.language && t.language.toLowerCase() === 'bg') ||
+                    (t.label && t.label.toLowerCase().includes('бъл')); // "български"
+        if (isSub) {
+          t.mode = 'disabled';
+          if (!picked && isBG) { t.mode = 'showing'; picked = true; }
+        }
+      }
+    } catch(e){}
+  }
 
   function openBox(e){
     if (e) e.preventDefault();
@@ -149,15 +171,32 @@ document.addEventListener('DOMContentLoaded', function () {
     box.setAttribute('aria-hidden','false');
 
     function init(){
-      if (inited) { try { player.play(); } catch(_){}; return; }
-      if (!window.videojs) { setTimeout(init, 50); return; }
+      if (inited) { try { player.play(); } catch(_){ } pickBulgarianSubs(player); return; }
       player = window.videojs('film-player', {
-        fluid: true, controls: true, preload: 'auto',
-        html5: { vhs: { overrideNative: true } },
+        fluid: true,
+        controls: true,
+        preload: 'auto',
+        html5: {
+          vhs: {
+            overrideNative: true,           // keep VHS
+            enableLowInitialPlaylist: false,// don't start on lowest
+            defaultBandwidthEstimate: 12000000, // ~12 Mbps initial guess
+            bandwidth: 12000000,                // same nudge
+            limitRenditionByPlayerDimensions: false, // allow 1080p even in small player
+            useDevicePixelRatio: true
+          }
+        },
         controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
       });
+      
       inited = true;
-      player.ready(function(){ try { player.play(); } catch(_){} });
+      player.ready(function(){
+        pickBulgarianSubs(player);
+        try { player.play(); } catch(_){}
+      });
+      player.on('loadedmetadata', function(){ pickBulgarianSubs(player); });
+      player.on('loadeddata',    function(){ pickBulgarianSubs(player); });
+      setTimeout(function(){ pickBulgarianSubs(player); }, 400);
     }
     init();
   }
