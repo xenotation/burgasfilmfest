@@ -4,13 +4,14 @@ hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 date: 2025-09-11 20:40:00Z+03:00
 film_title: Catraias
 country: Португалия
-year: '2023'
-minutes: '15'
-description: „Catraias“ е есеистичен филм, който размива границите между фикция и
-  документално. Той е свободна реинтерпретация на интимни записи, които са едновременно
-  мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна
-  етнография, която се отклонява от спомените и историята на две жени, които са изградили
-  целия си живот около морето. Или по-скоро, превърнали живота си в море.
+year: "2023"
+minutes: "15"
+description: „Catraias“ е есеистичен филм, който размива границите между фикция
+  и документално. Той е свободна реинтерпретация на интимни записи, които са
+  едновременно мимолетни и фини. Филмът се впуска в конфронтацията между тези
+  записи, в една вътрешна етнография, която се отклонява от спомените и
+  историята на две жени, които са изградили целия си живот около морето. Или
+  по-скоро, превърнали живота си в море.
 text_author: интервю с Таня Динис
 stream_duration: 12.09.25 - 19.09.25
 Director: Таня Динис
@@ -25,8 +26,8 @@ LeadActors: Мария Виана, Ирмина де Хесус Теросо, Р
 thumbnail: /img/TANITA.png
 feature_image: /img/catraias III.jpg
 show_watch_button: true
-video_id: 6799329e49d585252f581311c19642d3
-HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8
+video_id: 9b489d9e94cb1951a31ab2cca339b72f
+HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/9b489d9e94cb1951a31ab2cca339b72f/manifest/video.m3u8
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc4MjczNyIsIm5iZiI6IjE3NTc2OTI3MzgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.doonefVbD0aIZRgP7wHVLbiYAii6o8pdxRns9QTNW6EQoQC5CyQGVCP8lLT-cKTw5yMse-hdQQsodj9Z3XdkaADh3l5noho_aeZ8zc--QhqUdM7c88s88LtPB1xLsO0BGseheR4S8tYE46BQoOEb_8IDdiSSdsEMm7IchoDtPkBfATIj0bzMiUPDeIXTxD47c-uaILEeD-ytxsis-aStaw8ITKy56KELdHKjZuwjR65POGdo04Veo-Xb3VpzmVCtjyD8sbuVR6lBAtH7TtKXmvEtB7oGkLS9xP-xW8pH51ppKIjh1dc40b5X5HXDe8w3A5OXDTFh0FHmoXgQdSiZdw
 ---
 **\*** *For English scroll down.*
