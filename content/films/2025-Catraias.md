@@ -1,13 +1,17 @@
 ---
 date: 2025-09-11 20:40:00Z+03:00
 film_title: Catraias
-film_title_org: 
-country: 'Португалия'
+film_title_org: null
+country: Португалия
 year: '2023'
 minutes: '15'
-description: '„Catraias“ е есеистичен филм, който размива границите между фикция и документално. Той е свободна реинтерпретация на интимни записи, които са едновременно мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна етнография, която се отклонява от спомените и историята на две жени, които са изградили целия си живот около морето. Или по-скоро, превърнали живота си в море.'
-text_author: "интервю с Таня Динис"
-stream_duration: "12.09.25 - 19.09.25"
+description: „Catraias“ е есеистичен филм, който размива границите между фикция и
+  документално. Той е свободна реинтерпретация на интимни записи, които са едновременно
+  мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна
+  етнография, която се отклонява от спомените и историята на две жени, които са изградили
+  целия си живот около морето. Или по-скоро, превърнали живота си в море.
+text_author: интервю с Таня Динис
+stream_duration: 12.09.25 - 19.09.25
 Director: Таня Динис
 Production: Нуно Родригес, Curtas Metragens C.R.L.
 Screenwriter: Таня Динис
@@ -23,7 +27,7 @@ hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 show_watch_button: true
 video_id: 6799329e49d585252f581311c19642d3
 HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc2NTEyNyIsIm5iZiI6IjE3NTc2NzUxMjciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.CaYHi2sslCCeEJ3nzW1JEZwBXvQ7MkM_aZLvEGyx_cay8tggG1IkpQFiw7b0Jl4UNl3RqzhGMQjfhSacZI9V50lCIgz0SlnAJ0sibfQaZpcjFgqm0xEUCDnsU59H-Z0iRoZT7w3Qy0Ym1aIBgUamG39UXPcaWh12HPXxx8ukr7TUMsI8CK6E3zcraRaa60--AO65I1cxpnRHvGBgBB7OcpehsiGCEe3lEKnqcVv8ox4VJtccVvOkyWcjCUg4cFu8PywZa4rPqmUXSiVeo20uQpPPyNt4DP4G3N9P0YsSVIeLwHj8H5rylWfrhovv51WxWh4BuK_HBY7KzxsUKTkimg
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc3ODQ3NyIsIm5iZiI6IjE3NTc2ODg0NzciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.CjBAb0a_yXcP2ZKgorBxuMhd2-zZVrc6zfnKhVL7fbs0nji8KTfV_c41Ah5augORi7x_JHy6OVCXEcTiP-6w-vM5Bu2z3LDoM2lPnY3KvwLAxqgK05Ei6Loue_aswOJ-1MONeYg-uI8CW6zxkI6oxwjAjHhM0aGmTZ1-NdEtGVw6IxUDfKMx-ZUUI_YR78j2xVV8m5wnSCwSuZmDSHuUOFOkaqgXYlbqY1XBWXOVL3aZKFhGVF5xFlTQI3gur3DDdMNUe5fOt34Fo13T0_ZhMjbJtxHXbBUaBpiR06yWSQ6D0wogVeO1Ou3l5Sedp6kWKYZ4CQIMJdll3FR5wcy4rQ
 ---
 **\*** _For English scroll down._
 
@@ -132,4 +136,3 @@ Women’s archives about women—whether photographs, documents, letters, memori
 In _Catraias_, I worked in a fragmented and poetic way, crossing documentary and fiction, because I believe it is in that hybrid space that memory gains body. The film is not merely an ethnographic record; it is also a sensorial and political essay, where the body appears as a living archive and where cinema becomes a space of listening, belonging, and creation.
 
 **Tânia Dinis** Vila Nova de Famalicão, 1983. Her work spans different perspectives and artistic fields – photography, performance, and cinema – drawing from archival images, both personal and anonymous, as well as other records of real images. She focuses on stories and events led by women who face harsh and invisible working conditions, often unrecognized in society. Artist in the program _Luas Novas_, Batalha Centro de Cinema, Porto, 2024. _TÃO PEQUENINAS, TINHAM O AR DE SEREM JÁ CRESCIDAS_, Best Short Film at IndieLisboa 2024 and Best Portuguese Documentary at MDOC Melgaço 2024. Creation of _OPERARIADA_, stories of former textile workers from Vale do Ave, co-produced with CIAJG in Guimarães and Teatro Narciso Ferreira. _CORPOGRAFIA - Corpo Museu_ at the Museu da História da Cidade de Viseu, 2024. _Elas Entram e Ficam!_, 2023, produced by TEP and Teatro Municipal do Porto. Direction of _Todos vivemos a mesma viagem de maneiras diferentes_, Circuito Braga Media Artes, Braga, 2022. Educational project _ATOS_, Odisseia Nacional of Teatro Nacional D. Maria II, with the Plano Nacional das Braga, 2023. _Não são favas, são feijocas_ (2013), awarded at several film festivals, followed by _Arco da Velha_ (2015), _Laura_ (2017) – winner of the Arquivo prize at Arquivo em Cartaz - International Archive Film Festival, Brazil. _Lurdes_ (2022), awarded at FUSO Vídeo Arte Lisboa. Creation Grant from PACT - Plano de Apoio à Criação Territorial ARTISTA NO CENTRO 2019/2021 by A Oficina Guimarães. Director of _SANGUE NOVO_, 22nd Festival de Cinema Luso Brasileiro de Santa Maria da Feira, 2019. Winner of the GNRATION Summer Labs with the audiovisual installation _sobrepostos_, 2020. Assistant professor in the Department of Cinema and Theatre at ESAP and in the Theatre Department at Universidade do Minho. Represented in the contemporary art collection of the Municipality of Porto.
-
