@@ -81,6 +81,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8/dist/video-js.min.css">
 <script src="https://cdn.jsdelivr.net/npm/video.js@8/dist/video.min.js" defer></script>
 
+<script src="https://cdn.jsdelivr.net/npm/@videojs/http-streaming@3/dist/videojs-http-streaming.min.js" defer></script>
+
 <article class="film-single">
   <div class="film-inner">
     
@@ -159,11 +161,12 @@
               controls
               preload="auto"
               playsinline
+              crossorigin="anonymous"
               style="width:100%; height:auto;"
               poster="/img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp"
               data-setup='{}'>
-              <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/%25!s%28%3cnil%3e%29/manifest/video.m3u8" type="application/x-mpegURL" />
               
+              <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/%25!s%28%3cnil%3e%29/manifest/video.m3u8">
             </video>
           </div>
 
@@ -176,7 +179,14 @@
                 preload: 'auto',
                 controls: true,
                 inactivityTimeout: 3000,
-                playbackRates: [0.75, 1, 1.25, 1.5, 2]
+                playbackRates: [0.75, 1, 1.25, 1.5, 2],
+                html5: {
+                  vhs: {
+                    overrideNative: true,          
+                    enableLowInitialPlaylist: true 
+                  }
+                },
+                techOrder: ['html5']
               });
 
               
@@ -184,13 +194,18 @@
                 try {
                   var tracks = player.textTracks();
                   for (var i = 0; i < tracks.length; i++) {
-                    
                     if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
                       tracks[i].mode = 'showing';
                       break;
                     }
                   }
                 } catch (e) {}
+              });
+
+              
+              player.on('error', function () {
+                var err = player.error();
+                console.error('VIDEOJS error:', err);
               });
 
               
@@ -235,6 +250,12 @@
 
 
 <style>
+ 
+.film-title-single {
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
+  margin: 0 0 .5rem 0;
+}
+
  
 .vjs-text-track-display { text-shadow: none; }
 .vjs-text-track-cue {

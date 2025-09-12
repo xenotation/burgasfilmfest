@@ -6,6 +6,8 @@
 <!-- Video.js (CSS + JS) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8/dist/video-js.min.css">
 <script src="https://cdn.jsdelivr.net/npm/video.js@8/dist/video.min.js" defer></script>
+<!-- Explicit VHS (HLS) engine for Video.js -->
+<script src="https://cdn.jsdelivr.net/npm/@videojs/http-streaming@3/dist/videojs-http-streaming.min.js" defer></script>
 
 <article class="film-single">
   <div class="film-inner">
@@ -97,7 +99,7 @@
         </div>
 
         {{ if .Params.show_watch_button }}
-          {{/* Build HLS URL; prefer front matter HLS if present, else construct from video_id */}}
+          {{/* Prefer explicit HLS, fallback to video_id-based manifest */}}
           {{ $hls := .Params.HLS | default (printf "https://customer-tkp9gv7016aue3fr.cloudflarestream.com/%s/manifest/video.m3u8" .Params.video_id) }}
           {{ with .Params.signed_token }}
             {{ if in $hls "?" }}
@@ -126,11 +128,12 @@
               controls
               preload="auto"
               playsinline
+              crossorigin="anonymous"
               style="width:100%; height:auto;"
               poster="{{ .Params.feature_image }}"
               data-setup='{}'>
-              <source src="{{ $hls }}" type="application/x-mpegURL" />
-              {{/* No <track> tags needed: captions are provided by the HLS manifest from Cloudflare Stream and will be discovered by the player. */}}
+              <!-- Deliberately NO type attribute; let VHS handle HLS -->
+              <source src="{{ $hls }}">
             </video>
           </div>
 
@@ -143,21 +146,33 @@
                 preload: 'auto',
                 controls: true,
                 inactivityTimeout: 3000,
-                playbackRates: [0.75, 1, 1.25, 1.5, 2]
+                playbackRates: [0.75, 1, 1.25, 1.5, 2],
+                html5: {
+                  vhs: {
+                    overrideNative: true,          // force VHS on all browsers (esp. Firefox)
+                    enableLowInitialPlaylist: true // faster start on multi-variant HLS
+                  }
+                },
+                techOrder: ['html5']
               });
 
-              // Prefer text tracks on by default if any exist (will be populated from HLS manifest)
+              // Turn on the first available subs/captions track (from HLS manifest)
               player.on('loadedmetadata', function () {
                 try {
                   var tracks = player.textTracks();
                   for (var i = 0; i < tracks.length; i++) {
-                    // Enable the first 'subtitles' track
                     if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
                       tracks[i].mode = 'showing';
                       break;
                     }
                   }
                 } catch (e) {}
+              });
+
+              // Helpful logging if HLS fails
+              player.on('error', function () {
+                var err = player.error();
+                console.error('VIDEOJS error:', err);
               });
 
               // Pause on modal close (dimbox custom event hook)
@@ -181,8 +196,14 @@
   </div>
 </article>
 
-<!-- Minimal subtitle styling for readability -->
+<!-- Minimal fixes / styling -->
 <style>
+/* MDN warning: give h1 explicit size/margins when sectioned */
+.film-title-single {
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
+  margin: 0 0 .5rem 0;
+}
+
 /* Video.js – subtitles / captions */
 .vjs-text-track-display { text-shadow: none; }
 .vjs-text-track-cue {
