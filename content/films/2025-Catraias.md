@@ -1,7 +1,7 @@
 ---
 date: 2025-09-11 20:40:00Z+03:00
 film_title: Catraias
-film_title_org: Catraias
+film_title_org: 
 country: 'Португалия'
 year: '2023'
 minutes: '15'
