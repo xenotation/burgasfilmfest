@@ -6,9 +6,9 @@ on:
     # run daily at 01:00 UTC (set as you wish)
     - cron: "0 1 * * *"
   push:
-    branches: [ "test" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "test" ]
+    branches: [ "main" ]
 
 permissions:
   contents: write
@@ -29,6 +29,7 @@ jobs:
         with:
           # keep history so we can commit/push back to the same branch
           fetch-depth: 0
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -267,7 +268,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
             git commit -m "chore(stream): BG token refresh (newest by date)"
-            git push origin "HEAD:${BRANCH}"
+            git push origin HEAD:main
           else
             echo "Nothing to commit."
           fi
