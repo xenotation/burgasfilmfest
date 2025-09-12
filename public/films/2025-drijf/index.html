@@ -77,6 +77,10 @@
 
 <link rel="stylesheet" href="/css/film-single.min.22237ec17a5774655534be9a7d1d92b97040fbe0f1e310dc3e692a7083352f52.css" integrity="sha256-IiN&#43;wXpXdGVVNL6afR2SuXBA&#43;&#43;Dx4xDcPmkqcIM1L1I=" crossorigin="anonymous">
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8/dist/video-js.min.css">
+<script src="https://cdn.jsdelivr.net/npm/video.js@8/dist/video.min.js" defer></script>
+
 <article class="film-single">
   <div class="film-inner">
     
@@ -92,9 +96,8 @@
           <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">
             Drijf
           </p>
-        
+          
         </h1>
-
 
         <p class="film-details">2023 · Белгия · 15 мин.</p>
         
@@ -107,49 +110,96 @@
               <span class="credit-value">Леви Ступс</span>
             </div>
           
-        
+
           
             <div class="credit">
               <span class="credit-label">Продуцент</span>
               <span class="credit-value">Лунаниме</span>
             </div>
           
-        
+
           
-        
+
           
-        
+
           
           
-        
+
           
-        
+
           
-        
+
           
-        
+
           
           
         </div>
-        
-        
-        
-        
 
         
+          
+          
+          
+
+          <div class="watch-button-wrapper">
+            <a class="watch-button"
+               href="#watch-modal"
+               data-dimbox
+               data-dimbox-type="inline"
+               data-dimbox-class="dimbox-full"
+               data-dimbox-target="#watch-modal">
+              гледай
+            </a>
+          </div>
+
+          
+          <div id="watch-modal" style="display:none; max-width:min(90vw, 1200px);">
+            <video
+              id="film-player"
+              class="video-js vjs-default-skin vjs-big-play-centered"
+              controls
+              preload="auto"
+              playsinline
+              style="width:100%; height:auto;"
+              poster="/img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp"
+              data-setup='{}'>
+              <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/%25!s%28%3cnil%3e%29/manifest/video.m3u8" type="application/x-mpegURL" />
+              
+            </video>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              if (!window.videojs) return;
+
+              var player = window.videojs('film-player', {
+                fluid: true,
+                preload: 'auto',
+                controls: true,
+                inactivityTimeout: 3000,
+                playbackRates: [0.75, 1, 1.25, 1.5, 2]
+              });
+
+              
+              player.on('loadedmetadata', function () {
+                try {
+                  var tracks = player.textTracks();
+                  for (var i = 0; i < tracks.length; i++) {
+                    
+                    if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
+                      tracks[i].mode = 'showing';
+                      break;
+                    }
+                  }
+                } catch (e) {}
+              });
+
+              
+              document.addEventListener('dimbox:close', function () {
+                try { player.pause(); } catch (_) {}
+              });
+            });
+          </script>
         
-        
-      
-        <div class="watch-button-wrapper">
-          <a class="watch-button"
-             href="https://customer-tkp9gv7016aue3fr.cloudflarestream.com//iframe?preload=true&autoplay=true"
-             data-dimbox
-             data-dimbox-type="iframe"
-             data-dimbox-class="dimbox-full">
-            гледай
-          </a>
-        </div>
-      
       </div>
     </div>
 
@@ -179,9 +229,25 @@
 
       </div>
     
-    
+
   </div>
 </article>
+
+
+<style>
+ 
+.vjs-text-track-display { text-shadow: none; }
+.vjs-text-track-cue {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  background: rgba(0,0,0,0.55);
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+}
+.vjs-caption-settings { font-size: 14px; }
+</style>
+
 
   </main>
 

@@ -3,6 +3,10 @@
 {{ $main := resources.Get "css/film-single.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" crossorigin="anonymous">
 
+<!-- Video.js (CSS + JS) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8/dist/video-js.min.css">
+<script src="https://cdn.jsdelivr.net/npm/video.js@8/dist/video.min.js" defer></script>
+
 <article class="film-single">
   <div class="film-inner">
     <!-- top section -->
@@ -18,9 +22,8 @@
           <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">
             {{ . }}
           </p>
-        {{ end }}
+          {{ end }}
         </h1>
-
 
         <p class="film-details">{{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин.</p>
         {{/*  <div class="film-genre">{{ .Params.Genre }}</div>  */}}
@@ -33,28 +36,28 @@
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ with .Params.Production }}
             <div class="credit">
               <span class="credit-label">Продуцент</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ with .Params.Screenwriter }}
             <div class="credit">
               <span class="credit-label">Сценарий</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ with .Params.Editing }}
             <div class="credit">
               <span class="credit-label">Монтаж</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ $dop := .Params.Cinematography | default .Params.Operator }}
           {{ with $dop }}
             <div class="credit">
@@ -62,28 +65,28 @@
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ with .Params.Sound }}
             <div class="credit">
               <span class="credit-label">Звук</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ with .Params.Music }}
             <div class="credit">
               <span class="credit-label">Музика</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ with .Params.Voiceover }}
             <div class="credit">
               <span class="credit-label">Глас зад кадър</span>
               <span class="credit-value">{{ . }}</span>
             </div>
           {{ end }}
-        
+
           {{ $actors := .Params.LeadActors | default .Params.Actors }}
           {{ with $actors }}
             <div class="credit">
@@ -92,25 +95,78 @@
             </div>
           {{ end }}
         </div>
-        
-        
-        
-        
 
         {{ if .Params.show_watch_button }}
-        {{ $playPath := .Params.video_id }}
-        {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }}
-      
-        <div class="watch-button-wrapper">
-          <a class="watch-button"
-             href="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true"
-             data-dimbox
-             data-dimbox-type="iframe"
-             data-dimbox-class="dimbox-full">
-            гледай
-          </a>
-        </div>
-      {{ end }}
+          {{/* Build HLS URL; prefer front matter HLS if present, else construct from video_id */}}
+          {{ $hls := .Params.HLS | default (printf "https://customer-tkp9gv7016aue3fr.cloudflarestream.com/%s/manifest/video.m3u8" .Params.video_id) }}
+          {{ with .Params.signed_token }}
+            {{ if in $hls "?" }}
+              {{ $hls = printf "%s&token=%s" $hls . }}
+            {{ else }}
+              {{ $hls = printf "%s?token=%s" $hls . }}
+            {{ end }}
+          {{ end }}
+
+          <div class="watch-button-wrapper">
+            <a class="watch-button"
+               href="#watch-modal"
+               data-dimbox
+               data-dimbox-type="inline"
+               data-dimbox-class="dimbox-full"
+               data-dimbox-target="#watch-modal">
+              гледай
+            </a>
+          </div>
+
+          <!-- Inline modal with Video.js player -->
+          <div id="watch-modal" style="display:none; max-width:min(90vw, 1200px);">
+            <video
+              id="film-player"
+              class="video-js vjs-default-skin vjs-big-play-centered"
+              controls
+              preload="auto"
+              playsinline
+              style="width:100%; height:auto;"
+              poster="{{ .Params.feature_image }}"
+              data-setup='{}'>
+              <source src="{{ $hls }}" type="application/x-mpegURL" />
+              {{/* No <track> tags needed: captions are provided by the HLS manifest from Cloudflare Stream and will be discovered by the player. */}}
+            </video>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              if (!window.videojs) return;
+
+              var player = window.videojs('film-player', {
+                fluid: true,
+                preload: 'auto',
+                controls: true,
+                inactivityTimeout: 3000,
+                playbackRates: [0.75, 1, 1.25, 1.5, 2]
+              });
+
+              // Prefer text tracks on by default if any exist (will be populated from HLS manifest)
+              player.on('loadedmetadata', function () {
+                try {
+                  var tracks = player.textTracks();
+                  for (var i = 0; i < tracks.length; i++) {
+                    // Enable the first 'subtitles' track
+                    if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
+                      tracks[i].mode = 'showing';
+                      break;
+                    }
+                  }
+                } catch (e) {}
+              });
+
+              // Pause on modal close (dimbox custom event hook)
+              document.addEventListener('dimbox:close', function () {
+                try { player.pause(); } catch (_) {}
+              });
+            });
+          </script>
+        {{ end }}
       </div>
     </div>
 
@@ -121,7 +177,23 @@
         {{ .Content }}
       </div>
     {{ end }}
-    
+
   </div>
 </article>
+
+<!-- Minimal subtitle styling for readability -->
+<style>
+/* Video.js – subtitles / captions */
+.vjs-text-track-display { text-shadow: none; }
+.vjs-text-track-cue {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  background: rgba(0,0,0,0.55);
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+}
+.vjs-caption-settings { font-size: 14px; }
+</style>
+
 {{ end }}
