@@ -28,86 +28,43 @@
         </h1>
 
         <p class="film-details">{{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин.</p>
-        {{/*  <div class="film-genre">{{ .Params.Genre }}</div>  */}}
         <p class="film-description">{{ .Params.description }}</p>
 
         <div class="film-credits-grid">
           {{ with .Params.Director }}
-            <div class="credit">
-              <span class="credit-label">Режисьор</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Режисьор</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ with .Params.Production }}
-            <div class="credit">
-              <span class="credit-label">Продуцент</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Продуцент</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ with .Params.Screenwriter }}
-            <div class="credit">
-              <span class="credit-label">Сценарий</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Сценарий</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ with .Params.Editing }}
-            <div class="credit">
-              <span class="credit-label">Монтаж</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Монтаж</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ $dop := .Params.Cinematography | default .Params.Operator }}
           {{ with $dop }}
-            <div class="credit">
-              <span class="credit-label">Оператор</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Оператор</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ with .Params.Sound }}
-            <div class="credit">
-              <span class="credit-label">Звук</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Звук</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ with .Params.Music }}
-            <div class="credit">
-              <span class="credit-label">Музика</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Музика</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ with .Params.Voiceover }}
-            <div class="credit">
-              <span class="credit-label">Глас зад кадър</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Глас зад кадър</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
-
           {{ $actors := .Params.LeadActors | default .Params.Actors }}
           {{ with $actors }}
-            <div class="credit">
-              <span class="credit-label">Главни актьори</span>
-              <span class="credit-value">{{ . }}</span>
-            </div>
+            <div class="credit"><span class="credit-label">Главни актьори</span><span class="credit-value">{{ . }}</span></div>
           {{ end }}
         </div>
 
         {{ if .Params.show_watch_button }}
-          {{/* Prefer explicit HLS, fallback to video_id-based manifest */}}
-          {{ $hls := .Params.HLS | default (printf "https://customer-tkp9gv7016aue3fr.cloudflarestream.com/%s/manifest/video.m3u8" .Params.video_id) }}
-          {{ with .Params.signed_token }}
-            {{ if in $hls "?" }}
-              {{ $hls = printf "%s&token=%s" $hls . }}
-            {{ else }}
-              {{ $hls = printf "%s?token=%s" $hls . }}
-            {{ end }}
-          {{ end }}
+          <!-- HARD-CODED HLS + TOKEN (for debugging) -->
+          {{ $HARD_HLS := "https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8?token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc1NjE0MSIsIm5iZiI6IjE3NTc2NjYxNDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.nal-Y3RkUVE_Pi9A3mHFNC1zLYpVPNdWVj0TD5QXJX72T-5boIAXK85SvhrUHKRMhM8YWwx2gsVUpSie3zMia4HTn79G4lWkmCxco-HGTrUKxZcrHSNvzC7i2nfQhgEmmnTlcHjLdUramLCp680Ahe3ASeWHIEgln9019ckBIFkLyg0j5JYILeh-IIl1UZfZixGS2NcQAZo1vFIWXWx8LYRsk0Su3_BxOOKZFAtHHttW0hvn3FjyHf4JLlbcvIi1glHEs9pzznUyHwZMxDRpn3Tu25NhTRMVtnbDRFKtZftqm182GfYnagg29mwXpPrnBsMgnOuD-hta0CwaFlnB6A" }}
 
           <div class="watch-button-wrapper">
             <a class="watch-button"
@@ -122,6 +79,10 @@
 
           <!-- Inline modal with Video.js player -->
           <div id="watch-modal" style="display:none; max-width:min(90vw, 1200px);">
+            <div style="margin: 0 0 .5rem 0; font-size:.875rem; opacity:.8;">
+              Debug: <a href="{{ $HARD_HLS }}" target="_blank" rel="noopener">open manifest in a new tab</a>
+            </div>
+
             <video
               id="film-player"
               class="video-js vjs-default-skin vjs-big-play-centered"
@@ -133,13 +94,31 @@
               poster="{{ .Params.feature_image }}"
               data-setup='{}'>
               <!-- Deliberately NO type attribute; let VHS handle HLS -->
-              <source src="{{ $hls }}">
+              <source src="{{ $HARD_HLS }}">
             </video>
           </div>
 
           <script>
             document.addEventListener('DOMContentLoaded', function () {
               if (!window.videojs) return;
+
+              var HLS_URL = {{ $HARD_HLS | jsonify }};
+
+              // Quick fetch check so we know if token/geo is the blocker (shows status in console)
+              fetch(HLS_URL, { method: 'GET', mode: 'cors' })
+                .then(function(res) {
+                  console.log('[HLS manifest fetch]', res.status, res.statusText);
+                  if (!res.ok) {
+                    console.warn('Manifest fetch not OK. If 403, token/geo/access rule is blocking.');
+                  }
+                  return res.text();
+                })
+                .then(function(text) {
+                  console.log('[HLS manifest first 200 chars]', text.slice(0, 200));
+                })
+                .catch(function(err) {
+                  console.error('Manifest fetch error:', err);
+                });
 
               var player = window.videojs('film-player', {
                 fluid: true,
@@ -149,14 +128,13 @@
                 playbackRates: [0.75, 1, 1.25, 1.5, 2],
                 html5: {
                   vhs: {
-                    overrideNative: true,          // force VHS on all browsers (esp. Firefox)
-                    enableLowInitialPlaylist: true // faster start on multi-variant HLS
+                    overrideNative: true,
+                    enableLowInitialPlaylist: true
                   }
                 },
                 techOrder: ['html5']
               });
 
-              // Turn on the first available subs/captions track (from HLS manifest)
               player.on('loadedmetadata', function () {
                 try {
                   var tracks = player.textTracks();
@@ -169,7 +147,6 @@
                 } catch (e) {}
               });
 
-              // Helpful logging if HLS fails
               player.on('error', function () {
                 var err = player.error();
                 console.error('VIDEOJS error:', err);
@@ -198,12 +175,10 @@
 
 <!-- Minimal fixes / styling -->
 <style>
-/* MDN warning: give h1 explicit size/margins when sectioned */
 .film-title-single {
   font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
   margin: 0 0 .5rem 0;
 }
-
 /* Video.js – subtitles / captions */
 .vjs-text-track-display { text-shadow: none; }
 .vjs-text-track-cue {
