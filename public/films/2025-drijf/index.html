@@ -248,31 +248,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function init(){
       if (inited) { try { player.play(); } catch(_){ } pickBulgarianSubs(player); return; }
-      player = window.videojs('film-player', {
-        fluid: true,
-        controls: true,
-        preload: 'auto',
-        html5: {
-          vhs: {
-            overrideNative: true,           
-            enableLowInitialPlaylist: false,
-            defaultBandwidthEstimate: 12000000, 
-            bandwidth: 12000000,                
-            limitRenditionByPlayerDimensions: false, 
-            useDevicePixelRatio: true
-          },
-          nativeTextTracks: false,
-          nativeAudioTracks: false,
-          nativeVideoTracks: false
-        },
-        controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
-      });
       
-      inited = true;
-      player.ready(function(){
-        pickBulgarianSubs(player);
-        try { player.play(); } catch(_){}
-      });
+
+player = window.videojs('film-player', {
+  fluid: true,
+  controls: true,
+  preload: 'auto',
+  html5: {
+    vhs: {
+      overrideNative: true,
+      enableLowInitialPlaylist: false,
+      defaultBandwidthEstimate: 12000000,
+      bandwidth: 12000000,
+      limitRenditionByPlayerDimensions: false,
+      useDevicePixelRatio: true
+    },
+    nativeTextTracks: false,   
+    nativeAudioTracks: false,
+    nativeVideoTracks: false
+  },
+  controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
+});
+
+
+player.ready(function () {
+  
+  if (!player.controlBar.getChild('SubsCapsButton')) {
+    player.controlBar.addChild('SubsCapsButton', {});
+  }
+  
+  if (typeof pickBulgarianSubs === 'function') pickBulgarianSubs(player);
+});
+
+
+player.on('loadedmetadata', function () {
+  if (typeof pickBulgarianSubs === 'function') pickBulgarianSubs(player);
+});
+setTimeout(function () {
+  if (typeof pickBulgarianSubs === 'function') pickBulgarianSubs(player);
+}, 400);
+
+
+inited = true;
+player.ready(function(){ try { player.play(); } catch(_){} });
+
       player.on('loadedmetadata', function(){ pickBulgarianSubs(player); });
       player.on('loadeddata',    function(){ pickBulgarianSubs(player); });
       setTimeout(function(){ pickBulgarianSubs(player); }, 400);

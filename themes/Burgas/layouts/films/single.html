@@ -172,31 +172,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function init(){
       if (inited) { try { player.play(); } catch(_){ } pickBulgarianSubs(player); return; }
-      player = window.videojs('film-player', {
-        fluid: true,
-        controls: true,
-        preload: 'auto',
-        html5: {
-          vhs: {
-            overrideNative: true,           // keep VHS
-            enableLowInitialPlaylist: false,// don't start on lowest
-            defaultBandwidthEstimate: 12000000, // ~12 Mbps initial guess
-            bandwidth: 12000000,                // same nudge
-            limitRenditionByPlayerDimensions: false, // allow 1080p even in small player
-            useDevicePixelRatio: true
-          },
-          nativeTextTracks: false,
-          nativeAudioTracks: false,
-          nativeVideoTracks: false
-        },
-        controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
-      });
-      
-      inited = true;
-      player.ready(function(){
-        pickBulgarianSubs(player);
-        try { player.play(); } catch(_){}
-      });
+      // inside openBox() → init()
+
+player = window.videojs('film-player', {
+  fluid: true,
+  controls: true,
+  preload: 'auto',
+  html5: {
+    vhs: {
+      overrideNative: true,
+      enableLowInitialPlaylist: false,
+      defaultBandwidthEstimate: 12000000,
+      bandwidth: 12000000,
+      limitRenditionByPlayerDimensions: false,
+      useDevicePixelRatio: true
+    },
+    nativeTextTracks: false,   // force VJS captions (Android fix)
+    nativeAudioTracks: false,
+    nativeVideoTracks: false
+  },
+  controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
+});
+
+// ↓↓↓ THIS IS “after you create the player”
+player.ready(function () {
+  // show the CC (subs) menu button if hidden
+  if (!player.controlBar.getChild('SubsCapsButton')) {
+    player.controlBar.addChild('SubsCapsButton', {});
+  }
+  // pick BG subs by default (if you have this helper)
+  if (typeof pickBulgarianSubs === 'function') pickBulgarianSubs(player);
+});
+
+// also re-apply once tracks are discovered
+player.on('loadedmetadata', function () {
+  if (typeof pickBulgarianSubs === 'function') pickBulgarianSubs(player);
+});
+setTimeout(function () {
+  if (typeof pickBulgarianSubs === 'function') pickBulgarianSubs(player);
+}, 400);
+
+// then continue with your inited=true / autoplay code, etc.
+inited = true;
+player.ready(function(){ try { player.play(); } catch(_){} });
+
       player.on('loadedmetadata', function(){ pickBulgarianSubs(player); });
       player.on('loadeddata',    function(){ pickBulgarianSubs(player); });
       setTimeout(function(){ pickBulgarianSubs(player); }, 400);
