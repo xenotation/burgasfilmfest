@@ -14,7 +14,7 @@ Production: Лунаниме
 thumbnail: /img/Drijf.jpeg
 feature_image: /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
 hero_video_id: 7a587a49c9cf21aae8842ed12565765a
-show_watch_button: true
+show_watch_button: false
 video_id: 
 signed_token: 
 ---
