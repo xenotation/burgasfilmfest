@@ -4,14 +4,13 @@ hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 date: 2025-09-11 20:40:00Z+03:00
 film_title: Catraias
 country: Португалия
-year: "2023"
-minutes: "15"
-description: „Catraias“ е есеистичен филм, който размива границите между фикция
-  и документално. Той е свободна реинтерпретация на интимни записи, които са
-  едновременно мимолетни и фини. Филмът се впуска в конфронтацията между тези
-  записи, в една вътрешна етнография, която се отклонява от спомените и
-  историята на две жени, които са изградили целия си живот около морето. Или
-  по-скоро, превърнали живота си в море.
+year: '2023'
+minutes: '15'
+description: „Catraias“ е есеистичен филм, който размива границите между фикция и
+  документално. Той е свободна реинтерпретация на интимни записи, които са едновременно
+  мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна
+  етнография, която се отклонява от спомените и историята на две жени, които са изградили
+  целия си живот около морето. Или по-скоро, превърнали живота си в море.
 text_author: интервю с Таня Динис
 stream_duration: 12.09.25 - 19.09.25
 Director: Таня Динис
@@ -28,7 +27,7 @@ feature_image: /img/catraias III.jpg
 show_watch_button: true
 video_id: 6799329e49d585252f581311c19642d3
 HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc4MDI1NyIsIm5iZiI6IjE3NTc2OTAyNTciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.QM6bh4Oxf6DTgjeBJjxMgRuHw6wcUApW7ZkBUlurt3Ybrr7cV5v6J_Jx3w8LyBOi6wEDmjSKLEtjLg0m1D0ovFfZ0IUU-hfgrn4qEhyOl3j9K8qaFkqHFP7ckl5dSeeIsuSBq40ZvIti3ZhtmWyoOVUuepfrmTiBYRWSyf45nwLQSFqdP0e2fkocOQKDA8xBeuFatxPKTDZfVIXS5a7nz5OoSZWV9rWbNRpM97jM2N0YNW88w7t1TXRm6fzunHv3rkDdkPkkdXeiOZ-TzIBuzI_Dxd0X0O5dCjL1Ezy5Lz9cNoH9VKpNgDiV2tHtKKICGUSMWQk3OQgsloWoJasBuQ
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc4MTY1MiIsIm5iZiI6IjE3NTc2OTE2NTIiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.V-HtcQKs-b8feFyo3Om4Ih3RDdrYEqJ9YTIUqiFv0EaIfYtEXLaX5rsJxFuUZRGaV5EmBH2Lbsmo9dcglCjDLVZTeyn___-8KVlZoo5l6U5uaor8ViDtKC8gQwTxCJkoS8lydLUFTN5lEnxC-oZ7mNvrGaPiOlEo1Kmh_ovJy5DlpRIGXrvvl3oZ9u6Sgthd04zS7OFhE2MbH0oT8VFz4-MSz4wsQ99YITrk9uHTgLQ_WSa_SgpR2HodV__hOcTt8Ljl4PLnYZTTrxuYGCSW_yncmOjk8AqehH_mrVODTzn082JW3JfAP2io5OCiIlG9MGbMG6VB9JAYFxCbVbnlow
 ---
 **\*** *For English scroll down.*
 
