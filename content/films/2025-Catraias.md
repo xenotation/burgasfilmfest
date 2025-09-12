@@ -4,13 +4,14 @@ hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 date: 2025-09-11 20:40:00Z+03:00
 film_title: Catraias
 country: Португалия
-year: '2023'
-minutes: '15'
-description: „Catraias“ е есеистичен филм, който размива границите между фикция и
-  документално. Той е свободна реинтерпретация на интимни записи, които са едновременно
-  мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна
-  етнография, която се отклонява от спомените и историята на две жени, които са изградили
-  целия си живот около морето. Или по-скоро, превърнали живота си в море.
+year: "2023"
+minutes: "15"
+description: „Catraias“ е есеистичен филм, който размива границите между фикция
+  и документално. Той е свободна реинтерпретация на интимни записи, които са
+  едновременно мимолетни и фини. Филмът се впуска в конфронтацията между тези
+  записи, в една вътрешна етнография, която се отклонява от спомените и
+  историята на две жени, които са изградили целия си живот около морето. Или
+  по-скоро, превърнали живота си в море.
 text_author: интервю с Таня Динис
 stream_duration: 12.09.25 - 19.09.25
 Director: Таня Динис
@@ -35,7 +36,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 
 **Какво означава думата „Catraias” на португалски? Какво означава тя за теб?**
 
-Имах известни затруднения при превода й и в същото време, тъй като ми харесва значението на думата, реших да я запазя на португалски. Catraia е името, дадено на малка, традиционно построена лодка, използвана за крайбрежен риболов, особено в северните райони на Португалия. Но думата означава също момиче, младо момиче. За мен заглавието носи това двойно значение: малките лодки, които се изправят пред морето с издръжливост, и жените от Каксинас, в този случай, които от ранна възраст, много млади, от необходимост, чрез работа или по свой избор, са поемали тежки и опасни задачи, традиционно свързани с мъжете. Тези жени, подобно на catraias, може да изглеждат крехки, но разкриват огромна сила. Изборът на това име беше и начин да се признае тази устойчивост, да се даде достойнство на животи, които толкова често са премълчавани. *Catraias* така се превръща в метафора: на борба, на принадлежност, но и на нежност и грижа.
+Имах известни затруднения при превода й и в същото време, тъй като ми харесва значението на думата, реших да я запазя на португалски. Catraia е името, дадено на малка, традиционно построена лодка, използвана за крайбрежен риболов, особено в северните райони на Португалия. Но думата означава също момиче, младо момиче. За мен заглавието носи това двойно значение: малките лодки, които се изправят пред морето с издръжливост, и жените от Кашинас, в този случай, които от ранна възраст, много млади, от необходимост, чрез работа или по свой избор, са поемали тежки и опасни задачи, традиционно свързани с мъжете. Тези жени, подобно на catraias, може да изглеждат крехки, но разкриват огромна сила. Изборът на това име беше и начин да се признае тази устойчивост, да се даде достойнство на животи, които толкова често са премълчавани. *Catraias* така се превръща в метафора: на борба, на принадлежност, но и на нежност и грижа.
 
 **Откъде дойде вдъхновението и идеята за филма?**
 
@@ -83,11 +84,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 
 **Таня Динис,** Вила Нова де Фамаликан**,** 1983 г. Нейното творчество обхваща различни перспективи и артистични области – фотография, пърформанс и кино – като черпи от архивни изображения, както лични, така и анонимни, както и от други записи на реални изображения. Тя се фокусира върху истории и събития, водени от жени, които се сблъскват с тежки и невидими условия на труд, често неразпознати в обществото. Художник в програмата Luas Novas, Batalha Centro de Cinema, Порто, 2024. TÃO PEQUENINAS, TINHAM O AR DE SEREM JÁ CRESCIDAS, най-добър късометражен филм на IndieLisboa 2024 и най-добър португалски документален филм на MDOC Melgaço 2024. Създаване на OPERARIADA, истории на бивши текстилни работници от Vale do Ave, копродукция с CIAJG в Гимараеш и Teatro Narciso Ferreira. CORPOGRAFIA - Corpo Museu в Museu da História da Cidade de Viseu, 2024. Elas Entram e Ficam!, 2023, продуциран от TEP и Teatro Municipal do Porto. Режисьор на Todos vivemos a mesma viagem de maneiras diferentes, Circuito Braga Media Artes, Брага, 2022. Образователен проект ATOS, Odisseia Nacional на Teatro Nacional D. Maria II, с Plano Nacional das Braga, 2023. Não são favas, são feijocas (2013), награден на няколко филмови фестивала, последван от Arco da Velha (2015), Laura (2017) – носител на наградата Arquivo на Arquivo em Cartaz - Международен фестивал за архивни филми, Бразилия. Lurdes (2022), награден на FUSO Vídeo Arte Lisboa. Грант за творчество от PACT - Plano de Apoio à Criação Territorial ARTISTA NO CENTRO 2019/2021 от A Oficina Guimarães. Директор на SANGUE NOVO, 22-ри Лундо-бразилски филмов фестивал в Санта Мария да Фейра, 2019. Носител на наградата GNRATION Summer Labs с аудиовизуалната инсталация sobrepostos, 2020. Асистент в Катедрата по кино и театър в ESAP и в Катедрата по театър в Universidade do Minho. Представена в колекцията за съвременно изкуство на Община Порто.
 
-
-
 *Представянето на филма „Catraias“ и това интервю се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
-
-
 
 ## ***Women, labour, memory – the poetic world of Tânia Dinis***
 
@@ -111,7 +108,7 @@ For me, when a personal story carries within itself something that goes beyond b
 
 *Catraias* is a film that does not seek to provide definitive answers or to establish a “documentary truth.” What interests me is creating a space of encounter between what was lived and what is imagined, between past and present, between what memory preserves and what it transforms. The personal story, in this case, becomes a doorway into a collective experience, and cinema allows me to give form to that experience—through gesture, silence, the layering of images, and the elements of the sea and its textures in the creation of a poetic language.
 
-**Your film beautifully conveys the materiality of the sea—the textures of life and work by and with \*\***the sea***\*. How do you approach materiality, and what role do textures play in your storytelling?**
+**Your film beautifully conveys the materiality of the sea—the textures of life and work by and with \*\***the sea**\*\*. How do you approach materiality, and what role do textures play in your storytelling?**
 
 Textures and overlays are fundamental in my work. It is important that there is space in what I propose to the viewer—space for each person to create their own film, their own interpretation within what I am presenting. In the case of the sea, textures are everywhere: in the salt embedded in the skin, in the wind that shapes the body, in the repeated sound of ropes and nets, in the roughness of the rocks, in the gestures of calloused hands. Filming *Catraias* was, in large part, about learning to listen to those textures and elements, not only with the eyes but also with the body. For this, I also relied on the perspective of the artist Renato Cruz Santos, who is from Caxinas and develops his artistic work there.
 
