@@ -184,7 +184,10 @@ document.addEventListener('DOMContentLoaded', function () {
             bandwidth: 12000000,                // same nudge
             limitRenditionByPlayerDimensions: false, // allow 1080p even in small player
             useDevicePixelRatio: true
-          }
+          },
+          nativeTextTracks: false,
+          nativeAudioTracks: false,
+          nativeVideoTracks: false
         },
         controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
       });

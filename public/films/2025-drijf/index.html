@@ -114,34 +114,6 @@
         </div>
 
         
-          
-          
-          
-          
-          
-          
-          
-
-          <div class="watch-button-wrapper">
-            <a class="watch-button" href="#" id="watch-btn">гледай</a>
-          </div>
-
-          
-          <div id="vjs-lightbox" aria-hidden="true">
-            <button class="vjs-close" type="button" aria-label="Затвори">✕</button>
-            <div class="vjs-modal">
-              <video id="film-player"
-                     class="video-js vjs-default-skin vjs-big-play-centered"
-                     controls preload="auto" playsinline
-                     crossorigin="anonymous"
-                     poster="/img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp"
-                     data-setup="{}">
-                <source src="https://customer-ojfdlxwm7xyjwjmt.cloudflarestream.com/%25!s%28%3cnil%3e%29/manifest/video.m3u8" type="application/x-mpegURL" />
-                
-              </video>
-            </div>
-          </div>
-        
       </div>
     </div>
 
@@ -268,7 +240,10 @@ document.addEventListener('DOMContentLoaded', function () {
             bandwidth: 12000000,                
             limitRenditionByPlayerDimensions: false, 
             useDevicePixelRatio: true
-          }
+          },
+          nativeTextTracks: false,
+          nativeAudioTracks: false,
+          nativeVideoTracks: false
         },
         controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
       });

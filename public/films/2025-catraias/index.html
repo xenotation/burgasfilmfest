@@ -134,7 +134,7 @@
                      crossorigin="anonymous"
                      poster="/img/catraias%20III.jpg"
                      data-setup="{}">
-                <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc2NTEyNyIsIm5iZiI6IjE3NTc2NzUxMjciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.CaYHi2sslCCeEJ3nzW1JEZwBXvQ7MkM_aZLvEGyx_cay8tggG1IkpQFiw7b0Jl4UNl3RqzhGMQjfhSacZI9V50lCIgz0SlnAJ0sibfQaZpcjFgqm0xEUCDnsU59H-Z0iRoZT7w3Qy0Ym1aIBgUamG39UXPcaWh12HPXxx8ukr7TUMsI8CK6E3zcraRaa60--AO65I1cxpnRHvGBgBB7OcpehsiGCEe3lEKnqcVv8ox4VJtccVvOkyWcjCUg4cFu8PywZa4rPqmUXSiVeo20uQpPPyNt4DP4G3N9P0YsSVIeLwHj8H5rylWfrhovv51WxWh4BuK_HBY7KzxsUKTkimg/manifest/video.m3u8" type="application/x-mpegURL" />
+                <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc3ODQ3NyIsIm5iZiI6IjE3NTc2ODg0NzciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.CjBAb0a_yXcP2ZKgorBxuMhd2-zZVrc6zfnKhVL7fbs0nji8KTfV_c41Ah5augORi7x_JHy6OVCXEcTiP-6w-vM5Bu2z3LDoM2lPnY3KvwLAxqgK05Ei6Loue_aswOJ-1MONeYg-uI8CW6zxkI6oxwjAjHhM0aGmTZ1-NdEtGVw6IxUDfKMx-ZUUI_YR78j2xVV8m5wnSCwSuZmDSHuUOFOkaqgXYlbqY1XBWXOVL3aZKFhGVF5xFlTQI3gur3DDdMNUe5fOt34Fo13T0_ZhMjbJtxHXbBUaBpiR06yWSQ6D0wogVeO1Ou3l5Sedp6kWKYZ4CQIMJdll3FR5wcy4rQ/manifest/video.m3u8" type="application/x-mpegURL" />
                 
               </video>
             </div>
@@ -302,7 +302,10 @@ document.addEventListener('DOMContentLoaded', function () {
             bandwidth: 12000000,                
             limitRenditionByPlayerDimensions: false, 
             useDevicePixelRatio: true
-          }
+          },
+          nativeTextTracks: false,
+          nativeAudioTracks: false,
+          nativeVideoTracks: false
         },
         controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
       });
