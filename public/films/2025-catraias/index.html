@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/css/main.min.c339c2dd1fae99ce4e58415a385a6962806dd1ff94db4101e068915a064dc3b2.css" integrity="sha256-wznC3R&#43;umc5OWEFaOFppYoBt0f&#43;U20EB4GiRWgZNw7I=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.min.6fcac70cf5cc9d51df6b6c88a0dad9351dd085d4e5d6b8c083561679221ba926.css" integrity="sha256-b8rHDPXMnVHfa2yIoNrZNR3QhdTl1rjAg1YWeSIbqSY=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/css/film-list.min.cce2a9283eec41d2cb8bbe17a15a096112132cbaa83a8cd5751051d499caa632.css" integrity="sha256-zOKpKD7sQdLLi74XoVoJYRITLLqoOozVdRBR1JnKpjI=" crossorigin="anonymous">
 
@@ -77,15 +77,12 @@
 
 <link rel="stylesheet" href="/css/film-single.min.22237ec17a5774655534be9a7d1d92b97040fbe0f1e310dc3e692a7083352f52.css" integrity="sha256-IiN&#43;wXpXdGVVNL6afR2SuXBA&#43;&#43;Dx4xDcPmkqcIM1L1I=" crossorigin="anonymous">
 
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8/dist/video-js.min.css">
 <script src="https://cdn.jsdelivr.net/npm/video.js@8/dist/video.min.js" defer></script>
-
 <script src="https://cdn.jsdelivr.net/npm/@videojs/http-streaming@3/dist/videojs-http-streaming.min.js" defer></script>
 
 <article class="film-single">
   <div class="film-inner">
-    
     <div class="film-top">
       <div class="film-poster">
         <img src="/img/TANITA.png" alt="Catraias">
@@ -95,9 +92,7 @@
         <h1 class="film-title-single">
           Catraias
           
-          <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">
-            Catraias
-          </p>
+            <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:.2rem;">Catraias</p>
           
         </h1>
 
@@ -105,161 +100,153 @@
         <p class="film-description"></p>
 
         <div class="film-credits-grid">
+          <div class="credit"><span class="credit-label">Режисьор</span><span class="credit-value">Таня Динис</span></div>
+          <div class="credit"><span class="credit-label">Продуцент</span><span class="credit-value">Нуно Родригес, Curtas Metragens C.R.L.</span></div>
+          <div class="credit"><span class="credit-label">Сценарий</span><span class="credit-value">Таня Динис</span></div>
+          <div class="credit"><span class="credit-label">Монтаж</span><span class="credit-value">Таня Динис</span></div>
           
-            <div class="credit"><span class="credit-label">Режисьор</span><span class="credit-value">Таня Динис</span></div>
+          <div class="credit"><span class="credit-label">Оператор</span><span class="credit-value">Таня Динис</span></div>
+          <div class="credit"><span class="credit-label">Звук</span><span class="credit-value">Педро Мариньо</span></div>
+          <div class="credit"><span class="credit-label">Музика</span><span class="credit-value">Жорже Кинтела</span></div>
+          <div class="credit"><span class="credit-label">Глас зад кадър</span><span class="credit-value">Таня Динис</span></div>
           
-          
-            <div class="credit"><span class="credit-label">Продуцент</span><span class="credit-value">Нуно Родригес, Curtas Metragens C.R.L.</span></div>
-          
-          
-            <div class="credit"><span class="credit-label">Сценарий</span><span class="credit-value">Таня Динис</span></div>
-          
-          
-            <div class="credit"><span class="credit-label">Монтаж</span><span class="credit-value">Таня Динис</span></div>
-          
-          
-          
-            <div class="credit"><span class="credit-label">Оператор</span><span class="credit-value">Таня Динис</span></div>
-          
-          
-            <div class="credit"><span class="credit-label">Звук</span><span class="credit-value">Педро Мариньо</span></div>
-          
-          
-            <div class="credit"><span class="credit-label">Музика</span><span class="credit-value">Жорже Кинтела</span></div>
-          
-          
-            <div class="credit"><span class="credit-label">Глас зад кадър</span><span class="credit-value">Таня Динис</span></div>
-          
-          
-          
-            <div class="credit"><span class="credit-label">Главни актьори</span><span class="credit-value">Мария Виана, Ирмина де Жезус Терросо, Ренато Круз Сантос, Руте Рибейро</span></div>
-          
+          <div class="credit"><span class="credit-label">Главни актьори</span><span class="credit-value">Мария Виана, Ирмина де Жезус Терросо, Ренато Круз Сантос, Руте Рибейро</span></div>
         </div>
 
         
           
           
+          
+          
+          
+          
+          
 
           <div class="watch-button-wrapper">
-            <a class="watch-button"
-               href="#watch-modal"
-               data-dimbox
-               data-dimbox-type="inline"
-               data-dimbox-class="dimbox-full"
-               data-dimbox-target="#watch-modal">
-              гледай
-            </a>
+            <a class="watch-button" href="#" id="watch-btn">гледай</a>
           </div>
 
           
-          <div id="watch-modal" style="display:none; max-width:min(90vw, 1200px);">
-            <div style="margin: 0 0 .5rem 0; font-size:.875rem; opacity:.8;">
-              Debug: <a href="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8?token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc1NjE0MSIsIm5iZiI6IjE3NTc2NjYxNDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.nal-Y3RkUVE_Pi9A3mHFNC1zLYpVPNdWVj0TD5QXJX72T-5boIAXK85SvhrUHKRMhM8YWwx2gsVUpSie3zMia4HTn79G4lWkmCxco-HGTrUKxZcrHSNvzC7i2nfQhgEmmnTlcHjLdUramLCp680Ahe3ASeWHIEgln9019ckBIFkLyg0j5JYILeh-IIl1UZfZixGS2NcQAZo1vFIWXWx8LYRsk0Su3_BxOOKZFAtHHttW0hvn3FjyHf4JLlbcvIi1glHEs9pzznUyHwZMxDRpn3Tu25NhTRMVtnbDRFKtZftqm182GfYnagg29mwXpPrnBsMgnOuD-hta0CwaFlnB6A" target="_blank" rel="noopener">open manifest in a new tab</a>
+          <div id="vjs-lightbox" aria-hidden="true">
+            <button class="vjs-close" type="button" aria-label="Затвори">✕</button>
+            <div class="vjs-modal">
+              <video id="film-player"
+                     class="video-js vjs-default-skin vjs-big-play-centered"
+                     controls preload="auto" playsinline
+                     crossorigin="anonymous"
+                     poster="/img/catraias%20III.jpg"
+                     data-setup="{}">
+                <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc1NjE0MSIsIm5iZiI6IjE3NTc2NjYxNDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.nal-Y3RkUVE_Pi9A3mHFNC1zLYpVPNdWVj0TD5QXJX72T-5boIAXK85SvhrUHKRMhM8YWwx2gsVUpSie3zMia4HTn79G4lWkmCxco-HGTrUKxZcrHSNvzC7i2nfQhgEmmnTlcHjLdUramLCp680Ahe3ASeWHIEgln9019ckBIFkLyg0j5JYILeh-IIl1UZfZixGS2NcQAZo1vFIWXWx8LYRsk0Su3_BxOOKZFAtHHttW0hvn3FjyHf4JLlbcvIi1glHEs9pzznUyHwZMxDRpn3Tu25NhTRMVtnbDRFKtZftqm182GfYnagg29mwXpPrnBsMgnOuD-hta0CwaFlnB6A/manifest/video.m3u8" type="application/x-mpegURL" />
+                
+              </video>
             </div>
-
-            <video
-              id="film-player"
-              class="video-js vjs-default-skin vjs-big-play-centered"
-              controls
-              preload="auto"
-              playsinline
-              crossorigin="anonymous"
-              style="width:100%; height:auto;"
-              poster="/img/catraias%20III.jpg"
-              data-setup='{}'>
-              
-              <source src="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8?token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc1NjE0MSIsIm5iZiI6IjE3NTc2NjYxNDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.nal-Y3RkUVE_Pi9A3mHFNC1zLYpVPNdWVj0TD5QXJX72T-5boIAXK85SvhrUHKRMhM8YWwx2gsVUpSie3zMia4HTn79G4lWkmCxco-HGTrUKxZcrHSNvzC7i2nfQhgEmmnTlcHjLdUramLCp680Ahe3ASeWHIEgln9019ckBIFkLyg0j5JYILeh-IIl1UZfZixGS2NcQAZo1vFIWXWx8LYRsk0Su3_BxOOKZFAtHHttW0hvn3FjyHf4JLlbcvIi1glHEs9pzznUyHwZMxDRpn3Tu25NhTRMVtnbDRFKtZftqm182GfYnagg29mwXpPrnBsMgnOuD-hta0CwaFlnB6A">
-            </video>
           </div>
-
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              if (!window.videojs) return;
-
-              var HLS_URL = "\"https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8?token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc1NjE0MSIsIm5iZiI6IjE3NTc2NjYxNDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.nal-Y3RkUVE_Pi9A3mHFNC1zLYpVPNdWVj0TD5QXJX72T-5boIAXK85SvhrUHKRMhM8YWwx2gsVUpSie3zMia4HTn79G4lWkmCxco-HGTrUKxZcrHSNvzC7i2nfQhgEmmnTlcHjLdUramLCp680Ahe3ASeWHIEgln9019ckBIFkLyg0j5JYILeh-IIl1UZfZixGS2NcQAZo1vFIWXWx8LYRsk0Su3_BxOOKZFAtHHttW0hvn3FjyHf4JLlbcvIi1glHEs9pzznUyHwZMxDRpn3Tu25NhTRMVtnbDRFKtZftqm182GfYnagg29mwXpPrnBsMgnOuD-hta0CwaFlnB6A\"";
-
-              
-              fetch(HLS_URL, { method: 'GET', mode: 'cors' })
-                .then(function(res) {
-                  console.log('[HLS manifest fetch]', res.status, res.statusText);
-                  if (!res.ok) {
-                    console.warn('Manifest fetch not OK. If 403, token/geo/access rule is blocking.');
-                  }
-                  return res.text();
-                })
-                .then(function(text) {
-                  console.log('[HLS manifest first 200 chars]', text.slice(0, 200));
-                })
-                .catch(function(err) {
-                  console.error('Manifest fetch error:', err);
-                });
-
-              var player = window.videojs('film-player', {
-                fluid: true,
-                preload: 'auto',
-                controls: true,
-                inactivityTimeout: 3000,
-                playbackRates: [0.75, 1, 1.25, 1.5, 2],
-                html5: {
-                  vhs: {
-                    overrideNative: true,
-                    enableLowInitialPlaylist: true
-                  }
-                },
-                techOrder: ['html5']
-              });
-
-              player.on('loadedmetadata', function () {
-                try {
-                  var tracks = player.textTracks();
-                  for (var i = 0; i < tracks.length; i++) {
-                    if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
-                      tracks[i].mode = 'showing';
-                      break;
-                    }
-                  }
-                } catch (e) {}
-              });
-
-              player.on('error', function () {
-                var err = player.error();
-                console.error('VIDEOJS error:', err);
-              });
-
-              
-              document.addEventListener('dimbox:close', function () {
-                try { player.pause(); } catch (_) {}
-              });
-            });
-          </script>
         
       </div>
     </div>
 
     
     
-    
-
   </div>
 </article>
 
+<style>
+ 
+#vjs-lightbox{
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  display: none;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,.88);
+  z-index: 2147483000;  
+  padding: 16px;
+}
+#vjs-lightbox.show{ display: flex; }
+
+#vjs-lightbox .vjs-modal{
+  width: min(96vw, 1100px);
+  max-height: calc(100vh - 32px);
+}
+#vjs-lightbox video{
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  background: #000;  
+}
+
+ 
+.vjs-close{
+  position: fixed;
+  top: 14px; right: 14px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 10px;
+  padding: .45rem .65rem;
+  cursor: pointer;
+  z-index: 2147483001;
+}
+
+ 
+.video-js::cue{
+  background: transparent !important;
+  color: #fff;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  text-shadow: 0 2px 4px rgba(0,0,0,.9);
+}
+.video-js .vjs-text-track-display .vjs-text-track-cue div{
+  background: transparent !important;
+  padding: .15em .35em;
+  border-radius: .2em;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn  = document.getElementById('watch-btn');
+  var box  = document.getElementById('vjs-lightbox');
+  if (!btn || !box) return;
+
+  
+  if (box.parentNode !== document.body) document.body.appendChild(box);
+
+  var player, inited = false;
+
+  function openBox(e){
+    if (e) e.preventDefault();
+    box.classList.add('show');
+    box.setAttribute('aria-hidden','false');
+
+    function init(){
+      if (inited) { try { player.play(); } catch(_){}; return; }
+      if (!window.videojs) { setTimeout(init, 50); return; }
+      player = window.videojs('film-player', {
+        fluid: true, controls: true, preload: 'auto',
+        html5: { vhs: { overrideNative: true } },
+        controlBar: { pictureInPictureToggle: true, volumePanel: { inline: false } }
+      });
+      inited = true;
+      player.ready(function(){ try { player.play(); } catch(_){} });
+    }
+    init();
+  }
+
+  function closeBox(){
+    box.classList.remove('show');
+    box.setAttribute('aria-hidden','true');
+    if (player) { try { player.pause(); } catch(_){} }
+  }
+
+  btn.addEventListener('click', openBox);
+  box.addEventListener('click', function(e){ if (e.target === box) closeBox(); });
+  var x = box.querySelector('.vjs-close'); if (x) x.addEventListener('click', closeBox);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && box.classList.contains('show')) closeBox(); });
+});
+</script>
 
 <style>
-.film-title-single {
-  font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
-  margin: 0 0 .5rem 0;
-}
- 
-.vjs-text-track-display { text-shadow: none; }
-.vjs-text-track-cue {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  font-size: 1rem;
-  line-height: 1.35;
-  background: rgba(0,0,0,0.55);
-  padding: .25rem .5rem;
-  border-radius: .25rem;
-}
-.vjs-caption-settings { font-size: 14px; }
+.film-title-single{font-size:clamp(1.6rem,2vw+1rem,2.4rem);margin:0 0 .5rem 0;}
 </style>
 
 
