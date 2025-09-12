@@ -8,7 +8,7 @@ minutes: '15'
 description: Двама души, изгубени в морето, водят кървава битка както за оцеляването
   си, така и за спасяването на връзката си.
 text_author: интервю с Леви Ступс
-stream_duration: 05.09.25 - 12.09.25
+stream_duration: "05.0925 - 12.09.25"
 Director: Леви Ступс
 Production: Лунаниме
 thumbnail: /img/Drijf.jpeg
