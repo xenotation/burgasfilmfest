@@ -481,7 +481,17 @@ body {
   top: calc(env(safe-area-inset-top) + 12px) !important;
   right: calc(env(safe-area-inset-right) + 12px) !important;
 }
+/* Solid black lightbox overlay (no transparency) */
+.dimbox-container::before {
+  background-color: #000 !important;
+  opacity: 1 !important;
+}
 
+/* Even if .dimbox-light is used, force black */
+.dimbox-container.dimbox-light::before {
+  background-color: #000 !important;
+  opacity: 1 !important;
+}
 
 /* ////////////////// */
 /*   MOBILE OVERRIDES */
