@@ -25,9 +25,9 @@ LeadActors: Мария Виана, Ирмина де Хесус Теросо, Р
 thumbnail: /img/TANITA.png
 feature_image: /img/catraias III.jpg
 show_watch_button: true
-video_id: 6799329e49d585252f581311c19642d3
-HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1Nzc4MjQ3MyIsIm5iZiI6IjE3NTc2OTI0NzQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.SrjnU90-b4NbXbWkdDVdhx5M-O7Hcqu2jn_5z6YsKu_v7kQd1VHenEc3Atjipgflu7qUuWuo8bSwJT5fn1LU3kNRUAkYZ6BAaykQq8TZ2UEaFxPWUIbKLRxrBUWrLxKxeeNm8OnEXDbdKLz3cT7gwVk2JAmIbWINa3LmTSESr5JQg6uz8a3kMKZS1smr_3jvoaDYuqoDJsQBt2ZsLnAnYqwYi-I9poFsnEFPnwpk9vhwiaPFJmXj5ZPnlFbP9UNMwkMIl2yAT1hWBYQGvzhwBwSm5O1RZ5wvZPIaO_VunblSXfKM5Wvm7kiGoNZe1IVI0XMEWieIQoZd6U32Jt1Zdw
+video_id: 9b489d9e94cb1951a31ab2cca339b72f
+HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/9b489d9e94cb1951a31ab2cca339b72f/manifest/video.m3u8
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI5YjQ4OWQ5ZTk0Y2IxOTUxYTMxYWIyY2NhMzM5YjcyZiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1NzgxNTg2MSIsIm5iZiI6IjE3NTc3MjU4NjIiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.QFMYXv2x4XRZ6buDogVuY-o6EY8oCmMlwLReNXc9ARja0XxI9YvhmnL9gB8gBerZwaDSGwr6uvKTPpbe0lKuQFhi1o_ZPY1tKLbuveBAW4Gq_WWalPh23ZOW7dwYPcCGexiCZiA9B-T3zkcY-k3l6RI8S4TP9YyFFI5FWCHslr35GOPMeuf1EsMtVVngsdqY-EHEQfL9addJ06d3XSYfzWewekpHE1XWC6Y5QVRb98gjipM-A9X6V_MKc4GSn1LF5ym1eO7xx6eve37_RKkSY0YekxJYyH0Msc1NDZi24hhGcyuNjq0iHmO-pP8wNraBFbY1FyCtSpJWJoUWsqo4SA
 ---
 **\*** *For English scroll down.*
 
@@ -35,7 +35,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 
 **Какво означава думата „Catraias” на португалски? Какво означава тя за теб?**
 
-Имах известни затруднения при превода й и в същото време, тъй като ми харесва значението на думата, реших да я запазя на португалски. Catraia е името, дадено на малка, традиционно построена лодка, използвана за крайбрежен риболов, особено в северните райони на Португалия. Но думата означава също момиче, младо момиче. За мен заглавието носи това двойно значение: малките лодки, които се изправят пред морето с издръжливост, и жените от Каксинас, в този случай, които от ранна възраст, много млади, от необходимост, чрез работа или по свой избор, са поемали тежки и опасни задачи, традиционно свързани с мъжете. Тези жени, подобно на catraias, може да изглеждат крехки, но разкриват огромна сила. Изборът на това име беше и начин да се признае тази устойчивост, да се даде достойнство на животи, които толкова често са премълчавани. *Catraias* така се превръща в метафора: на борба, на принадлежност, но и на нежност и грижа.
+Имах известни затруднения при превода й и в същото време, тъй като ми харесва значението на думата, реших да я запазя на португалски. Catraia е името, дадено на малка, традиционно построена лодка, използвана за крайбрежен риболов, особено в северните райони на Португалия. Но думата означава също момиче, младо момиче. За мен заглавието носи това двойно значение: малките лодки, които се изправят пред морето с издръжливост, и жените от Кашинас, в този случай, които от ранна възраст, много млади, от необходимост, чрез работа или по свой избор, са поемали тежки и опасни задачи, традиционно свързани с мъжете. Тези жени, подобно на catraias, може да изглеждат крехки, но разкриват огромна сила. Изборът на това име беше и начин да се признае тази устойчивост, да се даде достойнство на животи, които толкова често са премълчавани. *Catraias* така се превръща в метафора: на борба, на принадлежност, но и на нежност и грижа.
 
 **Откъде дойде вдъхновението и идеята за филма?**
 
@@ -69,7 +69,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 За мен нямаше смисъл да избирам едно тълкуване пред другото, защото солта е едновременно рана и лек. Животът на тези жени е белязан от трудности и издръжливост, но също и от дълбока грижа: за децата им, за домовете им, за рибарските мрежи, за самата общност и за мястото им в обществото. Морето, с цялата си жестокост, им даваше и форма на независимост и утвърждаване. Филмът се намира в това нестабилно равновесие – между болката и благодарността.\
 Все пак това остава моят опит, моята перспектива, моето разбиране за това, което видях, проучих и интерпретирах.
 
-**С „Catraias“ ни предоставяш подробен, почти етнографски поглед върху живота на жените край морето и труда, който определя ежедневието им. Как реши да се фокусираш върху тези теми и какъв беше подходът към тяхното представяне?**
+**С „Catraias“ един почти етнографски поглед върху живота на жените край морето и труда, който определя ежедневието им. Как реши да се фокусираш върху тези теми и какъв беше подходът към тяхното представяне?**
 
 Чрез работата си се стремя да изведа на преден план разкази, които са останали невидими или заглушени, забравени от историята, с особено внимание към разказите на жените и начините, по които техният труд и преживявания са били исторически маргинализирани. В този контекст архивите на жените играят централна роля в моя артистичен процес, като служат като суровина за изграждането на нови начини за четене на миналото, настоящето и бъдещето. За мен е важно да се замисля: кой избира какво да се архивира? Да се документира? Кой разказва историята? За кого я разказваме? Кой я слуша, приема, поставя под въпрос?
 
@@ -83,11 +83,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 
 **Таня Динис,** Вила Нова де Фамаликан**,** 1983 г. Нейното творчество обхваща различни перспективи и артистични области – фотография, пърформанс и кино – като черпи от архивни изображения, както лични, така и анонимни, както и от други записи на реални изображения. Тя се фокусира върху истории и събития, водени от жени, които се сблъскват с тежки и невидими условия на труд, често неразпознати в обществото. Художник в програмата Luas Novas, Batalha Centro de Cinema, Порто, 2024. TÃO PEQUENINAS, TINHAM O AR DE SEREM JÁ CRESCIDAS, най-добър късометражен филм на IndieLisboa 2024 и най-добър португалски документален филм на MDOC Melgaço 2024. Създаване на OPERARIADA, истории на бивши текстилни работници от Vale do Ave, копродукция с CIAJG в Гимараеш и Teatro Narciso Ferreira. CORPOGRAFIA - Corpo Museu в Museu da História da Cidade de Viseu, 2024. Elas Entram e Ficam!, 2023, продуциран от TEP и Teatro Municipal do Porto. Режисьор на Todos vivemos a mesma viagem de maneiras diferentes, Circuito Braga Media Artes, Брага, 2022. Образователен проект ATOS, Odisseia Nacional на Teatro Nacional D. Maria II, с Plano Nacional das Braga, 2023. Não são favas, são feijocas (2013), награден на няколко филмови фестивала, последван от Arco da Velha (2015), Laura (2017) – носител на наградата Arquivo на Arquivo em Cartaz - Международен фестивал за архивни филми, Бразилия. Lurdes (2022), награден на FUSO Vídeo Arte Lisboa. Грант за творчество от PACT - Plano de Apoio à Criação Territorial ARTISTA NO CENTRO 2019/2021 от A Oficina Guimarães. Директор на SANGUE NOVO, 22-ри Лундо-бразилски филмов фестивал в Санта Мария да Фейра, 2019. Носител на наградата GNRATION Summer Labs с аудиовизуалната инсталация sobrepostos, 2020. Асистент в Катедрата по кино и театър в ESAP и в Катедрата по театър в Universidade do Minho. Представена в колекцията за съвременно изкуство на Община Порто.
 
-
-
 *Представянето на филма „Catraias“ и това интервю се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
-
-
 
 ## ***Women, labour, memory – the poetic world of Tânia Dinis***
 
@@ -105,13 +101,13 @@ At my first encounter with Irmina, I realized that there were no family archival
 
 The film is born out of that urgency, out of that desire to transform and document these memories through cinema. I speak of an urgency for myself, as an artist focused on women’s stories and their relationship with work, but I also recognize that other stories, books, other artists, and other artworks have been and are still being created about this community.
 
-***Catraias*** has a hybrid approach, it does not strictly document but it provides space for interpretation and imagination. **When does a personal story need to be told and shown through such cinematic language?**
+***Catraias*** **has a hybrid approach, it does not strictly document but it provides space for interpretation and imagination.** **When does a personal story need to be told and shown through such cinematic language?**
 
 For me, when a personal story carries within itself something that goes beyond biography, it can be told in a more open way, one that is not limited to factual record. It is in that space between fiction and documentary that I find the freedom to work. My artistic path has always beenmarked by this intersection—between cinema, performance, and visual arts; between moving image and photography; between biography, autobiography, and collective memory.
 
 *Catraias* is a film that does not seek to provide definitive answers or to establish a “documentary truth.” What interests me is creating a space of encounter between what was lived and what is imagined, between past and present, between what memory preserves and what it transforms. The personal story, in this case, becomes a doorway into a collective experience, and cinema allows me to give form to that experience—through gesture, silence, the layering of images, and the elements of the sea and its textures in the creation of a poetic language.
 
-**Your film beautifully conveys the materiality of the sea—the textures of life and work by and with \*\***the sea***\*. How do you approach materiality, and what role do textures play in your storytelling?**
+**Your film beautifully conveys the materiality of the sea—the textures of life and work by and with the sea. How do you approach materiality, and what role do textures play in your storytelling?**
 
 Textures and overlays are fundamental in my work. It is important that there is space in what I propose to the viewer—space for each person to create their own film, their own interpretation within what I am presenting. In the case of the sea, textures are everywhere: in the salt embedded in the skin, in the wind that shapes the body, in the repeated sound of ropes and nets, in the roughness of the rocks, in the gestures of calloused hands. Filming *Catraias* was, in large part, about learning to listen to those textures and elements, not only with the eyes but also with the body. For this, I also relied on the perspective of the artist Renato Cruz Santos, who is from Caxinas and develops his artistic work there.
 
