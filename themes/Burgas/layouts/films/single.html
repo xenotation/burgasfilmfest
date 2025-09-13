@@ -1,1 +1,132 @@
-{{ define "main" }} {{ $main := resources.Get "css/film-single.css" | minify | fingerprint }} <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" crossorigin="anonymous"> <article class="film-single"> <div class="film-inner"> <!-- top section --> <div class="film-top"> <div class="film-poster"> <img src="{{ .Params.thumbnail }}" alt="{{ .Params.film_title }}"> </div> <div class="film-meta-single"> <h1 class="film-title-single"> {{ .Params.film_title }} {{ with .Params.film_title_org }} <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;"> {{ . }} </p> {{ end }} </h1> <p class="film-details">{{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин.</p> {{/* <div class="film-genre">{{ .Params.Genre }}</div> */}} <p class="film-description">{{ .Params.description }}</p> <div class="film-credits-grid"> {{ with .Params.Director }} <div class="credit"> <span class="credit-label">Режисьор</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ with .Params.Production }} <div class="credit"> <span class="credit-label">Продуцент</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ with .Params.Screenwriter }} <div class="credit"> <span class="credit-label">Сценарий</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ with .Params.Editing }} <div class="credit"> <span class="credit-label">Монтаж</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ $dop := .Params.Cinematography | default .Params.Operator }} {{ with $dop }} <div class="credit"> <span class="credit-label">Оператор</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ with .Params.Sound }} <div class="credit"> <span class="credit-label">Звук</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ with .Params.Music }} <div class="credit"> <span class="credit-label">Музика</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ with .Params.Voiceover }} <div class="credit"> <span class="credit-label">Глас зад кадър</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} {{ $actors := .Params.LeadActors | default .Params.Actors }} {{ with $actors }} <div class="credit"> <span class="credit-label">Главни актьори</span> <span class="credit-value">{{ . }}</span> </div> {{ end }} </div> {{ if .Params.show_watch_button }} {{ $playPath := .Params.video_id }} {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }} <div class="watch-button-wrapper"> <a class="watch-button" href="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true" data-dimbox data-dimbox-type="iframe" data-dimbox-class="dimbox-full"> гледай </a> </div> {{ end }} </div> </div> <!-- markdown body --> {{ $hasBody := ne (trim (plainify .Content) " \n\r\t") "" }} {{ if $hasBody }} <div class="film-body"> {{ .Content }} </div> {{ end }} </div> </article> {{ end }}
+{{ define "main" }}
+
+  {{ $main := resources.Get "css/film-single.css" | minify | fingerprint }}
+  <link
+    rel="stylesheet"
+    href="{{ $main.RelPermalink }}"
+    integrity="{{ $main.Data.Integrity }}"
+    crossorigin="anonymous"
+  >
+
+  <article class="film-single">
+    <div class="film-inner">
+
+      <!-- top section -->
+      <div class="film-top">
+
+        <div class="film-poster">
+          <img src="{{ .Params.thumbnail }}" alt="{{ .Params.film_title }}">
+        </div>
+
+        <div class="film-meta-single">
+          <h1 class="film-title-single">
+            {{ .Params.film_title }}
+            {{ with .Params.film_title_org }}
+              <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">
+                {{ . }}
+              </p>
+            {{ end }}
+          </h1>
+
+          <p class="film-details">{{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин.</p>
+          {{/* <div class="film-genre">{{ .Params.Genre }}</div> */}}
+          <p class="film-description">{{ .Params.description }}</p>
+
+          <div class="film-credits-grid">
+            {{ with .Params.Director }}
+              <div class="credit">
+                <span class="credit-label">Режисьор</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.Production }}
+              <div class="credit">
+                <span class="credit-label">Продуцент</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.Screenwriter }}
+              <div class="credit">
+                <span class="credit-label">Сценарий</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.Editing }}
+              <div class="credit">
+                <span class="credit-label">Монтаж</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ $dop := .Params.Cinematography | default .Params.Operator }}
+            {{ with $dop }}
+              <div class="credit">
+                <span class="credit-label">Оператор</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.Sound }}
+              <div class="credit">
+                <span class="credit-label">Звук</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.Music }}
+              <div class="credit">
+                <span class="credit-label">Музика</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.Voiceover }}
+              <div class="credit">
+                <span class="credit-label">Глас зад кадър</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ $actors := .Params.LeadActors | default .Params.Actors }}
+            {{ with $actors }}
+              <div class="credit">
+                <span class="credit-label">Главни актьори</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+          </div>
+
+          {{ if .Params.show_watch_button }}
+            {{ $playPath := .Params.video_id }}
+            {{ with .Params.signed_token }}{{ $playPath = . }}{{ end }}
+
+            <div class="watch-button-wrapper">
+              <a
+                class="watch-button"
+                href="https://customer-tkp9gv7016aue3fr.cloudflarestream.com/{{ $playPath }}/iframe?preload=true&autoplay=true&defaultTextTrack=bg"
+                data-dimbox
+                data-dimbox-type="iframe"
+                data-dimbox-class="dimbox-full"
+              >
+                гледай
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- markdown body -->
+      {{ $hasBody := ne (trim (plainify .Content) " \n\r\t") "" }}
+      {{ if $hasBody }}
+        <div class="film-body">
+          {{ .Content }}
+        </div>
+      {{ end }}
+
+    </div>
+  </article>
+
+{{ end }}
