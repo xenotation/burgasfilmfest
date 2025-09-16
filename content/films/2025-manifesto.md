@@ -1,5 +1,6 @@
 ---
-date: "2025-09-16T10:21:00+03:00"
+date: 2025-09-16T10:21:00+03:00
+draft: true
 film_title: Манифесто
 film_title_org: Manifesto
 country: Норвегия
@@ -22,8 +23,7 @@ Sound: Ойвинд Ридланд, Руне Багеруд
 Music: Мари Квиен Брунвол
 LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терье Николясен, Бьорнар Сира,
   Фату Мадлен Асбак
-thumbnail: /img/11974_a024c003_120101_r0v3.jpg
+thumbnail: /img/poster-iffr-manifest.png
 feature_image: /img/11974_a024c003_120101_r0v3.jpg
 show_watch_button: false
-draft: true
 ---
