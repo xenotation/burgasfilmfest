@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+# publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
 
 media_folder: "static/img"
 public_folder: "/img"
@@ -45,6 +46,10 @@ collections:
     fields:
       - { label: "Date", name: "date", widget: "datetime",
           format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}" }
+
+      # NEW: Draft toggle (Hugo reads this as front matter `draft: true/false`)
+      - { label: "Draft", name: "draft", widget: "boolean", default: true, hint: "Uncheck to publish." }
+
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
       - { label: "Country", name: "country", widget: "string", required: true }
@@ -71,7 +76,6 @@ collections:
       - { label: "Cloudflare HLS link", name: "HLS", widget: "string", required: false }
       - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
 
-      # --- HERO VIDEO ID (exposed) ---
       - label: "Hero Video ID (front page)"
         name: "hero_video_id"
         widget: "string"
@@ -109,7 +113,7 @@ collections:
     files:
       - label: "General Settings"
         name: "site"
-        file: "hugo.toml"   # change if your path differs
+        file: "hugo.toml"
         format: "toml"
         fields:
           - { label: "Base URL", name: "baseURL", widget: "string" }
