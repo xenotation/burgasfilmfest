@@ -24,6 +24,6 @@ Music: Мари Квиен Брунвол
 LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терье Николясен, Бьорнар Сира,
   Фату Мадлен Асбак
 thumbnail: /img/poster-iffr-manifest.png
-feature_image: /img/11974_a024c003_120101_r0v3.jpg
+feature_image: /img/poster-iffr-manifest.png
 show_watch_button: false
 ---
