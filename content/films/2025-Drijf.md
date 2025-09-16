@@ -1,7 +1,7 @@
 ---
 film_title_org: Drijf
 hero_video_id: 7a587a49c9cf21aae8842ed12565765a
-date: 2025-02-10 20:20:00Z+03:00
+date: "2025-02-10T20:20:00+03:00"
 film_title: Плаване
 country: Белгия
 year: "2023"

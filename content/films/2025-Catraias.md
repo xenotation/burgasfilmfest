@@ -1,7 +1,7 @@
 ---
 film_title_org: null
 hero_video_id: ac21c626c2f2aa493a58702da8eb6400
-date: 2025-09-11 20:40:00Z+03:00
+date: "2025-09-11T20:40:00+03:00"
 film_title: Catraias
 country: Португалия
 year: '2023'

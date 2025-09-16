@@ -5,6 +5,11 @@ backend:
 media_folder: "static/img"
 public_folder: "/img"
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   # -------------------------
   # Posters
@@ -13,6 +18,7 @@ collections:
     label: "Posters"
     folder: "content/posters"
     create: true
+    identifier_field: "title"
     slug: "{{year}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
@@ -21,7 +27,8 @@ collections:
       - { label: "Author", name: "author", widget: "string", required: false }
       - { label: "Year", name: "year", widget: "string", required: false }
       - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}", required: false }
 
   # -------------------------
   # Films
@@ -32,10 +39,12 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
+    identifier_field: "film_title"
     slug: "{{year}}-{{slug}}"
     summary: "{{film_title}} ({{year}})"
     fields:
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", default: "{{now}}", picker_utc: true }
+      - { label: "Date", name: "date", widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}" }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
       - { label: "Country", name: "country", widget: "string", required: true }
@@ -53,12 +62,25 @@ collections:
       - { label: "Music", name: "Music", widget: "string", required: false }
       - { label: "Voiceover", name: "Voiceover", widget: "string", required: false }
       - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", required: false }
+
       - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false, required: true }
       - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false, required: true }
+
       - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
       - { label: "Cloudflare video ID", name: "video_id", widget: "string", required: false }
-      - { label: "Cloudflare HSL link", name: "HLS", widget: "string", required: false }
+      - { label: "Cloudflare HLS link", name: "HLS", widget: "string", required: false }
       - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
+
+      # --- HERO VIDEO ID (exposed) ---
+      - label: "Hero Video ID (front page)"
+        name: "hero_video_id"
+        widget: "string"
+        required: false
+        hint: "Cloudflare Stream video ID used for the homepage hero."
+        pattern:
+          - "^[a-f0-9]{32}$"
+          - "Must be a 32-character lowercase hex Cloudflare Stream ID (e.g. 7a587a49c9cf21aae8842ed12565765a)."
+
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
@@ -87,7 +109,7 @@ collections:
     files:
       - label: "General Settings"
         name: "site"
-        file: "hugo.toml"   # change to "config/_default/hugo.toml" if that's your path
+        file: "hugo.toml"   # change if your path differs
         format: "toml"
         fields:
           - { label: "Base URL", name: "baseURL", widget: "string" }
@@ -127,7 +149,7 @@ collections:
                   - label: "Same As (profiles)"
                     name: "sameAs"
                     widget: "list"
-                    field: { label: "Profile URL", name: "item", widget: "string" }  # writes TOML array of strings
+                    field: { label: "Profile URL", name: "item", widget: "string" }
 
               - label: "Partners (ticker)"
                 name: "partners"
