@@ -1,6 +1,6 @@
 ---
 date: 2025-09-16T10:21:00+03:00
-draft: false
+draft: true
 film_title: Манифесто
 film_title_org: Manifesto
 country: Норвегия
