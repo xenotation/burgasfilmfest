@@ -2,31 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Films on Планктон</title>
-    <link>http://192.168.0.103:64085/films/</link>
+    <link>http://192.168.0.103:64834/films/</link>
     <description>Recent content in Films on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Tue, 16 Sep 2025 10:21:00 +0300</lastBuildDate>
-    <atom:link href="http://192.168.0.103:64085/films/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Sep 2025 20:40:00 +0300</lastBuildDate>
+    <atom:link href="http://192.168.0.103:64834/films/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://192.168.0.103:64085/films/2025-map-film_title_org-manifesto-show_watch_button-false-music-%D0%BC%D0%B0%D1%80%D0%B8-%D0%BA%D0%B2%D0%B8%D0%B5%D0%BD-%D0%B1%D1%80%D1%83%D0%BD%D0%B2%D0%BE%D0%BB-thumbnail-img-11974_a024c003_120101_r0v3-jpg-director-%D0%B0%D0%BD%D0%B5-%D1%85%D1%8C%D0%BE%D1%80%D1%82-%D0%B3%D1%83%D1%82%D1%83-date-2025-09-16-10-00-00z-03-00-sound/</link>
-      <pubDate>Tue, 16 Sep 2025 10:21:00 +0300</pubDate>
-      <guid>http://192.168.0.103:64085/films/2025-map-film_title_org-manifesto-show_watch_button-false-music-%D0%BC%D0%B0%D1%80%D0%B8-%D0%BA%D0%B2%D0%B8%D0%B5%D0%BD-%D0%B1%D1%80%D1%83%D0%BD%D0%B2%D0%BE%D0%BB-thumbnail-img-11974_a024c003_120101_r0v3-jpg-director-%D0%B0%D0%BD%D0%B5-%D1%85%D1%8C%D0%BE%D1%80%D1%82-%D0%B3%D1%83%D1%82%D1%83-date-2025-09-16-10-00-00z-03-00-sound/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://192.168.0.103:64085/films/2025-catraias/</link>
+      <link>http://192.168.0.103:64834/films/2025-catraias/</link>
       <pubDate>Thu, 11 Sep 2025 20:40:00 +0300</pubDate>
-      <guid>http://192.168.0.103:64085/films/2025-catraias/</guid>
+      <guid>http://192.168.0.103:64834/films/2025-catraias/</guid>
       <description>* For English scroll down.&#xA;Жени, труд, памет – поетичният свят на Таня Динис Какво означава думата „Catraias” на португалски? Какво означава тя за теб?&#xA;Имах известни затруднения при превода й и в същото време, тъй като ми харесва значението на думата, реших да я запазя на португалски. Catraia е името, дадено на малка, традиционно построена лодка, използвана за крайбрежен риболов, особено в северните райони на Португалия. Но думата означава също момиче, младо момиче.</description>
     </item>
     <item>
       <title></title>
-      <link>http://192.168.0.103:64085/films/2025-drijf/</link>
+      <link>http://192.168.0.103:64834/films/2025-drijf/</link>
       <pubDate>Mon, 10 Feb 2025 20:20:00 +0300</pubDate>
-      <guid>http://192.168.0.103:64085/films/2025-drijf/</guid>
+      <guid>http://192.168.0.103:64834/films/2025-drijf/</guid>
       <description>*Този филм съдържа сцени на насилие, кръв и/или силно плашещи елементи, които могат да бъдат обезпокоителни за някои зрители. Не се препоръчва за лица под 16 години.&#xA;*For English scroll down.&#xA;Разговор с Леви Ступс за Drijf Дони Георгиев: Здравей, Леви, благодаря ти, че прие поканата ни за интервю. Тъй като Плаване (Drijf) е част от програмата ни „Летен залез“, която ще покажем тук, със „залязването“ на това лято през септември, исках да те попитам как беше твоето лято тази година?</description>
     </item>
   </channel>
