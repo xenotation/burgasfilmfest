@@ -1,10 +1,8 @@
 {{ define "main" }}
 <section class="film-archive">
   <div class="film-list">
-    {{ range $index, $element := .Pages.ByDate }}
+    {{ range $index, $element := .Pages.ByDate.Reverse }}
     <article class="film-entry">
-
-      <!-- ○ image now links to the film page -->
       <div class="film-image">
         <a href="{{ $element.RelPermalink }}">
           <img src="{{ $element.Params.feature_image }}" alt="{{ $element.Params.film_title }}">
@@ -21,9 +19,7 @@
               </p>
             {{ end }}
             <p class="film-details-hero">{{ $element.Params.Director }} · {{ $element.Params.year }} · {{ $element.Params.country }} · {{ $element.Params.minutes }} мин</p>
-            <div class="film-author-subtext">
-              {{ $element.Params.text_author }}
-            </div>
+            <div class="film-author-subtext">{{ $element.Params.text_author }}</div>
           </div>
         </a>
 
@@ -33,7 +29,6 @@
           <div class="stream-label stream-label--hidden">{{ $element.Params.stream_duration }}</div>
         {{ end }}
       </div>
-
     </article>
     {{ end }}
   </div>
