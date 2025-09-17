@@ -1,8 +1,8 @@
 ---
 date: 2025-09-16T10:21:00+03:00
 draft: true
-film_title: Манифесто
-film_title_org: Manifesto
+film_title: Манифест
+film_title_org: Manifest
 country: Норвегия
 year: "2021"
 minutes: "27"
