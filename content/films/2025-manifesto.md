@@ -4,14 +4,15 @@ draft: false
 film_title: Манифест
 film_title_org: Manifesto
 country: Норвегия
-year: "2020"
-minutes: "27"
-description: >
-  Малка художествена академия се слива с огромен университет като един от
-  многото институти. Те трябва да следват всички административни процедури на
-  университета. Но тайно студентите и персоналът решават да се самоорганизират
-  като независима художествена школа. Те създават свои собствени курсове,
-  програми и ръководство, тайно и без знанието на университета.
+year: '2020'
+minutes: '27'
+description: 'Малка художествена академия се слива с огромен университет като един
+  от многото институти. Те трябва да следват всички административни процедури на университета.
+  Но тайно студентите и персоналът решават да се самоорганизират като независима художествена
+  школа. Те създават свои собствени курсове, програми и ръководство, тайно и без знанието
+  на университета.
+
+  '
 text_author: текст от Савина Петкова
 stream_duration: 19.09.25 - 26.09.25
 Director: Ане Хьорт Гуту
@@ -21,14 +22,14 @@ Editing: Джон Ендре Мьорк
 Cinematography: Патрик Сьофстрьом
 Sound: Ойвинд Ридланд, Руне Багеруд
 Music: Мари Квиен Брунвол
-LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терье Николясен, Бьорнар Сира,
-  Фату Мадлен Асбак
+LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терье Николясен, Бьорнар Сира, Фату
+  Мадлен Асбак
 thumbnail: /img/poster-iffr-manifest.png
 feature_image: /img/11974_a024c003_120101_r0v3.jpg
 show_watch_button: true
 video_id: d1ac249c5f7b526de1536f46e22ddbb1
-HLS: ""
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJkMWFjMjQ5YzVmN2I1MjZkZTE1MzZmNDZlMjJkZGJiMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODM4NDEzNiIsIm5iZiI6IjE3NTgyOTQxMzYiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.c6uKk4f3qaxbHwqDVUEYnwdMyswRUCDayrp-3LGvE99K8BjBCu5TdZJKDvbQdST3tpKkLlaC0qdWMKvgFBfJqwY6TqkPCwwLkFobIZOTPacCqFTPW8JiUoP15-ZAwBSYi_D4Bow9KuBrVA5AmBjM5ou2Od4XDXbp-8wT_cCSeMlXPYBWx-KB0SAecQZndNFwldHSo76mcjYIUG6q8RC-GeyC3RUdZr_jYdES6_gpwT2m1mnDlUxpkN62lvfxK4cVnQuZKS33feOoMXxW_VuOXVW7V4k7qYsjMsayeyvNoYUISG8MnEuwmHF809c6Wwlqh2Ei3hsZ29lROXobJdkXDA
+HLS: ''
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJkMWFjMjQ5YzVmN2I1MjZkZTE1MzZmNDZlMjJkZGJiMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODM4NTA4NCIsIm5iZiI6IjE3NTgyOTUwODQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.mW07E2pfC_OcKXx0aa7nD_ZpzRX_HBqHncr0ruMrOTXvks79yhxR6PzsPhhfBpB0d8DqtcSCqctDoqF_IeF3E9pVi7n4ouOcDNC_NjwJcv1tJVHP272n8lUnickRdCq4n045eSjVmU8B9RcsFrNrEl6trYGqsUZie1icAaL8PpRMc7LkHd-TQEkxYKGWIHNA9X-fEKGFKnasjJMv2nzBmpmz7gsXbtnEopm4SrSomFcXp0ZgPxgFbH93hAqJeFlFkwU3iMyPZ8GkPOkoVVrE6zwh73OOtAg-P2egy2sblIAD-jfMNqVSS9UdIQtpI63OUOUqbgQjPuAp24jTfkP09Q
 hero_video_id: db8048d6368eff0c5c7b2d5222b606ae
 ---
 ## **Да подкопаем системата отвътре - Ане Хьорт Гуту и “Манифест”**
