@@ -25,5 +25,7 @@ LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Те
   Фату Мадлен Асбак
 thumbnail: /img/poster-iffr-manifest.png
 feature_image: /img/11974_a024c003_120101_r0v3.jpg
-show_watch_button: false
+show_watch_button: true
+video_id: 6799329e49d585252f581311c19642d3
+HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6799329e49d585252f581311c19642d3/manifest/video.m3u8
 ---
