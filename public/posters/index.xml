@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posters on Планктон</title>
-    <link>http://192.168.0.103:64834/posters/</link>
+    <link>http://192.168.0.103:1313/posters/</link>
     <description>Recent content in Posters on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
     <lastBuildDate>Fri, 29 Dec 2023 11:43:54 -0500</lastBuildDate>
-    <atom:link href="http://192.168.0.103:64834/posters/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://192.168.0.103:1313/posters/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drijf</title>
-      <link>http://192.168.0.103:64834/posters/2025-drijf-poster/</link>
+      <link>http://192.168.0.103:1313/posters/2025-drijf-poster/</link>
       <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.103:64834/posters/2025-drijf-poster/</guid>
+      <guid>http://192.168.0.103:1313/posters/2025-drijf-poster/</guid>
       <description></description>
     </item>
     <item>
       <title>Catraias</title>
-      <link>http://192.168.0.103:64834/posters/2025-catraias/</link>
+      <link>http://192.168.0.103:1313/posters/2025-catraias/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:64834/posters/2025-catraias/</guid>
+      <guid>http://192.168.0.103:1313/posters/2025-catraias/</guid>
       <description></description>
     </item>
     <item>
       <title>Manifesto</title>
-      <link>http://192.168.0.103:64834/posters/2025-manifesto/</link>
+      <link>http://192.168.0.103:1313/posters/2025-manifesto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:64834/posters/2025-manifesto/</guid>
+      <guid>http://192.168.0.103:1313/posters/2025-manifesto/</guid>
       <description></description>
     </item>
   </channel>
