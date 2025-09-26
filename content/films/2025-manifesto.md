@@ -1,18 +1,17 @@
 ---
 date: 2025-09-16 10:21:00+03:00
-draft: true
+draft: false
 film_title: Манифест
 film_title_org: Manifesto
 country: Норвегия
-year: '2020'
-minutes: '27'
-description: 'Малка художествена академия се слива с огромен университет като един
-  от многото институти. Те трябва да следват всички административни процедури на университета.
-  Но тайно студентите и персоналът решават да се самоорганизират като независима художествена
-  школа. Те създават свои собствени курсове, програми и ръководство, тайно и без знанието
-  на университета.
-
-  '
+year: "2020"
+minutes: "27"
+description: >
+  Малка художествена академия се слива с огромен университет като един от
+  многото институти. Те трябва да следват всички административни процедури на
+  университета. Но тайно студентите и персоналът решават да се самоорганизират
+  като независима художествена школа. Те създават свои собствени курсове,
+  програми и ръководство, тайно и без знанието на университета.
 text_author: текст от Савина Петкова
 stream_duration: 19.09.25 - 26.09.25
 Director: Ане Хьорт Гуту
@@ -22,13 +21,13 @@ Editing: Джон Ендре Мьорк
 Cinematography: Патрик Сьофстрьом
 Sound: Ойвинд Ридланд, Руне Багеруд
 Music: Мари Квиен Брунвол
-LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терe Николясен, Бьорнар Сира, Фату
-  Мадлен Асбак
+LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терe Николясен, Бьорнар Сира,
+  Фату Мадлен Асбак
 thumbnail: /img/poster-iffr-manifest.png
 feature_image: /img/11974_a024c003_120101_r0v3.jpg
 show_watch_button: false
 video_id: d1ac249c5f7b526de1536f46e22ddbb1
-HLS: ''
+HLS: ""
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJkMWFjMjQ5YzVmN2I1MjZkZTE1MzZmNDZlMjJkZGJiMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODk5Mjc5NyIsIm5iZiI6IjE3NTg5MDI3OTgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.TcnBf7LIvorhycXhBBI7zuaY2-v7plrT7k_x9fG5Hru8QwylSzg65k3-3LZeaLEURyyP1FalRDVZ6kzQRLLfhk24kXcdI-pMoiEcnU5iOEheEFG09khbO1BVY-yZTGxtgr0BLU2VEcoYtRDjcsuENnJxfq6NQ2A4s7EV7uHc0Pemqpe01JlYMMJjBbQc5NXYnzSLZeGZHvfsOmLNsQPcZrJgsmEoliAaohrh-EztmBIQzfW98EDgQDDN8UssiCRvoyHSZ81HEHw3QcnrOJAp8qjrDXMsXbIj9_cZq3TX3JYae8erU0SZg5OvRUiOfAdziGnX9Mdm1BIBpF_7dbgZWg
 hero_video_id: db8048d6368eff0c5c7b2d5222b606ae
 ---
