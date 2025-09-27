@@ -4,15 +4,14 @@ draft: false
 film_title: Манифест
 film_title_org: Manifesto
 country: Норвегия
-year: '2020'
-minutes: '27'
-description: 'Малка художествена академия се слива с огромен университет като един
-  от многото институти. Те трябва да следват всички административни процедури на университета.
-  Но тайно студентите и персоналът решават да се самоорганизират като независима художествена
-  школа. Те създават свои собствени курсове, програми и ръководство, тайно и без знанието
-  на университета.
-
-  '
+year: "2020"
+minutes: "27"
+description: >
+  Малка художествена академия се слива с огромен университет като един от
+  многото институти. Те трябва да следват всички административни процедури на
+  университета. Но тайно студентите и персоналът решават да се самоорганизират
+  като независима художествена школа. Те създават свои собствени курсове,
+  програми и ръководство, тайно и без знанието на университета.
 text_author: текст от Савина Петкова
 stream_duration: 19.09.25 - 26.09.25
 Director: Ане Хьорт Гуту
@@ -22,14 +21,14 @@ Editing: Джон Ендре Мьорк
 Cinematography: Патрик Сьофстрьом
 Sound: Ойвинд Ридланд, Руне Багеруд
 Music: Мари Квиен Брунвол
-LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терe Николясен, Бьорнар Сира, Фату
-  Мадлен Асбак
+LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терe Николясен, Бьорнар Сира,
+  Фату Мадлен Асбак
 thumbnail: /img/poster-iffr-manifest.png
 feature_image: /img/11974_a024c003_120101_r0v3.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: d1ac249c5f7b526de1536f46e22ddbb1
-HLS: ''
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJkMWFjMjQ5YzVmN2I1MjZkZTE1MzZmNDZlMjJkZGJiMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODg1MzI4NiIsIm5iZiI6IjE3NTg3NjMyODYiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.aufCOAT00yh9lOUhOyyfG_bBBOWQaR20OoB1Rd892EEGZadnuBiG_cANRPFK7F6I-knyIucgnA0Zv5bhGFCn9cn-FEYqAmWoSjH1u0yLffyY0n0d2wOtshlXk3ZVkvJuZSiQoCXGIhT8drTWspWqEduntwkpZDVzSt_mxQUraI9FpPrrAFTmct3IBDj5cpbN1ieQXa9CO_q9Pv8QI2Mq-li7NN43mfxyntThtZzWU-gqBsJKymmQa2nmoEnSDuymxT1uNsDnKzbxROgnxepRm6GYg7x5nh8AQgr4NbonqyZWck1znCxQswh6mdjIK8WFFFhS3YyG5R5hRMuBlbXUFg
+HLS: ""
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJkMWFjMjQ5YzVmN2I1MjZkZTE1MzZmNDZlMjJkZGJiMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODk5Mjc5NyIsIm5iZiI6IjE3NTg5MDI3OTgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.TcnBf7LIvorhycXhBBI7zuaY2-v7plrT7k_x9fG5Hru8QwylSzg65k3-3LZeaLEURyyP1FalRDVZ6kzQRLLfhk24kXcdI-pMoiEcnU5iOEheEFG09khbO1BVY-yZTGxtgr0BLU2VEcoYtRDjcsuENnJxfq6NQ2A4s7EV7uHc0Pemqpe01JlYMMJjBbQc5NXYnzSLZeGZHvfsOmLNsQPcZrJgsmEoliAaohrh-EztmBIQzfW98EDgQDDN8UssiCRvoyHSZ81HEHw3QcnrOJAp8qjrDXMsXbIj9_cZq3TX3JYae8erU0SZg5OvRUiOfAdziGnX9Mdm1BIBpF_7dbgZWg
 hero_video_id: db8048d6368eff0c5c7b2d5222b606ae
 ---
 ## **Да подкопаем системата отвътре - Ане Хьорт Гуту и “Манифест”**
@@ -42,4 +41,4 @@ hero_video_id: db8048d6368eff0c5c7b2d5222b606ae
 
 Да скърбиш за сграда, която вече не съществува, е меко казано странно: все пак нали следва да си пазим тъгата за хора, животни и изобщо живите същества на тази планета, които имат най-голяма нужда от нея! За “Манифест” няма съмнение, че хората са на първо място, но и местата, които те обживяват в опитите си да споделят знания и да създават изкуство, заслужават внимание. Патосът на филма е донякъде сходен с този на Канудовия “Манифест”, но Гуту и интервюираните от нея се обявяват против тотализиращите практики и строгите йерархични строеве под опеката на капитала; против университета и академията, превръщащи се в инструменти на контрола; против лъскавите сгради и обещанията за светло бъдеще, които изключват хората от уравнението. Самата Ане Хьорт Гуту освен режисьор, артист, куратор, е и професор в академията по изящни изкуства в Осло – в иначе невидимото ѝ присъствие личи грижата ѝ за студенти, колеги и институцията като такава.
 
-*Представянето на филма „Манифест“ и това интервю се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
+*Представянето на филма „Манифест“ и този текст се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
