@@ -4,13 +4,14 @@ draft: false
 film_title: Откъм брега
 film_title_org: Du côté de la côte
 country: Франция
-year: '1958'
-minutes: '27'
-description: Ироничен поглед към френската Ривиера, особено през лятото, когато тя
-  е препълнена с туристи. Разказва за историята ѝ и известните посетители, фалшиво
-  екзотичните сгради, препълнените плажове, дърветата и паметниците. Филмът прославя
-  използването на „Едем“ като име на място, подсказвайки, че раят идва на брега, след
-  като всички са си тръгнали, може би само на отдалечен плаж на остров.
+year: "1958"
+minutes: "27"
+description: Ироничен поглед към френската Ривиера, особено през лятото, когато
+  тя е препълнена с туристи. Разказва за историята ѝ и известните посетители,
+  фалшиво екзотичните сгради, препълнените плажове, дърветата и паметниците.
+  Филмът прославя използването на „Едем“ като име на място, подсказвайки, че
+  раят идва на брега, след като всички са си тръгнали, може би само на отдалечен
+  плаж на остров.
 text_author: текст от Нева Мичева
 stream_duration: 26.09.2025 - 03.10.2025
 Director: Аниес Варда
@@ -23,8 +24,8 @@ Voiceover: Роже Коджо, Ан Оливие
 thumbnail: /img/whatsapp-image-2025-09-26-at-23.54.40_e550c1bb.jpg
 feature_image: /img/bguxdtpply2twkage09swvvdv5i.jpg
 show_watch_button: true
-video_id: '7509d99092577a1a4bd1e03889e39330 '
-HLS: ''
+video_id: "7509d99092577a1a4bd1e03889e39330 "
+HLS: ""
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI3NTA5ZDk5MDkyNTc3YTFhNGJkMWUwMzg4OWUzOTMzMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1OTIzMjQ2MyIsIm5iZiI6IjE3NTkxNDI0NjMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.HPUAINhZxHhYbZH9oW8pF10NQHidGMYPG0-byzY7EcLDGC1s_hbQtsllq3QHBsBCyGfZSDClJETE5CVaMz_0mbi9uu56VerAtdPfsWNwjr0wVQX7o1zpRfSZqDgfdVmNf49B7B4U-AM73NnWHvRIbfBdfHJ-tfHfvOetFxF0qdVqdQnIs6Q4h7XrxqhvQFhvwfnVG6iCeG-CHkITSdRoyLnKcJyVGsDNimQY5DSnGVstVYyL9WdLFFbvlxEqMEN3CjnTLhG6f1u0TTSmlt3UV4SG1Hvr5Vva5S5HQBB_5tZBr21OJAyAeq5rQw8l7l4TlXvNH486w0Aj5qs7Y2tT7A
 hero_video_id: 6f5feae75697a2ca14fd351846590aa5
 ---
@@ -44,4 +45,4 @@ hero_video_id: 6f5feae75697a2ca14fd351846590aa5
 
 „Oткъм брега“ (жалко, че играта на думи и препратката към Пруст от оригиналното заглавие Du côté de la côte няма как да се предадат на български) е третият късометражен филм на Аниес Варда (1928–2019) от общо трийсетина и четвъртият, ако започнем броенето от пълнометражния ѝ дебют [„Ла Поант Курт“](https://www.imdb.com/title/tt0048499/) (1955), смятан за предвестник на Новата вълна. Именно заради „Ла Поант Курт“ и вечното говорене за „бащите“ на течението Годар, Трюфо, Шаброл, Ромер и ко, в късните си години Варда беше наричана „бабата на Новата вълна“ – прякор колкото симпатичен, толкова и снизходителен спрямо тази оригинална, разкрепостена, весела и любяща личност, която с всеки свой [кинопис ](https://filmsociety.bg/filmi/avtori/san-sebastian-2017-litza-mesta)правеше мъничка революция. Далеч по-точно я определи Мартин Скорсезе, когато я назова [„едно от божествата на киното“](https://www.hollywoodreporter.com/news/general-news/telluride-martin-scorsese-calls-agnes-varda-one-gods-at-fest-tribute-1235935/).\
 \
-*Представянето на филма „Oткъм брега“ и този текст се осъществяват с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
+*Представянето на филма „Oткъм брега“ и този текст се осъществяват с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
