@@ -4,14 +4,13 @@ draft: false
 film_title: Откъм брега
 film_title_org: Du côté de la côte
 country: Франция
-year: "1958"
-minutes: "27"
-description: Ироничен поглед към френската Ривиера, особено през лятото, когато
-  тя е препълнена с туристи. Разказва за историята ѝ и известните посетители,
-  фалшиво екзотичните сгради, препълнените плажове, дърветата и паметниците.
-  Филмът прославя използването на „Едем“ като име на място, подсказвайки, че
-  раят идва на брега, след като всички са си тръгнали, може би само на отдалечен
-  плаж на остров.
+year: '1958'
+minutes: '27'
+description: Ироничен поглед към френската Ривиера, особено през лятото, когато тя
+  е препълнена с туристи. Разказва за историята ѝ и известните посетители, фалшиво
+  екзотичните сгради, препълнените плажове, дърветата и паметниците. Филмът прославя
+  използването на „Едем“ като име на място, подсказвайки, че раят идва на брега, след
+  като всички са си тръгнали, може би само на отдалечен плаж на остров.
 text_author: текст от Нева Мичева
 stream_duration: 26.09.2025 - 03.10.2025
 Director: Аниес Варда
@@ -24,9 +23,9 @@ Voiceover: Роже Коджо, Ан Оливие
 thumbnail: /img/whatsapp-image-2025-09-26-at-23.54.40_e550c1bb.jpg
 feature_image: /img/bguxdtpply2twkage09swvvdv5i.jpg
 show_watch_button: true
-video_id: "7509d99092577a1a4bd1e03889e39330 "
-HLS: ""
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI3NTA5ZDk5MDkyNTc3YTFhNGJkMWUwMzg4OWUzOTMzMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1OTIzMjQ2MyIsIm5iZiI6IjE3NTkxNDI0NjMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.HPUAINhZxHhYbZH9oW8pF10NQHidGMYPG0-byzY7EcLDGC1s_hbQtsllq3QHBsBCyGfZSDClJETE5CVaMz_0mbi9uu56VerAtdPfsWNwjr0wVQX7o1zpRfSZqDgfdVmNf49B7B4U-AM73NnWHvRIbfBdfHJ-tfHfvOetFxF0qdVqdQnIs6Q4h7XrxqhvQFhvwfnVG6iCeG-CHkITSdRoyLnKcJyVGsDNimQY5DSnGVstVYyL9WdLFFbvlxEqMEN3CjnTLhG6f1u0TTSmlt3UV4SG1Hvr5Vva5S5HQBB_5tZBr21OJAyAeq5rQw8l7l4TlXvNH486w0Aj5qs7Y2tT7A
+video_id: '7509d99092577a1a4bd1e03889e39330 '
+HLS: ''
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI3NTA5ZDk5MDkyNTc3YTFhNGJkMWUwMzg4OWUzOTMzMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1OTIzMjU0MiIsIm5iZiI6IjE3NTkxNDI1NDIiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.CQiC4jubVycBuQ4aVXR0-7EVtdL_J3fSUjM6mZnGdiMeE5OV0qZO9qfsnFJfRhZY2xvXfTKYlRYoU7W2gyp3igkp84UimBX8WGbXcLANAxPKlV8GjYiWGfb5YRxROqamaK9pt8TXc1EEQv-vEHmZHaQNwcJUj1x0o4oXK1aL4R2OdIeo4epXh0V_SNJeIjsvxCOvUDuUeRiddAkY-8NfVZKOOvi1GOU9mMVX4AfGLjD3RUSWUzUTNzkL6w00btAun2q-7TJ953q-rmdXgDyQhKCrnqB2UiETEfTgTLaK3wRxZc_JSMZ3OF5lKBAIQa5m6EK7t50Y7HwGviqP7Gv9gA
 hero_video_id: 6f5feae75697a2ca14fd351846590aa5
 ---
 ### На гости в рая: „Откъм брега“ на Аниес Варда
