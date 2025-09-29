@@ -1,16 +1,17 @@
 ---
-film_title_org: null
-hero_video_id: ac21c626c2f2aa493a58702da8eb6400
-date: '2025-09-11T20:40:00+03:00'
+date: 2025-09-11T20:40:00+03:00
+draft: false
 film_title: Catraias
+film_title_org: null
 country: Португалия
-year: '2023'
-minutes: '15'
-description: „Catraias“ е есеистичен филм, който размива границите между фикция и
-  документално. Той е свободна реинтерпретация на интимни записи, които са едновременно
-  мимолетни и фини. Филмът се впуска в конфронтацията между тези записи, в една вътрешна
-  етнография, която се отклонява от спомените и историята на две жени, които са изградили
-  целия си живот около морето. Или по-скоро, превърнали живота си в море.
+year: "2023"
+minutes: "15"
+description: „Catraias“ е есеистичен филм, който размива границите между фикция
+  и документално. Той е свободна реинтерпретация на интимни записи, които са
+  едновременно мимолетни и фини. Филмът се впуска в конфронтацията между тези
+  записи, в една вътрешна етнография, която се отклонява от спомените и
+  историята на две жени, които са изградили целия си живот около морето. Или
+  по-скоро, превърнали живота си в море.
 text_author: интервю с Таня Динис
 stream_duration: 12.09.25 - 19.09.25
 Director: Таня Динис
@@ -28,6 +29,7 @@ show_watch_button: true
 video_id: 6799329e49d585252f581311c19642d3
 HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/9b489d9e94cb1951a31ab2cca339b72f/manifest/video.m3u8
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODMzNDg5NiIsIm5iZiI6IjE3NTgyNDQ4OTYiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.NXSr2Er50UxBA56RVikOgENE0m2in7DJYIEZGp2NjKw7uf1aY9plEqpoz4tq1PLrYEghqFaYERfhJah0yQphEd3oLfPVAQYg_2gR5Uh2c5wBu536413zLg2EmK9iDIW7HbnFgBBKIGU15akKVHJqim7feZf821NiLg-SFoTyQtoSfW_NAYWBQGt3pAI39LWJPRHWkepje4MSvAP73jz9VqpdHhgI66tiWCKX1tGwDAJD2XE9hkU0JiFQUfu1Zlgst_E6TuJK0-FcpZNR_2CTX1FUtq3fnAlix6wM9z4k4y1R3bBO9wsHSlzQsT1E5V6eeVjs7Lbyzi4Sp_UrXqX_hw
+hero_video_id: ac21c626c2f2aa493a58702da8eb6400
 ---
 **\*** *For English scroll down.*
 
@@ -83,7 +85,7 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 
 **Таня Динис,** Вила Нова де Фамаликан**,** 1983 г. Нейното творчество обхваща различни перспективи и артистични области – фотография, пърформанс и кино – като черпи от архивни изображения, както лични, така и анонимни, както и от други записи на реални изображения. Тя се фокусира върху истории и събития, водени от жени, които се сблъскват с тежки и невидими условия на труд, често неразпознати в обществото. Художник в програмата Luas Novas, Batalha Centro de Cinema, Порто, 2024. TÃO PEQUENINAS, TINHAM O AR DE SEREM JÁ CRESCIDAS, най-добър късометражен филм на IndieLisboa 2024 и най-добър португалски документален филм на MDOC Melgaço 2024. Създаване на OPERARIADA, истории на бивши текстилни работници от Vale do Ave, копродукция с CIAJG в Гимараеш и Teatro Narciso Ferreira. CORPOGRAFIA - Corpo Museu в Museu da História da Cidade de Viseu, 2024. Elas Entram e Ficam!, 2023, продуциран от TEP и Teatro Municipal do Porto. Режисьор на Todos vivemos a mesma viagem de maneiras diferentes, Circuito Braga Media Artes, Брага, 2022. Образователен проект ATOS, Odisseia Nacional на Teatro Nacional D. Maria II, с Plano Nacional das Braga, 2023. Não são favas, são feijocas (2013), награден на няколко филмови фестивала, последван от Arco da Velha (2015), Laura (2017) – носител на наградата Arquivo на Arquivo em Cartaz - Международен фестивал за архивни филми, Бразилия. Lurdes (2022), награден на FUSO Vídeo Arte Lisboa. Грант за творчество от PACT - Plano de Apoio à Criação Territorial ARTISTA NO CENTRO 2019/2021 от A Oficina Guimarães. Директор на SANGUE NOVO, 22-ри Лундо-бразилски филмов фестивал в Санта Мария да Фейра, 2019. Носител на наградата GNRATION Summer Labs с аудиовизуалната инсталация sobrepostos, 2020. Асистент в Катедрата по кино и театър в ESAP и в Катедрата по театър в Universidade do Minho. Представена в колекцията за съвременно изкуство на Община Порто.
 
-*Представянето на филма „Catraias“ и това интервю се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
+*Представянето на филма „Catraias“ и това интервю се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
 
 ## ***Women, labour, memory – the poetic world of Tânia Dinis***
 
