@@ -1,8 +1,8 @@
 ---
-film_title_org: Drijf
-hero_video_id: 7a587a49c9cf21aae8842ed12565765a
-date: "2025-02-10T20:20:00+03:00"
+date: 2025-02-10T20:20:00+03:00
+draft: false
 film_title: Плаване
+film_title_org: Drijf
 country: Белгия
 year: "2023"
 minutes: "15"
@@ -17,6 +17,7 @@ feature_image: /img/7Sgpv8SJA2XnKIYR3eh3AULPd6q.webp
 show_watch_button: false
 video_id: null
 signed_token: null
+hero_video_id: 7a587a49c9cf21aae8842ed12565765a
 ---
 \*Този филм съдържа сцени на насилие, кръв и/или силно плашещи елементи, които могат да бъдат обезпокоителни за някои зрители. Не се препоръчва за лица под 16 години.
 
@@ -56,9 +57,7 @@ signed_token: null
 
 **Л.С.:** Завършихме новия ми филм *Klonter* през януари и очакваме да излезе през октомври. Белгийската премиера ще бъде на Film Fest Gent, а също така сме селектирани за DOK Leipzig и Valladolid IFF.
 
-*Представянето на филма „Плаване“ и този текст се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС**. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
-
-
+*Представянето на филма „Плаване“ и този текст се осъществяват с финансовата подкрепа на **Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049.**Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
 
 ## ***Interview with Levi Stoops on Drijf***
 
@@ -72,33 +71,23 @@ signed_token: null
 
 The way the two characters interact and the specific dynamics between the two, actually came about when we were recording the voices together with Anemone Valcke. The skeleton of the movie existed before the recordings, but the actual meat of the story came about while working on the dialogue. The subtle and not so subtle behaviours of the characters became the center of the film.
 
-
-
 **D.G:** Drijf deals with relationship dynamics, a theme many people can relate to some extent, but it tells the story by blending humor with darker undertones. What inspired you to create the story this way, and why did you choose this particular approach?
 
 **L.S:** The subtle behaviours and choices of the characters are amplified against the backdrop of these very violent and unforgiving circumstances. The stakes are so high that it becomes crazier and crazier throughout the story for the characters to stay in this relationship dynamic. It makes the film very crude and absurd.
-
-
 
 **D.G:** What influenced the visual choices, and how do you feel the style supports the story and its emotional shifts? What tools/approaches did you use to achieve this style of animation?
 
 **L.S:** Well, I've only ever learned to work with TVPaint, so that's what we went with for the graphics and animation. I didn't put that much work in the design of the characters and the background. We stuck to the style from the storyboard I made. The animators and I cleaned it up a bit so it was easier to animate. The bare-bones style kind of works with the crudeness of the story. During the post-production phase I played around with the colours a lot. I spent days getting the feeling of the colour schemes right until -at least for me- it clicked with what I was trying to convey. 
 
-
-
 **D.G:** Are there any specific films, directors, or personal experiences that inspired Drijf or that inspire you and your style in general?
 
 **L.S:** I always say that, when I'm working on a storyboard, I find myself trying to make a Don Hetzfeldt film.  As for personal experiences, Drijf and also my new film, are really about myself in the end. Rather in a subconscious than a biographical manner.
-
-
 
 **D.G:** How was the film received by audiences around the world? What was the mostsurprising reaction you have received from an audience so far?
 
 **L.S:** It's not really an audience reaction, but winning the Jury Award at Annecy was just crazy. It was only the third festival we got selected to with my small debut film that was written in my living room. I never saw that coming. 
 
 I have the feeling that Drijf has a lot of big big fans, but there's also people who just really don't like it. There's not much in between. Most of the people who like it, relate to the deeper storyline about this couple and understand the violence that comes with it in the film.  Sometimes people like it, not because they understand the story, but because it reminds them of Happy Tree Friends.
-
-
 
 **D.G:** What is next? I know you are working on a new film, how is that going and when do you expect it to be released?
 
