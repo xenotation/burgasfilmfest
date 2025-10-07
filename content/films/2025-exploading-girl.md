@@ -4,19 +4,21 @@ draft: false
 film_title: Експлодиращото момиче
 film_title_org: La Fille qui explose
 country: Франция
-year: '2024'
-minutes: '19'
-description: През последните три месеца Кандис експлодира всеки ден. Понякога дори
-  два или три пъти на ден. Рекордът ѝ е седем пъти. Към момента тя има общо 192 експлозии.
+year: "2024"
+minutes: "19"
+description: През последните три месеца Кандис експлодира всеки ден. Понякога
+  дори два или три пъти на ден. Рекордът ѝ е седем пъти. Към момента тя има общо
+  192 експлозии.
 text_author: текст от Никола Стоянов
 stream_duration: 03.10.2025 - 10.10.2025
 Director: Каролин Поги, Джонатан Винел
 Production: Ориан Юрар (Atlas V)
 Screenwriter: Каролин Поги, Джонатан Винел
-Cinematography: ''
+Cinematography: ""
 Sound: Оливие Вуазен, Виктор Про (звуково миксиране)
 Music: Malibu
 Voiceover: Грас Сери
+animator: Saradibiza, Люсиен Крампф
 thumbnail: /img/lafillequiexplose_poster_3000x4000.jpg
 feature_image: /img/lfqe_still_1.jpg
 show_watch_button: true
