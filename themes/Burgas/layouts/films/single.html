@@ -33,6 +33,13 @@
           <p class="film-description">{{ .Params.description }}</p>
 
           <div class="film-credits-grid">
+            {{ with .Params.animator }}
+            <div class="credit">
+              <span class="credit-label">Аниматори</span>
+              <span class="credit-value">{{ . }}</span>
+            </div>
+          {{ end }}
+
             {{ with .Params.Director }}
               <div class="credit">
                 <span class="credit-label">Режисьор</span>

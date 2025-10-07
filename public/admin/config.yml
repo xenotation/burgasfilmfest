@@ -67,6 +67,7 @@ collections:
       - { label: "Music", name: "Music", widget: "string", required: false }
       - { label: "Voiceover", name: "Voiceover", widget: "string", required: false }
       - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", required: false }
+      - { label: "Animator(s) (comma-separated)", name: "animator", widget: "string", required: false }
 
       - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false, required: true }
       - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false, required: true }
