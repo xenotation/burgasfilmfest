@@ -4,17 +4,16 @@ draft: false
 film_title: Експлодиращото момиче
 film_title_org: La Fille qui explose
 country: Франция
-year: "2024"
-minutes: "19"
-description: През последните три месеца Кандис експлодира всеки ден. Понякога
-  дори два или три пъти на ден. Рекордът ѝ е седем пъти. Към момента тя има общо
-  192 експлозии.
+year: '2024'
+minutes: '19'
+description: През последните три месеца Кандис експлодира всеки ден. Понякога дори
+  два или три пъти на ден. Рекордът ѝ е седем пъти. Към момента тя има общо 192 експлозии.
 text_author: текст от Никола Стоянов
 stream_duration: 03.10.2025 - 10.10.2025
 Director: Каролин Поги, Джонатан Винел
 Production: Ориан Юрар (Atlas V)
 Screenwriter: Каролин Поги, Джонатан Винел
-Cinematography: ""
+Cinematography: ''
 Sound: Оливие Вуазен, Виктор Про (звуково миксиране)
 Music: Malibu
 Voiceover: Грас Сери
@@ -24,7 +23,7 @@ feature_image: /img/lfqe_still_1.jpg
 show_watch_button: true
 video_id: 6ba7f1d4d757f647187d01e9338349d2
 HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/6ba7f1d4d757f647187d01e9338349d2/manifest/video.m3u8
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2YmE3ZjFkNGQ3NTdmNjQ3MTg3ZDAxZTkzMzgzNDlkMiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1OTkwNDAwMSIsIm5iZiI6IjE3NTk4MTQwMDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.SiMy6xVd35-2WEh7agQ8yhqoPJQibdaAZcXqjn67SB2vI7PC4ccuCJX3PMYP7AF1Ji3Z4rNQChO9o7SAoOehKdGFqfbuLeSUDCP3YUWbEPSTqw6NX0KvN2HNPOdhbNJra41vfRo0S9IjCMEYYth6JsknjzKzausY_r7UbasBnVU1N9c4_Hfzh0iWkQsImPbaR90wGeEEY-ANi49IwSdgRxuzmUsExRtgUwHlaeqP47Fs2FppTpMXV2mE3o8MiXUa-GvafBtvOJzlluoPheTUxgQjuWPiRmDfQwnTNNoI8KHwmeXq7Ge4KRzIQWde87ojUWj2nJWeZiy9tawmgVDRzg
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2YmE3ZjFkNGQ3NTdmNjQ3MTg3ZDAxZTkzMzgzNDlkMiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1OTkzOTE4NyIsIm5iZiI6IjE3NTk4NDkxODciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.vQA1fn_U7q6jMEaa-DWhT6qAMsdEFg9raAhErEg5Wqn2aCuD80ZmaAjue2_AI2qobcx3BdOFnbMxp0gbTvilhtW0QQSz-_CT6QlKGYK_rCthhCLsMK3OH-WbJVCD_daF6mb1qgmtT8QS4n8WXlxE8moI4zcaSXcnSD9NIx2U0EFWhCXUGbL6PC9_3-T3w926FN8gm3vy_0X0qOixemDOnxpAWRERD76SpYBfVbyu0oau4iEOwGgvfXL9rO37w-DaqE8Hwe9MIfu0rTEFESEhMoOug9nq31200s-M0KY57aZ70dGEP6uwmOaSrRaFktr1Iku-G1_zjZ4m3p7IgCUq8A
 hero_video_id: 8f1430343a03f75a2da79266c57f92c8
 ---
 ## Процесия от модели
