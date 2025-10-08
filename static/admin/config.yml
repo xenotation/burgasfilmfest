@@ -13,25 +13,6 @@ slug:
 
 collections:
   # -------------------------
-  # Posters
-  # -------------------------
-  - name: "posters"
-    label: "Posters"
-    folder: "content/posters"
-    create: true
-    identifier_field: "title"
-    slug: "{{year}}-{{slug}}"
-    extension: "md"
-    format: "frontmatter"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Author", name: "author", widget: "string", required: false }
-      - { label: "Year", name: "year", widget: "string", required: false }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}", required: false }
-
-  # -------------------------
   # Films
   # -------------------------
   - name: "films"
@@ -41,7 +22,7 @@ collections:
     extension: "md"
     format: "frontmatter"
     identifier_field: "film_title"
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}-{{film_title}}"
     summary: "{{film_title}} ({{year}})"
     fields:
       - { label: "Date", name: "date", widget: "datetime",
@@ -87,7 +68,24 @@ collections:
           - "Must be a 32-character lowercase hex Cloudflare Stream ID (e.g. 7a587a49c9cf21aae8842ed12565765a)."
 
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
+  # -------------------------
+  # Posters
+  # -------------------------
+  - name: "posters"
+    label: "Posters"
+    folder: "content/posters"
+    create: true
+    identifier_field: "title"
+    slug: "{{year}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}", required: false }
   # -------------------------
   # Pages (About)
   # -------------------------
