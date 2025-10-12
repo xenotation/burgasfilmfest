@@ -23,7 +23,7 @@ Sound: Ойвинд Ридланд, Руне Багеруд
 Music: Мари Квиен Брунвол
 LeadActors: Ямиле Калдерон, Майкен Хаварстейн, Терe Николясен, Бьорнар Сира,
   Фату Мадлен Асбак
-thumbnail: /img/poster-iffr-manifest.png
+thumbnail: /img/poster-iffr-manifest-comp2.jpg
 feature_image: /img/11974_a024c003_120101_r0v3.jpg
 show_watch_button: false
 video_id: d1ac249c5f7b526de1536f46e22ddbb1
