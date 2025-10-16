@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-# publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
+  # publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
 
 media_folder: "static/img"
 public_folder: "/img"
@@ -13,25 +13,6 @@ slug:
 
 collections:
   # -------------------------
-  # Posters
-  # -------------------------
-  - name: "posters"
-    label: "Posters"
-    folder: "content/posters"
-    create: true
-    identifier_field: "title"
-    slug: "{{year}}-{{slug}}"
-    extension: "md"
-    format: "frontmatter"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Author", name: "author", widget: "string", required: false }
-      - { label: "Year", name: "year", widget: "string", required: false }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}", required: false }
-
-  # -------------------------
   # Films
   # -------------------------
   - name: "films"
@@ -40,16 +21,34 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-    identifier_field: "film_title"
+
+    # Use the custom filename field as the identifier (and therefore for {{slug}})
+    identifier_field: "file_name"
     slug: "{{year}}-{{slug}}"
     summary: "{{film_title}} ({{year}})"
-    fields:
-      - { label: "Date", name: "date", widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false, default: "{{now}}" }
 
-      # NEW: Draft toggle (Hugo reads this as front matter `draft: true/false`)
+    fields:
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        picker_utc: false
+        default: "{{now}}"
+
+      # Draft toggle
       - { label: "Draft", name: "draft", widget: "boolean", default: true, hint: "Uncheck to publish." }
 
+      # NEW: explicit filename control (what becomes the slug base)
+      - label: "File name (slug base)"
+        name: "file_name"
+        widget: "string"
+        required: true
+        hint: "Lowercase letters, numbers, hyphens/underscores. No spaces. Example: exploding-girl"
+        pattern:
+          - "^[a-z0-9]+([_-][a-z0-9]+)*$"
+          - "Use lowercase letters, numbers, and - or _. No spaces."
+
+      # Visible fields for the page
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
       - { label: "Country", name: "country", widget: "string", required: true }
@@ -87,6 +86,30 @@ collections:
           - "Must be a 32-character lowercase hex Cloudflare Stream ID (e.g. 7a587a49c9cf21aae8842ed12565765a)."
 
       - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Posters
+  # -------------------------
+  - name: "posters"
+    label: "Posters"
+    folder: "content/posters"
+    create: true
+    identifier_field: "title"
+    slug: "{{year}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        picker_utc: false
+        default: "{{now}}"
+        required: false
 
   # -------------------------
   # Pages (About)

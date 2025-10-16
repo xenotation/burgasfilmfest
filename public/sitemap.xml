@@ -2,13 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.0.103:1313/films/2025-exploading-girl/</loc>
-    <lastmod>2025-10-03T17:14:00+03:00</lastmod>
+    <loc>http://192.168.0.103:1313/films/2025-op-jane-walk/</loc>
+    <lastmod>2025-10-10T19:47:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/films/</loc>
-    <lastmod>2025-10-03T17:14:00+03:00</lastmod>
+    <lastmod>2025-10-10T19:47:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/</loc>
+    <lastmod>2025-10-10T19:47:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.0.103:1313/posters/2025-operation-jane-walk/</loc>
+    <lastmod>2025-10-10T19:28:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.0.103:1313/posters/</loc>
+    <lastmod>2025-10-10T19:28:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.0.103:1313/films/2025-exploading-girl/</loc>
     <lastmod>2025-10-03T17:14:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/films/2025-du-cote-de-la-cote/</loc>
@@ -24,9 +33,6 @@
     <lastmod>2025-02-10T20:20:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/posters/2025-drijf-poster/</loc>
-    <lastmod>2023-12-29T11:43:54-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.0.103:1313/posters/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
     <loc>http://192.168.0.103:1313/about/</loc>
