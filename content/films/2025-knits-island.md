@@ -20,5 +20,6 @@ Sound: Матийо Фарнарие
 thumbnail: /img/poster-knits-island.jpg
 feature_image: /img/knits-island-still-4.jpg
 show_watch_button: true
+video_id: ac2417398fb33c405b4a8b74106b6768
 hero_video_id: ba964e9e101d3a4b4afb5b94ee67ad8e
 ---
