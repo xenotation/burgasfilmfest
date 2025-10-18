@@ -245,3 +245,51 @@
     }
   }
   
+
+  .film-body {
+    overflow: hidden;            /* just in case */
+  }
+  
+  /* Images inside the markdown body */
+  .film-body img,
+  .film-body picture img,
+  .film-body figure img {
+    display: block;
+    max-width: 100%;
+    width: 100%;                 /* scale down & fill the column */
+    height: auto;                /* keep aspect ratio */
+    object-fit: contain;         /* avoid cropping if width set */
+  }
+  
+  /* If markdown uses <figure> */
+  .film-body figure {
+    margin: 1.2rem 0;
+    max-width: 100%;
+  }
+  .film-body figure > * {
+    max-width: 100%;
+  }
+  
+  /* Safety for other media */
+  .film-body video {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Long lines (code/links) don’t force overflow */
+  .film-body,
+  .film-body p,
+  .film-body li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  
+  /* Optional: wide tables scroll instead of breaking layout */
+  .film-body table {
+    display: block;
+    max-width: 100%;
+    width: max-content;
+    overflow-x: auto;
+  }
