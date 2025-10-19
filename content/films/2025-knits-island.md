@@ -5,10 +5,10 @@ file_name: knits-island
 film_title: Островът на Нит
 film_title_org: Knit's Island
 country: Франция
-year: '2023'
-minutes: '95'
-description: Под формата на аватари, снимачен екип влиза в онлайн видео игра. Те се
-  срещат с общност от играчи и опознават техните истории, страхове и мечти.
+year: "2023"
+minutes: "95"
+description: Под формата на аватари, снимачен екип влиза в онлайн видео игра. Те
+  се срещат с общност от играчи и опознават техните истории, страхове и мечти.
 text_author: Интервю с екипа на филма
 stream_duration: 17.10.2025 - 24.10.2025
 Director: Екием Барбие, Гийем Кос, Кɑнтен Лелгуак
@@ -33,13 +33,9 @@ hero_video_id: ba964e9e101d3a4b4afb5b94ee67ad8e
 
 **Ekiem Barbier:** We actually decided to consider this entire world of gaming and the particular servers we decided to shoot in as real places in order to consider it as real as possible. We met together in a house and had a huge setup, and we were practically in  an artificial lockdown, actually, for the first step of the shooting. And so we were together and deciding day to day what we were shooting and there were a lot of weeks and months of research before that, and so we decided to meet the people inside the game exclusively. So that meant that we had to handle the game, its mechanics and all of it to be able to be at the same level as the players. From that, we managed to meet people inside the game, completely randomly during a walk in the forest. We suddenly met someone and and he was asking for water, and we needed food. We exchanged those goods, we had a barbeque in the forest, and then we talked about our project. You also have to know that in those kind of games roleplay is important, but what's the most important is the trust you put in two people. So if you meet someone and it's going to ruin your four hours gameplay obviously, you have to trust those people, and in order to trust them, you have to grab some clues that they are, let's say, good people in away. That's entirely subjective. It's your opinion and your instinct decides for those things. So at some point, we managed to meet people, to keep contact and to play and be with them for a long time. When you talk with someone in an online server, someone you don't know, you've never seen before, and you have like an hour conversation about their life here as players and stuff, they automatically begin to cross the border and talk about their real self. 
 
-
-
 **D.G:** *Throughout the film, there’s somewhat of a tension between loneliness and connection. How did you approach and work with these opposing feelings throughout the process of making the film, especially in a virtual world?*
 
 **E.B:** The relationship between loneliness and connection is something inherent to virtual places and games like this. There are not opposite feelings in the game. It's the whole point, I would say. So some people are playing alone at this game. What they are searching for is some kind of isolation through their own adventure. They can only rely to themselves and maybe they feel good that way. But most of the people try to engage in a conversation, to have interactions and maybe they have the chance to experience this in a longer period of time. They want to meet people, they want to be involved in a community and share some values, even if they are fictional or not. They want to be part of something. So us as a filmmaking team, we were already a team. The point was to invent our own gameplay or roleplay for the film. I wouldn't say there is a tension between connection and loneliness. I would say it's the same thing here. So you are alone, but your purpose is to connect with everybody. 
-
-
 
 **D.G:** *What drew you to the world of online survivalist role-playing games, and how did your perspective on virtual communities evolve during the filming process?* 
 
@@ -47,9 +43,9 @@ hero_video_id: ba964e9e101d3a4b4afb5b94ee67ad8e
 
 The survivalist aspect of the game was also really interesting for us because it's about what people are picturing for the future - their hopes and their fears. We wanted to bring these subjects into the film as well. It's also a game, a survival game. Survival games are places where people try to invent new forms of society. It's also a kind of a step back regarding to huge industrial and capitalistic enhancement of society. It's like a step forward from that because there is no internet in the game. You can't have money and buy stuff. You have to find new path, new ways to interact and make society. So we were really interested in that. At first we thought that maybe everybody wanted to play the criminal, the cannibal, the horror stuff. But we knew and we discovered at the first steps of the shooting that it wasn't the case. Many people were also playing other kinds of roles. We also dragged the people to our project.
 
+![](/img/knits-island-still-2.jpg)
+
 We were like a meeting community. Like sometimes they were a leader or some stuff, and we were talking to them and see if we can come to some sort of agreement. Can we come to shoot for a day or two? Next week. And they accept that and, and and we, we pursue our, our shooting with the people that accepted us also. So it's not like people you can see in the movie is not representative of all the, the, the, the players in, in Daisy and other games also, it's quite particular and quite unique actually. 
-
-
 
 **D.G:** *Collaboration seems essential in a project that crosses real and virtual worlds. How did the three of you navigate creative differences and maintain a unified vision?* 
 
@@ -59,7 +55,7 @@ I even ended up eating my own partners Guilhem and Quentin during the war, becau
 
 It's kind of homemade film. We did practically everything and we worked also with other people on the sound editing and editing, people that were not there at the shooting and that were not involved into video games at all. We had many interactions and partnerships with a lot of people, including our producer Boris, during the shooting, the writing, the editing, all the stages of filmmaking. 
 
-
+![](/img/knits-island-still-5.jpg)
 
 **D.G:** *And one question for the producer of the film, Boris Garavini. Knit’s Island merges cinema, technology, and videogame culture in ways that challenge traditional production models. From a producer’s perspective, how did you adapt to support such an unconventional project — both creatively and logistically?* 
 
@@ -71,9 +67,9 @@ It was hard. We had to finish the film mostly with public funds. And we had to i
 
 Nobody knew how to properly shoot a film in the game and the game was so hard. So it was a lot of scouting, a lot of death trying to invent a new cinematic language, only shooting from the player's point of view to respect the players, not to use a free roaming cam. That was the first point. We had to invent a way of filming the game, and then we had to find a way to get the rights of the players of the game. Juridically, it was also very hard because you're asking an avatar and someone who's not really here, his right, the right to use his voice and his personality. So that was super fucked up. Then the game developers, of course, it was a huge bet because usually the developers, they don't grant rights like that. We know that for sure because we tried a few times with GTA five, Rockstar and Take-Two companies and developers. It was hard. Bohemia, they were quite reluctant. That's not the word. They didn't say yes in the very first place so wetried GTA five, Take-Two said, no, you cannot use our game to make a film. So we went to this other game DayZ, it was quite interesting and hopeful. We were quite lucky actually, that Take-Two said no, because DayZ was much more singular in a way. And so when we approached them, they said yeah, why not, but we should see the film first. So it was either we would do the film and wait for a yes, an eventual yes, which was something you don't do that usually. We took the bet. We took the risk. 
 
-We've waited for five years to get their approval. In the end, we just sent the rough cut super freaked out, and they said, sure. It's not bad. Just remove this, this and that. Bugs seem strange bugs. We said no, please. It's part of the artistic process. We would like to keep those bugs in the film. I know they're showing the game not in the way you intended to, but it's part of the experience for the players. We had to show some arguments. We had to come up with strong arguments. And they said yes in the end. We were quite lucky that we took this bet. From a legal point of view, artistically, whatever, we had to invent everything. And that was, of course, not common at all. Although the film itself, to me, is like any other documentary, you go out in the wild, you try to gain characters confidence. You spend a lot of time on the ground, on the field, approaching your subject, trying to gain trust. This is the way it is. I hope I answered. 
+We've waited for five years to get their approval. In the end, we just sent the rough cut super freaked out, and they said, sure. It's not bad. Just remove this, this and that. Bugs seem strange bugs. We said no, please. It's part of the artistic process. We would like to keep those bugs in the film. I know they're showing the game not in the way you intended to, but it's part of the experience for the players. We had to show some arguments. We had to come up with strong arguments. And they said yes in the end. We were quite lucky that we took this bet. From a legal point of view, artistically, whatever, we had to invent everything. And that was, of course, not common at all. Although the film itself, to me, is like any other documentary, you go out in the wild, you try to gain characters confidence. You spend a lot of time on the ground, on the field, approaching your subject, trying to gain trust. 
 
-
+![](/img/knits-island-still-1.jpg)
 
 **D.G:** *Your film can be seen as a form of machinima — a film created within a video game using its engine. What is your perspective on machinima as a genre, and how do you see its future, both in general and in relation to professional filmmaking?*
 
