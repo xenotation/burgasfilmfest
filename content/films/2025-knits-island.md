@@ -5,10 +5,10 @@ file_name: knits-island
 film_title: Островът на Нит
 film_title_org: Knit's Island
 country: Франция
-year: "2023"
-minutes: "95"
-description: Под формата на аватари, снимачен екип влиза в онлайн видео игра. Те
-  се срещат с общност от играчи и опознават техните истории, страхове и мечти.
+year: '2023'
+minutes: '95'
+description: Под формата на аватари, снимачен екип влиза в онлайн видео игра. Те се
+  срещат с общност от играчи и опознават техните истории, страхове и мечти.
 text_author: Интервю с екипа на филма
 stream_duration: 17.10.2025 - 24.10.2025
 Director: Екием Барбие, Гийем Кос, Кɑнтен Лелгуак
@@ -21,7 +21,7 @@ thumbnail: /img/poster-knits-island.jpg
 feature_image: /img/knits-island-still-4.jpg
 show_watch_button: true
 video_id: ac2417398fb33c405b4a8b74106b6768
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYzI0MTczOThmYjMzYzQwNWI0YThiNzQxMDZiNjc2OCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTIzMTk4MCIsIm5iZiI6IjE3NjExNDE5ODAiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.gZ-HWrSnmYN2-QTv7JeMI1iklWhWLYrcaxfVUx6Q_bdo8mHHIHTAjeaQ48R0XFM-Di8FRkTe4LTDpqI1NzvXvSbxaS1LSoUlLlLSx7ZeEFYTPSKARsRFhw_kTGsksqAZaX6hdFbWYyNJouhLaKkh1HUfU5tJFl7IUwLm6bNwfa2KoEUd7gZjal_PND-V51NKwWI2mJblwD2Yao2N78MLvvQwkuqdjhMyhVl8yXG15XV4czrDDUhVwuu0YEa8h2ZsMrpHsbgqllNiudNA7agEtUAq5fvEi9jv8qvhgl-hmA7nS_dbUrj-020RFw9S9RtIinavZBdWz3ltWG0Z-wtiNw
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYzI0MTczOThmYjMzYzQwNWI0YThiNzQxMDZiNjc2OCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTI0NDM3NyIsIm5iZiI6IjE3NjExNTQzNzciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.GMraYeNRzuIYjYKA_tb5tZScp2DgPnRqftsvexaBY3rUZrarnOuZZkApPWWY5_fchBy5xeBSrXzgCIZIOSetcKk02_QEuMzg9TejofXBhL4o_vwl6Ncv_HYqQmbl29ckRzQqGLdZui4JHDPoULRyimByuhlSqG5yxaTXSn7BJm3bpGqX8gF4Mn5lT_eCurK9SGteyiK2t5uiFUqJ3vwyiO-5WjuB4la34YcqJc4zNLkG3QMH7R7Dl2lb3nzzETrrwR8JlqNS5ICoZ65qQ5rvDPFT_lksA5KadZBeR339BUPyVNopD7cEf73PM5hlbIwsiMgrwQ6jPyE4V2Obv-EO1Q
 hero_video_id: ba964e9e101d3a4b4afb5b94ee67ad8e
 ---
 ## **A talk with director Ekiem Barbier and producer Boris Garavini**
