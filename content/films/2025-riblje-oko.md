@@ -1,18 +1,18 @@
 ---
-date: 2025-10-24T14:50:00+03:00
+date: 2025-10-24 14:50:00+03:00
 draft: true
 file_name: riblje-oko
 film_title: Рибешко око
 film_title_org: Riblje Oko
 country: Yugoslavia
-year: "1980"
-minutes: "8"
-description: В едно малко рибарско селище хората живеят един и същ живот от
-  поколения наред. Всичко, което имат и което ги прави човешки същества, идва от
-  морето. Но една нощ нормалният ред на нещата се нарушава. Сутринта носи със
-  себе си съмнение дали всичко това е било метафора, която ни предупреждава, че
-  никога не можем да избягаме от природата...
-text_author: "текст от Стефанѝ Стоева "
+year: '1980'
+minutes: '8'
+description: В едно малко рибарско селище хората живеят един и същ живот от поколения
+  наред. Всичко, което имат и което ги прави човешки същества, идва от морето. Но
+  една нощ нормалният ред на нещата се нарушава. Сутринта носи със себе си съмнение
+  дали всичко това е било метафора, която ни предупреждава, че никога не можем да
+  избягаме от природата...
+text_author: 'текст от Стефанѝ Стоева '
 stream_duration: 24.10.2025 - 31.10.2025
 Director: Йошко Марушич
 Production: Загреб филм
@@ -27,6 +27,7 @@ feature_image: /img/fisheye2.jpg
 show_watch_button: true
 video_id: a8a34f105cf04a5ee181c8934e959153
 hero_video_id: ca75a9b613cc8d39a7bd76bc938cf353
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhOGEzNGYxMDVjZjA0YTVlZTE4MWM4OTM0ZTk1OTE1MyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTM5NDIyNyIsIm5iZiI6IjE3NjEzMDQyMjciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.LET4OA_IoCu26wAIopvIDqeg3J69xb_qTGhjlAn__F6zCs-HJ0CPq_ozAgijWubMmFjBwvPLr6V_1pzQwNxtJjuV58LN-po5MmGsLcf1YeN5lQB9hv1rPDVj0sWrZjZTd0dpxexssPl8lDPp0RXyWZ0ER2Gv0GwQ6BgERmVw8Ycmb-FtUGhqXLnPzs3Z9tu76xi4j7hmlTKOraD98DRPfPRFR0cLQBp-u4pSFmC-9Xnm6iW51y5HxF0FMuK4i5T_-DrCAC34uXetpHwW8nNaugmxzBU6JMR_GsaD3dkvroELJwYPzKvz1KFPAofOUucpa9uAf8NXHKx6McWrMHzgmQ
 ---
 ## **На умната риба враг ѝ е не стръвта, а рибарят.**
 
