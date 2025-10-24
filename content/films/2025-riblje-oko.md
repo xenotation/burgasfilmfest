@@ -25,6 +25,8 @@ animator: Йошко Марушич
 thumbnail: /img/188079.jpg
 feature_image: /img/fisheye2.jpg
 show_watch_button: true
+video_id: a8a34f105cf04a5ee181c8934e959153
+hero_video_id: ca75a9b613cc8d39a7bd76bc938cf353
 ---
 ## **На умната риба враг ѝ е не стръвта, а рибарят.**
 
