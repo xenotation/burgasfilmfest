@@ -5,14 +5,14 @@ file_name: riblje-oko
 film_title: Рибешко око
 film_title_org: Riblje Oko
 country: Югославия
-year: "1980"
-minutes: "8"
-description: В едно малко рибарско селище хората живеят един и същ живот от
-  поколения наред. Всичко, което имат и което ги прави човешки същества, идва от
-  морето. Но една нощ нормалният ред на нещата се нарушава. Сутринта носи със
-  себе си съмнение дали всичко това е било метафора, която ни предупреждава, че
-  никога не можем да избягаме от природата...
-text_author: "текст от Стефанѝ Стоева "
+year: '1980'
+minutes: '8'
+description: В едно малко рибарско селище хората живеят един и същ живот от поколения
+  наред. Всичко, което имат и което ги прави човешки същества, идва от морето. Но
+  една нощ нормалният ред на нещата се нарушава. Сутринта носи със себе си съмнение
+  дали всичко това е било метафора, която ни предупреждава, че никога не можем да
+  избягаме от природата...
+text_author: 'текст от Стефанѝ Стоева '
 stream_duration: 24.10.2025 - 31.10.2025
 Director: Йошко Марушич
 Production: Загреб филм
@@ -26,7 +26,7 @@ thumbnail: /img/188079.jpg
 feature_image: /img/screenshot-180-.png
 show_watch_button: true
 video_id: a8a34f105cf04a5ee181c8934e959153
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhOGEzNGYxMDVjZjA0YTVlZTE4MWM4OTM0ZTk1OTE1MyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTQxMDI4NyIsIm5iZiI6IjE3NjEzMjAyODciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.c6nqvh_bBgcUL57fwGPpWQkHGKf-5-oRC8qEAzVpd8ysDnY7z1mzNKvfPH8Vvaic9kQmQbfqhlswKXT1nxZN3t-PR9YKCSk9p_r067w8lGJFASIYv3hItbVe-MLL4BHO5xGsNPqXYupi-Oo5RTkvMsoVV1TwQuQrgfup-pvthRiRFWR2iMVRrIp1lIhCcsjJNTFkjKwSr_o1LLkN9uMoxLXJEArqkS6jOd9CAA7Ii5OQz3U4UtQEOlBgBgiSf1xbt8z-S3PEl6kHfXizKQT3e1__BZyzmByO_K3HuZtK6hfgc-UdIzmrnefN5SjV1NbbE-RazdPc53zsLIYmr9pIkg
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhOGEzNGYxMDVjZjA0YTVlZTE4MWM4OTM0ZTk1OTE1MyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTQxMDc1NCIsIm5iZiI6IjE3NjEzMjA3NTQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.Wq8OtGqxpcto8_wogmHYSqWBtio0-3kU3VWjv1gRwrHgVr6lOO9y_7D_FlmFFSv0x9CMC2SjHc1yfXhB6FiQwZgFv2zYbd5KCQwoDSIqcSKUitl-v5yPZXrU6NsmbMHgJhbq2-p2dFR1FmzLxK8-8eyMr3fRxWlWVLP6cRFT8YZoWH51HHtiCiWtL-4VUD8Cj8RFrfBeSFRIqoG31d0fqwr6vHnWD1-Pvhb58WWLTEqo9_apNtkKY11PeuVZLCGH7ldkKtaCXALt2c4AMNdm18r7F4luFTbYDL3xe4HMXomzto_mN3AhOEmpPSHuRzP1vT_cRIyskutK2UcP1QfUFA
 hero_video_id: ca75a9b613cc8d39a7bd76bc938cf353
 ---
 ## **На умната риба враг ѝ е не стръвта, а рибарят.**
