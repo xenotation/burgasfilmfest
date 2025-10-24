@@ -19,7 +19,7 @@ Production: Загреб филм
 Screenwriter: Горан Бабич
 Editing: Теа Бруншмид
 Cinematography: Франьо Малогорски
-Sound: Младен Пребил, Петко Кантардж
+Sound: Младен Пребил, Петко Кантарджиев
 Music: Томислав Симович
 animator: Йошко Марушич
 thumbnail: /img/188079.jpg
