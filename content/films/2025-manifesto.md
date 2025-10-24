@@ -1,6 +1,7 @@
 ---
 date: 2025-09-16 10:21:00+03:00
 draft: false
+file_name: manifesto
 film_title: Манифест
 film_title_org: Manifesto
 country: Норвегия
@@ -31,9 +32,8 @@ HLS: ""
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJkMWFjMjQ5YzVmN2I1MjZkZTE1MzZmNDZlMjJkZGJiMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODk5Mjc5NyIsIm5iZiI6IjE3NTg5MDI3OTgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.TcnBf7LIvorhycXhBBI7zuaY2-v7plrT7k_x9fG5Hru8QwylSzg65k3-3LZeaLEURyyP1FalRDVZ6kzQRLLfhk24kXcdI-pMoiEcnU5iOEheEFG09khbO1BVY-yZTGxtgr0BLU2VEcoYtRDjcsuENnJxfq6NQ2A4s7EV7uHc0Pemqpe01JlYMMJjBbQc5NXYnzSLZeGZHvfsOmLNsQPcZrJgsmEoliAaohrh-EztmBIQzfW98EDgQDDN8UssiCRvoyHSZ81HEHw3QcnrOJAp8qjrDXMsXbIj9_cZq3TX3JYae8erU0SZg5OvRUiOfAdziGnX9Mdm1BIBpF_7dbgZWg
 hero_video_id: db8048d6368eff0c5c7b2d5222b606ae
 ---
-## **Да подкопаем системата отвътре - Ане Хьорт Гуту и “Манифест”**
-
-### *текст от Савина Петкова*
+## **Да подкопаем системата отвътре - Ане Хьорт Гуту и “Манифест”**\
+*Савина Петкова*
 
 Когато теоретикът Ричото Канудо обявява киното за “тотално изкуство” в своя “Манифест на седемте изкуства” през 1923г., в думите му прозира типичен за междувоенния период оптимизъм. Завиден патос личи и в опита да увековечи киното с епитети като “съвършен синтез” и метафори за брака между Изкуството и Науката – както и подобава на жанра, в който пише. Въпреки това, желанието му да обедини множеството от изкуства под един консолидиращ принцип ми се струва много по-интересно, отколкото йерархичността, която му спечелва славата на един от първите киноведи изобщо. Съвременните образователни системи също предпочитат синтез над специализация и това личи в речника им: думи като “интердисциплинарен” се подразбират. Тясноспециализирани хуманитарни катедри затварят врати и стават част от по-големи и по-доходоносни звена в нови негостоприемни сгради, по света и у нас. С късометражния си филм “Манифест”, норвежката режисьорка Ане Хьорт Гуту ни дава пример за това, как можем да подкопаем системата отвътре.
 
