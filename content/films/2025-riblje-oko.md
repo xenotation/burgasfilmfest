@@ -1,5 +1,5 @@
 ---
-date: "{{now}}"
+date: 2025-10-24T14:50:00+03:00
 draft: true
 file_name: riblje-oko
 film_title: Рибешко око
