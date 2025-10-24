@@ -5,14 +5,14 @@ file_name: riblje-oko
 film_title: Рибешко око
 film_title_org: Riblje Oko
 country: Югослав
-year: '1980'
-minutes: '8'
-description: В едно малко рибарско селище хората живеят един и същ живот от поколения
-  наред. Всичко, което имат и което ги прави човешки същества, идва от морето. Но
-  една нощ нормалният ред на нещата се нарушава. Сутринта носи със себе си съмнение
-  дали всичко това е било метафора, която ни предупреждава, че никога не можем да
-  избягаме от природата...
-text_author: 'текст от Стефанѝ Стоева '
+year: "1980"
+minutes: "8"
+description: В едно малко рибарско селище хората живеят един и същ живот от
+  поколения наред. Всичко, което имат и което ги прави човешки същества, идва от
+  морето. Но една нощ нормалният ред на нещата се нарушава. Сутринта носи със
+  себе си съмнение дали всичко това е било метафора, която ни предупреждава, че
+  никога не можем да избягаме от природата...
+text_author: "текст от Стефанѝ Стоева "
 stream_duration: 24.10.2025 - 31.10.2025
 Director: Йошко Марушич
 Production: Загреб филм
@@ -26,7 +26,7 @@ thumbnail: /img/188079.jpg
 feature_image: /img/screenshot-180-.png
 show_watch_button: true
 video_id: a8a34f105cf04a5ee181c8934e959153
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhOGEzNGYxMDVjZjA0YTVlZTE4MWM4OTM0ZTk1OTE1MyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTQwOTMzMCIsIm5iZiI6IjE3NjEzMTkzMzAiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.j6_2EbFFgQP9BguO-mWTgruzS7F2POBGlLe9Zg-R3FuiIM_tYyajVq4pxkySnoNCHoSkm0q4Hg3YqOE3w8bvT2UIw6S0a61zCSzUut450pQ_N2xtUVFk6m58rOHtl-VfbQncfQlK6U97f2zPkmYa5Pvea7_-Hee-ddhoGUkE0viHNRXE5RRYLrdqvpZXlZkTIIKsYHqO3Gfz_4xN_K4YxgPbVQYQPqbdt_wFekwUckNaO7KgiW8mMTkTPyVvn1f3J9hjwDQJxHgqosT7WWHa-oVUDMl5xusYubn4V4MXMu3GNmsCkZTbEFX8Yy5KjZythAIAs2r1jgVO9fG0oRMq_A
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhOGEzNGYxMDVjZjA0YTVlZTE4MWM4OTM0ZTk1OTE1MyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTQwODQ2MyIsIm5iZiI6IjE3NjEzMTg0NjMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.jjwx9VbnnKs6-22F12aCypD03e3KY0NDprN7efThsaXQU9VDOX-o9WqJgNZ_VEMFhN_SWKxj9Z4ezPLWaOfY98vgl37OVoH5jiE909fhC2hfBr-Z5nJ3z_yjt9brrVLqN7NdQvpmMCDqJmfiUiui-GKUe0hTtdBd8w8u9ZVCRSM7U9RcmfZoBup6VmHM9zIsjjC7A46P1tvzHOhMfY2frD-q3PPduLgTOY2pS-MvkhKUmLp9KIRwx9pL52gNt_0KXa7SC2eaUrp5cK8GZL4WrFLRnlcj36xJDU9eiH-w3w8N4zE_xN8dgA_qsMOiSqio_AVbH-Cg8jpTret28SxaYw
 hero_video_id: ca75a9b613cc8d39a7bd76bc938cf353
 ---
 ## **На умната риба враг ѝ е не стръвта, а рибарят.**
@@ -51,7 +51,7 @@ hero_video_id: ca75a9b613cc8d39a7bd76bc938cf353
 
 През този период хърватската анимация генерира международно признание, което избухва в блясъка на наградата „Оскар“ за късометражния Сурогат (1961) на Душан Вукотич – първата такава награда за неамерикански анимационен филм. 
 
-![](/img/surugat.png)
+![](/img/surugat.png "Кадър от филма Сурогат (1961)")
 
 Към края на 70-те години под натиска на политическите промени анимацията започва бавно да затихва и макар и наследена от свръхкачествени артисти, фокусът се измества. В Хърватия се създава фестивалът *Animafest Zagreb* (1972 г.), който става **вторият по значимост фестивал за анимация** след *Annecy* (Франция).
 
