@@ -1,6 +1,7 @@
 ---
 date: 2025-09-26 20:08:00+03:00
 draft: false
+file_name: du-cote-de-la-cote
 film_title: Откъм брега
 film_title_org: Du côté de la côte
 country: Франция
@@ -29,9 +30,9 @@ HLS: ""
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI3NTA5ZDk5MDkyNTc3YTFhNGJkMWUwMzg4OWUzOTMzMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1OTU4NzI2MyIsIm5iZiI6IjE3NTk0OTcyNjMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.WN1jPGmyNii-yGKoZVAaMy4BYBWvVcSGxQ1d_RfKuMCtRKqNI1XLuJ-LivFPSDDXdq78gxNTDcNcFOI0kBkY654Aud3soF0Axl1iILEQzX-b9vIP5N-GzRzRUFIl05TMVaTnHCLGdp5YmiEGMUrnOnPVM12iQ7UB0JocxfQFZai0jBdQmgkYjljQmMgnl71aHLkM9ep2lyNcqxer6uKwmSFG4cBwmTpwIWNSYYLoOeYb9u9xvNCVBUgCggCJu903ZsDLlQz8toULDxLYnibjNyLxZjI00EAGU_fi7XPCE28S0iXVqYt-SxAsgHiONt3gFPZ6-e8RonxkkYPsU_gvng
 hero_video_id: 6f5feae75697a2ca14fd351846590aa5
 ---
-### На гости в рая: „Откъм брега“ на Аниес Варда
+## На гости в рая: „Откъм брега“ на Аниес Варда
 
-#### Нева Мичева
+### *Нева Мичева*
 
 През май 1958 г. на все още младия, но вече авторитетен фестивал в Кан Златна палма печели съветският филм „Летят жерави“ – напук на Студената война и на Желязната завеса. Кан кипи от живот и заедно с Ница, Сен Тропе и Монако отдавна е емблема на Лазурния бряг – пъстрото, наглед безметежно средиземноморско крайбрежие на Франция. От живот кипи и киното – в самия край на предната година една журналистка е дала име на онова, което десетилетия по-късно ще е всеизвестно като най-яркото течение във френското кино: Новата вълна...
 
