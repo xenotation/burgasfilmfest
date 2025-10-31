@@ -1,12 +1,13 @@
 ---
 date: 2025-10-31T16:07:00+02:00
-draft: true
+draft: false
 file_name: lucifer-rising
 film_title: Възходът на Луцифер
 film_title_org: Lucifer Rising
 country: САЩ
 year: "1972"
 minutes: "29"
+description: ""
 text_author: Стефанѝ Стоева
 stream_duration: 31.10.2025 - 07.11.2025
 Director: Кенет Ангър
@@ -19,6 +20,9 @@ animator: Мариан Файтфул, Боби Босолей, Кенет Ан�
 thumbnail: /img/dz5wesua62jshgowibcyjvffrva.jpg
 feature_image: /img/o7uchmkaqrrxji5huiktmekfchj.jpg
 show_watch_button: true
+video_id: 03d7cd91418580a83de3013c9abfd1f0
+HLS: ""
+hero_video_id: 0c04e897afd4d4c13023aa71904a9485
 ---
 ## Кръвта - между метафората и факта
 
