@@ -1,18 +1,17 @@
 ---
 date: 2025-10-10 19:47:00+03:00
 draft: false
+file_name: op-jane-walk
 film_title: Oперация Джейн Уок
 film_title_org: Operation Jane Walk
 country: Aвстрия
-year: '2018'
-minutes: '16'
-description: 'Разходка из града през архитектурата на онлайн шутър
+year: "2018"
+minutes: "16"
+description: >-
+  Разходка из града през архитектурата на онлайн шутър
 
 
-  Военната зона на дистопична мултиплeйър шутър игра се превръща в поле за зимна разходка
-  с няколко градски изследователи, като те избягват сраженията, когато е възможно,
-  и остават мирни наблюдатели и жители на дигитален свят, който е подробна реплика
-  на центъра на Манхатън.'
+  Военната зона на дистопична мултиплeйър шутър игра се превръща в поле за зимна разходка с няколко градски изследователи, като те избягват сраженията, когато е възможно, и остават мирни наблюдатели и жители на дигитален свят, който е подробна реплика на центъра на Манхатън.
 text_author: интервю с Total Refusal
 stream_duration: 10.10.2025 - 17.10.2025
 Director: Робин Кленгел, Леонард Мюлнер
@@ -23,9 +22,9 @@ Cinematography: Леонард Мюлнер
 LeadActors: Джейкъб Баниган, Робин Кленгел, Леонард Мюлнер
 thumbnail: /img/operationjanewalk_plakata1-3.png
 feature_image: /img/ojw_still5.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: 910473076d71c88373ff9c9489a54d0c
-HLS: ''
+HLS: ""
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI5MTA0NzMwNzZkNzFjODgzNzNmZjljOTQ4OWE1NGQwYyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MDc1NDEwMCIsIm5iZiI6IjE3NjA2NjQxMDEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.JC_lIgKpLwNfP7u-WPDZam18_3uvibJfIVe3HYxWe6HUwU5QGgzJWgIJm1hq2GFTTZaXcO-wi35e0FxBuetIIXc0gtJFAOBQ4_vrCj16mRi7aMpz75aJxKL1Ioac-ch-bi0kCwIXqTn6hkcM2zv7gtO07V7gS7sObq8zOQlVVdue06sUvdyhYpJ-WFgBTFlJLCrN4ipidb3oToPZs2YGetjZgVN8yLTNOs4ZSncbtckhfq0Mr9l-t2HsNI-QjW_iKdBTv84Amf1XWqjLWxunlgtH7ER8R_D464u4WgSmkW8F-BX23nkk_Qy1rrmm3saiTRsT1LzNfgj99C3-yNgKKg
 hero_video_id: 3f297e781dd76605e0ab290a7a2f8b9e
 ---
