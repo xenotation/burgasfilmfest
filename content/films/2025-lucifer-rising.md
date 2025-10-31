@@ -14,7 +14,8 @@ Production: Кенет Ангър
 Editing: Кенет Ангър
 Cinematography: Крис О'Дел
 Music: Боби Босолей
-animator: Мариан Файтфул, Боби Босолей, Кенет Ангър, Доналд Камел
+animator: Мариан Файтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж,
+  Крис Джагър
 thumbnail: /img/dz5wesua62jshgowibcyjvffrva.jpg
 feature_image: /img/o7uchmkaqrrxji5huiktmekfchj.jpg
 show_watch_button: true
