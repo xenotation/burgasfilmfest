@@ -5,10 +5,10 @@ file_name: knits-island
 film_title: Островът на Нит
 film_title_org: Knit's Island
 country: Франция
-year: '2023'
-minutes: '95'
-description: Под формата на аватари, снимачен екип влиза в онлайн видео игра. Те се
-  срещат с общност от играчи и опознават техните истории, страхове и мечти.
+year: "2023"
+minutes: "95"
+description: Под формата на аватари, снимачен екип влиза в онлайн видео игра. Те
+  се срещат с общност от играчи и опознават техните истории, страхове и мечти.
 text_author: Интервю с екипа на филма
 stream_duration: 17.10.2025 - 24.10.2025
 Director: Екием Барбие, Гийем Кос, Кɑнтен Лелгуак
@@ -19,7 +19,7 @@ Cinematography: Екием Барбие, Гийем Кос, Кɑнтен Лел�
 Sound: Матийо Фарнарие
 thumbnail: /img/poster-knits-island.jpg
 feature_image: /img/knits-island-still-4.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: ac2417398fb33c405b4a8b74106b6768
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYzI0MTczOThmYjMzYzQwNWI0YThiNzQxMDZiNjc2OCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MTM5MzEzNyIsIm5iZiI6IjE3NjEzMDMxMzciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.lsS88vqe4lyPjR5y1ZTLOc4KhMOKicTUyj1NX4uu0rHq7VapG7UKPVNR0SRArZxT-YfpNifeCz6uyzM_6WYzBph7Q7SDTM-U-1EWdHCJp8HRSg9MAITQYd0KDqRJRq-OVmfx_qWPWrFN1U6t6n9m5WDppIdhg3YkZsoT_XYY5ZSUkqmGMk8Ggyl-ow_g5tYunRP3U7KIkeh191jxf7dj6ahttwXt3ZoWLO0Y2SFfWURxEKLO0ebghPGUBGQIZOm2cfEUBU68-qmngYm8ypfZEIhmLzK2hn0QhEwPGbBPXPjdd6HRmH4d8lfz5s37p8bm9ztC73o4c8sIabIBc4-DaA
 hero_video_id: ba964e9e101d3a4b4afb5b94ee67ad8e
