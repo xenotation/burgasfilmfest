@@ -1,13 +1,13 @@
 ---
-date: 2025-10-31T16:07:00+02:00
+date: 2025-10-31 16:07:00+02:00
 draft: false
 file_name: lucifer-rising
 film_title: Възходът на Луцифер
 film_title_org: Lucifer Rising
 country: САЩ
-year: "1972"
-minutes: "29"
-description: ""
+year: '1972'
+minutes: '29'
+description: ''
 text_author: Стефанѝ Стоева
 stream_duration: 31.10.2025 - 07.11.2025
 Director: Кенет Ангър
@@ -15,14 +15,15 @@ Production: Кенет Ангър
 Editing: Кенет Ангър
 Cinematography: Крис О'Дел
 Music: Боби Босолей
-animator: Мариан Файтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж,
-  Крис Джагър
+animator: Мариан Файтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж, Крис
+  Джагър
 thumbnail: /img/dz5wesua62jshgowibcyjvffrva.jpg
 feature_image: /img/o7uchmkaqrrxji5huiktmekfchj.jpg
 show_watch_button: true
 video_id: 03d7cd91418580a83de3013c9abfd1f0
-HLS: ""
+HLS: ''
 hero_video_id: 0c04e897afd4d4c13023aa71904a9485
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIwM2Q3Y2Q5MTQxODU4MGE4M2RlMzAxM2M5YWJmZDFmMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjAxODQ2NSIsIm5iZiI6IjE3NjE5Mjg0NjUiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.ZzzY7sNbawuKXr-9ZfXPGYCOnQHuOJAswr-hDigwJnar-Pn3ZE7DhieLwNsMdfbhDd-nbj7CdWGes2Hw2n34WL4IhuEF7kdRYv1gN6w_FeJzPrNdN9Pktsf-zH3j8HlV_GmuvdWHGU3UUmF_N0SvCVmdBjlnxa-PbBfRf3EMI-yFEUdBJarWaY6gD1ONaanvKrp8Bi04i5dR3P1bATY4qztKk6mG3oMo2ikDmbWwDX3LWGAADwM96uwgedhUOhMDTNx33ixr3JgH-8FlEay0nY2j-HNST93tkN85mp3BLFi-0fCPfXpU0NZO11oUTSBYxDZWr--FXqaVPTUCCKgCsw
 ---
 ## Кръвта - между метафората и факта
 
