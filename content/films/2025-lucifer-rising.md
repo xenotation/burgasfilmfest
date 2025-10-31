@@ -6,8 +6,8 @@ film_title: Възходът на Луцифер
 film_title_org: Lucifer Rising
 country: САЩ
 year: 1972-1980
-minutes: "28"
-description: ""
+minutes: '28'
+description: ''
 text_author: текст от Стефанѝ Стоева
 stream_duration: 31.10.2025 - 07.11.2025
 Director: Кенет Ангър
@@ -15,14 +15,14 @@ Production: Кенет Ангър
 Editing: Кенет Ангър
 Cinematography: Крис О'Дел
 Music: Боби Босолей
-animator: Мариан Файтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж,
-  Крис Джагър
+animator: Мариан Файтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж, Крис
+  Джагър
 thumbnail: /img/dz5wesua62jshgowibcyjvffrva.jpg
 feature_image: /img/o7uchmkaqrrxji5huiktmekfchj.jpg
 show_watch_button: true
 video_id: 03d7cd91418580a83de3013c9abfd1f0
-HLS: ""
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIwM2Q3Y2Q5MTQxODU4MGE4M2RlMzAxM2M5YWJmZDFmMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjAxODQ2NSIsIm5iZiI6IjE3NjE5Mjg0NjUiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.ZzzY7sNbawuKXr-9ZfXPGYCOnQHuOJAswr-hDigwJnar-Pn3ZE7DhieLwNsMdfbhDd-nbj7CdWGes2Hw2n34WL4IhuEF7kdRYv1gN6w_FeJzPrNdN9Pktsf-zH3j8HlV_GmuvdWHGU3UUmF_N0SvCVmdBjlnxa-PbBfRf3EMI-yFEUdBJarWaY6gD1ONaanvKrp8Bi04i5dR3P1bATY4qztKk6mG3oMo2ikDmbWwDX3LWGAADwM96uwgedhUOhMDTNx33ixr3JgH-8FlEay0nY2j-HNST93tkN85mp3BLFi-0fCPfXpU0NZO11oUTSBYxDZWr--FXqaVPTUCCKgCsw
+HLS: ''
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIwM2Q3Y2Q5MTQxODU4MGE4M2RlMzAxM2M5YWJmZDFmMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjAxODU3MCIsIm5iZiI6IjE3NjE5Mjg1NzEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.DzCUOV_242tp4_44p4HtY7skjlOdo0bC3NJGc4K0xh6ZsK4QnWH1FmqGDPGKZvCPDsbOxtqMlD6hfP25hqTEv7CC-Rs2jtdE6l7GvC9YSooivORUNqO1-8-8LIPgEKvEBA0D4SSE4gd0wvKg3OuXFVD8Jxawl5s7KbermDEhhFC2pRH79FwVO0FL-jF8oXzqF_XfgDv1bEOVOuy_vp13i0vhKMME70FlfF14t4cCUWpbuOfUi53kmroMTWraLXyWcll1a9LG91Y9s9ODwXzwelkmwtiFW_AlFN-1A_qJYyiBAW-jqfTyuxZ_P4TLu1BR9Uvd3h4XSXqMFeJxRHchUg
 hero_video_id: 0c04e897afd4d4c13023aa71904a9485
 ---
 ## Кръвта - между метафората и факта
