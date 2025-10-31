@@ -1,5 +1,5 @@
 ---
-date: "{{now}}"
+date: 2025-10-31T16:07:00+02:00
 draft: true
 file_name: lucifer-rising
 film_title: Възходът на Луцифер
