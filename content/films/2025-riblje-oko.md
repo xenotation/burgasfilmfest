@@ -5,14 +5,14 @@ file_name: riblje-oko
 film_title: Рибешко око
 film_title_org: Riblje Oko
 country: Югославия
-year: '1980'
-minutes: '8'
-description: В едно малко рибарско селище хората живеят един и същ живот от поколения
-  наред. Всичко, което имат и което ги прави човешки същества, идва от морето. Но
-  една нощ нормалният ред на нещата се нарушава. Сутринта носи със себе си съмнение
-  дали всичко това е било метафора, която ни предупреждава, че никога не можем да
-  избягаме от природата...
-text_author: 'текст от Стефанѝ Стоева '
+year: "1980"
+minutes: "8"
+description: В едно малко рибарско селище хората живеят един и същ живот от
+  поколения наред. Всичко, което имат и което ги прави човешки същества, идва от
+  морето. Но една нощ нормалният ред на нещата се нарушава. Сутринта носи със
+  себе си съмнение дали всичко това е било метафора, която ни предупреждава, че
+  никога не можем да избягаме от природата...
+text_author: "текст от Стефанѝ Стоева "
 stream_duration: 24.10.2025 - 31.10.2025
 Director: Йошко Марушич
 Production: Загреб филм
@@ -24,7 +24,7 @@ Music: Томислав Симович
 animator: Йошко Марушич
 thumbnail: /img/188079.jpg
 feature_image: /img/screenshot-180-.png
-show_watch_button: true
+show_watch_button: false
 video_id: a8a34f105cf04a5ee181c8934e959153
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhOGEzNGYxMDVjZjA0YTVlZTE4MWM4OTM0ZTk1OTE1MyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjAwOTQ0MiIsIm5iZiI6IjE3NjE5MTk0NDIiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.RlSqtQ8T2nbj_5IP218b87vkujeL1P8iF01fGnA__Aoiw2D-3wvYAGdwSKVFuTpheyG4a3hyWmaWlhm_WfN2qmCYawIMRe5uF2RCfBSYJVUJK1xKl2GEp4rec7bb9XEcOXJvLyBEH8P4c8XbEHzLxUtEkVgHlmI4OIqYcEACnGqys4GWc8eVclaKSU5pZrQqwEqgvaXrn8uaFw7LKKD4R_7mvKboa5loyMC-P0Bs4S1lNEx9mCfbxRAzPhwuita6BhAeBVmV_CgTn148ppNzapr3J4syStV0_plfxrKQlfPepu2RxePYILLBgkzYz-4OP5BzW1P9qkzIcYIu0Drpqg
 hero_video_id: ca75a9b613cc8d39a7bd76bc938cf353
