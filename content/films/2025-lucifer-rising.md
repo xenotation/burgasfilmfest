@@ -6,7 +6,7 @@ film_title: Възходът на Луцифер
 film_title_org: Lucifer Rising
 country: САЩ
 year: 1972-1980
-minutes: '28'
+minutes: "28"
 description: © The Estate of Kenneth Anger. Courtesy of Brian Butler.
 text_author: текст от Стефанѝ Стоева
 stream_duration: 31.10.2025 - 07.11.2025
@@ -15,22 +15,22 @@ Production: Кенет Ангър
 Editing: Кенет Ангър
 Cinematography: Крис О'Дел
 Music: Боби Босолей
-LeadActors: Мариан Фейтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж,
-  Крис Джагър
-animator: ''
+LeadActors: Мариан Фейтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими
+  Пейдж, Крис Джагър
+animator: ""
 thumbnail: /img/dz5wesua62jshgowibcyjvffrva.jpg
 feature_image: /img/o7uchmkaqrrxji5huiktmekfchj.jpg
 show_watch_button: true
 video_id: 03d7cd91418580a83de3013c9abfd1f0
-HLS: ''
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIwM2Q3Y2Q5MTQxODU4MGE4M2RlMzAxM2M5YWJmZDFmMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjI1Mzk0MiIsIm5iZiI6IjE3NjIxNjM5NDMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.NheNnmb-kc5ldKF1rSzaUaEM0uu0qEaaLoGBUxtvziUWnFzcbCYwnJ40-eLRTvysiBmhroUlv4OjVzt_ElTSm8lif_F7pyRSkyLXDMiNu4fc-9nxy_WQ9jdAf1bcS-vdbsZmzuf_w5Nap6l86sv2LL_T1dckI3SZ2nIE_K4sbPyojCCrxxqhLiAUg15xpGqeo7AWAocWQtydWpBFMSVk3qJ7OnqAhNhN5JNuXUvMiSNnxuy0E2LDAEfHW69_23wwtXBmt4xCt5Wp9nv0iLnNqdyxDeHpn5qBwFdFWZBmbiQe04ZMNWmOV2p9fqpM7XI-bsMdXS-O8UJcQrGRIHmqFA
+HLS: ""
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIwM2Q3Y2Q5MTQxODU4MGE4M2RlMzAxM2M5YWJmZDFmMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjIyNDIzMSIsIm5iZiI6IjE3NjIxMzQyMzEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.HrtJ3WT_TMK3TQsf7RLmNCqpHcl_5CERx1jJfc6OvABOj9EOyKbZen9H3PsdelWFRqiN-LZZTHHECG7_I95x9-82n1lDy7aNflFLgp-l_TIB-Eo_5mEoKFVt9cbN7dPp497INiHVY10KVmB3pKRz6DBLlmZTjTFag9p_LjRc7sMF0IwSLE8jlI-cTheQCw0SGQnmvyzUnEw-mIhnuGgCbtrX-DpU-wngTNgEZK_yLoQjgurv9zTWrZW77ZydkV0oconCVT85Hr7rAxNxj73LkZV_V4p4UhcQIo4qDpu7uBgUvCfWbdYMQbhXZweMXsMBW4quhtwLat7pcs37iE7bwA
 hero_video_id: 0c04e897afd4d4c13023aa71904a9485
 ---
 ## Кръвта - между метафората и факта
 
 ### Стефанѝ Стоева
 
-> *Едно от интересните човешки проявления на свободната воля е доброволното мислене във вакуум. Това, което може да обезкорени мислите и да предложи нови идеи за бог… или поне за друга истина… или поне да е цветно и непредвидимо… или поне да има добър саундтрак.* 
+*Едно от интересните човешки проявления на свободната воля е доброволното мислене във вакуум. Това, което може да обезкорени мислите и да предложи нови идеи за бог… или поне за друга истина… или поне да е цветно и непредвидимо… или поне да има добър саундтрак.* 
 
 **Изгубени в иконите**
 
