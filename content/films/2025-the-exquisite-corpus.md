@@ -1,29 +1,30 @@
 ---
-date: 2025-11-07T18:38:00+02:00
+date: 2025-11-07 18:38:00+02:00
 draft: false
 file_name: the-exquisite-corpus
 film_title: Изящният труп
 film_title_org: The Exquisite Corpus
 country: Австрия
-year: "2015"
-minutes: "19"
-description: >-
-  Филмът "Изящният труп" е базиран на намерен материал от еротични филми и
-  рекламни клипове. Безбройните фрагменти се сливат в един чувствен,
-  хумористичен, зловещ и екстатичен сън.
+year: '2015'
+minutes: '19'
+description: 'Филмът "Изящният труп" е базиран на намерен материал от еротични филми
+  и рекламни клипове. Безбройните фрагменти се сливат в един чувствен, хумористичен,
+  зловещ и екстатичен сън.
 
 
-  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате съдържанието.
+  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над 18-годишна
+  възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате съдържанието.'
 text_author: текст от Стефан Гончаров
 stream_duration: 07.11-14.11
 Director: Петер Черкаски
-Production: ""
+Production: ''
 Music: Дирк Шeфер
 thumbnail: /img/nah8kln6umxtebrlxpnmt8bh1th.jpg
 feature_image: /img/the_exquisite_corpus.jpg
 show_watch_button: true
 video_id: 464c13dd709a87fab9b2ed3ea390f76e
 hero_video_id: ef897ccf070663ee4a96b13e80e12ec2
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjYyNDcwMiIsIm5iZiI6IjE3NjI1MzQ3MDMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.EQO4CV9l7i2h0RnbDmx55wYJ1P3d3a05hydxthBInJsZHgnKDXLXZseM0TjPziDUrKNMFXYWbrwAGTPkNEi8MspinPVDJmuonijWkvkixSN9CiWFegiRtLdyEGA6uKOUWax0gByG9Pup9XtRq8qRGUO327iBvggguAvst7UlFAECZPLvbs9UAhhJM6mENIyU09uTnGqahhqc3xK066x8j3jo8eUrF3Zl0vGE_AIFD0pHfGO2gCcP75saHsnQ_B-BNK7N0mTk1HInFphc0TOhymb1YpLG8CYzCjx0dH8hpM3h8Yxk6NbADLAZoBtHPzslaDoafBFB3G6xAJuj4cTt9Q
 ---
 ## Авангардът на желанието
 
