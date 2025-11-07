@@ -6,7 +6,7 @@ film_title: Възходът на Луцифер
 film_title_org: Lucifer Rising
 country: САЩ
 year: 1972-1980
-minutes: '28'
+minutes: "28"
 description: © The Estate of Kenneth Anger. Courtesy of Brian Butler.
 text_author: текст от Стефанѝ Стоева
 stream_duration: 31.10.2025 - 07.11.2025
@@ -15,14 +15,14 @@ Production: Кенет Ангър
 Editing: Кенет Ангър
 Cinematography: Крис О'Дел
 Music: Боби Босолей
-LeadActors: Мариан Фейтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими Пейдж,
-  Крис Джагър
-animator: ''
+LeadActors: Мариан Фейтфул, Боби Босолей, Кенет Ангър, Доналд Камел, Джими
+  Пейдж, Крис Джагър
+animator: ""
 thumbnail: /img/dz5wesua62jshgowibcyjvffrva.jpg
 feature_image: /img/o7uchmkaqrrxji5huiktmekfchj.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: 03d7cd91418580a83de3013c9abfd1f0
-HLS: ''
+HLS: ""
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIwM2Q3Y2Q5MTQxODU4MGE4M2RlMzAxM2M5YWJmZDFmMCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjU2ODg3MCIsIm5iZiI6IjE3NjI0Nzg4NzAiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.TTawwKg910w5WqxuVKI9Q3HC6swtZDPukslZv8csnK2hCDETAn-HoD36RQB5GuSJ_dHwrQBfIph8m2DHl6uFtiSMPCp8t2m3FqieQ7YbZTbQaz4BKNw2FT2qcvJ9bkyTBj28GFwcIz5n4VtGOhItHQa2QY0-z30bGJwAc9m0t04H6imI4SsAl5F-KHqbZ8etfxTUILgb4yCv8tYONjuieGg4y9HsTZQ7SZAK1cXwv57Gj3ly9obYJolKLoUtbx3SeXF_PoKgxv7fY99AJ_laN2F-CV5n6mRFFdqNFWlOPCdjpsBmeK_1EDWDGOgQTS6pgvhA0xah2hGK44wu_Hjtig
 hero_video_id: 0c04e897afd4d4c13023aa71904a9485
 ---
