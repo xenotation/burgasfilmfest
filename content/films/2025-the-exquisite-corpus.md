@@ -1,28 +1,29 @@
 ---
-date: 2025-11-07T18:38:00+02:00
+date: 2025-11-07 18:38:00+02:00
 draft: true
 file_name: the-exquisite-corpus
 film_title: Изящният труп
 film_title_org: The Exquisite Corpus
 country: Австрия
-year: "2015"
-minutes: "19"
-description: >-
-  Филмът "Изящният труп" е базиран на намерен материал от еротични филми и
-  рекламни клипове. Безбройните фрагменти се сливат в един чувствен,
-  хумористичен, зловещ и екстатичен сън.
+year: '2015'
+minutes: '19'
+description: 'Филмът "Изящният труп" е базиран на намерен материал от еротични филми
+  и рекламни клипове. Безбройните фрагменти се сливат в един чувствен, хумористичен,
+  зловещ и екстатичен сън.
 
 
-  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате съдържанието.
+  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над 18-годишна
+  възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате съдържанието.'
 text_author: текст от Стефан Гончаров
 stream_duration: 07.11-14.11
 Director: Петер Черкаски
-Production: ""
+Production: ''
 Music: Дирк Шeфер
 thumbnail: /img/nah8kln6umxtebrlxpnmt8bh1th.jpg
 feature_image: /img/the_exquisite_corpus.jpg
 show_watch_button: true
 video_id: 464c13dd709a87fab9b2ed3ea390f76e
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MjYyMjQ1MSIsIm5iZiI6IjE3NjI1MzI0NTEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.lDLnDRZaxGmDIDm4G1oBrRP2ui4F4IuNvYar8skF1bPiO4HyylX2pxWDx8wpGW7G8J-SEldrBRjRne7q1UOg1_jMeLu9FBD2g3zCcBReDFLr6rQotcHUuQKrMTr5gC9PcUtGmtBF_cGppTp7m4Etn8iBtQE76ctqQTzGzRhUK8d74Egb-S42DY5LdYax3RjS7GnR8npdqqY9SI-sjLxc14Iq2Xhjxe1vjxWN6DILiqVf9C-w27X8AGlALBECPdeiGrXuP0kdoyY4QkYsXyLo9kIIx4ntlzLVrTe-0RMiF8FE67MOcqKrCjezyzt5A2MMt-rGXadMbHgPEvjjgqbkIg
 ---
 Методът на „изящния труп“ е сред най-емблематичните изобретения на сюрреализма. Разработен от знакови представители на движението като Андре Бретон, Жак Превер, Ив Танги и др., въпросният подход за писане (и впоследствие рисуване) третира творческия процес като колективно, асоциативно и в общи линии – лудическо мероприятие, разгръщащо се процесуално, стъпка по стъпка, като онирична серия от случайно монтирани образи и съждения. Техниката е сравнително семпла – взима се лист хартия и първият „играч“ изписва дума или цяло изречение. После страницата се прегъва така, че следващият участник да не вижда написаното, докато съчинява следващия ред. Това се повтаря, докато не се изредят всички играчи поне веднъж. Накрая листът се разгъва и полученият колаж от думи се разчита като свързан текст, независимо колко ирационален и аграматичен е той. Дори може да се твърди, че колкото по-изненадващ, сугестивен и абсурден е резултатът, толкова по-добре. Все пак целта не е да се произведе разбиране, а по-скоро удивление (а защо не и смут?), като се разкрие „несъзнаваното на езика“, т.е. всичко онова, което думите са в състояние да кажат въпреки нас и нашите най-упорити опити да ги овладеем.
 
