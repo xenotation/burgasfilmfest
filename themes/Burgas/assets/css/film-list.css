@@ -79,14 +79,7 @@
     z-index: 300;
     filter: drop-shadow(0px 0px 0px black);
   }
-  .stream-label--hidden {
-    transform: translateY(-10px);
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
+
   
   .film-text:hover .stream-label--hidden {
     transform: translateY(0);
@@ -200,10 +193,6 @@
   }
   
 
-  /* hide/show ribbon on hover still works */
-  .stream-label--hidden {
-    display: none;
-  }
   .film-text:hover .stream-label--hidden {
     transform: none;
     opacity: 1;

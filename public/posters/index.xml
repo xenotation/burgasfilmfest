@@ -2,59 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posters on Планктон</title>
-    <link>http://192.168.0.103:1313/posters/</link>
+    <link>http://192.168.0.101:1313/posters/</link>
     <description>Recent content in Posters on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Fri, 17 Oct 2025 00:28:00 +0300</lastBuildDate>
-    <atom:link href="http://192.168.0.103:1313/posters/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Nov 2025 20:02:00 +0200</lastBuildDate>
+    <atom:link href="http://192.168.0.101:1313/posters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Exquisite Corpus</title>
+      <link>http://192.168.0.101:1313/posters/2025-the-exquisite-corpus/</link>
+      <pubDate>Fri, 07 Nov 2025 20:02:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-the-exquisite-corpus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lucifer Rising</title>
+      <link>http://192.168.0.101:1313/posters/2025-lucifer-rising/</link>
+      <pubDate>Fri, 31 Oct 2025 19:35:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-lucifer-rising/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Riblje Oko</title>
+      <link>http://192.168.0.101:1313/posters/2025-riblje-oko/</link>
+      <pubDate>Fri, 24 Oct 2025 15:12:00 +0300</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-riblje-oko/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Knit&#39;s Island</title>
-      <link>http://192.168.0.103:1313/posters/2025-knits-island/</link>
+      <link>http://192.168.0.101:1313/posters/2025-knits-island/</link>
       <pubDate>Fri, 17 Oct 2025 00:28:00 +0300</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-knits-island/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-knits-island/</guid>
       <description></description>
     </item>
     <item>
       <title>Operation: Jane Walk</title>
-      <link>http://192.168.0.103:1313/posters/2025-operation-jane-walk/</link>
+      <link>http://192.168.0.101:1313/posters/2025-operation-jane-walk/</link>
       <pubDate>Fri, 10 Oct 2025 19:28:00 +0300</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-operation-jane-walk/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-operation-jane-walk/</guid>
       <description></description>
     </item>
     <item>
       <title>Drijf</title>
-      <link>http://192.168.0.103:1313/posters/2025-drijf-poster/</link>
+      <link>http://192.168.0.101:1313/posters/2025-drijf-poster/</link>
       <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-drijf-poster/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-drijf-poster/</guid>
       <description></description>
     </item>
     <item>
       <title>Catraias</title>
-      <link>http://192.168.0.103:1313/posters/2025-catraias/</link>
+      <link>http://192.168.0.101:1313/posters/2025-catraias/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-catraias/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-catraias/</guid>
       <description></description>
     </item>
     <item>
       <title>Du côté de la côte</title>
-      <link>http://192.168.0.103:1313/posters/2025-du-cote-de-la-cote/</link>
+      <link>http://192.168.0.101:1313/posters/2025-du-cote-de-la-cote/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-du-cote-de-la-cote/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-du-cote-de-la-cote/</guid>
       <description></description>
     </item>
     <item>
       <title>La Fille qui explose</title>
-      <link>http://192.168.0.103:1313/posters/2025-la-fille-qui-explose/</link>
+      <link>http://192.168.0.101:1313/posters/2025-la-fille-qui-explose/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-la-fille-qui-explose/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-la-fille-qui-explose/</guid>
       <description></description>
     </item>
     <item>
       <title>Manifesto</title>
-      <link>http://192.168.0.103:1313/posters/2025-manifesto/</link>
+      <link>http://192.168.0.101:1313/posters/2025-manifesto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-manifesto/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-manifesto/</guid>
       <description></description>
     </item>
   </channel>
