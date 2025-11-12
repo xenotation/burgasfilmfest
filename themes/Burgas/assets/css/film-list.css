@@ -79,7 +79,14 @@
     z-index: 300;
     filter: drop-shadow(0px 0px 0px black);
   }
-
+  .stream-label--hidden {
+    transform: translateY(-10px);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
   
   .film-text:hover .stream-label--hidden {
     transform: translateY(0);
@@ -123,92 +130,110 @@
   }
 
 
-  /* MOBILE (≤700 px) — film list only
+/* MOBILE (≤1000 px) — film list only
    -------------------------------------------------- */
-@media (max-width: 1000px) {
+   @media (max-width: 1000px) {
 
-  /* keep the global mobile layout */
-  :root {
-    --layout-width: 100vw;
-    --layout-max-width: 90vw;
-  }
-
-  /* archive wrapper stays centred */
-  .film-archive {
-    width: var(--layout-width);
-    max-width: var(--layout-max-width);
-    margin: 8rem auto 2rem;
-    padding: 0 1rem;
-  }
-
-  .film-entry {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0; /* REMOVE the space between image + text */
-  }
-
-
-  /* poster image */
-  .film-image img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
-  /* text panel stretches the same width as the image */
-  .film-text {
-    width: 100%;
-    margin: 0 0 0 0.5rem;
-    padding: 0; /* Ensure no extra space */
-    align-items: flex-start;
-    text-align: left;
-    box-sizing: border-box;
-   
-  }
-
-  /* title panel — relative so the ribbon can be absolut-pos */
-  .film-title-list {
-    position: relative;
-    width: 99%;
-    box-sizing: border-box;
-    font-size: var(--font-size-3);
-    padding: 0.6rem 1.2rem 0.6rem 0.6rem;
-    border: 2px solid var(--color-fg);
-    border-radius: 0 0 1rem 1rem;
-  }
-
-
-
-  /* ribbon pinned top-left of the panel */
-  .stream-label {
-    position: absolute;
-    top: -1.7rem;
-    left: 0;
-    margin: 0;
-    border-radius: 0 1rem 0 0;
-    font-size: var(--font-size-1);
-    padding: .25rem .6rem;
-    border: 2px solid var(--color-fg);
+    /* keep the global mobile layout (unchanged) */
+    :root {
+      --layout-width: 100vw;
+      --layout-max-width: 90vw;
+    }
+  
+    /* archive wrapper stays centred */
+    .film-archive {
+      width: var(--layout-width);
+      max-width: var(--layout-max-width);
+      margin: 8rem auto 2rem;
+      padding: 0 1rem;
+    }
+  
+    .film-entry {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0; /* REMOVE the space between image + text */
+    }
+  
+    /* poster image */
+    .film-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+    }
+  
+    /* text panel stretches the same width as the image */
+    .film-text {
+      position: relative;       /* anchor the ribbon here */
+      width: 100%;
+      margin: 0 0 0 0.5rem;
+      padding: 0;               /* Ensure no extra space */
+      align-items: flex-start;
+      text-align: left;
+      box-sizing: border-box;
+    }
+  
+    /* title panel */
+    .film-title-list {
+      position: relative;
+      width: 99%;
+      box-sizing: border-box;
+      font-size: var(--font-size-3);
+      padding: 0.6rem 1.2rem 0.6rem 0.6rem;
+      border: 2px solid var(--color-fg);
+      border-radius: 0 0 1rem 1rem;
+    }
+  
+    /* ribbon pinned top-left of the panel (original) */
+    .stream-label {
+      position: absolute;
+      top: -1.7rem;
+      left: 0;
+      margin: 0;
+      border-radius: 0 1rem 0 0;
+      font-size: var(--font-size-1);
+      padding: .25rem .6rem;
+      border: 2px solid var(--color-fg);
+      z-index: 5;
+    }
+  
+    /* make the "hidden" label behave EXACTLY like the visible one */
+    .stream-label--hidden {
+      position: absolute;
+      top: -1.7rem;
+      left: 0;
+      margin: 0;
+      border-radius: 0 1rem 0 0;
+      font-size: var(--font-size-1);
+      padding: .25rem .6rem;
+      border: 2px solid var(--color-fg);
+      z-index: 5;
+  
+      /* override hidden/transition state */
+      display: block;
+      transform: none;
+      opacity: 1;
+      max-height: none;
+      pointer-events: auto;
+    }
+  
+    /* neutralize hover reveal */
+    .film-text:hover .stream-label--hidden {
+      transform: none;
+      opacity: 1;
+      max-height: none;
+    }
+  
+    /* details under the title */
+    .film-details-hero,
+    .film-author-subtext {
+      font-size: var(--font-size-1);
+    }
+  
+    /* shrink the meta rows */
+    .film-meta-list,
+    .film-details-list {
+      font-size: var(--font-size-1);
+    }
   }
   
-
-  .film-text:hover .stream-label--hidden {
-    transform: none;
-    opacity: 1;
-    max-height: none;
-  }
-
-  /* details under the title */
-  .film-details-hero,
-  .film-author-subtext {
-    font-size: var(--font-size-1);
-  }
-
-  /* shrink the meta rows */
-  .film-meta-list,
-  .film-details-list {
-    font-size: var(--font-size-1);
-  }
-
-}
