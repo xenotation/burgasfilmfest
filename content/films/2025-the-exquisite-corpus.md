@@ -5,27 +5,26 @@ file_name: the-exquisite-corpus
 film_title: Изящният труп
 film_title_org: The Exquisite Corpus
 country: Австрия
-year: '2015'
-minutes: '19'
-description: 'ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за
-  лица над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни
-  и приемате съдържанието.
+year: "2015"
+minutes: "19"
+description: >-
+  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над
+  18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и
+  приемате съдържанието.
 
 
 
-  Филмът "Изящният труп" е базиран на намерен материал от еротични филми и рекламни
-  клипове. Безбройните фрагменти се сливат в един чувствен, хумористичен, зловещ и
-  екстатичен сън.'
+  Филмът "Изящният труп" е базиран на намерен материал от еротични филми и рекламни клипове. Безбройните фрагменти се сливат в един чувствен, хумористичен, зловещ и екстатичен сън.
 text_author: текст от Стефан Гончаров
 stream_duration: 07.11.2025 - 14.11.2025
 Director: Петер Черкаски
-Production: ''
+Production: ""
 Music: Дирк Шeфер
 thumbnail: /img/nah8kln6umxtebrlxpnmt8bh1th.jpg
 feature_image: /img/the_exquisite_corpus.jpg
 show_watch_button: true
 video_id: 464c13dd709a87fab9b2ed3ea390f76e
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzEyOTI0NCIsIm5iZiI6IjE3NjMwMzkyNDUiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.N4Xyug7UXR90-pg0ptOWwpziMJzfdJ3mzn-54vxFS_HVMr100KuMOADkMFR0_g2rZeuKZAZyZD-ZFEXCsMzlyXu8QQdErCPUWFqkYRDwzvK8nGsz1Ng4g3K1qpRowF_JmyVFITLyxwRIkbD_RkMs-_cbfnwjCq9f8nucH_jAkAvnNmrGUaPDJPVO6QlExBP58MFxX8WJWcQ15LRLrZJLmGl-GTKXBYjUvcUr1ygrb0S0_a2E6bnV7Elbw1d_17b9kltsuFPUzOChwWPwlIq9FzkoI01ovuPiiuXgdtscXjSENpqP4pqKV0Tx8uFtAm13X_7kcFAw_8eSNvTBROasTQ
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzA4ODE0OCIsIm5iZiI6IjE3NjI5OTgxNDgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.v-iMM4TlPDbYIg_L8vG6sjdfsCGhfuEiyY-IeVut0Q3Yy8PQ-sOqbd2l8SgPupkJbxFXD-5G91PY_DUVEN3vxBemUc2xS4H8QeHd1s9VwqAkb_LHfrD-LsG3lv2L62fvAlS83U7JEenHeW7WJG5FaKjol7PAJ4p7P7ICRBg_yjORO49to6Eha9cJraxyPibiYQYIik_nuYzLgRiNZFnnQ5d1LwgvmJALRC4ZtwMZYed35t3dqvZbzm9Cdcm2yKoYDIIbFJUcrAwqna4lUblqtpKq3Zb_62sFy_dcxSNvIF6dUuqsOvtnw4EwGqyrFZH_dTC6snOk4ylTwQMfZoBDiQ
 hero_video_id: ef897ccf070663ee4a96b13e80e12ec2
 ---
 ## Авангардът на желанието
@@ -44,4 +43,4 @@ hero_video_id: ef897ccf070663ee4a96b13e80e12ec2
 
 Разбира се, това не е метафизично съждение, а по-скоро психоаналитично наблюдение, представено по алегоричен път. Идеята на Черкаски е, че човешкото същество не би искало да бъде „спасено“, ако това означава, че всичките му нужди и копнежи ще бъдат задоволени веднъж завинаги. Както отбелязва френският психоаналитик Жак Лакан, чиито идеи оказват силно влияние върху режисьора, хората по-скоро „желаят да желаят“, а за това е необходимо нещо да им липсва. Нужна ни е причина да копнеем – някаква пречка, която бленуваме да надмогнем. Неслучайно колкото и да е порнографски сънят на „нудистката“, в него почти не присъстват чисто голи тела. Всички мъже и жени, преминаващи екстатично на екрана, са по-скоро на ръба да бъдат разсъблечени. Защо? Защото в крайна сметка няма трансгрес (и съответно еротика), ако няма и граница. Оттук идва и интимната връзка на киното с желанието. Ако екранът не действаше като почти невидим предел, който не сме в състояние да пресечем, освен в най-смелите ни фантазии, то тогава седмото изкуство нямаше да е нищо повече от мъртвороден сън – труп, ограбен от цялата си красота и „изящество“.\
 \
-*Представянето на филма „Изящния труп“ и този текст се осъществяват с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
+*Представянето на филма „Изящният труп“ и този текст се осъществяват с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този документ отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
