@@ -5,25 +5,26 @@ file_name: the-exquisite-corpus
 film_title: Изящният труп
 film_title_org: The Exquisite Corpus
 country: Австрия
-year: "2015"
-minutes: "19"
-description: Филмът "Изящният труп" е базиран на намерен материал от еротични
-  филми и рекламни клипове. Безбройните фрагменти се сливат в един чувствен,
-  хумористичен, зловещ и екстатичен сън.
-disclaimer: >
-  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над
-  18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и
-  приемате съдържанието.
+year: '2015'
+minutes: '19'
+description: Филмът "Изящният труп" е базиран на намерен материал от еротични филми
+  и рекламни клипове. Безбройните фрагменти се сливат в един чувствен, хумористичен,
+  зловещ и екстатичен сън.
+disclaimer: 'ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица
+  над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате
+  съдържанието.
+
+  '
 text_author: текст от Стефан Гончаров
 stream_duration: 07.11.2025 - 14.11.2025
 Director: Петер Черкаски
-Production: ""
+Production: ''
 Music: Дирк Шeфер
 thumbnail: /img/nah8kln6umxtebrlxpnmt8bh1th.jpg
 feature_image: /img/the_exquisite_corpus.jpg
 show_watch_button: true
 video_id: 464c13dd709a87fab9b2ed3ea390f76e
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzEzMDQ1NiIsIm5iZiI6IjE3NjMwNDA0NTciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.MPDjTPTLe8NvxJRhc2iK-l2YRxjbLUgQIaj9YbecRcUnrYbGedZxwCpE_9u2N2-pMuXoP-ZhGLR7r-XcRreUMjNRfYVXIDfwpI0_VWXAwaZjdvta0F8mNsBaZQVUvLZl6TK8MbbQxHBeXtpjM4uwc5VqQvhcM5-WaopKGEXks0riSpNN338K6sNDs4_3nTsn9rMEKcxXUHpFIXJVSrekwg9GaGIjIUEXo-cb5OMWbjr_NjH7WPEmhh3NPrcgLFxN-MVzFrhU84iFL90ni-wurAPYt2_Rs2syarUF3db_fiA1xsn3LdoPHVMsIB2T5U3U2B_9U8SZz7wnGWEracfA6w
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzEzMDUzOCIsIm5iZiI6IjE3NjMwNDA1MzgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.TszMsy09KwIU1LcvLngielCfaaMif5jYkM_g8v-O2UiIT9QVbH-kYilpuvvob06KXVI-yD8SzGsTst98hWyk_jBYaUZIUPjZlT-dHbCO7Mud47BHbrlXMyEZt0HWzG6yNsoPuBOuI_YadGuiayO3DtzL-wZWsb21Fl2DJqs041DjUtxy61iCZvM4R-JmOhEnadCM5oi2QSFnXgC0co7s9NgcEjuw6NZ6yhqsPBAOwbSnz4WFc2SZaFHpikj7lA9md6wrdxeW0kXcXDROFbSVJPX0w7z2M4ZBE2XUynFYgc5CVbSoeDQFGs4JnhvUOx-t2f0-W2EgZNodlC2lwxdQaQ
 hero_video_id: ef897ccf070663ee4a96b13e80e12ec2
 ---
 ## Авангардът на желанието
