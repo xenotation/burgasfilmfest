@@ -32,6 +32,13 @@
           {{/* <div class="film-genre">{{ .Params.Genre }}</div> */}}
           <p class="film-description">{{ .Params.description }}</p>
 
+          {{ with .Params.disclaimer }}
+            <div class="film-description film-disclaimer">
+              {{ . | markdownify }}
+            </div>
+          {{ end }}
+
+
           <div class="film-credits-grid">
             {{ with .Params.animator }}
             <div class="credit">

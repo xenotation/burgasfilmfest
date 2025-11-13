@@ -38,7 +38,7 @@ collections:
       # Draft toggle
       - { label: "Draft", name: "draft", widget: "boolean", default: true, hint: "Uncheck to publish." }
 
-      # NEW: explicit filename control (what becomes the slug base)
+      # Explicit filename control (what becomes the slug base)
       - label: "File name (slug base)"
         name: "file_name"
         widget: "string"
@@ -55,6 +55,10 @@ collections:
       - { label: "Year", name: "year", widget: "string", required: true }
       - { label: "Minutes", name: "minutes", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", required: false }
+
+      # NEW OPTIONAL FIELD — shown under description on the film page
+      - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false, hint: "Shown under the description on the film page." }
+
       - { label: "Text author", name: "text_author", widget: "string", required: false }
       - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: true }
       - { label: "Director", name: "Director", widget: "string", required: false }
