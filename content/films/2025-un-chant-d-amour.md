@@ -1,18 +1,17 @@
 ---
-date: 2025-11-14T10:12:00+02:00
+date: 2025-11-14 10:12:00+02:00
 draft: true
 file_name: un-chant-d-amour
 film_title: Песен за любовта
 film_title_org: Un chant d'amour
 country: Франция
-year: "1950"
-minutes: "26"
-description: Двама затворници, напълно изолирани, разделени от дебели тухлени
-  стени и отчаяно нуждаещи се от човешки контакт, измислят необичаен начин за
-  общуване.
-disclaimer: ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за
-  лица над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте
-  пълнолетни и приемате съдържанието.
+year: '1950'
+minutes: '26'
+description: Двама затворници, напълно изолирани, разделени от дебели тухлени стени
+  и отчаяно нуждаещи се от човешки контакт, измислят необичаен начин за общуване.
+disclaimer: ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица
+  над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате
+  съдържанието.
 text_author: текст от Димитър Марков
 stream_duration: 14.11.2025 - 21.11.2025
 Director: Жан Жьоне
@@ -26,6 +25,7 @@ feature_image: /img/still1.webp
 show_watch_button: true
 video_id: f3b9032443c2514fbc15e3a93efd24fd
 hero_video_id: 7b1f3c450ff20eb2250bd6f28dadbde4
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmM2I5MDMyNDQzYzI1MTRmYmMxNWUzYTkzZWZkMjRmZCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzE5NTU2NSIsIm5iZiI6IjE3NjMxMDU1NjUiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.mFwNr_T_vBkKeVw6TGSJP2AZh3GAlK-rDvtBnYgQ5oEankR_rGfc1Sp0jgrna6m9iF28oSZa9-7ivUtUtbHJ0TuRwT0sZOHt8D3Pr1BnbonR_QJ92flKrEYm7QsQ2jyYNB-BixYB960s92kLS_ra-ArCyxZ-mGLEGdGCDEt0GzC6mEz9jER2brSG2TRDMkVwbs-MWOAvUjDdFfk2ovwXdPOkg6TxMhmbKKKstYPGbIj79w4OWL_0_BPZzBHPKyv7wZJIqKe6S91M6Yv4qD0zwGYZmDDlqmThvQzF7D0i0mF8bUb8y11O3uCW2LoFjqEhi0csbmot4gINhqGloNvnJQ
 ---
 Творчеството на френския писател, драматург и поет Жан Жьоне (1910 – 1986) остава сравнително неизвестно за българския читател, макар авторът да е превеждан и поставян на българска сцена[^1]. Още Георги Марков (1929 – 1978) иронично повдига въпроса как българската критика би обрисувала Жьоне, ако един ден все пак трябва да заговори за него[^2]. Истината е, че автентичният и оригинален творец не може лесно да бъде ограничен от критиката на своето време; неговият обсег е, така да се каже, насочен към бъдещето, макар да остава здраво стъпил в настоящето, чийто продукт е самият той. Още повече това важи за Жьоне, чието творчество отразява като криво огледало нравствения облик на едно общество: от една страна – това на почтените граждани, а от друга – копторите на съвременния град и неговите обитатели, макар да не е напълно сигурно кой от двата образа е изкривен. 	
 
