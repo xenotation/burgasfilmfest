@@ -5,24 +5,23 @@ file_name: the-exquisite-corpus
 film_title: Изящният труп
 film_title_org: The Exquisite Corpus
 country: Австрия
-year: '2015'
-minutes: '19'
-description: Филмът "Изящният труп" е базиран на намерен материал от еротични филми
-  и рекламни клипове. Безбройните фрагменти се сливат в един чувствен, хумористичен,
-  зловещ и екстатичен сън.
-disclaimer: 'ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица
-  над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате
-  съдържанието.
-
-  '
+year: "2015"
+minutes: "19"
+description: Филмът "Изящният труп" е базиран на намерен материал от еротични
+  филми и рекламни клипове. Безбройните фрагменти се сливат в един чувствен,
+  хумористичен, зловещ и екстатичен сън.
+disclaimer: >
+  ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица над
+  18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и
+  приемате съдържанието.
 text_author: текст от Стефан Гончаров
 stream_duration: 07.11.2025 - 14.11.2025
 Director: Петер Черкаски
-Production: ''
+Production: ""
 Music: Дирк Шeфер
 thumbnail: /img/nah8kln6umxtebrlxpnmt8bh1th.jpg
 feature_image: /img/the_exquisite_corpus.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: 464c13dd709a87fab9b2ed3ea390f76e
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI0NjRjMTNkZDcwOWE4N2ZhYjliMmVkM2VhMzkwZjc2ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzE5NTE2NSIsIm5iZiI6IjE3NjMxMDUxNjUiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.nEQGiHCMor2GrJFeV2XBkBgcNqzxv1OKUaRjm_Woy5TPkbLQEj5Ydkrfws0Sxo5XVY0sb6tKzdbQgPWFbrDK4v15447SoPWmtL_IIOKJhCTCsQ4OfQdSSrqIEE5GCGjaJ-0Ak510Ci59sI-vj9SylgvVmQ6SGQKMdDtWuIBxabku0SN8mTn5JiCB6-6QpuZ5IloZg57vVieIksfkQd8gsLpxqbo8SdFKxa9i4vcvbrK_iAXM5W_8ZSyVQrm0jY1e_uJLE3I-o9_3LxA2pEH8f_4BHHf0p1ikHE3HYmEWAL4ctG4H1u5jepc9MBEmphNcFZPux3lQz-s48dwBZ-twJQ
 hero_video_id: ef897ccf070663ee4a96b13e80e12ec2
