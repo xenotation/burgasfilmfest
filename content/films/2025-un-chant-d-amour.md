@@ -5,14 +5,13 @@ file_name: un-chant-d-amour
 film_title: Песен за любовта
 film_title_org: Un chant d'amour
 country: Франция
-year: "1950"
-minutes: "26"
-description: Двама затворници, напълно изолирани, разделени от дебели тухлени
-  стени и отчаяно нуждаещи се от човешки контакт, измислят необичаен начин за
-  общуване.
-disclaimer: ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за
-  лица над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте
-  пълнолетни и приемате съдържанието.
+year: '1950'
+minutes: '26'
+description: Двама затворници, напълно изолирани, разделени от дебели тухлени стени
+  и отчаяно нуждаещи се от човешки контакт, измислят необичаен начин за общуване.
+disclaimer: ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица
+  над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате
+  съдържанието.
 text_author: текст от Димитър Марков
 stream_duration: 14.11.2025 - 21.11.2025
 Director: Жан Жьоне
@@ -25,7 +24,7 @@ thumbnail: /img/poster.webp
 feature_image: /img/still1.webp
 show_watch_button: true
 video_id: f3b9032443c2514fbc15e3a93efd24fd
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmM2I5MDMyNDQzYzI1MTRmYmMxNWUzYTkzZWZkMjRmZCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzIxNDkwOCIsIm5iZiI6IjE3NjMxMjQ5MTEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.thV-BCUoF6QnyUNL7GytDA0xi4FaJtE-668q9p39CQEE68QWp6IfggatLS_FSv9ypd0Hbpx6l8Z0Q0qFiB1Hh-EF3pKXD9ZX04wnJku70OkWVqfPg2mLZYfQIsEU0pfSDqfNwq-0yBs-His2azgtSDI2tgguk2Lm5qB-wNMj2N6NsKdHELyN5kpFah7_SijGWnqqT9LxBDdpZTEmo8se5rkgNsdmmeKCR44qyE6zPDNKyFt2CjOxHCaYCvHTd-GWWfhmXJ7RCyepASlF10RsfNR7gRGkmg2Wuj6g5lmS9CYBG7bVlavFINyY_Z1FkWffEhneFoEcvDDmssR2lkdT6A
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmM2I5MDMyNDQzYzI1MTRmYmMxNWUzYTkzZWZkMjRmZCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzIxNTExMyIsIm5iZiI6IjE3NjMxMjUxMTMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.Voif1qDf6suJvHzfzOZLZ3arKqRQEJ50MreMuezi3wpAI9S_EWYytkhllznmMW1Q9R7YG8q2QN0CpWx3Igj9U4MsB2SDudD5oddW0Rfq4g1HyNIBT0jp1iw0lj9iHWSIMX58G8rCV4QjvoVSwfWUeTVVQfVz5Mwo-FAe395fPXG8yz26tGvLDX7O6L_-K8lpckwbrz2H6fcfXC0NrQ8p2QEvhhJrS2V3QOep20u2iPF17x5tt9s2sl6gPkLvHUnOpuJda_-XKqdK__C06CpcTUrR3F_GwHHXJ7I3dhP6WonaWGBWc8JULlqllhVZ_wIosgBQvFMKe0JIymHsEcuVug
 hero_video_id: 7b1f3c450ff20eb2250bd6f28dadbde4
 ---
 ## Бележка за Жан Жьоне
