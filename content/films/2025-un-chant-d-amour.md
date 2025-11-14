@@ -1,18 +1,17 @@
 ---
-date: 2025-11-14T10:12:00+02:00
+date: 2025-11-14 10:12:00+02:00
 draft: true
 file_name: un-chant-d-amour
 film_title: Песен за любовта
 film_title_org: Un chant d'amour
 country: Франция
-year: "1950"
-minutes: "26"
-description: Двама затворници, напълно изолирани, разделени от дебели тухлени
-  стени и отчаяно нуждаещи се от човешки контакт, измислят необичаен начин за
-  общуване.
-disclaimer: ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за
-  лица над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте
-  пълнолетни и приемате съдържанието.
+year: '1950'
+minutes: '26'
+description: Двама затворници, напълно изолирани, разделени от дебели тухлени стени
+  и отчаяно нуждаещи се от човешки контакт, измислят необичаен начин за общуване.
+disclaimer: ВНИМАНИЕ! Този филм съдържа еротични сцени и е предназначен само за лица
+  над 18-годишна възраст. Продължавайки, Вие потвърждавате, че сте пълнолетни и приемате
+  съдържанието.
 text_author: текст от Димитър Марков
 stream_duration: 14.11.2025 - 21.11.2025
 Director: Жан Жьоне
@@ -26,6 +25,7 @@ feature_image: /img/still1.webp
 show_watch_button: true
 video_id: f3b9032443c2514fbc15e3a93efd24fd
 hero_video_id: 7b1f3c450ff20eb2250bd6f28dadbde4
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmM2I5MDMyNDQzYzI1MTRmYmMxNWUzYTkzZWZkMjRmZCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2MzE5NTUyNyIsIm5iZiI6IjE3NjMxMDU1MjciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.dL0JFOun_MPyZFZF3jxpriI3BG9fOQjcSTdCXidvys-CQGvvGg4iHqjDWxdexSy6kkYQcxakaAOKd8QPNfFvzXCPPPIVk47GJBksi8NV8UJA9b38LC7yq9fP9Mon5-KVg1KjH0GePze7_uBQ-t3hUiONFF0Db8rt1oetpxNoMqUBGuUq975Wr6rcmlLhVUVqdQnl4gDei4dh0OEZk3dReiegvRojTrX89qXkExmmGEXmLFDK_QfPe6EqYJbiiGKY_1Sf7j23ieVykvZrjBAoGMhzLQCI-e5EbgTQjpyvAapdmB4Op-PhAFNXhJtrgMbBbrHaE568zLdhZu9UMxMLxA
 ---
 ![]()
 
