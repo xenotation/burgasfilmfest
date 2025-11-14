@@ -7,8 +7,10 @@ theme = "Burgas"
 
 [markup.goldmark]
 
-[markup.goldmark.renderer]
-unsafe = true
+ [markup.goldmark.extensions]
+      footnote = true
+    [markup.renderer]
+      unsafe = true
 
 [outputs]
 home = ["HTML", "RSS"]

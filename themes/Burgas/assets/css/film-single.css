@@ -176,6 +176,88 @@
   .film-disclaimer { margin-top: -0.5rem; }
 
 
+/* ==== Footnotes (refs + bibliography) ==== */
+
+/* In-text refs like ¹, ² … */
+.film-body sup.footnote-ref a,
+.film-body sup.footnote-ref a:visited {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  padding: 0 .15em;
+  font-weight: 600;
+}
+.film-body sup.footnote-ref a:hover,
+.film-body sup.footnote-ref a:focus {
+  background: #4444dd;
+  color: black;
+  border-bottom-color: transparent;
+  outline: none;
+}
+
+/* Keep anchors from hiding under sticky headers */
+.film-body sup[id^="fnref:"],
+.film-body .footnotes li[id^="fn:"] {
+  scroll-margin-top: 8rem;
+}
+
+/* Bibliography block */
+.film-body .footnotes {
+  font-size: var(--font-size-2);
+  margin-top: 1.5rem;
+  border-top: 2px solid var(--color-fg);
+  padding-top: .8rem;
+  color: var(--color-fg);
+}
+.film-body .footnotes hr { display: none; }
+
+/* Make the list look editorial */
+.film-body .footnotes ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: fn;
+}
+.film-body .footnotes li {
+  counter-increment: fn;
+  position: relative;
+  margin: .6rem 0;
+  padding-left: 2rem;
+  line-height: 1.4;
+}
+.film-body .footnotes li::marker { content: ""; } /* hide default marker */
+.film-body .footnotes li::before {
+  content: counter(fn) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+/* Links inside footnotes (sources, etc.) */
+.film-body .footnotes a,
+.film-body .footnotes a:visited {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+/* Backlink ⤴ from footnote to reference */
+.film-body .footnotes a.footnote-backref {
+  margin-left: .4rem;
+  font-weight: 600;
+  border: 0;
+}
+.film-body .footnotes li {
+  line-height: 1;
+}
+
+/* Mobile: slightly tighter */
+@media (max-width: 1000px) {
+  .film-body .footnotes { font-size: var(--font-size-1); }
+  .film-body .footnotes li { padding-left: 1.6rem; }
+}
+
+
   @media (max-width: 1000px) {
   
     .film-inner {
