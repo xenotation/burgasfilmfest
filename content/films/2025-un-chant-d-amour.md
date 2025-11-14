@@ -1,6 +1,6 @@
 ---
-date: 2025-11-11T10:11:00+02:00
-draft: true
+date: 2025-11-14T10:12:00+02:00
+draft: false
 file_name: un-chant-d-amour
 film_title: Песен за любовта
 film_title_org: Un chant d'amour
