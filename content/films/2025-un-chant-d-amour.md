@@ -20,10 +20,11 @@ Production: Никос Папатакис
 Screenwriter: Жан Жьоне
 Editing: Жан Жьоне
 Cinematography: Жак Нато
-LeadActors: ""
+LeadActors: Браво, Коко льо Мартиникe, Люсиен Сенемо, Джава, Андре Рейбаз
 thumbnail: /img/poster.webp
 feature_image: /img/still1.webp
 show_watch_button: true
+video_id: f3b9032443c2514fbc15e3a93efd24fd
 hero_video_id: 7b1f3c450ff20eb2250bd6f28dadbde4
 ---
 ![]()
