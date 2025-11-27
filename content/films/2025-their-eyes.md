@@ -2,7 +2,7 @@
 date: 2025-11-27T15:12:00+02:00
 draft: true
 file_name: their-eyes
-film_title: Their Eyes
+film_title: Техният поглед
 film_title_org: Their Eyes
 country: Франция
 year: "2025"
@@ -21,4 +21,5 @@ Sound: Етиен Андре
 thumbnail: /img/poster-their-eyes.jpeg
 feature_image: /img/their-eyes-still-4.jpeg
 show_watch_button: true
+video_id: ecc97fcdebf4c72c6cc5ae4fa164b2ea
 ---
