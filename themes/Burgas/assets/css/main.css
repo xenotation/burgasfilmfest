@@ -639,6 +639,7 @@ body {
     right: 0;
     border-radius: 1rem 0 0 0;
     font-size: var(--font-size-2);
+    width: fit-content;
   }
 
   .hero-film-banner .film-title-list {
