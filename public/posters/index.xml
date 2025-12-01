@@ -2,87 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posters on Планктон</title>
-    <link>http://192.168.0.101:56068/posters/</link>
+    <link>http://192.168.0.101:1313/posters/</link>
     <description>Recent content in Posters on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Thu, 13 Nov 2025 18:27:00 +0200</lastBuildDate>
-    <atom:link href="http://192.168.0.101:56068/posters/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Nov 2025 23:01:00 +0200</lastBuildDate>
+    <atom:link href="http://192.168.0.101:1313/posters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Their Eyes</title>
+      <link>http://192.168.0.101:1313/posters/2025-their-eyes/</link>
+      <pubDate>Thu, 27 Nov 2025 23:01:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-their-eyes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workers&#39; Wings</title>
+      <link>http://192.168.0.101:1313/posters/2025-workers-wings/</link>
+      <pubDate>Fri, 21 Nov 2025 15:47:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-workers-wings/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Un chant d&#39;amour</title>
-      <link>http://192.168.0.101:56068/posters/2025-un-chant-damour/</link>
+      <link>http://192.168.0.101:1313/posters/2025-un-chant-damour/</link>
       <pubDate>Thu, 13 Nov 2025 18:27:00 +0200</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-un-chant-damour/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-un-chant-damour/</guid>
       <description></description>
     </item>
     <item>
       <title>The Exquisite Corpus</title>
-      <link>http://192.168.0.101:56068/posters/2025-the-exquisite-corpus/</link>
+      <link>http://192.168.0.101:1313/posters/2025-the-exquisite-corpus/</link>
       <pubDate>Fri, 07 Nov 2025 20:02:00 +0200</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-the-exquisite-corpus/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-the-exquisite-corpus/</guid>
       <description></description>
     </item>
     <item>
       <title>Lucifer Rising</title>
-      <link>http://192.168.0.101:56068/posters/2025-lucifer-rising/</link>
+      <link>http://192.168.0.101:1313/posters/2025-lucifer-rising/</link>
       <pubDate>Fri, 31 Oct 2025 19:35:00 +0200</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-lucifer-rising/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-lucifer-rising/</guid>
       <description></description>
     </item>
     <item>
       <title>Riblje Oko</title>
-      <link>http://192.168.0.101:56068/posters/2025-riblje-oko/</link>
+      <link>http://192.168.0.101:1313/posters/2025-riblje-oko/</link>
       <pubDate>Fri, 24 Oct 2025 15:12:00 +0300</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-riblje-oko/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-riblje-oko/</guid>
       <description></description>
     </item>
     <item>
       <title>Knit&#39;s Island</title>
-      <link>http://192.168.0.101:56068/posters/2025-knits-island/</link>
+      <link>http://192.168.0.101:1313/posters/2025-knits-island/</link>
       <pubDate>Fri, 17 Oct 2025 00:28:00 +0300</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-knits-island/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-knits-island/</guid>
       <description></description>
     </item>
     <item>
       <title>Operation: Jane Walk</title>
-      <link>http://192.168.0.101:56068/posters/2025-operation-jane-walk/</link>
+      <link>http://192.168.0.101:1313/posters/2025-operation-jane-walk/</link>
       <pubDate>Fri, 10 Oct 2025 19:28:00 +0300</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-operation-jane-walk/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Drijf</title>
-      <link>http://192.168.0.101:56068/posters/2025-drijf-poster/</link>
-      <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-drijf-poster/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Catraias</title>
-      <link>http://192.168.0.101:56068/posters/2025-catraias/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-catraias/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Du côté de la côte</title>
-      <link>http://192.168.0.101:56068/posters/2025-du-cote-de-la-cote/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-du-cote-de-la-cote/</guid>
+      <guid>http://192.168.0.101:1313/posters/2025-operation-jane-walk/</guid>
       <description></description>
     </item>
     <item>
       <title>La Fille qui explose</title>
-      <link>http://192.168.0.101:56068/posters/2025-la-fille-qui-explose/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-la-fille-qui-explose/</guid>
+      <link>http://192.168.0.101:1313/posters/2025-la-fille-qui-explose/</link>
+      <pubDate>Fri, 03 Oct 2025 15:51:00 +0300</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-la-fille-qui-explose/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Du côté de la côte</title>
+      <link>http://192.168.0.101:1313/posters/2025-du-cote-de-la-cote/</link>
+      <pubDate>Thu, 25 Sep 2025 15:51:00 +0300</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-du-cote-de-la-cote/</guid>
       <description></description>
     </item>
     <item>
       <title>Manifesto</title>
-      <link>http://192.168.0.101:56068/posters/2025-manifesto/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.101:56068/posters/2025-manifesto/</guid>
+      <link>http://192.168.0.101:1313/posters/2025-manifesto/</link>
+      <pubDate>Thu, 18 Sep 2025 15:50:00 +0300</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-manifesto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Catraias</title>
+      <link>http://192.168.0.101:1313/posters/2025-catraias/</link>
+      <pubDate>Fri, 12 Sep 2025 15:50:00 +0300</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-catraias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drijf</title>
+      <link>http://192.168.0.101:1313/posters/2025-drijf-poster/</link>
+      <pubDate>Fri, 05 Sep 2025 18:43:00 +0300</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-drijf-poster/</guid>
       <description></description>
     </item>
   </channel>
