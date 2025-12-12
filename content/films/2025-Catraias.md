@@ -1,6 +1,7 @@
 ---
 date: 2025-09-11T20:40:00+03:00
-draft: true
+draft: false
+file_name: catraias
 film_title: Catraias
 film_title_org: null
 country: Португалия
@@ -25,7 +26,7 @@ Voiceover: Таня Динис
 LeadActors: Мария Виана, Ирмина де Хесус Теросо, Ренато Круз Сантос, Руте Рибейро
 thumbnail: /img/TANITA.png
 feature_image: /img/catraias III.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: 6799329e49d585252f581311c19642d3
 HLS: https://customer-tkp9gv7016aue3fr.cloudflarestream.com/9b489d9e94cb1951a31ab2cca339b72f/manifest/video.m3u8
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2Nzk5MzI5ZTQ5ZDU4NTI1MmY1ODEzMTFjMTk2NDJkMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc1ODMzNDg5NiIsIm5iZiI6IjE3NTgyNDQ4OTYiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.NXSr2Er50UxBA56RVikOgENE0m2in7DJYIEZGp2NjKw7uf1aY9plEqpoz4tq1PLrYEghqFaYERfhJah0yQphEd3oLfPVAQYg_2gR5Uh2c5wBu536413zLg2EmK9iDIW7HbnFgBBKIGU15akKVHJqim7feZf821NiLg-SFoTyQtoSfW_NAYWBQGt3pAI39LWJPRHWkepje4MSvAP73jz9VqpdHhgI66tiWCKX1tGwDAJD2XE9hkU0JiFQUfu1Zlgst_E6TuJK0-FcpZNR_2CTX1FUtq3fnAlix6wM9z4k4y1R3bBO9wsHSlzQsT1E5V6eeVjs7Lbyzi4Sp_UrXqX_hw
