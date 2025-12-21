@@ -6,8 +6,29 @@
     <description>Recent content in Posters on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Thu, 27 Nov 2025 23:01:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 18:37:00 +0200</lastBuildDate>
     <atom:link href="http://192.168.0.101:1313/posters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zima</title>
+      <link>http://192.168.0.101:1313/posters/2025-zima/</link>
+      <pubDate>Fri, 19 Dec 2025 18:37:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-zima/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chaque mur est une porte</title>
+      <link>http://192.168.0.101:1313/posters/2025-chaque-mur-est-une-porte/</link>
+      <pubDate>Fri, 12 Dec 2025 20:47:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-chaque-mur-est-une-porte/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Center, Ring, Mall</title>
+      <link>http://192.168.0.101:1313/posters/2025-center-ring-mall/</link>
+      <pubDate>Fri, 05 Dec 2025 17:24:00 +0200</pubDate>
+      <guid>http://192.168.0.101:1313/posters/2025-center-ring-mall/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Their Eyes</title>
       <link>http://192.168.0.101:1313/posters/2025-their-eyes/</link>
