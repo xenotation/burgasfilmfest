@@ -63,6 +63,32 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
+  # Blog
+  # -------------------------
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{name}}"
+    fields:
+      - { label: "Title", name: "name", widget: "string", required: true }
+      - { label: "Author", name: "author", widget: "string", required: false }
+
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        allow_add: true
+        summary: "{{fields.item}}"
+        field:
+          { label: "Category", name: "item", widget: "string" }
+
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
   # Pages (About)
   # -------------------------
   - name: "pages"
@@ -88,7 +114,7 @@ collections:
     files:
       - label: "General Settings"
         name: "site"
-        file: "hugo.toml"   # change to "config/_default/hugo.toml" if that's your path
+        file: "hugo.toml"
         format: "toml"
         fields:
           - { label: "Base URL", name: "baseURL", widget: "string" }
@@ -128,7 +154,8 @@ collections:
                   - label: "Same As (profiles)"
                     name: "sameAs"
                     widget: "list"
-                    field: { label: "Profile URL", name: "item", widget: "string" }  # writes TOML array of strings
+                    field:
+                      { label: "Profile URL", name: "item", widget: "string" }
 
               - label: "Partners (ticker)"
                 name: "partners"

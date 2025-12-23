@@ -3,26 +3,21 @@
 <section class="film-archive">
   <div class="film-list">
 
-    {{ range .RegularPages.ByDate.Reverse }}
+    {{ range .Pages.ByDate.Reverse }}
     <article class="film-entry">
 
       <div class="film-text">
 
         <div class="film-title-list">
-
-          <!-- Title link, visually neutral -->
           <a href="{{ .RelPermalink }}"
              style="color:inherit; text-decoration:none;">
             {{ .Params.name | default .Title }}
           </a>
 
           <p class="film-details-hero">
-            {{ with .Params.author }}
-              {{ . }}
-            {{ end }}
+            {{ with .Params.author }}{{ . }}{{ end }}
 
-            <!-- Category AFTER author, also visually neutral -->
-            {{ with .Params.categories }}
+            {{ with .Params.category }}
               ·
               <a href="{{ "/categories/" | relURL }}{{ . | urlize }}/"
                  style="color:inherit; text-decoration:none;">
@@ -30,7 +25,6 @@
               </a>
             {{ end }}
           </p>
-
         </div>
 
         <div

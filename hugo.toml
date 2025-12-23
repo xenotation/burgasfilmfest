@@ -3,6 +3,10 @@ languageCode = "bg-bg"
 title = "Планктон"
 theme = "Burgas"
 
+
+[taxonomies]
+category = "categories"
+
 [markup]
 
 [markup.goldmark]

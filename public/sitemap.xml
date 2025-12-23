@@ -11,6 +11,12 @@
     <loc>http://192.168.100.9:1313/blog/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://192.168.100.9:1313/categories/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.9:1313/categories/theory/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.9:1313/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -27,10 +33,6 @@
   </url><url>
     <loc>http://192.168.100.9:1313/films/2025-drijf/</loc>
   </url><url>
-    <loc>http://192.168.100.9:1313/categories/</loc>
-  </url><url>
     <loc>http://192.168.100.9:1313/films/</loc>
-  </url><url>
-    <loc>http://192.168.100.9:1313/tags/</loc>
   </url>
 </urlset>
