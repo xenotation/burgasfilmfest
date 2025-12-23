@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<section class="film-archive">
+  <div class="film-list">
+
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="film-entry">
+
+      <div class="film-text">
+        <a href="{{ .RelPermalink }}">
+
+          <div class="film-title-list">
+            {{ .Params.name | default .Title }}
+
+            <p class="film-details-hero">
+              {{ with .Params.author }}{{ . }}{{ end }}
+              {{ with .Params.category }} · {{ . }}{{ end }}
+            </p>
+          </div>
+
+        </a>
+
+        <div
+          class="stream-label"
+          style="opacity:1; visibility:visible; display:block;"
+        >
+          {{ with .Params.date }}
+            {{ (time .).Format "2006-01-02" }}
+          {{ end }}
+        </div>
+
+      </div>
+
+    </article>
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}

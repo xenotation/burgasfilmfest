@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+  {{ $main := resources.Get "css/film-single.css" | minify | fingerprint }}
+  <link
+    rel="stylesheet"
+    href="{{ $main.RelPermalink }}"
+    integrity="{{ $main.Data.Integrity }}"
+    crossorigin="anonymous"
+  >
+
+  <article class="film-single">
+    <div class="film-inner">
+
+      <div class="film-meta-single">
+
+        <h1 class="film-title-single">
+          {{ .Params.name | default .Title }}
+        </h1>
+
+        <p class="film-details">
+          {{ with .Params.author }}{{ . }}{{ end }}
+          {{ with .Params.category }} · {{ . }}{{ end }}
+          {{ with .Params.date }} · {{ (time .).Format "2006-01-02" }}{{ end }}
+        </p>
+
+      </div>
+
+      {{ $hasBody := ne (trim (plainify .Content) " \n\r\t") "" }}
+      {{ if $hasBody }}
+        <div class="film-body">
+          {{ .Content }}
+        </div>
+      {{ end }}
+
+    </div>
+  </article>
+
+{{ end }}

@@ -2,31 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Планктон</title>
-    <link>http://192.168.0.103:1313/</link>
+    <link>http://192.168.100.9:1313/</link>
     <description>Recent content on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Fri, 29 Dec 2023 11:43:54 -0500</lastBuildDate>
-    <atom:link href="http://192.168.0.103:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.100.9:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Drijf</title>
-      <link>http://192.168.0.103:1313/posters/2025-drijf-poster/</link>
-      <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
-      <guid>http://192.168.0.103:1313/posters/2025-drijf-poster/</guid>
+      <title></title>
+      <link>http://192.168.100.9:1313/blog/2025-12-22-test/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://192.168.100.9:1313/blog/2025-12-22-test/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://192.168.0.103:1313/films/2025-catraias/</link>
+      <link>http://192.168.100.9:1313/blog/2025-12-23-test2/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://192.168.100.9:1313/blog/2025-12-23-test2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drijf</title>
+      <link>http://192.168.100.9:1313/posters/2025-drijf-poster/</link>
+      <pubDate>Fri, 29 Dec 2023 11:43:54 -0500</pubDate>
+      <guid>http://192.168.100.9:1313/posters/2025-drijf-poster/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://192.168.100.9:1313/films/2025-catraias/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:1313/films/2025-catraias/</guid>
+      <guid>http://192.168.100.9:1313/films/2025-catraias/</guid>
       <description>* For English scroll down.&#xA;Жени, труд, памет – поетичният свят на Таня Динис&#xA;Какво означава думата „Catraias” на португалски? Какво означава тя за теб?&#xA;Имах известни затруднения при превода й и в същото време, тъй като ми харесва значението на думата, реших да я запазя на португалски. Catraia е името, дадено на малка, традиционно построена лодка, използвана за крайбрежен риболов, особено в северните райони на Португалия. Но думата означава също момиче, младо момиче.</description>
     </item>
     <item>
       <title></title>
-      <link>http://192.168.0.103:1313/films/2025-drijf/</link>
+      <link>http://192.168.100.9:1313/films/2025-drijf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.0.103:1313/films/2025-drijf/</guid>
+      <guid>http://192.168.100.9:1313/films/2025-drijf/</guid>
       <description>*Този филм съдържа сцени на насилие, кръв и/или силно плашещи елементи, които могат да бъдат обезпокоителни за някои зрители. Не се препоръчва за лица под 16 години.&#xA;Разговор с Леви Ступс за Drijf Дони Георгиев: Здравей, Леви, благодаря ти, че прие поканата ни за интервю. Тъй като Плаване (Drijf) е част от програмата ни „Летен залез“, която ще покажем тук, със „залязването“ на това лято през септември, исках да те попитам как беше твоето лято тази година?</description>
     </item>
   </channel>
