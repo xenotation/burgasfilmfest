@@ -7,6 +7,7 @@
     <div class="nav-links">
       <a href="/films" class="{{ if (hasPrefix .RelPermalink "/films/") }}active{{ end }}">ФИЛМОТЕКА</a>
       <a href="/posters" class="{{ if (hasPrefix .RelPermalink "/posters/") }}active{{ end }}">ПЛАКАТИ</a>
+      <a href="/about" class="{{ if (hasPrefix .RelPermalink "/blog/") }}active{{ end }}">БЛОГ</a>
       <a href="/about" class="{{ if (hasPrefix .RelPermalink "/about/") }}active{{ end }}">ЗА НАС</a>
     </div>
   </nav>
