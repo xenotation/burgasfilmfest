@@ -20,7 +20,7 @@ animator: Едмундс Янсонс, Мартинш Думинш
 thumbnail: /img/poster-freeride-in-c.jpg
 feature_image: /img/freeride-in-c-still-02.jpeg
 show_watch_button: true
-video_id: ""
-HLS: d872eef2aba72a969ee02d22c3a523f3
+video_id: d872eef2aba72a969ee02d22c3a523f3
+HLS: ""
 hero_video_id: 8f1c4afd586e3c0a046c5681bc4ab6de
 ---
