@@ -1,19 +1,18 @@
 ---
-date: 2026-01-09T19:36:00+02:00
+date: 2026-01-09 19:36:00+02:00
 draft: false
 file_name: dahomey
 film_title: Дахомей
 film_title_org: Dahomey
 country: Франция, Сенегал, Бенин
-year: "2024"
-minutes: "68"
-description: Ноември 2021 г. 26 кралски съкровища на Кралство Дахомей са на път
-  да напуснат Париж и да се върнат в родната си страна – днешната Република
-  Бенин. Заедно с хиляди други, тези артефакти са ограбени от френските
-  колониални войски през 1892 г. Какво трябва да е отношението към завръщането
-  на това ценно материално наследство в страна, която е трябвало да се развива в
-  негово отсъствие? Дебатът се разгаря сред студентите в университета на
-  Абомей-Калави.
+year: '2024'
+minutes: '68'
+description: Ноември 2021 г. 26 кралски съкровища на Кралство Дахомей са на път да
+  напуснат Париж и да се върнат в родната си страна – днешната Република Бенин. Заедно
+  с хиляди други, тези артефакти са ограбени от френските колониални войски през 1892
+  г. Какво трябва да е отношението към завръщането на това ценно материално наследство
+  в страна, която е трябвало да се развива в негово отсъствие? Дебатът се разгаря
+  сред студентите в университета на Абомей-Калави.
 stream_duration: 09.01.2026 - 16.01.2026
 Director: Мати Диоп
 Production: Ив Робин, Жюдит Лу Леви, Мати Диоп
@@ -27,6 +26,7 @@ feature_image: /img/dahomey-3.jpg
 show_watch_button: true
 video_id: 51b2ea31db9558dc72c1c787ee7b3784
 hero_video_id: 4f51e102fe265b403e2199ef33b0bece
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI1MWIyZWEzMWRiOTU1OGRjNzJjMWM3ODdlZTdiMzc4NCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2ODA2OTE4MCIsIm5iZiI6IjE3Njc5NzkxODAiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.cxAZdCHMsMGvgEfRHZIJDUZQC9AVZnbssLpm-HkyXUKLl6vlvRVqBd7bt2AAFV6IPzpdc5aDIFrnEivpavtpc40PdISrlBx6Hjtfn7sX_hHyCuJrrtMXl4wj3rLWWEVGdMySWTyjKJgGfY7ftWdaPL3UkYEbe3BP5RJPOnhwlPx3ASElNU9eowg_mPDH_L3KinX4a40_AbqIm-q8x0tt-tzJbQ8p3UHg5OjU_msE0oO-a-pfRojv8KGxpVg1ysTx7T_eVbB2mKCmbgthnnv4APqqfb3Ge-RMw7hYXPhplpQv7MEpw4Azu2ATce2U3s-LIBBB4VLXXthjvnTkKiZTfQ
 ---
 През 1892 г. стотици предмети на изкуството от западноафриканското кралство Дахомей са плячкосани от френски колониални войски и отнесени в „родината“. През 2021 г. 26 от тези изчезнали кралски артефакти са върнати на Република Бенин, в рамките на която се е намирал Дахомей. Това е ключов момент в смутната постколониална история.
 
