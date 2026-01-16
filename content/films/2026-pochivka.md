@@ -1,19 +1,18 @@
 ---
 date: 2026-01-16 16:37:00+02:00
-draft: true
+draft: false
 file_name: pochivka
 film_title: Почивка💆
-film_title_org: '-'
-country: '-'
-year: '-'
-minutes: '-'
+film_title_org: "-"
+country: "-"
+year: "-"
+minutes: "-"
 description: В кратка почивка до 23.01.2025 :)
 stream_duration: 16.10.2026 - 23.10.2026
 thumbnail: /img/plankton_rozov_pochivka.png
 feature_image: /img/pochivka_feature_comp.png
 show_watch_button: false
 video_id: fe2e754dd69771077e5513f4bd96614c
-hero_video_id: d4f4af09c6df0a3d4a28e8d651f67c80
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmZTJlNzU0ZGQ2OTc3MTA3N2U1NTEzZjRiZDk2NjE0YyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2ODY2MTY4MyIsIm5iZiI6IjE3Njg1NzE2ODQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.AxyPn7Vyz6c5ImNUQQiE8KGWQEj80CO4Mvk8k8CrtvcVwc74gl7t098MrejcpvHvtUrHFitGjqiBd2NaWzZOer7hTVT31uOVZ9zXx_tfdQNzE0J4ei0Kr99LSbDGXZUkT2yquDh2Zg07iA3R5vKEzTZlKHePOzvNn_S5C7f2ST8G7JDipg55a30o3QpTEjuF3saZu1J6sD7iG3mcWsYMjwgGnemg0Xurjn6rvw_J683BTSBk-olwlswNVqzzeL1F8T92-g77FoAO4TzfhjHpUeBvWY-NWGDstUeuF6d-fpGXP505gL-UJrtqGcm_nE62gvQ7GTVKfw0l2y9FJ7peOQ
+hero_video_id: d4f4af09c6df0a3d4a28e8d651f67c80
 ---
-
