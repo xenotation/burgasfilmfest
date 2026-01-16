@@ -1,6 +1,6 @@
 ---
 date: 2026-01-16T16:37:00+02:00
-draft: true
+draft: false
 file_name: pochivka
 film_title: Почивка💆
 film_title_org: "-"
