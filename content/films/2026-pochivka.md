@@ -12,5 +12,6 @@ stream_duration: 16.10.2026 - 23.10.2026
 thumbnail: /img/plankton_rozov_pochivka.png
 feature_image: /img/pochivka_feature_comp.png
 show_watch_button: false
+video_id: fe2e754dd69771077e5513f4bd96614c
 hero_video_id: d4f4af09c6df0a3d4a28e8d651f67c80
 ---
