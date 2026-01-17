@@ -39,7 +39,7 @@
 
 {{/* ---------- Dates ---------- */}}
 {{- $published := $p.Date | time -}}
-{{- $modified  := $p.Date | time -}}
+{{- $modified  := $p.Lastmod | default $p.Date | time -}}
 
 {{/* ---------- Canonical ---------- */}}
 <link rel="canonical" href="{{ $p.Permalink }}"/>
@@ -67,40 +67,57 @@
 {{- with $firstImg }}<meta name="twitter:image" content="{{ . }}">{{ end }}
 {{- with $twitterSite }}<meta name="twitter:site" content="{{ . }}">{{ end }}
 
-{{/* ---------- JSON-LD: Movie (only allowed fields) ---------- */}}
-{{- $movieName := or $p.Params.film_title $p.Title -}}
-{{- $movie := dict "@context" "https://schema.org" "@type" "Movie" "name" $movieName -}}
-{{- with $firstImg            }}{{ $movie = merge $movie (dict "image" .) }}{{ end -}}
-{{- with $desc                }}{{ $movie = merge $movie (dict "description" .) }}{{ end -}}
-{{- with $published           }}{{ $movie = merge $movie (dict "datePublished" ($published.Format "2006-01-02T15:04:05Z07:00")) }}{{ end -}}
-{{- with $p.Params.minutes    }}{{ $movie = merge $movie (dict "duration" (printf "PT%vM" .)) }}{{ end -}}
-{{- with $p.Params.country    }}{{ $movie = merge $movie (dict "countryOfOrigin" (slice (dict "@type" "Country" "name" .))) }}{{ end -}}
-
-{{/* Directors (comma-separated string to Person[]) */}}
-{{- $directors := slice -}}
-{{- with $p.Params.Director -}}
-  {{- range (split . ",") -}}
-    {{- $directors = $directors | append (dict "@type" "Person" "name" (trim . " ")) -}}
-  {{- end -}}
+{{/* ---------- JSON-LD: WebSite (Home only) ---------- */}}
+{{- if $p.IsHome -}}
+  <script type="application/ld+json">
+  {{ dict
+      "@context" "https://schema.org"
+      "@type" "WebSite"
+      "name" $siteName
+      "url" $site.BaseURL
+    | jsonify | safeJS }}
+  </script>
 {{- end -}}
-{{- if gt (len $directors) 0 }}{{ $movie = merge $movie (dict "director" $directors) }}{{ end -}}
 
-{{/* Actors: prefer LeadActors then Actors (comma-separated) */}}
-{{- $actorsArr := slice -}}
-{{- $actorsStr := or $p.Params.LeadActors $p.Params.Actors -}}
-{{- with $actorsStr -}}
-  {{- range (split . ",") -}}
-    {{- $actorsArr = $actorsArr | append (dict "@type" "Person" "name" (trim . " ")) -}}
+{{/* ---------- JSON-LD: Movie (ONLY on single film pages) ---------- */}}
+{{- if and (eq $p.Section "films") $p.IsPage -}}
+  {{- $movieName := or $p.Params.film_title $p.Title -}}
+  {{- $movie := dict "@context" "https://schema.org" "@type" "Movie" "name" $movieName -}}
+  {{- with $firstImg          }}{{ $movie = merge $movie (dict "image" .) }}{{ end -}}
+  {{- with $desc              }}{{ $movie = merge $movie (dict "description" .) }}{{ end -}}
+  {{- with $published         }}{{ $movie = merge $movie (dict "datePublished" ($published.Format "2006-01-02T15:04:05Z07:00")) }}{{ end -}}
+  {{- with $p.Params.minutes  }}{{ $movie = merge $movie (dict "duration" (printf "PT%vM" .)) }}{{ end -}}
+  {{- with $p.Params.country  }}{{ $movie = merge $movie (dict "countryOfOrigin" (slice (dict "@type" "Country" "name" .))) }}{{ end -}}
+
+  {{/* Directors (comma-separated string to Person[]) -- support both director/Director */}}
+  {{- $directors := slice -}}
+  {{- $dirStr := or $p.Params.director $p.Params.Director -}}
+  {{- with $dirStr -}}
+    {{- range (split . ",") -}}
+      {{- $directors = $directors | append (dict "@type" "Person" "name" (trim . " ")) -}}
+    {{- end -}}
   {{- end -}}
+  {{- if gt (len $directors) 0 }}{{ $movie = merge $movie (dict "director" $directors) }}{{ end -}}
+
+  {{/* Actors: prefer lead_actors/LeadActors then actors/Actors (comma-separated) */}}
+  {{- $actorsArr := slice -}}
+  {{- $actorsStr := or $p.Params.lead_actors $p.Params.LeadActors $p.Params.actors $p.Params.Actors -}}
+  {{- with $actorsStr -}}
+    {{- range (split . ",") -}}
+      {{- $actorsArr = $actorsArr | append (dict "@type" "Person" "name" (trim . " ")) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt (len $actorsArr) 0 }}{{ $movie = merge $movie (dict "actor" $actorsArr) }}{{ end -}}
+
+  <script type="application/ld+json">
+  {{ $movie | jsonify | safeJS }}
+  </script>
 {{- end -}}
-{{- if gt (len $actorsArr) 0 }}{{ $movie = merge $movie (dict "actor" $actorsArr) }}{{ end -}}
 
-<script type="application/ld+json">{{ $movie | jsonify }}</script>
-
-{{/* ---------- JSON-LD: ItemList for film archive ---------- */}}
-{{- if and (eq .Section "films") .IsSection -}}
+{{/* ---------- JSON-LD: ItemList for film archive (films section list page) ---------- */}}
+{{- if and (eq $p.Section "films") $p.IsSection -}}
   {{- $items := slice -}}
-  {{- range .Pages.ByDate.Reverse -}}
+  {{- range $p.Pages.ByDate.Reverse -}}
     {{- $items = $items | append (dict
       "@type" "ListItem"
       "position" (add 1 (len $items))
@@ -109,28 +126,30 @@
     ) -}}
   {{- end -}}
   <script type="application/ld+json">
-    {{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" $items | jsonify }}
+  {{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" $items | jsonify | safeJS }}
   </script>
 {{- end -}}
 
-{{/* ---------- JSON-LD: CollectionPage for posters ---------- */}}
-{{- if and (eq .Section "posters") .IsSection -}}
+{{/* ---------- JSON-LD: CollectionPage for posters (posters section list page) ---------- */}}
+{{- if and (eq $p.Section "posters") $p.IsSection -}}
   {{- $parts := slice -}}
-  {{- range .Pages.ByDate.Reverse -}}
-    {{- $img := or .Params.thumbnail (index .Params.images 0) -}}
-    {{- $parts = $parts | append (dict
-        "@type" "ImageObject"
-        "name"  .Params.title
-        "contentUrl" (absURL $img)
-        "url" (absURL .Permalink)
-      ) -}}
+  {{- range $p.Pages.ByDate.Reverse -}}
+    {{- $img := or .Params.thumbnail (index (.Params.images | default (slice "")) 0) -}}
+    {{- if $img -}}
+      {{- $parts = $parts | append (dict
+          "@type" "ImageObject"
+          "name"  (or .Params.title .Title)
+          "contentUrl" (absURL $img)
+          "url" (absURL .Permalink)
+        ) -}}
+    {{- end -}}
   {{- end -}}
   <script type="application/ld+json">
-    {{ dict
+  {{ dict
       "@context" "https://schema.org"
       "@type" "CollectionPage"
-      "name" (or .Title "Плакати")
+      "name" (or $p.Title "Плакати")
       "hasPart" $parts
-    | jsonify }}
+    | jsonify | safeJS }}
   </script>
 {{- end -}}
