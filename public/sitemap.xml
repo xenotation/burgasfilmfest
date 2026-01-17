@@ -2,19 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.1.28:1313/films/2026-pochivka/</loc>
+    <lastmod>2026-01-16T16:37:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/films/</loc>
+    <lastmod>2026-01-16T16:37:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/</loc>
+    <lastmod>2026-01-16T16:37:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/films/2026-dahomey/</loc>
+    <lastmod>2026-01-09T19:36:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/posters/2026-dahomey/</loc>
+    <lastmod>2026-01-09T19:36:00+02:00</lastmod>
+  </url><url>
     <loc>http://192.168.1.28:1313/posters/</loc>
-    <lastmod>2025-12-19T18:37:00+02:00</lastmod>
+    <lastmod>2026-01-09T19:36:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/posters/2026-x2000/</loc>
+    <lastmod>2026-01-02T21:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/films/2026-x2000/</loc>
+    <lastmod>2026-01-02T20:06:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/posters/2025-freeride-in-c/</loc>
+    <lastmod>2025-12-26T18:19:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.28:1313/films/2025-freeride-in-c/</loc>
+    <lastmod>2025-12-26T17:52:00+02:00</lastmod>
   </url><url>
     <loc>http://192.168.1.28:1313/posters/2025-zima/</loc>
     <lastmod>2025-12-19T18:37:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.28:1313/</loc>
-    <lastmod>2025-12-19T18:37:00+02:00</lastmod>
-  </url><url>
     <loc>http://192.168.1.28:1313/films/2025-zima/</loc>
-    <lastmod>2025-12-19T18:34:00+02:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.28:1313/films/</loc>
     <lastmod>2025-12-19T18:34:00+02:00</lastmod>
   </url><url>
     <loc>http://192.168.1.28:1313/posters/2025-chaque-mur-est-une-porte/</loc>
@@ -110,8 +131,14 @@
     <loc>http://192.168.1.28:1313/about/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
+    <loc>http://192.168.1.28:1313/blog/</loc>
+  </url><url>
     <loc>http://192.168.1.28:1313/categories/</loc>
   </url><url>
+    <loc>http://192.168.1.28:1313/categories/fiction/</loc>
+  </url><url>
     <loc>http://192.168.1.28:1313/tags/</loc>
+  </url><url>
+    <loc>http://192.168.1.28:1313/categories/theory/</loc>
   </url>
 </urlset>

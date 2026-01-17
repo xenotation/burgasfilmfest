@@ -1,17 +1,30 @@
 backend:
   name: git-gateway
+  local_backend: true
   branch: main
-  # publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
 
 media_folder: "static/img"
 public_folder: "/img"
 
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "-"
-
 collections:
+  # -------------------------
+  # Posters
+  # -------------------------
+  - name: "posters"
+    label: "Posters"
+    folder: "content/posters"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
   # -------------------------
   # Films
   # -------------------------
@@ -21,44 +34,16 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-
-    # Use the custom filename field as the identifier (and therefore for {{slug}})
-    identifier_field: "file_name"
     slug: "{{year}}-{{slug}}"
     summary: "{{film_title}} ({{year}})"
-
     fields:
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DDTHH:mm:ssZ"
-        picker_utc: false
-        default: "{{now}}"
-
-      # Draft toggle
-      - { label: "Draft", name: "draft", widget: "boolean", default: true, hint: "Uncheck to publish." }
-
-      # Explicit filename control (what becomes the slug base)
-      - label: "File name (slug base)"
-        name: "file_name"
-        widget: "string"
-        required: true
-        hint: "Lowercase letters, numbers, hyphens/underscores. No spaces. Example: exploding-girl"
-        pattern:
-          - "^[a-z0-9]+([_-][a-z0-9]+)*$"
-          - "Use lowercase letters, numbers, and - or _. No spaces."
-
-      # Visible fields for the page
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", default: "{{now}}", picker_utc: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
       - { label: "Country", name: "country", widget: "string", required: true }
       - { label: "Year", name: "year", widget: "string", required: true }
       - { label: "Minutes", name: "minutes", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", required: false }
-
-      # NEW OPTIONAL FIELD — shown under description on the film page
-      - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false, hint: "Shown under the description on the film page." }
-
       - { label: "Text author", name: "text_author", widget: "string", required: false }
       - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: true }
       - { label: "Director", name: "Director", widget: "string", required: false }
@@ -70,50 +55,39 @@ collections:
       - { label: "Music", name: "Music", widget: "string", required: false }
       - { label: "Voiceover", name: "Voiceover", widget: "string", required: false }
       - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", required: false }
-      - { label: "Animator(s) (comma-separated)", name: "animator", widget: "string", required: false }
-
       - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false, required: true }
       - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false, required: true }
-
       - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
       - { label: "Cloudflare video ID", name: "video_id", widget: "string", required: false }
-      - { label: "Cloudflare HLS link", name: "HLS", widget: "string", required: false }
+      - { label: "Cloudflare HSL link", name: "HLS", widget: "string", required: false }
       - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
-
-      - label: "Hero Video ID (front page)"
-        name: "hero_video_id"
-        widget: "string"
-        required: false
-        hint: "Cloudflare Stream video ID used for the homepage hero."
-        pattern:
-          - "^[a-f0-9]{32}$"
-          - "Must be a 32-character lowercase hex Cloudflare Stream ID (e.g. 7a587a49c9cf21aae8842ed12565765a)."
-
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
-  # Posters
+  # Blog
   # -------------------------
-  - name: "posters"
-    label: "Posters"
-    folder: "content/posters"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
-    identifier_field: "title"
-    slug: "{{year}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{name}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "name", widget: "string", required: true }
       - { label: "Author", name: "author", widget: "string", required: false }
-      - { label: "Year", name: "year", widget: "string", required: false }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DDTHH:mm:ssZ"
-        picker_utc: false
-        default: "{{now}}"
-        required: false
+
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        allow_add: true
+        summary: "{{fields.item}}"
+        field:
+          { label: "Category", name: "item", widget: "string" }
+
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
   # Pages (About)
@@ -181,7 +155,8 @@ collections:
                   - label: "Same As (profiles)"
                     name: "sameAs"
                     widget: "list"
-                    field: { label: "Profile URL", name: "item", widget: "string" }
+                    field:
+                      { label: "Profile URL", name: "item", widget: "string" }
 
               - label: "Partners (ticker)"
                 name: "partners"
