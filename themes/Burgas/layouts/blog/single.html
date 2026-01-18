@@ -17,12 +17,13 @@
 
           <h1
             class="film-title-single"
-            style="text-align:left; justify-self:start; align-self:flex-start; margin-left:0; margin-right:auto; margin-top: 0; line-height: 1.2;"
+            style="text-align:left; justify-self:start; align-self:flex-start; margin-left:0; margin-bottom:1rem; margin-right:auto; margin-top:0; line-height:1.2;"
           >
             {{ .Params.name | default .Title }}
           </h1>
 
-          <p class="film-details">
+          <p class="film-details"
+             style="font-size:1.05em; line-height:1.4; margin-bottom:1.2rem;">
             {{ with .Params.author }}{{ . }}{{ end }}
             {{ with .Params.category }} · {{ . }}{{ end }}
             {{ with .Params.date }} · {{ (time .).Format "2006-01-02" }}{{ end }}

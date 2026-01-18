@@ -1,7 +1,29 @@
 {{ define "main" }}
 
-<section class="film-archive">
-  <div class="film-list">
+<style>
+  @media (max-width: 1000px) {
+    .film-archive.--mobile-only {
+      margin: 10rem auto 0rem auto !important;
+    }
+    .film-list.--mobile-only {
+      gap: 3.2rem !important;
+    }
+  }
+</style>
+
+<section class="film-archive --mobile-only"
+  style="
+    min-height: calc(100vh - var(--footer-h));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  "
+>
+  <div class="film-list --mobile-only"
+    style="
+      flex: 1;
+    "
+  >
 
     {{ range .RegularPages.ByDate.Reverse }}
     <article class="film-entry">
@@ -16,18 +38,25 @@
             {{ .Params.name | default .Title }}
           </a>
 
-          <p class="film-details-hero">
+          <p class="film-details-hero" style="margin:0.2em 0 0 0;">
+
             {{ with .Params.author }}
-              {{ . }}
+              <span style="display:block;">
+                {{ . }}
+              </span>
             {{ end }}
 
-            <!-- Category AFTER author, also visually neutral -->
             {{ with .Params.categories }}
-            {{ range . }}
-              <a href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+              <span style="display:block; font-size:0.85em; opacity:0.8; margin-top:0.1em;">
+                {{ range . }}
+                  <a href="{{ "/categories/" | relURL }}{{ . | urlize }}/"
+                     style="color:inherit; text-decoration:none;">
+                    {{ . }}
+                  </a>
+                {{ end }}
+              </span>
             {{ end }}
-          {{ end }}
-          
+
           </p>
 
         </div>
