@@ -5,15 +5,14 @@ hero_video_id: 4f51e102fe265b403e2199ef33b0bece
 date: 2026-01-09 19:36:00+02:00
 film_title: Дахомей
 country: Франция, Сенегал, Бенин
-year: "2024"
-minutes: "68"
-description: Ноември 2021 г. 26 кралски съкровища на Кралство Дахомей са на път
-  да напуснат Париж и да се върнат в родната си страна – днешната Република
-  Бенин. Заедно с хиляди други, тези артефакти са ограбени от френските
-  колониални войски през 1892 г. Какво трябва да е отношението към завръщането
-  на това ценно материално наследство в страна, която е трябвало да се развива в
-  негово отсъствие? Дебатът се разгаря сред студентите в университета на
-  Абомей-Калави.
+year: '2024'
+minutes: '68'
+description: Ноември 2021 г. 26 кралски съкровища на Кралство Дахомей са на път да
+  напуснат Париж и да се върнат в родната си страна – днешната Република Бенин. Заедно
+  с хиляди други, тези артефакти са ограбени от френските колониални войски през 1892
+  г. Какво трябва да е отношението към завръщането на това ценно материално наследство
+  в страна, която е трябвало да се развива в негово отсъствие? Дебатът се разгаря
+  сред студентите в университета на Абомей-Калави.
 text_author: текст от Савина Петкова
 stream_duration: 09.01.2026 - 16.01.2026
 Director: Мати Диоп
@@ -28,7 +27,7 @@ feature_image: /img/dahomey-3.jpg
 show_watch_button: false
 file_name: dahomey
 video_id: 51b2ea31db9558dc72c1c787ee7b3784
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI1MWIyZWEzMWRiOTU1OGRjNzJjMWM3ODdlZTdiMzc4NCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2ODgyMjE5MSIsIm5iZiI6IjE3Njg3MzIxOTEiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.tm--VmFSac25i3wHlt9sJIkRRoqU9Y_qPP_pUJAt5W_8vmkPLLZCXp8m9LzqoOnPgbb7ngPdXMJxjbBp-m5ZXPZKS2xRXP-3SAnKfZTRbxE9S_hTv2SB8qOsCfwNl6VB2M6I13qioxc2oOlyYdpp0hnATbKmETWIeQCsFqjajMiJ0ngrv_VbYvpXZS8qK0bpW3yCesVmSoOnpZkXBA_ddO42_oCsNNcYVw7K_U0U9_gOh2_je0DUchbLvxN7peLvo0stW_5vxWSrVxM9HwwColuGPNUQZEXYJtrEHB4F6zhs4fi3clUdX6Oiw8jGliMYhMBF-t-TJPx5l7oT28bbVQ
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI1MWIyZWEzMWRiOTU1OGRjNzJjMWM3ODdlZTdiMzc4NCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2ODgyMjM5MCIsIm5iZiI6IjE3Njg3MzIzOTAiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.sN6RuUikmdGw4s9FgIrsS-fbuLBzQwRMxmeV9Y_OlNAfWwV3wkSmDlbbP-AX3GWPToXE5XjTCljFVOqY1312K8ksJZct-2WjI4FgDVTbXB0sTEMpIosbYIutJ4dR_j8BtEPP-HP4eWQLJAb6sGD8b9sAa9znb3YWhefLaMQvbzjBRN8gFyyrU7_iwV2KHgjiJjLQjveu6hh3CT0SRKc8nbCRCZ-NctveVtajIMZX1z1AvpgYprroPpDLdI0gQa5P6tFF5Gx0dOlELNVM0yk5nOH-aNRZu35gZH_BtM8I3N9naD2DUy0OwA8KaIL5hpPQNNtVW1FGU1ZT07AGMQDPDA
 ---
 ## **Дахомей и миналото: преносно и буквално**
 
