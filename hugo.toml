@@ -7,10 +7,11 @@ theme = "Burgas"
 
 [markup.goldmark]
 
- [markup.goldmark.extensions]
-      footnote = true
-    [markup.renderer]
-      unsafe = true
+[markup.goldmark.extensions]
+footnote = true
+
+[markup.renderer]
+unsafe = true
 
 [outputs]
 home = ["HTML", "RSS"]
@@ -60,3 +61,7 @@ alt = "Burgas Film Fest"
 url = ""
 img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
 alt = "European Union Funding (Alt)"
+
+[[params.partners]]
+img = "/img/лого-нпву.png"
+alt = "нпву"
