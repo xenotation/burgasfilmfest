@@ -66,7 +66,7 @@ collections:
   # -------------------------
   # Blog
   # -------------------------
-    - name: "blog"
+  - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
@@ -88,7 +88,6 @@ collections:
 
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "{{now}}", picker_utc: true, required: true }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
 
   # -------------------------
   # Pages (About)
