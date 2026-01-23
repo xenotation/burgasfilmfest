@@ -1,6 +1,6 @@
 ---
 unlisted: false
-date: 2026-01-23 18:51:00Z+02:00
+date: 2026-01-23 20:06:00+02:00
 film_title: Сияния
 film_title_org: ''
 country: България, Швейцария
