@@ -25,7 +25,7 @@
     "
   >
 
-    {{ range .RegularPages.ByDate.Reverse }}
+  {{ range where .RegularPages.ByDate.Reverse ".Params.unlisted" "ne" true }}
     <article class="film-entry">
 
       <div class="film-text">

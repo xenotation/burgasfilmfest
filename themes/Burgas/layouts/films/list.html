@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="film-archive">
   <div class="film-list">
-    {{ range $index, $element := .Pages.ByDate.Reverse }}
+    {{ range $index, $element := where .Pages.ByDate.Reverse ".Params.unlisted" "ne" true }}
     <article class="film-entry">
       <div class="film-image">
         <a href="{{ $element.RelPermalink }}">

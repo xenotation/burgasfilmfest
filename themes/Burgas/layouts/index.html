@@ -2,8 +2,8 @@
 
 <div class="landing">
   
-  {{ range first 1 (where .Site.RegularPages "Section" "films") }}
-    <a href="{{ .RelPermalink }}" class="hero-wrapper">
+  {{ range first 1 (where (where .Site.RegularPages "Section" "films") ".Params.unlisted" "ne" true) }}
+      <a href="{{ .RelPermalink }}" class="hero-wrapper">
       <!-- bg‑image removed → plain section -->
       <section class="landing-hero hero-dark">
 
