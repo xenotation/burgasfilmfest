@@ -38,6 +38,7 @@ collections:
     summary: "{{film_title}} ({{year}})"
     fields:
       - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
+      - { label: "URL slug (for the link)", name: "url_slug", widget: "string", required: true, hint: "Lowercase, hyphens only. Example: satantango-1994" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
