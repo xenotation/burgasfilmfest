@@ -62,6 +62,7 @@ collections:
       - { label: "Cloudflare video ID", name: "video_id", widget: "string", required: false }
       - { label: "Cloudflare HSL link", name: "HLS", widget: "string", required: false }
       - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
+      - { label: "Hero video ID (landing)", name: "hero_video_id", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
