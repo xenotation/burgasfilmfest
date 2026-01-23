@@ -143,6 +143,8 @@
     <loc>http://192.168.1.42:1313/about/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
+    <loc>http://192.168.1.42:1313/films/2026-map-film_title_org-show_watch_button-true-music-%D0%BC%D0%B8%D1%87%D0%B5%D0%BB-%D0%BC%D0%B8%D1%87%D0%B5%D0%B2-thumbnail-img-1-jpg-director-%D0%BB%D0%B0%D0%B7%D0%B0%D1%80-%D0%B8%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2-date-2026-01-23-16-42-00z-02-00-sound-feature_image-img-1-jpg-stream_duration/</loc>
+  </url><url>
     <loc>http://192.168.1.42:1313/tags/</loc>
   </url>
 </urlset>
