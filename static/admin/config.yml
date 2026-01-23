@@ -34,11 +34,11 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}-{{film_title | slugify}}"
     summary: "{{film_title}} ({{year}})"
     fields:
       - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
-      - { label: "URL slug (for the link)", name: "url_slug", widget: "string", required: true, hint: "Lowercase, hyphens only. Example: satantango-1994" }
+      - { label: "File name (URL)", name: "file_name", widget: "string", required: true, hint: "Lowercase, hyphens only. Used for the URL. Changing this requires renaming the file manually." }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
@@ -46,6 +46,7 @@ collections:
       - { label: "Year", name: "year", widget: "string", required: true }
       - { label: "Minutes", name: "minutes", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false, hint: "Optional content warning / viewer notice (Markdown allowed if you use *...*)" }
       - { label: "Text author", name: "text_author", widget: "string", required: false }
       - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: true }
       - { label: "Director", name: "Director", widget: "string", required: false }
