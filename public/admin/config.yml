@@ -3,8 +3,6 @@ backend:
   local_backend: true
   branch: main
 
-publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
-
 media_folder: "static/img"
 public_folder: "/img"
 
@@ -39,6 +37,7 @@ collections:
     slug: "{{year}}-{{slug}}"
     summary: "{{film_title}} ({{year}})"
     fields:
+      - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", default: "{{now}}", picker_utc: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
@@ -77,6 +76,7 @@ collections:
     slug: "{{date | date('YYYY-MM-DD')}}-{{slug}}"
     summary: "{{name}}"
     fields:
+      - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
       - { label: "Title", name: "name", widget: "string", required: true }
       - { label: "Author", name: "author", widget: "string", required: false }
 
