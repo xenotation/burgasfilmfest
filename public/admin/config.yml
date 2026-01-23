@@ -2,7 +2,8 @@ backend:
   name: git-gateway
   local_backend: true
   branch: main
-  publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
+
+publish_mode: editorial_workflow   # ← optional: enables Draft/Review/Publish in Decap
 
 media_folder: "static/img"
 public_folder: "/img"
