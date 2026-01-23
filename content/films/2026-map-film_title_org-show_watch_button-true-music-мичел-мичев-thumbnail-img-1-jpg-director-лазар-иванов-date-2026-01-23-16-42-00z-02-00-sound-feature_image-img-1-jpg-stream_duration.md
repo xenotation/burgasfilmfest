@@ -15,7 +15,7 @@ Cinematography: Лиляна Русева
 Sound: ""
 Music: Мичел Мичев
 LeadActors: Сияна Шишкова, Георги Търкаланов, Братан Братанов, Йов Иванов
-thumbnail: /img/1.jpg
-feature_image: /img/1.jpg
+thumbnail: /img/431003879_423619806872819_3958695800139336188_n.png
+feature_image: /img/siyaniya_still_1.1.3.jpg
 show_watch_button: true
 ---
