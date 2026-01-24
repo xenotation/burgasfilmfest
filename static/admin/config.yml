@@ -82,7 +82,7 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-    slug: "{{date | date('YYYY-MM-DD')}}-{{slug}}"
+    slug: "{{date | date('YYYY')}}-{{slug}}"
     summary: "{{name}}"
     fields:
       - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }

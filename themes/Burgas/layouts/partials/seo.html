@@ -24,6 +24,11 @@
   {{- $title = printf "%s%s | %s" . $yearPart $site.Title -}}
 {{- end -}}
 
+{{- if and (eq $p.Section "blog") $p.IsPage -}}
+  {{- $title = or $p.Params.name $p.Title $p.File.BaseFileName -}}
+{{- end -}}
+
+
 {{/* ---------- Description ---------- */}}
 {{- $desc := or $p.Params.description $p.Summary $site.Params.description -}}
 {{- $desc = $desc | plainify | truncate 160 -}}
