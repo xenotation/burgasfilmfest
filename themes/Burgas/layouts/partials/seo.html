@@ -17,16 +17,36 @@
 {{- $twitterSite = or $pageSEO.twitterSite $twitterSite -}}
 
 {{/* ---------- Title ---------- */}}
-{{- $title := cond $p.IsHome $site.Title (printf "%s | %s" (or $p.Title $p.File.BaseFileName) $site.Title) -}}
+{{/* ---------- Title ---------- */}}
+
+{{- $title := "" -}}
+
+{{- if $p.IsHome -}}
+  {{- $title = $site.Title -}}
+
+{{- else -}}
+  {{- $title = printf "%s | %s" (or $p.Title $p.File.BaseFileName) $site.Title -}}
+{{- end -}}
+
+{{/* ---------- Film pages override ---------- */}}
 {{- with $p.Params.film_title -}}
   {{- $yearPart := "" -}}
-  {{- with $p.Params.year }}{{ $yearPart = printf " (%v)" . }}{{ end -}}
+  {{- with $p.Params.year -}}
+    {{- $yearPart = printf " (%v)" . -}}
+  {{- end -}}
   {{- $title = printf "%s%s | %s" . $yearPart $site.Title -}}
 {{- end -}}
 
+{{/* ---------- Blog pages override ---------- */}}
 {{- if and (eq $p.Section "blog") $p.IsPage -}}
-  {{- $title = or $p.Params.name $p.Title $p.File.BaseFileName -}}
+  {{- $postTitle := or $p.Params.name $p.Title $p.File.BaseFileName -}}
+  {{- with $p.Params.author -}}
+    {{- $title = printf "%s – %s | %s" $postTitle . $site.Title -}}
+  {{- else -}}
+    {{- $title = printf "%s | %s" $postTitle $site.Title -}}
+  {{- end -}}
 {{- end -}}
+
 
 
 {{/* ---------- Description ---------- */}}
