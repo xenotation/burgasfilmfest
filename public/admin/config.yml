@@ -14,9 +14,9 @@ collections:
     label: "Posters"
     folder: "content/posters"
     create: true
-    slug: "{{year}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
+    slug: "{{year}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string", required: false }
@@ -34,11 +34,11 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-    slug: "{{year}}-{{film_title | slugify}}"
+    slug: "{{slug_name}}"
     summary: "{{film_title}} ({{year}})"
     fields:
       - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
-      - { label: "File name (URL)", name: "file_name", widget: "string", required: true, hint: "Lowercase, hyphens only. Used for the URL. Changing this requires renaming the file manually." }
+      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
@@ -46,9 +46,9 @@ collections:
       - { label: "Year", name: "year", widget: "string", required: true }
       - { label: "Minutes", name: "minutes", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false, hint: "Optional content warning / viewer notice (Markdown allowed if you use *...*)" }
+      - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false }
       - { label: "Text author", name: "text_author", widget: "string", required: false }
-      - { label: "Stream duration (label)", name: "stream_duration", widget: "string", required: true }
+      - { label: "Stream duration", name: "stream_duration", widget: "string", required: true }
       - { label: "Director", name: "Director", widget: "string", required: false }
       - { label: "Production", name: "Production", widget: "string", required: false }
       - { label: "Screenwriter", name: "Screenwriter", widget: "string", required: false }
@@ -57,18 +57,18 @@ collections:
       - { label: "Sound", name: "Sound", widget: "string", required: false }
       - { label: "Music", name: "Music", widget: "string", required: false }
       - { label: "Voiceover", name: "Voiceover", widget: "string", required: false }
-      - { label: "Lead actors (comma-separated)", name: "LeadActors", widget: "string", required: false }
-      - { label: "Thumbnail (poster)", name: "thumbnail", widget: "image", allow_multiple: false, required: true }
-      - { label: "Feature image", name: "feature_image", widget: "image", allow_multiple: false, required: true }
+      - { label: "Lead actors", name: "LeadActors", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: true }
+      - { label: "Feature image", name: "feature_image", widget: "image", required: true }
       - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
       - { label: "Cloudflare video ID", name: "video_id", widget: "string", required: false }
-      - { label: "Cloudflare HSL link", name: "HLS", widget: "string", required: false }
+      - { label: "Cloudflare HLS link", name: "HLS", widget: "string", required: false }
       - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
-      - { label: "Hero video ID (landing)", name: "hero_video_id", widget: "string", required: false }
+      - { label: "Hero video ID", name: "hero_video_id", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
-  # Blog
+  # Blog  ✅ FIXED
   # -------------------------
   - name: "blog"
     label: "Blog"
@@ -76,13 +76,15 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-    slug: "{{date | date('YYYY-MM-DD')}}-{{slug}}"
+
+    identifier_field: "name"
+    slug: "{{date | date('YYYY')}}-{{slug}}"
     summary: "{{name}}"
+
     fields:
       - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
       - { label: "Title", name: "name", widget: "string", required: true }
       - { label: "Author", name: "author", widget: "string", required: false }
-
       - label: "Categories"
         name: "categories"
         widget: "list"
@@ -90,9 +92,7 @@ collections:
         summary: "{{fields.item}}"
         field:
           { label: "Category", name: "item", widget: "string" }
-
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
-
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
@@ -111,7 +111,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
-  # Site Configuration (edits hugo.toml)
+  # Site Configuration
   # -------------------------
   - name: "config"
     label: "Site Configuration"
@@ -128,6 +128,7 @@ collections:
           - { label: "Language Code", name: "languageCode", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Theme", name: "theme", widget: "string" }
+
 
           - label: "Params"
             name: "params"
