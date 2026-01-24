@@ -34,11 +34,17 @@ collections:
     create: true
     extension: "md"
     format: "frontmatter"
-    slug: "{{year}}-{{film_title | slugify}}"
+    slug: "{{slug_name}}"
     summary: "{{film_title}} ({{year}})"
     fields:
       - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
-      - { label: "File name (URL)", name: "file_name", widget: "string", required: true, hint: "Lowercase, hyphens only. Used for the URL. Changing this requires renaming the file manually." }
+      - { 
+        label: "URL slug",
+        name: "slug_name",
+        widget: "string",
+        required: true,
+        hint: "Lowercase latin letters, numbers, hyphens only. Used for filename and URL."
+      }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
