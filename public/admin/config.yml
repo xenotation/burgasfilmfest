@@ -79,7 +79,7 @@ collections:
 
     identifier_field: "name"
     slug_field: "name"
-    slug: "{{date | date('YYYY')}}-{{slug}}"
+    slug: "{{year}}-{{slug}}"
     summary: "{{name}}"
 
     fields:
