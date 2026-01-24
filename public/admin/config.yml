@@ -78,6 +78,7 @@ collections:
     format: "frontmatter"
 
     identifier_field: "name"
+    slug_field: "name"
     slug: "{{date | date('YYYY')}}-{{slug}}"
     summary: "{{name}}"
 
