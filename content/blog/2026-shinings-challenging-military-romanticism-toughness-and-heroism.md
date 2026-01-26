@@ -1,6 +1,6 @@
 ---
 unlisted: false
-name: "Shinings: Challenging military romanticism, toughness, and heroism*"
+name: "Shinings: Challenging military romanticism, toughness, and heroism"
 author: Stefka Mancheva
 categories:
   - Сияния,
