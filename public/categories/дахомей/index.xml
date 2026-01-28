@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Дахомей, on Планктон</title>
-    <link>http://192.168.1.42:1313/categories/%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9/</link>
+    <link>http://192.168.1.5:1313/categories/%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9/</link>
     <description>Recent content in Дахомей, on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Thu, 16 Jan 2025 15:26:00 +0200</lastBuildDate>
-    <atom:link href="http://192.168.1.42:1313/categories/%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jan 2026 16:17:00 +0200</lastBuildDate>
+    <atom:link href="http://192.168.1.5:1313/categories/%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://192.168.1.42:1313/blog/2026-%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BE%D1%82%D0%BE/</link>
-      <pubDate>Thu, 16 Jan 2025 15:26:00 +0200</pubDate>
-      <guid>http://192.168.1.42:1313/blog/2026-%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BE%D1%82%D0%BE/</guid>
+      <link>http://192.168.1.5:1313/blog/2026-%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BE%D1%82%D0%BE/</link>
+      <pubDate>Fri, 16 Jan 2026 16:17:00 +0200</pubDate>
+      <guid>http://192.168.1.5:1313/blog/2026-%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BE%D1%82%D0%BE/</guid>
       <description>Възможността да гледаме филм като Дахомей днес, и то безплатно, резонира с етоса на неговата режисьорка, френско-сенегалската носителка на голямата награда “Златна мечка за най-добър филм” от Берлинале, Мати Диоп. Документалният Дахомей е заснет през 2021 г., показан за пръв път през 2024 г., а през изминалата 2025 г., Диоп организира своеобразно “турне” из най-престижните университети в САЩ – Харвард, Дюк, Колумбия и други – където прожекциите са придружени от разговори по засегнатите теми, културно наследство, реституция и деколонизация.</description>
     </item>
   </channel>

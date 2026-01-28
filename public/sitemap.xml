@@ -2,176 +2,212 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.1.42:1313/posters/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-shinings-challenging-military-romanticism-toughness-and-heroism/</loc>
+    <lastmod>2026-01-26T20:49:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/blog/</loc>
+    <lastmod>2026-01-26T20:49:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/</loc>
+    <lastmod>2026-01-26T20:49:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D0%BB%D0%B0%D0%B7%D0%B0%D1%80-%D0%B8%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2/</loc>
+    <lastmod>2026-01-26T20:49:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/</loc>
+    <lastmod>2026-01-26T20:49:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D1%8F/</loc>
+    <lastmod>2026-01-26T20:49:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/posters/</loc>
     <lastmod>2026-01-23T19:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/</loc>
+    <loc>http://192.168.1.5:1313/posters/2026-%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D1%8F/</loc>
     <lastmod>2026-01-23T19:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2026-%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D1%8F/</loc>
-    <lastmod>2026-01-23T19:15:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.42:1313/films/2026-siyania/</loc>
+    <loc>http://192.168.1.5:1313/films/2026-siyania/</loc>
     <lastmod>2026-01-23T20:06:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/</loc>
+    <loc>http://192.168.1.5:1313/films/</loc>
     <lastmod>2026-01-23T20:06:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2026-pochivka/</loc>
+    <loc>http://192.168.1.5:1313/films/2026-pochivka/</loc>
     <lastmod>2026-01-16T16:37:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2026-dahomey/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BE%D1%82%D0%BE/</loc>
+    <lastmod>2026-01-16T16:17:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9/</loc>
+    <lastmod>2026-01-16T16:17:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D0%BC%D0%B0%D1%82%D0%B8-%D0%B4%D0%B8%D0%BE%D0%BF/</loc>
+    <lastmod>2026-01-16T16:17:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/films/2026-dahomey/</loc>
     <lastmod>2026-01-09T19:36:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2026-dahomey/</loc>
+    <loc>http://192.168.1.5:1313/posters/2026-dahomey/</loc>
     <lastmod>2026-01-09T19:36:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2026-x2000/</loc>
+    <loc>http://192.168.1.5:1313/posters/2026-x2000/</loc>
     <lastmod>2026-01-02T21:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2026-x2000/</loc>
+    <loc>http://192.168.1.5:1313/films/2026-x2000/</loc>
     <lastmod>2026-01-02T20:06:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-freeride-in-c/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-freeride-in-c/</loc>
     <lastmod>2025-12-26T18:19:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-freeride-in-c/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-freeride-in-c/</loc>
     <lastmod>2025-12-26T17:52:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-zima/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-zima/</loc>
     <lastmod>2025-12-19T18:37:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-zima/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-zima/</loc>
     <lastmod>2025-12-19T18:34:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/blog/2025-name-%D0%B4%D0%B0-%D0%BD%D0%B5-%D0%B7%D0%B0%D0%B1%D1%80%D0%B0%D0%B2%D1%8F%D0%BC%D0%B5/</loc>
+    <loc>http://192.168.1.5:1313/blog/2025-name-%D0%B4%D0%B0-%D0%BD%D0%B5-%D0%B7%D0%B0%D0%B1%D1%80%D0%B0%D0%B2%D1%8F%D0%BC%D0%B5/</loc>
     <lastmod>2025-12-18T15:10:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/blog/</loc>
+    <loc>http://192.168.1.5:1313/categories/%D0%B2%D1%81%D1%8F%D0%BA%D0%B0-%D1%81%D1%82%D0%B5%D0%BD%D0%B0-%D0%B5-%D0%B2%D1%80%D0%B0%D1%82%D0%B0/</loc>
     <lastmod>2025-12-18T15:10:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/categories/</loc>
+    <loc>http://192.168.1.5:1313/categories/%D0%B5%D0%BB%D0%B8%D1%86%D0%B0-%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D0%B0/</loc>
     <lastmod>2025-12-18T15:10:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/categories/%D0%B2%D1%81%D1%8F%D0%BA%D0%B0-%D1%81%D1%82%D0%B5%D0%BD%D0%B0-%D0%B5-%D0%B2%D1%80%D0%B0%D1%82%D0%B0/</loc>
-    <lastmod>2025-12-18T15:10:00+02:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.42:1313/categories/%D0%B5%D0%BB%D0%B8%D1%86%D0%B0-%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D0%B0/</loc>
-    <lastmod>2025-12-18T15:10:00+02:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-chaque-mur-est-une-porte/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-chaque-mur-est-une-porte/</loc>
     <lastmod>2025-12-12T20:47:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-chaque-mur-est-une-porte/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-chaque-mur-est-une-porte/</loc>
     <lastmod>2025-12-12T17:41:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-center-ring-mall/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-center-ring-mall/</loc>
     <lastmod>2025-12-05T20:16:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-center-ring-mall/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-center-ring-mall/</loc>
     <lastmod>2025-12-05T17:24:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-their-eyes/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-their-eyes/</loc>
     <lastmod>2025-11-28T20:38:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-their-eyes/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-their-eyes/</loc>
     <lastmod>2025-11-27T23:01:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-workers-wings/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-workers-wings/</loc>
     <lastmod>2025-11-21T15:47:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-workers-wings/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-workers-wings/</loc>
     <lastmod>2025-11-21T15:19:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/blog/2025-%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%BA%D0%B0-%D0%B7%D0%B0-%D0%B6%D0%B0%D0%BD-%D0%B6%D1%8C%D0%BE%D0%BD%D0%B5/</loc>
+    <loc>http://192.168.1.5:1313/blog/2025-%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%BA%D0%B0-%D0%B7%D0%B0-%D0%B6%D0%B0%D0%BD-%D0%B6%D1%8C%D0%BE%D0%BD%D0%B5/</loc>
     <lastmod>2025-11-14T15:26:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/categories/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D1%81%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8-%D1%81%D1%8A%D0%BD%D0%B8%D1%89%D0%B0/</loc>
+    <loc>http://192.168.1.5:1313/categories/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D1%81%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8-%D1%81%D1%8A%D0%BD%D0%B8%D1%89%D0%B0/</loc>
     <lastmod>2025-11-14T15:26:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-un-chant-d-amour/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-un-chant-d-amour/</loc>
     <lastmod>2025-11-14T10:12:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-un-chant-damour/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-un-chant-damour/</loc>
     <lastmod>2025-11-13T18:27:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-the-exquisite-corpus/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-the-exquisite-corpus/</loc>
     <lastmod>2025-11-07T20:02:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-the-exquisite-corpus/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-the-exquisite-corpus/</loc>
     <lastmod>2025-11-07T18:38:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/blog/2025-%D0%B0%D0%B2%D0%B0%D0%BD%D0%B3%D0%B0%D1%80%D0%B4%D1%8A%D1%82-%D0%BD%D0%B0-%D0%B6%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D0%B5%D1%82%D0%BE/</loc>
+    <loc>http://192.168.1.5:1313/blog/2025-%D0%B0%D0%B2%D0%B0%D0%BD%D0%B3%D0%B0%D1%80%D0%B4%D1%8A%D1%82-%D0%BD%D0%B0-%D0%B6%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D0%B5%D1%82%D0%BE/</loc>
     <lastmod>2025-11-07T15:29:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-lucifer-rising/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-lucifer-rising/</loc>
     <lastmod>2025-10-31T19:35:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-lucifer-rising/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-%D0%BA%D1%80%D1%8A%D0%B2%D1%82%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%BC%D0%B5%D1%82%D0%B0%D1%84%D0%BE%D1%80%D0%B0%D1%82%D0%B0-%D0%B8-%D1%84%D0%B0%D0%BA%D1%82%D0%B0/</loc>
+    <lastmod>2025-10-31T16:29:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D1%85%D0%B5%D0%BB%D0%BE%D1%83%D0%B8%D0%BD-%D1%82%D1%80%D0%B8%D0%B7%D1%8A%D0%B1%D1%86%D0%B8-%D0%B8-%D0%BE%D0%BA%D1%83%D0%BB%D1%82%D0%B8%D0%B7%D1%8A%D0%BC/</loc>
+    <lastmod>2025-10-31T16:29:00+02:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/films/2025-lucifer-rising/</loc>
     <lastmod>2025-10-31T16:07:00+02:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-riblje-oko/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-riblje-oko/</loc>
     <lastmod>2025-10-24T19:37:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-riblje-oko/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-%D0%BD%D0%B0-%D1%83%D0%BC%D0%BD%D0%B0%D1%82%D0%B0-%D1%80%D0%B8%D0%B1%D0%B0-%D0%B2%D1%80%D0%B0%D0%B3-%D1%9D-%D0%B5-%D0%BD%D0%B5-%D1%81%D1%82%D1%80%D1%8A%D0%B2%D1%82%D0%B0-%D0%B0-%D1%80%D0%B8%D0%B1%D0%B0%D1%80%D1%8F%D1%82/</loc>
+    <lastmod>2025-10-24T17:02:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/posters/2025-riblje-oko/</loc>
     <lastmod>2025-10-24T15:12:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-knits-island/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-knits-island/</loc>
     <lastmod>2025-10-17T00:28:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-knits-island/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-knits-island/</loc>
     <lastmod>2025-10-17T00:01:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-op-jane-walk/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-op-jane-walk/</loc>
     <lastmod>2025-10-10T19:47:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-operation-jane-walk/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-operation-jane-walk/</loc>
     <lastmod>2025-10-10T19:28:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-exploading-girl/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-exploading-girl/</loc>
     <lastmod>2025-10-03T17:14:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-la-fille-qui-explose/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%B8%D1%8F-%D0%BE%D1%82-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8/</loc>
+    <lastmod>2025-10-03T17:04:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/machinima/</loc>
+    <lastmod>2025-10-03T17:04:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/posters/2025-la-fille-qui-explose/</loc>
     <lastmod>2025-10-03T15:51:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-du-cote-de-la-cote/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-du-cote-de-la-cote/</loc>
     <lastmod>2025-09-26T20:08:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-du-cote-de-la-cote/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-%D0%BD%D0%B0-%D0%B3%D0%BE%D1%81%D1%82%D0%B8-%D0%B2-%D1%80%D0%B0%D1%8F-%D0%BE%D1%82%D0%BA%D1%8A%D0%BC-%D0%B1%D1%80%D0%B5%D0%B3%D0%B0-%D0%BD%D0%B0-%D0%B0%D0%BD%D0%B8%D0%B5%D1%81-%D0%B2%D0%B0%D1%80%D0%B4%D0%B0/</loc>
+    <lastmod>2025-09-26T17:09:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BB%D0%B5%D1%82%D0%B5%D0%BD-%D0%B7%D0%B0%D0%BB%D0%B5%D0%B7/</loc>
+    <lastmod>2025-09-26T17:09:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/posters/2025-du-cote-de-la-cote/</loc>
     <lastmod>2025-09-25T15:51:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-manifesto/</loc>
+    <loc>http://192.168.1.5:1313/blog/2026-%D0%B4%D0%B0-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BE%D0%BF%D0%B0%D0%B5%D0%BC-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B0-%D0%BE%D1%82%D0%B2%D1%8A%D1%82%D1%80%D0%B5-%D0%B0%D0%BD%D0%B5-%D1%85%D1%8C%D0%BE%D1%80%D1%82-%D0%B3%D1%83%D1%82%D1%83-%D0%B8-%D0%BC%D0%B0%D0%BD%D0%B8%D1%84%D0%B5%D1%81%D1%82/</loc>
+    <lastmod>2025-09-19T17:10:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/categories/%D0%BB%D0%B8%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE-%D0%BE%D1%82%D0%BA%D0%BB%D0%BE%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0-15-%D1%82%D0%B8-%D1%81%D0%B5%D0%BF%D1%82%D0%B5%D0%BC%D0%B2%D1%80%D0%B8/</loc>
+    <lastmod>2025-09-19T17:10:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/posters/2025-manifesto/</loc>
     <lastmod>2025-09-18T15:50:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-manifesto/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-manifesto/</loc>
     <lastmod>2025-09-16T10:21:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-catraias/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-catraias/</loc>
     <lastmod>2025-09-12T15:50:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-catraias/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-catraias/</loc>
     <lastmod>2025-09-11T20:40:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/posters/2025-drijf-poster/</loc>
+    <loc>http://192.168.1.5:1313/posters/2025-drijf-poster/</loc>
     <lastmod>2025-09-05T18:43:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2025-drijf/</loc>
+    <loc>http://192.168.1.5:1313/films/2025-drijf/</loc>
     <lastmod>2025-02-10T20:20:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/blog/2026-%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9-%D0%B8-%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BE%D1%82%D0%BE/</loc>
-    <lastmod>2025-01-16T15:26:00+02:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.42:1313/categories/%D0%B4%D0%B0%D1%85%D0%BE%D0%BC%D0%B5%D0%B9/</loc>
-    <lastmod>2025-01-16T15:26:00+02:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.42:1313/categories/%D0%BC%D0%B0%D1%82%D0%B8-%D0%B4%D0%B8%D0%BE%D0%BF/</loc>
-    <lastmod>2025-01-16T15:26:00+02:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.42:1313/about/</loc>
+    <loc>http://192.168.1.5:1313/about/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.42:1313/films/2026-asdasdasda/</loc>
+    <loc>http://192.168.1.5:1313/films/2026-asdasdasda/</loc>
   </url><url>
-    <loc>http://192.168.1.42:1313/tags/</loc>
+    <loc>http://192.168.1.5:1313/tags/</loc>
   </url>
 </urlset>
