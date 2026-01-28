@@ -1,37 +1,13 @@
 ---
 unlisted: false
-slug_name: siyania
-date: 2026-01-23 20:06:00+02:00
-film_title: Сияния
-film_title_org: ''
-country: България, Швейцария
-year: '2024'
-minutes: '28'
-description: Сияна и петимата и приятели войници се връщат към последните дни преди
-  тяхната раздяла.  Сияна се опитва да измие съдбата им на скалите.
-stream_duration: 23.01.2026 - 30.01.2026
-Director: Лазар Иванов
-Production: HEAD Cinema, Йордан Михайловски
-Screenwriter: Лазар Иванов
-Editing: Давид Жaне, Лазар Иванов
-Cinematography: Лиляна Русева
-Sound: Марио Балабанов
-Music: Мичел Мичев
-LeadActors: Сияна Шишкова, Георги Търкаланов, Братан Братанов, Йов Иванов
-thumbnail: /img/431003879_423619806872819_3958695800139336188_n.png
-feature_image: /img/siyaniya_still_1.1.3.jpg
-show_watch_button: true
-hero_video_id: 05d69f055d0368ddb2c6d46141696dd2
-file_name: siyanie
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYWRhZmE0MWQwYjRjY2FhNWUwMDg2NmIyMjhmN2JiZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2OTY1NTU4OSIsIm5iZiI6IjE3Njk1NjU1OTAifQ.OIwG728R0pwf0XF1jp7UjhQz-cK0c9LytYHTKDftcfuzDaOA2fgQbfovDYiKdGvI-XrRsaJObarNbXTMkNe5rBTq8LBnCjU3gXUwYECcAYyOxROZyRnyKD6oH9E-bQs9NnqiePFjEUsc9dRjtkdu0fdyZ0IhcW62nkA3dxmklAULME14pZsjNcixbBy7Pvybh43U82MQ4Y00WhbVBRFS__wsj_kWDiCM0Vs7XL1a-aLmF-fW1hCHDCcMv0xk-mvzLlPkKOmkIIyKhaYTZjzXR1tO2XdvsG9Ty9ZdZ4SWjw_CCLjLnZES-YOP2SPC0sJZY7UD_42UcDVP33QeCNxNYA
-url_slug: 2026-siyania
-video_id: aadafa41d0b4ccaa5e00866b228f7bbe
+name: "Shinings: Challenging military romanticism, toughness, and heroism"
+author: Stefka Mancheva
+categories:
+  - Сияния,
+  - Лазар Иванов
+date: 2026-01-26 20:49:00+0200
 ---
-*Текстът се публикува със съдействието на Стефка Манчева и е достъпен само на английски за момента. Надяваме се скоро да можем да представим и превод на текста.*
-
-### **Shinings: Challenging military romanticism, toughness, and heroism**
-
-#### **Stefka Mancheva[^1]**
+*\*Текстът се публикува със съдействието на Стефка Манчева*[^1] *и е достъпен само на английски за момента. Надяваме се скоро да можем да представим и негов превод.*
 
 *Shinings* was screened in the short-film program at the 28th Sofia International Film Festival 2024. It stood out not only as a thematically relevant but also as a formally interesting film. 
 

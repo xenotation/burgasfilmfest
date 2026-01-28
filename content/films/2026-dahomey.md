@@ -1,7 +1,11 @@
 ---
 draft: false
+unlisted: false
+slug_name: Dahomey
+date: 2026-01-09 19:36:00+02:00
 film_title: Дахомей
 film_title_org: Dahomey
+country: Франция, Сенегал, Бенин
 year: "2024"
 minutes: "68"
 description: Ноември 2021 г. 26 кралски съкровища на Кралство Дахомей са на път
@@ -12,23 +16,20 @@ description: Ноември 2021 г. 26 кралски съкровища на �
   негово отсъствие? Дебатът се разгаря сред студентите в университета на
   Абомей-Калави.
 text_author: текст от Савина Петкова
+stream_duration: 09.01.2026 - 16.01.2026
 Director: Мати Диоп
 Production: Ив Робин, Жюдит Лу Леви, Мати Диоп
 Screenwriter: Мати Диоп
 Editing: Габриел Гонзалес
+Cinematography: Жозефин Друен-Вияр
+Sound: Никола Бекер, Маел Дьорьомо
 Music: Уоли Бадару, Дийн Блънт
 thumbnail: /img/dahomey-poster-web-comrpessed-.jpg
+feature_image: /img/dahomey-3.jpg
 show_watch_button: false
 video_id: 51b2ea31db9558dc72c1c787ee7b3784
 hero_video_id: 4f51e102fe265b403e2199ef33b0bece
 file_name: dahomey
-unlisted: false
-date: 2026-01-09 19:36:00+02:00
-country: Франция, Сенегал, Бенин
-stream_duration: 09.01.2026 - 16.01.2026
-Cinematography: Жозефин Друен-Вияр
-Sound: Никола Бекер, Маел Дьорьомо
-feature_image: /img/dahomey-3.jpg
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI1MWIyZWEzMWRiOTU1OGRjNzJjMWM3ODdlZTdiMzc4NCIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2OTI3NjAyNyIsIm5iZiI6IjE3NjkxODYwMjgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.WPOO0aRGw6pZBmxDZ9tDAZKku9qrxYBB-1oIeg8844lCgHHQxgHcCtoiy50oYj9LA5qLU00BnKc-Or8mGt1R9es-CEGuGUQGxOFGNHYOCECdDmFM8rc4tSncWbq5m8qgSiium9PhhL33qYuJ5itgt-lTRV2EV4svfJzsnU7wsxuPw7ErlO73VTkWzmABWSDEI_Tz9bQ2pgGgZMyIgXv4fMo_2ZnKtMBt9VHOehmDgD1KnnPKIkMoJuTXORcE9EOaMBgm7_trhnwHIh8eGrl8WEM9YW-KQR7Meop9ZfQRpAMEP8DtnHucc7FX1CA-HbqPz1qnOVU5yax1usuEt6P4aw
 ---
 ## **Дахомей и миналото: преносно и буквално**
@@ -59,4 +60,4 @@ signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNm
 2020 В моята стая (In My Room) - къс.\
 2024 Дахомей (Dahomey) - док.
 
-*Представянето на филма се осъществява с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049 с управляващ орган Национален фонд „Култура“. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този филм отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
+*Представянето на филма и този текст се осъществява с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049 с управляващ орган Национален фонд „Култура“. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този филм отразява официалното становище на Европейския съюз и Национален фонд „Култура“.*
