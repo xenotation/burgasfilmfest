@@ -3,12 +3,12 @@ unlisted: false
 slug_name: siyania
 date: 2026-01-23 20:06:00+02:00
 film_title: Сияния
-film_title_org: ""
+film_title_org: ''
 country: България, Швейцария
-year: "2024"
-minutes: "28"
-description: Сияна и петимата и приятели войници се връщат към последните дни
-  преди тяхната раздяла.  Сияна се опитва да измие съдбата им на скалите.
+year: '2024'
+minutes: '28'
+description: Сияна и петимата и приятели войници се връщат към последните дни преди
+  тяхната раздяла.  Сияна се опитва да измие съдбата им на скалите.
 stream_duration: 23.01.2026 - 06.02.2026
 Director: Лазар Иванов
 Production: HEAD Cinema, Йордан Михайловски
@@ -23,7 +23,7 @@ feature_image: /img/siyaniya_still_1.1.3.jpg
 show_watch_button: true
 hero_video_id: 05d69f055d0368ddb2c6d46141696dd2
 file_name: siyanie
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYWRhZmE0MWQwYjRjY2FhNWUwMDg2NmIyMjhmN2JiZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2OTgyOTg2OSIsIm5iZiI6IjE3Njk3Mzk4NjkifQ.NFf501BC0KRrHGkXhUbF8wnEDjCgnL9tpfiQcc18FS1mZreBKy76KCS_vFwOZzv56DJ4iCmS2lAGHAG6JCFBjoT_mYcmZj4FOM7rXrtIewS8mssU3AZG8Z1aZz2KPHk0PNG-D8pBJO5ROT89aCvC2xA1L6AI1uXqaQsdp37P6to3Eej9ffS2A8ptHFdaeSRPxhxIrwpAY3uvleEYIMv0LKnAAQXOhb9CTXDhRBJyycO5FaFcUD_hbh2XqgQ28qpPPdHzkz98I2Et3Mjdwe4CT1sMm_DgHZyrd67GBFnwaKny_0J7LwzTnHy4QLYaWM1HERaO6ZzvHZjkpTYCGGmtww
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYWRhZmE0MWQwYjRjY2FhNWUwMDg2NmIyMjhmN2JiZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2OTg3OTg0OCIsIm5iZiI6IjE3Njk3ODk4NDgifQ.GgvJw2VJdwUs5FVnJOuI_vkk45njSkRvjQPoiPW-7j7D__rQwONBw5Ee6-wB2fv250pNJtEDY0RLuq9nkKX6MZABe7z5I7g9L_1iGwwvvoljKOabO1Lzw0ObVz8BN7tc4dAn_7GlSCO3S6mAxsH0pbKncZC6LrIyJWJQv-Ng0HCCgHVetOdq_xsOQaJiadUuDvoQfoJPY6ORlChYI5zn_bEx1zDKctumChGZp-1UjVAHq25f-_b7-uCSOb2NPK4j-BWEDqN6aCB7Z8s2pzeVSclWtkAOkN2piRDINIESjW35JQEL8tjxymrbM_nK-PwzBnZhqETca95TD6Pa58UWUw
 url_slug: 2026-siyania
 video_id: aadafa41d0b4ccaa5e00866b228f7bbe
 ---
