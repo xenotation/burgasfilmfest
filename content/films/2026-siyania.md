@@ -3,12 +3,12 @@ unlisted: false
 slug_name: siyania
 date: 2026-01-23 20:06:00+02:00
 film_title: Сияния
-film_title_org: ''
+film_title_org: ""
 country: България, Швейцария
-year: '2024'
-minutes: '28'
-description: Сияна и петимата и приятели войници се връщат към последните дни преди
-  тяхната раздяла.  Сияна се опитва да измие съдбата им на скалите.
+year: "2024"
+minutes: "28"
+description: Сияна и петимата и приятели войници се връщат към последните дни
+  преди тяхната раздяла.  Сияна се опитва да измие съдбата им на скалите.
 stream_duration: 23.01.2026 - 06.02.2026
 Director: Лазар Иванов
 Production: HEAD Cinema, Йордан Михайловски
@@ -20,7 +20,7 @@ Music: Мичел Мичев
 LeadActors: Сияна Шишкова, Георги Търкаланов, Братан Братанов, Йов Иванов
 thumbnail: /img/431003879_423619806872819_3958695800139336188_n.png
 feature_image: /img/siyaniya_still_1.1.3.jpg
-show_watch_button: true
+show_watch_button: false
 hero_video_id: 05d69f055d0368ddb2c6d46141696dd2
 file_name: siyanie
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJhYWRhZmE0MWQwYjRjY2FhNWUwMDg2NmIyMjhmN2JiZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3MDQ3Njg5OCIsIm5iZiI6IjE3NzAzODY4OTgifQ.f21ExsQZZRemMK0ieh8BSW_NBB5--0p8QTZsCLgqOP9Pur2WAXIzgMwzRolAHkytz8gPGmFnJUysAkOytvBN-vx7eeo0XuS9ZQJkbyq0kAwmg4ayeUBuIha0SJB3S6HbjLlZEtrc8CHJzdqsQXhdolFvxYh3i1V70nVFIxj96cpcsTtf6Xs9ZBnRnNDdD2F2nLqOqlBa8DQP6se9swp5YPWKXWYq42Aia2LC_uX_XeL5NbaPCw4k_TdMURvPBXd5fzOCTgUa39twcjdK3u1T-THxTrOxKcYqQr-aMPpwA4L5WeJXxKkUGHPwhRHEdXO9HdPw7lLP4UmCv6eJ7j1X8g
