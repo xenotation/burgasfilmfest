@@ -5,10 +5,10 @@ date: 2026-03-06 19:16:00+0200
 film_title: Квадрант
 film_title_org: Quadrant
 country: Швейцария
-year: "2023"
-minutes: "8"
-description: Хирург преглежда гърдите на жена. Друга жена, режисьорката, прави
-  дисекция както на материала, така и на себе си.
+year: '2023'
+minutes: '8'
+description: Хирург преглежда гърдите на жена. Друга жена, режисьорката, прави дисекция
+  както на материала, така и на себе си.
 text_author: Интервю със Слава Дойчева
 stream_duration: 06.03.2026 - 20.03.2026
 Director: Слава Дойчева
@@ -16,8 +16,8 @@ thumbnail: /img/quadrant_poster_comp2.jpg
 feature_image: /img/3.png
 show_watch_button: true
 video_id: 38901db4a42740284677ac98de771b4e
-HLS: ""
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIzODkwMWRiNGE0Mjc0MDI4NDY3N2FjOThkZTc3MWI0ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3MzkyODIyMiIsIm5iZiI6IjE3NzM4MzgyMjIifQ.F8la5X3Y1-Fb0AiImVqos6od_gsh5QuAdHY2OYh_WYB0kLxSVXUKyjT1M7yfXHp0HjsyGQHi5rf9ja4DVhoztZdyrS4ITbgW4JK6uIQEyDWSD130zih9IV58D4WIB5b9An59wbnDBaFjAyFEmmefH31QrmaPaaqq3TFY-__UMgQMWolPUGE0rhnqYJVcmmJmWCLP-htqN0a7QxfS9reMn8pm26D2ntikTzcc8pNMIBXQsytkyRff7hhdwMcAfpuuXhAhrlXV0-R1jg3T9Cs6VA18sZ9Fj-L7BrS8SslKAElecJmxCmp3JZo_2nruyRXCX29TLRr08WUkjSZz7t7cQw
+HLS: ''
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIzODkwMWRiNGE0Mjc0MDI4NDY3N2FjOThkZTc3MWI0ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3Mzk0MDczMyIsIm5iZiI6IjE3NzM4NTA3MzUifQ.Vpl7XPgYuiZJUX-L2aZEiBTpD1qD6Hc7bfj_IQhwcCJGRAuiTNj10l4I5OGhd8eovtfxtTQoUhztvG4_k9e-2xK0YSGJynyxb3SVZc3XudrfGCk8b9Pet7JrIqbaxobBPojwzpa86XEteXqAAhDwvnEqoBrdlGPUcerZTdWY3OM9oJY6lf0RzKNY6ObqdmzvZrkBcDVPEFlqwNnx6bE2jIftW7bs8TMfEpyD2mn5RkdOMgwwFlMf1IAg7tRSZQGp88qWzSyAPgkpF7nnmd84kS05TdFi-3MrCnAtJn-I_4AXNe-HMidUX-0F3tVXaWgA1ycIpPRQM-VycXPq-tr-vA
 hero_video_id: 48073d9fd0778e82516c46f56e7f6f54
 ---
 ### **Образи и противообрази**
