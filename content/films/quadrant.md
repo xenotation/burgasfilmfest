@@ -5,10 +5,10 @@ date: 2026-03-06 19:16:00+0200
 film_title: Квадрант
 film_title_org: Quadrant
 country: Швейцария
-year: '2023'
-minutes: '8'
-description: Хирург преглежда гърдите на жена. Друга жена, режисьорката, прави дисекция
-  както на материала, така и на себе си.
+year: "2023"
+minutes: "8"
+description: Хирург преглежда гърдите на жена. Друга жена, режисьорката, прави
+  дисекция както на материала, така и на себе си.
 text_author: Интервю със Слава Дойчева
 stream_duration: 06.03.2026 - 20.03.2026
 Director: Слава Дойчева
@@ -16,8 +16,8 @@ thumbnail: /img/quadrant_poster_comp2.jpg
 feature_image: /img/3.png
 show_watch_button: true
 video_id: 38901db4a42740284677ac98de771b4e
-HLS: ''
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIzODkwMWRiNGE0Mjc0MDI4NDY3N2FjOThkZTc3MWI0ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3MzkxNzcyMiIsIm5iZiI6IjE3NzM4Mjc3MjMifQ.l9qVgCx6jv5mdS97zlV0n9DHGdYEKwrKgFBIDJkHLkhGJQ9fWNmkCG9o0SuK5y6aQZmeuzGH00NDbksnKwYcFJ1tlk-0E2fw4fv25NMnu-STsv697COzmLKISxYmf5DhIoOmVhmx61n7t96g6Nt0ss7Ql4Ek8QiNoZiMo0xRN8Rk1P66icc9F4NU13adAAgOsq-iIJGe3wcQkgSg43DBh30d-mp6baNCVp5cDbkZpW1-mcWJRjFiInQt4gnO0t5Yg3XZoL_GRssDytAysHUqhJMOXdla70iBqC7D8AS-BdQDgfP_qtTR0hPFA4gqmTmsgsTMxHGAxQ_t6fl4HFTPIw
+HLS: ""
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiIzODkwMWRiNGE0Mjc0MDI4NDY3N2FjOThkZTc3MWI0ZSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3Mzg5MTQxMCIsIm5iZiI6IjE3NzM4MDE0MTAifQ.vAI5Y8KDtDZ8SmGPr5o0kqVd3mugVQaktvcBAt1Ch-Ek4Igkb9zgshfhYPsUo1pZ53wTAf6p9o5g8_RlfeZJGcCN6dCzmZc1ILeZ1vfeHR9sfbF-Vm0GHCnO1WVGPipp3gv1WLYnFvUOITrmWhjzLP2rT2pM9a0sIQ-RbyivlsqJGWZDeaZ3HztWwD9lNdCa-scIxS5S6gEi9XteNEdC9sSGBZKREevvnp-b6HyegVgubRGCAJgqf77coBuksdujmhwJHO9Dc0JuRl8jMGiDJ3f8yNvygR91JImVyW-AWaOv2yiCAxq9SfeHWaXHKTMRjhSfSbU5zKQNawRIDG-HQQ
 hero_video_id: 48073d9fd0778e82516c46f56e7f6f54
 ---
 ### **Между личното преживяване и експериментът като свобода**
@@ -64,4 +64,12 @@ hero_video_id: 48073d9fd0778e82516c46f56e7f6f54
 
 **Д.Г.** Извън рамките на този филм, има ли нещо ново по което работиш? Какво можем да очакваме – отново експеримент с формата както при Квадрант?
 
-**С.Д.** Квадрант наистина беше моментна снимка от един дълъг процес. Сега, когато е минало малко време и аз имам отстоянието не само да документирам, но и да осмислям, работя върху друг по-дълъг филм за този период. Формата е доста различна, но отново експериментална - опитът с Квадрант беше много освобождаващ и разпали любопитството ми да пробвам неща, които не съм правила досега и не знам как ще се получат.
+**С.Д.** Квадрант наистина беше моментна снимка от един дълъг процес. Сега, когато е минало малко време и аз имам отстоянието не само да документирам, но и да осмислям, работя върху друг по-дълъг филм за този период. Формата е доста различна, но отново експериментална - опитът с Квадрант беше много освобождаващ и разпали любопитството ми да пробвам неща, които не съм правила досега и не знам как ще се получат. 
+
+
+
+*Слава (р. 1988, София) е българска сценаристка и режисьорка, завършила Лондонското филмово училище. Творчеството на Слава е лично и интимно - тя често обръща камерата към себе си и близките си за да изследва въпроси за идентичност и принадлежност. Последните ѝ три късометражни филма са носители на множество награди и са прожектирани на над 100 фестивала, сред които Локарно, Палм Спрингс, Сараево, Упсала и Талин.*
+
+*Завършила е Berlinale Short Film Station, Locarno Spring Academy и е носителка на голямата награда на European Short Pitch. Членка на Европейската филмова академия. Освен, че пише и режисира, Слава понякога играе в български игрални филми и има две изложби като визуална артистка.* 
+
+*В момента преподава кино в Американския университет в Благоевград.*
