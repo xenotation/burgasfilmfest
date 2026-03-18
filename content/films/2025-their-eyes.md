@@ -1,7 +1,7 @@
 ---
-date: 2025-11-28 20:38:00+02:00
 draft: false
-file_name: their-eyes
+slug_name: their-eyes
+date: 2025-11-28 20:38:00+02:00
 film_title: Техните очи
 film_title_org: Their Eyes
 country: Франция
@@ -21,10 +21,13 @@ Sound: Етиен Андре
 thumbnail: /img/poster-their-eyes.jpeg
 feature_image: /img/their-eyes-still-4.jpeg
 show_watch_button: false
+hero_video_id: c6e9ffcc7b6b5a6ea4051b5459a241dd
+file_name: their-eyes
 video_id: ecc97fcdebf4c72c6cc5ae4fa164b2ea
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJlY2M5N2ZjZGViZjRjNzJjNmNjNWFlNGZhMTY0YjJlYSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc2NTAzNDcxNCIsIm5iZiI6IjE3NjQ5NDQ3MTQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV19.ilWeV-ov7wXcCuvvnFP46nOLm7E_bTN4TfrHIstBH5jBX7rcZcOboixVk0QQ1lja30YxboC2sf0VrbRNejcyRUbhDfuyrFK0STLSodWZsjb5tcMxRt_43_vYlGOL7uKrN7X1afgXwT948slN7HrNmo-4N7G095XzCKDSVV7ej5ZRQpLopTLMLD99w28CGOrsYlVyJwNdJuTaTBuIu3v_XP4rKt8Dvj8p0c-YOuWh_S0P9NYZ-6YVuGqHTfAvT7DF4ENryOZZL1iwoJr7h6N6Y7VqZctrJMW1KH8bw4A35lxDM7WzonihWVAMmGWyfXvRNuyybR7xi-2_ps6neWTo9w
-hero_video_id: c6e9ffcc7b6b5a6ea4051b5459a241dd
 ---
-Филмът е част от програма "Труд и инфраструктура", която цели да представи филми, които изследват взаимодействието и взаимовръзката на труда и инфраструктурата в миналото и настоящето. 
+Филмът е част от програма "Труд и инфраструктура", която цели да представи филми, които изследват взаимодействието и взаимовръзката на труда и инфраструктурата в миналото и настоящето. На линк по-долу може да откриете текстa на Христо Калоянов върху трите филма, част от програма "Труд и инфраструктура":
+
+[Късометражната форма като инфраструктура, Христо Калоянов](https://plankton.bg/blog/2026-%D0%BA%D1%8A%D1%81%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%B6%D0%BD%D0%B0%D1%82%D0%B0-%D1%84%D0%BE%D1%80%D0%BC%D0%B0-%D0%BA%D0%B0%D1%82%D0%BE-%D0%B8%D0%BD%D1%84%D1%80%D0%B0%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0/)
 
 Представянето на филма се осъществява с финансовата подкрепа на Европейския съюз – СледващоПоколениеЕС по инвестиция BG-RRP-11.016-0049 с управляващ орган Национален фонд „Култура“. Цялата отговорност за съдържанието се носи от авторите и при никакви обстоятелства не може да се приема, че този филм отразява официалното становище на Европейския съюз и Национален фонд „Култура“.
