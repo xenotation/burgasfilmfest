@@ -185,7 +185,7 @@ jobs:
         run: |
           set -Eeuo pipefail
           EXP=$(( $(date +%s) + 24*3600 ))
-          BODY=$(jq -n --argjson exp "$EXP" '{ exp: $exp }')
+          BODY=$(jq -n --argjson exp "$EXP" '{ exp: $exp, downloadable: true }')
           echo "Token request:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
