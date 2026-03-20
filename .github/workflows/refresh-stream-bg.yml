@@ -3,7 +3,7 @@ name: Refresh Cloudflare Stream Token (BG-only)
 on:
   workflow_dispatch:
   schedule:
-    # run daily at 01:00 UTC (set as you wish)
+    # run daily at 01:00 UTC
     - cron: "0 1 * * *"
   push:
     branches: [ "main" ]
@@ -19,7 +19,6 @@ concurrency:
 
 jobs:
   refresh:
-    # allow schedule/manual even when not tied to a specific branch ref
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || startsWith(github.ref, 'refs/heads/')
     runs-on: ubuntu-latest
 
@@ -27,7 +26,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # keep history so we can commit/push back to the same branch
           fetch-depth: 0
           ref: main
 
@@ -39,9 +37,6 @@ jobs:
       - name: Install Python deps
         run: pip install pyyaml python-dateutil
 
-      # ---------------------------------------------------------------
-      # NEW: find newest film strictly by 'date' (Decap format), require video_id
-      # ---------------------------------------------------------------
       - name: Find newest film (by date only) + extract video_id
         id: pick
         run: |
@@ -50,15 +45,14 @@ jobs:
           from dateutil import parser as dp
 
           def clean(s):
-              # remove BOM/zero-width/nbsp
-              return s.replace('\ufeff','').replace('\u200b','').replace('\xa0','')
+              return s.replace('\ufeff', '').replace('\u200b', '').replace('\xa0', '')
 
           def read_front_matter(path):
               with open(path, 'r', encoding='utf-8') as f:
                   txt = f.read()
               lines = txt.splitlines()
               start = None
-              for i,l in enumerate(lines):
+              for i, l in enumerate(lines):
                   if clean(l).strip() == '---':
                       start = i
                       break
@@ -66,32 +60,28 @@ jobs:
                   print(f"skip (no front matter): {path}")
                   return None, txt
               end = None
-              for i in range(start+1, len(lines)):
+              for i in range(start + 1, len(lines)):
                   if clean(lines[i]).strip() == '---':
                       end = i
                       break
               if end is None:
                   print(f"skip (no closing ---): {path}")
                   return None, txt
-              block = '\n'.join(lines[start+1:end])
+              block = '\n'.join(lines[start + 1:end])
               try:
                   fm = yaml.safe_load(block) or {}
               except Exception as e:
                   print(f"skip (YAML error): {path}: {e}")
                   return None, txt
-              body = '\n'.join(lines[end+1:])
+              body = '\n'.join(lines[end + 1:])
               if txt.endswith('\n') and not body.endswith('\n'):
                   body += '\n'
               return fm, body
 
-          # normalize Decap date string to a form parser accepts
           def normalize_date_str(s):
               s = clean(str(s)).strip()
-              # Ensure space (Decap uses "YYYY-MM-DD HH:mm:ss+00:00")
               s = re.sub(r'^(\d{4}-\d{2}-\d{2})[T\s]+(\d{2}:\d{2}:\d{2})', r'\1 \2', s)
-              # Fix erroneous "Z+03:00" → "+03:00"
               s = re.sub(r'Z([+-]\d{2}:\d{2})$', r'\1', s)
-              # Pure 'Z' → '+00:00'
               if s.endswith('Z'):
                   s = s[:-1] + '+00:00'
               return s
@@ -103,7 +93,6 @@ jobs:
                   return None
               raw = str(v)
               norm = normalize_date_str(raw)
-              # Try exact Decap format first
               try:
                   dt = datetime.datetime.strptime(norm, "%Y-%m-%d %H:%M:%S%z")
               except Exception:
@@ -112,7 +101,6 @@ jobs:
                   except Exception as e:
                       print(f"skip (bad 'date'): {path}: raw='{raw}' norm='{norm}' err={e}")
                       return None
-              # normalize to UTC
               if dt.tzinfo is None:
                   dt = dt.replace(tzinfo=datetime.timezone.utc)
               else:
@@ -122,7 +110,8 @@ jobs:
 
           files = sorted(glob.glob('content/films/*.md'))
           if not files:
-              print("::error::No files in content/films"); sys.exit(1)
+              print("::error::No files in content/films")
+              sys.exit(1)
 
           candidates = []
           for p in files:
@@ -139,13 +128,13 @@ jobs:
               candidates.append((dt, p, vid))
 
           if not candidates:
-              print("::error::No film with valid 'date' and 'video_id' found"); sys.exit(1)
+              print("::error::No film with valid 'date' and 'video_id' found")
+              sys.exit(1)
 
           print("— Candidates (UTC, by 'date'):")
           for dt, p, vid in candidates:
               print(f"  {dt.isoformat()}  {p}  (video_id={vid})")
 
-          # Sort newest first; tie-break by filename for determinism
           candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
           dt, latest_path, vid = candidates[0]
           print(f"Picked newest: {latest_path} @ {dt.isoformat()}  (video_id={vid})")
@@ -156,7 +145,28 @@ jobs:
               fh.write(f"video_id={vid}\n")
           PY
 
-            - name: Create signed playback token (BG only, 24h)
+      - name: Require signed URLs for this video
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          VID: ${{ steps.pick.outputs.video_id }}
+        run: |
+          set -Eeuo pipefail
+          BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
+          echo "Request body:"; echo "$BODY" | jq .
+          RESP=$(curl -sS -X POST \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
+            --data "$BODY")
+          echo "Response:"; echo "$RESP" | jq .
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+            echo "CF error:"
+            echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            exit 1
+          }
+
+      - name: Create signed playback token (BG only, 24h)
         id: sign
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -182,13 +192,12 @@ jobs:
             --data "$BODY")
           echo "Token response:"; echo "$RESP" | jq .
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
-            echo "CF error:"; echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            echo "CF error:"
+            echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
           echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
-      # ---------------------------------------------------------------
-      # NEW: write token back only to the picked file (tolerant parser)
-      # ---------------------------------------------------------------
+
       - name: Write token into front matter (picked file only)
         env:
           FILEPATH: ${{ steps.pick.outputs.path }}
@@ -198,9 +207,9 @@ jobs:
           import yaml, sys, os
 
           def clean(s):
-              return s.replace('\ufeff','').replace('\u200b','').replace('\xa0','')
+              return s.replace('\ufeff', '').replace('\u200b', '').replace('\xa0', '')
 
-          path  = os.environ['FILEPATH']
+          path = os.environ['FILEPATH']
           token = os.environ['TOKEN']
 
           with open(path, 'r', encoding='utf-8') as f:
@@ -208,29 +217,31 @@ jobs:
 
           lines = txt.splitlines()
           start = None
-          for i,l in enumerate(lines):
+          for i, l in enumerate(lines):
               if clean(l).strip() == '---':
                   start = i
                   break
           if start is None:
-              print("::error::Front matter not found in " + path); sys.exit(1)
+              print("::error::Front matter not found in " + path)
+              sys.exit(1)
 
           end = None
-          for i in range(start+1, len(lines)):
+          for i in range(start + 1, len(lines)):
               if clean(lines[i]).strip() == '---':
                   end = i
                   break
           if end is None:
-              print("::error::Front matter closing '---' not found in " + path); sys.exit(1)
+              print("::error::Front matter closing '---' not found in " + path)
+              sys.exit(1)
 
-          fm = yaml.safe_load('\n'.join(lines[start+1:end])) or {}
-          body = '\n'.join(lines[end+1:])
+          fm = yaml.safe_load('\n'.join(lines[start + 1:end])) or {}
+          body = '\n'.join(lines[end + 1:])
           if txt.endswith('\n') and not body.endswith('\n'):
               body += '\n'
 
           fm['signed_token'] = token
 
-          new_fm  = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
+          new_fm = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
           new_txt = f"---\n{new_fm}\n---\n{body}"
 
           with open(path, 'w', encoding='utf-8') as f:
