@@ -176,7 +176,7 @@ jobs:
             exit 1
           }
 
-      - name: Create signed playback token (24h)
+            - name: Create signed playback token (BG only, 24h)
         id: sign
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -185,7 +185,15 @@ jobs:
         run: |
           set -Eeuo pipefail
           EXP=$(( $(date +%s) + 24*3600 ))
-          BODY=$(jq -n --argjson exp "$EXP" '{ exp: $exp, downloadable: true }')
+          BODY=$(jq -n --argjson exp "$EXP" '
+            {
+              exp: $exp,
+              downloadable: true,
+              accessRules: [
+                { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] },
+                { "type": "any", "action": "block" }
+              ]
+            }')
           echo "Token request:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
