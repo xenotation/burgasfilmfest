@@ -1,5 +1,5 @@
 ---
-title: From My Desert
+title: От пустинята
 author: Венета Андрова
 year: "2019"
 thumbnail: /img/from-my-desert-poster.png
