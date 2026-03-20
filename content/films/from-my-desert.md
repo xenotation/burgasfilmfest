@@ -2,8 +2,8 @@
 unlisted: true
 slug_name: from-my-desert
 date: 2026-03-20 18:46:00+0200
-film_title: От моята пустиня
-film_title_org: From My Desert
+film_title: From My Desert
+film_title_org: ""
 country: Германия
 year: "2019"
 minutes: "14"
@@ -23,4 +23,6 @@ Music: Надя Ди’Ало, Бенедикт Фрай
 thumbnail: /img/from-my-desert-poster.png
 feature_image: /img/from-my-desert_2.png
 show_watch_button: true
+video_id: 25b44091db706d4d42ddeca0482425a9
+hero_video_id: 2cd27892bc430f0708b3a661517f8bba
 ---
