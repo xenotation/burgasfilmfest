@@ -32,6 +32,6 @@ Plankton.bg е резултат от инициатива на Burgas Internatio
 
 **Контакт**
 <br/>
-<a href="mailto:d.georgiev@burgasfilmfest.com ">d.georgiev@burgasfilmfest.com </a>
+<a href="mailto:doni.georgiev6@gmail.com">doni.georgiev6@gmail.com </a>
 <br/>
-<a href="mailto:info@burgasfilmfest.com">info@burgasfilmfest.com</a>
+<a href="mailtod.georgiev@plankton.bg">d.georgiev@plankton.bg</a>
