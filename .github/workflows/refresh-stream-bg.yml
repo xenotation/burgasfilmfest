@@ -180,7 +180,7 @@ jobs:
               exp: $exp,
               downloadable: true,
               accessRules: [
-                { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] },
+                { "type": "ip.geoip.country", "action": "allow", "country": ["BG", "DE"] },
                 { "type": "any", "action": "block" }
               ]
             }')
