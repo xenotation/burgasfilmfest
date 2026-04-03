@@ -19,7 +19,9 @@ Editing: Стефан Куцев
 Cinematography: Бернар Мешеровски
 Sound: Хелин Сезен Коркмаз, Стефан Куцев, Шокуфе Ефтехар, Юдит Нордброк
 LeadActors: Мохамад Мо Сабах, Матиас Таранг
-thumbnail: /img/04_krahetepunetoreve_300dpi_small.jpg
-feature_image: /img/04_krahetepunetoreve_300dpi_small.jpg
+thumbnail: /img/restbestand_poster_even_smaller.jpg
+feature_image: /img/restbestand_still2_©stefankoutzev-2.jpg
 show_watch_button: true
+video_id: 6998cf5a53c645e681fad58ee80c5a91
+hero_video_id: ba42bbd5f14465d86d55902d3c77f111
 ---
