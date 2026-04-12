@@ -1,0 +1,59 @@
+{{ define "main" }}
+<section class="film-archive">
+  <div class="film-list">
+    {{ $films := .Data.Pages }}
+    {{ $films = where $films ".Params.unlisted" "ne" true }}
+
+    {{ range $element := $films.ByDate.Reverse }}
+    <article class="film-entry">
+      <div class="film-image">
+        <a href="{{ $element.RelPermalink }}">
+          <img src="{{ $element.Params.feature_image }}" alt="{{ $element.Params.film_title | default $element.Title }}">
+        </a>
+      </div>
+
+      <div class="film-text">
+        <a href="{{ $element.RelPermalink }}" style="color:inherit; text-decoration:none;">
+          <div class="film-title-list">
+            {{ $element.Params.film_title | default $element.Title }}
+
+            {{ with $element.Params.film_title_org }}
+              <p class="film-title-org" style="display:block; font-size:1.2rem; margin-top:0.2rem;">
+                {{ . }}
+              </p>
+            {{ end }}
+
+            <p class="film-details-hero" style="margin:0.2em 0 0 0;">
+              <span style="display:block;">
+                {{ $element.Params.Director }} · {{ $element.Params.year }} · {{ $element.Params.country }} · {{ $element.Params.minutes }} мин
+              </span>
+
+              {{ with $element.Params.text_author }}
+                <span style="display:block;">
+                  {{ . }}
+                </span>
+              {{ end }}
+
+              {{ with $element.Params.film_categories }}
+                <span style="display:block; font-size:0.85em; opacity:0.8; margin-top:0.1em;">
+                  {{ range . }}
+                    <a href="{{ "/film_categories/" | relURL }}{{ . | urlize }}/"
+                       style="color:inherit; text-decoration:none;">
+                      {{ . }}
+                    </a>
+                  {{ end }}
+                </span>
+              {{ end }}
+            </p>
+          </div>
+        </a>
+
+        <div class="stream-label">
+          {{ $element.Params.stream_duration }}
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

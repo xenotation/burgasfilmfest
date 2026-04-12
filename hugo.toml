@@ -19,6 +19,10 @@ home = ["HTML", "RSS"]
 [params]
 description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
 
+[taxonomies]
+film_category = "film_categories"
+
+
 [params.seo]
 site_name = "Планктон"
 defaultImage = "/img/og-default.jpg"

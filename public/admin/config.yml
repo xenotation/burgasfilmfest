@@ -48,6 +48,16 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false }
       - { label: "Text author", name: "text_author", widget: "string", required: false }
+
+      - label: "Film categories"
+        name: "film_categories"
+        widget: "list"
+        required: false
+        allow_add: true
+        summary: "{{fields.item}}"
+        field:
+          { label: "Category", name: "item", widget: "string" }
+
       - { label: "Stream duration", name: "stream_duration", widget: "string", required: true }
       - { label: "Director", name: "Director", widget: "string", required: false }
       - { label: "Production", name: "Production", widget: "string", required: false }
@@ -68,7 +78,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
-  # Blog  ✅ FIXED
+  # Blog
   # -------------------------
   - name: "blog"
     label: "Blog"
@@ -129,7 +139,6 @@ collections:
           - { label: "Language Code", name: "languageCode", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Theme", name: "theme", widget: "string" }
-
 
           - label: "Params"
             name: "params"
