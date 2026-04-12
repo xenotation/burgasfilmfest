@@ -5,17 +5,17 @@ date: 2026-04-03 12:01:00+0300
 film_title: Наличен остатък
 film_title_org: Restbestand
 country: Германия
-year: "2025"
-minutes: "19"
-description: Сред обсебващия цикъл на масовото производство човешкият труд
-  контрастира с безкрайния запас от ковчези в една берлинска фабрика. На фона на
-  компютърно-подпомогнатото производство и прекомерната експлоатация на
-  природните ресурси, този филм копнее за миг почивка от конвейера, докато
-  човечеството непрестанно се погребва в останките на един материален свят.
+year: '2025'
+minutes: '19'
+description: Сред обсебващия цикъл на масовото производство човешкият труд контрастира
+  с безкрайния запас от ковчези в една берлинска фабрика. На фона на компютърно-подпомогнатото
+  производство и прекомерната експлоатация на природните ресурси, този филм копнее
+  за миг почивка от конвейера, докато човечеството непрестанно се погребва в останките
+  на един материален свят.
 film_categories: []
 stream_duration: 03.04.2026 - 17.04.2026
 Director: Стефан Куцев
-Production: "Стефан Куцев, Academy of Media Arts Cologne "
+Production: 'Стефан Куцев, Academy of Media Arts Cologne '
 Editing: Стефан Куцев
 Cinematography: Бернар Мешеровски
 Sound: Хелин Сезен Коркмаз, Стефан Куцев, Шокуфе Ефтехар, Юдит Нордброк
@@ -24,7 +24,7 @@ thumbnail: /img/restbestand_poster_even_smaller.jpg
 feature_image: /img/restbestand_still2_©stefankoutzev-2.jpg
 show_watch_button: true
 video_id: 6998cf5a53c645e681fad58ee80c5a91
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2OTk4Y2Y1YTUzYzY0NWU2ODFmYWQ1OGVlODBjNWE5MSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3NjA3Njg4NCIsIm5iZiI6IjE3NzU5ODY4ODQiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciLCJERSJdfSx7ImFjdGlvbiI6ImJsb2NrIiwidHlwZSI6ImFueSJ9XSwiZG93bmxvYWRhYmxlIjp0cnVlfQ.jR0BpNxOKFzowDbf7cdEcnBUZjZ6ECgi3poGgPosTZJUW7oY5zlRvyYJ5mKPVVrQeeabgLV4Cs9NmGCeQg_KP3OE1RZlr_Lq23F3Bdh52P8zCi_WPXCEtSNR3isFrPUI5k1cNtWo5nBEbV0Une0ZwMUE997oubFcXI8PBBZdZJw2QsOZ0T3B5hGTMWoDfaM_KNhrl9eW62XkulzLjZjRxrCZTJIQR0GGSeBUlGHkqNmMq0Hf5hGNz85sNBCN7hM-jR2e7kEWTJoPS8QqAPaqA85UKHvQwDdyYd6e8-OxtStOnh0bmJKvKCKwIn84LPStM5s5zdqqK9qlXjCes1wmPg
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2OTk4Y2Y1YTUzYzY0NWU2ODFmYWQ1OGVlODBjNWE5MSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3NjA3NzA5NSIsIm5iZiI6IjE3NzU5ODcwOTYiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciLCJERSJdfSx7ImFjdGlvbiI6ImJsb2NrIiwidHlwZSI6ImFueSJ9XSwiZG93bmxvYWRhYmxlIjp0cnVlfQ.bgir2ZAgD5n6m7eo5xcHa8FQuiFS-vla-J7HUOSbxc_vbzXO23nCCLeuKTqIhi-6ctlrbjb9FSFdOuZiCupuiDCgw_TDGGYfdcCVBX3AvDLysccZt1UxYXf6w_BMs1cygR0ZCtV2NuS68TNaPeEXC2uS-XC17_XsXsNrfXYfqa1kAMgahW9SYLtZ7H-fbXZn4_5lSJLoaYnOQ7354wkII2feFxEzoglh2hOWsqwmbHU2LJ9Su9N3qdAkTvRaBQgfnRAFHIjKVKc7AvbEls3lJS9fVA0H0WgWcK2eqgk4ihmO-uuiJOBpeq0x14MkeBzykBGE_X_tONJZmCDgb7siVA
 hero_video_id: ba42bbd5f14465d86d55902d3c77f111
 ---
 ### Бележка от режисьора Стефан Куцев
