@@ -3,7 +3,7 @@ draft: false
 slug_name: workers-wings
 date: 2025-11-21 15:19:00+02:00
 film_title: Крилeте на работниците
-film_title_org: KRAHËT E PUNËTORËVE
+film_title_org: Krahët E Punëtoreve
 country: Косово
 year: "2024"
 minutes: "19"
