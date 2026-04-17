@@ -5,24 +5,24 @@ date: 2026-04-03 12:01:00+0300
 film_title: Наличен остатък
 film_title_org: Restbestand
 country: Германия
-year: '2025'
-minutes: '19'
-description: Сред обсебващия цикъл на масовото производство човешкият труд контрастира
-  с безкрайния запас от ковчези в една берлинска фабрика. На фона на компютърно-подпомогнатото
-  производство и прекомерната експлоатация на природните ресурси, този филм копнее
-  за миг почивка от конвейера, докато човечеството непрестанно се погребва в останките
-  на един материален свят.
+year: "2025"
+minutes: "19"
+description: Сред обсебващия цикъл на масовото производство човешкият труд
+  контрастира с безкрайния запас от ковчези в една берлинска фабрика. На фона на
+  компютърно-подпомогнатото производство и прекомерната експлоатация на
+  природните ресурси, този филм копнее за миг почивка от конвейера, докато
+  човечеството непрестанно се погребва в останките на един материален свят.
 film_categories: []
 stream_duration: 03.04.2026 - 17.04.2026
 Director: Стефан Куцев
-Production: 'Стефан Куцев, Academy of Media Arts Cologne '
+Production: "Стефан Куцев, Academy of Media Arts Cologne "
 Editing: Стефан Куцев
 Cinematography: Бернар Мешеровски
 Sound: Хелин Сезен Коркмаз, Стефан Куцев, Шокуфе Ефтехар, Юдит Нордброк
 LeadActors: Мохамад Мо Сабах, Матиас Таранг
 thumbnail: /img/restbestand_poster_even_smaller.jpg
 feature_image: /img/restbestand_still2_©stefankoutzev-2.jpg
-show_watch_button: true
+show_watch_button: false
 video_id: 6998cf5a53c645e681fad58ee80c5a91
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2OTk4Y2Y1YTUzYzY0NWU2ODFmYWQ1OGVlODBjNWE5MSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc3NjUzMTk2OCIsIm5iZiI6IjE3NzY0NDE5NjgiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciLCJERSJdfSx7ImFjdGlvbiI6ImJsb2NrIiwidHlwZSI6ImFueSJ9XSwiZG93bmxvYWRhYmxlIjp0cnVlfQ.x4X7JIQn-KXPZ-Pj_qkGdFu15txEdYE5nj4ZKMycUJSKnEKZCV00pKYl7Y5lZFOl8vjEFF_t-OgEZlIzj0BT76_U-hwGGfdur6Cn9wKBClG194xulVLnwKCgxEZchteY7WgyNVDneJkLFnv4lDSlrnrJKLfE0SsPylcGk9b-gaktLxHc-Eg4cVIHXUVVsnYLLjzwn6cP7qAcf8_vnY2ZOXOf6x6CdUOvBS-S8u5ygyPpJWlnQSPh2iVS9gVQLpnPlvgGcQdhQdIvJadL6uNijvRtnSJLm2Y7ZifBn_oiZI4CwNVDxLQdiObELn7oNhnbJsf9ai5ZjVtwUQYfrSm6xA
 hero_video_id: ba42bbd5f14465d86d55902d3c77f111
