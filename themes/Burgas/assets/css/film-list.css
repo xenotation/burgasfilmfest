@@ -64,9 +64,9 @@
   filter: drop-shadow(2px 8px 4px #d6d6ec);
   }
   
-  .film-list .film-title-list {
-    text-transform: uppercase;
-  }
+
+
+
   .stream-label {
     background-color: #4444dd;
     color: var(--color-bg);       

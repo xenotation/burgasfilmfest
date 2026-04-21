@@ -107,7 +107,7 @@
             {{ $actors := .Params.LeadActors | default .Params.Actors }}
             {{ with $actors }}
               <div class="credit">
-                <span class="credit-label">Главни актьори</span>
+                <span class="credit-label">С участието на</span>
                 <span class="credit-value">{{ . }}</span>
               </div>
             {{ end }}
