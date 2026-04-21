@@ -6,8 +6,15 @@
     <description>Recent content in Posters on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Fri, 03 Apr 2026 14:36:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 19:50:00 +0300</lastBuildDate>
     <atom:link href="http://192.168.1.5:1313/posters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Поредната семейна драма</title>
+      <link>http://192.168.1.5:1313/posters/2026-%D0%BF%D0%BE%D1%80%D0%B5%D0%B4%D0%BD%D0%B0%D1%82%D0%B0-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D0%B0-%D0%B4%D1%80%D0%B0%D0%BC%D0%B0/</link>
+      <pubDate>Fri, 17 Apr 2026 19:50:00 +0300</pubDate>
+      <guid>http://192.168.1.5:1313/posters/2026-%D0%BF%D0%BE%D1%80%D0%B5%D0%B4%D0%BD%D0%B0%D1%82%D0%B0-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D0%B0-%D0%B4%D1%80%D0%B0%D0%BC%D0%B0/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Restbestand</title>
       <link>http://192.168.1.5:1313/posters/2026-restbestand/</link>
@@ -93,7 +100,7 @@
       <description></description>
     </item>
     <item>
-      <title>Workers&#39; Wings</title>
+      <title>Krahët E Punëtoreve</title>
       <link>http://192.168.1.5:1313/posters/2025-workers-wings/</link>
       <pubDate>Fri, 21 Nov 2025 15:47:00 +0200</pubDate>
       <guid>http://192.168.1.5:1313/posters/2025-workers-wings/</guid>

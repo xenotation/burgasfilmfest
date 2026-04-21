@@ -6,8 +6,15 @@
     <description>Recent content in Films on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
-    <lastBuildDate>Fri, 03 Apr 2026 12:01:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 21:06:00 +0300</lastBuildDate>
     <atom:link href="http://192.168.1.5:1313/films/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://192.168.1.5:1313/films/yet-another-family-drama/</link>
+      <pubDate>Fri, 17 Apr 2026 21:06:00 +0300</pubDate>
+      <guid>http://192.168.1.5:1313/films/yet-another-family-drama/</guid>
+      <description></description>
+    </item>
     <item>
       <title></title>
       <link>http://192.168.1.5:1313/films/unsold-copies/</link>

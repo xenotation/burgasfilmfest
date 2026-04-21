@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.1.5:1313/films/yet-another-family-drama/</loc>
+    <lastmod>2026-04-17T21:06:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/films/</loc>
+    <lastmod>2026-04-17T21:06:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/</loc>
+    <lastmod>2026-04-17T21:06:00+03:00</lastmod>
+  </url><url>
     <loc>http://192.168.1.5:1313/posters/</loc>
-    <lastmod>2026-04-03T14:36:00+03:00</lastmod>
+    <lastmod>2026-04-17T19:50:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.5:1313/posters/2026-%D0%BF%D0%BE%D1%80%D0%B5%D0%B4%D0%BD%D0%B0%D1%82%D0%B0-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D0%B0-%D0%B4%D1%80%D0%B0%D0%BC%D0%B0/</loc>
+    <lastmod>2026-04-17T19:50:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.1.5:1313/posters/2026-restbestand/</loc>
     <lastmod>2026-04-03T14:36:00+03:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.5:1313/</loc>
-    <lastmod>2026-04-03T14:36:00+03:00</lastmod>
-  </url><url>
     <loc>http://192.168.1.5:1313/films/unsold-copies/</loc>
-    <lastmod>2026-04-03T12:01:00+03:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.5:1313/films/</loc>
     <lastmod>2026-04-03T12:01:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.1.5:1313/posters/2026-from-my-desert/</loc>
