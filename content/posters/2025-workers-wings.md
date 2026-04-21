@@ -1,5 +1,5 @@
 ---
-title: Workers' Wings
+title: Krahët E Punëtoreve
 author: Ilir Hasanaj
 year: "2024"
 thumbnail: /img/workers_wings_poster_digital_01.jpg
