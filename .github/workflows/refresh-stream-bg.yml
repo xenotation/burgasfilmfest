@@ -179,10 +179,7 @@ jobs:
             {
               exp: $exp,
               downloadable: true,
-              accessRules: [
-                { "type": "ip.geoip.country", "action": "allow", "country": ["BG", "DE"] },
-                { "type": "any", "action": "block" }
-              ]
+
             }')
           echo "Token request:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
