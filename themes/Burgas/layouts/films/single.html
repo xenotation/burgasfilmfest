@@ -104,6 +104,13 @@
               </div>
             {{ end }}
 
+            {{ with .Params.Choreography }}
+              <div class="credit">
+                <span class="credit-label">Хореограф</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
             {{ $actors := .Params.LeadActors | default .Params.Actors }}
             {{ with $actors }}
               <div class="credit">
