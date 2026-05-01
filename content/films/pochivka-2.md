@@ -11,4 +11,5 @@ stream_duration: 01.05.2026 - 08.05.2026
 thumbnail: /img/pochivka_shturk.jpeg
 feature_image: /img/pochivka2.jpeg
 show_watch_button: false
+hero_video_id: 2c5f36f0b57ef9ab97f6c76ed5378f7d
 ---
