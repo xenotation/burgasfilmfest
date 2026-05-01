@@ -3,7 +3,7 @@ draft: false
 unlisted: false
 slug_name: pochivka
 date: 2026-01-16 16:37:00+02:00
-film_title: Почивка 2💆
+film_title: Почивка💆
 film_title_org: "-"
 country: "-"
 year: "-"
