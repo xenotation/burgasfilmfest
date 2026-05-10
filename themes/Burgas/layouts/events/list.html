@@ -20,9 +20,6 @@
               {{ $element.Title }}
 
               <p class="film-details-hero" style="margin:0.2em 0 0 0;">
-                {{ with $element.Params.event_date }}
-                  <span style="display:block;">{{ . }}</span>
-                {{ end }}
 
                 {{ with $element.Params.location }}
                   <span style="display:block;">{{ . }}</span>
@@ -41,9 +38,19 @@
             </div>
           </a>
 
-          {{ with $element.Params.event_date }}
-            <div class="stream-label">{{ . }}</div>
-          {{ end }}
+          {{ if or $element.Params.event_date $element.Params.event_time }}
+            <div class="stream-label">
+
+                {{ with $element.Params.event_date }}
+                {{ . }}
+                {{ end }}
+
+                {{ with $element.Params.event_time }}
+                , {{ . }}
+                {{ end }}
+
+            </div>
+            {{ end }}
         </div>
       </article>
     {{ end }}
