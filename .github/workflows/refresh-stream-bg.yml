@@ -175,12 +175,37 @@ jobs:
         run: |
           set -Eeuo pipefail
           EXP=$(( $(date +%s) + 24*3600 ))
-          BODY=$(jq -n --argjson exp "$EXP" '
-            {
-              exp: $exp,
-              downloadable: true,
+          python - <<'PY' > token_body.json
+            import yaml, json, time
 
-            }')
+            with open("data/stream.yml", "r", encoding="utf-8") as f:
+                cfg = yaml.safe_load(f) or {}
+
+            exp = int(time.time()) + 24 * 3600
+
+            body = {
+                "exp": exp,
+                "downloadable": True
+            }
+
+            if cfg.get("geo_blocking_enabled"):
+                countries = cfg.get("allowed_countries") or ["BG"]
+                body["accessRules"] = [
+                    {
+                        "type": "ip.geoip.country",
+                        "action": "allow",
+                        "country": countries
+                    },
+                    {
+                        "type": "any",
+                        "action": "block"
+                    }
+                ]
+
+            print(json.dumps(body))
+            PY
+
+            BODY=$(cat token_body.json)
           echo "Token request:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \

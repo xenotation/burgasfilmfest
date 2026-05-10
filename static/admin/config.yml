@@ -142,6 +142,30 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # -------------------------
+  # Stream Settings
+  # -------------------------
+  - name: "stream_settings"
+    label: "Stream Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Cloudflare Stream Geo Blocking"
+        name: "cloudflare_stream"
+        file: "data/stream.yml"
+        format: "yaml"
+        fields:
+          - { label: "Enable geo blocking", name: "geo_blocking_enabled", widget: "boolean", default: false, required: false }
+
+          - label: "Allowed countries"
+            name: "allowed_countries"
+            widget: "list"
+            required: false
+            allow_add: true
+            field:
+              { label: "Country code", name: "item", widget: "string", hint: "Use ISO country codes, e.g. BG, DE, FR" }
+
+  # -------------------------
   # Pages (About)
   # -------------------------
   - name: "pages"
