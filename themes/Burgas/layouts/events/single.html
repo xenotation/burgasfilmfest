@@ -1,0 +1,122 @@
+{{ define "main" }}
+
+  {{ $main := resources.Get "css/film-single.css" | minify | fingerprint }}
+
+  <link
+    rel="stylesheet"
+    href="{{ $main.RelPermalink }}"
+    integrity="{{ $main.Data.Integrity }}"
+    crossorigin="anonymous"
+  >
+
+  <article class="film-single">
+
+    <div class="film-inner">
+
+      <div class="film-top">
+
+        <div class="film-poster">
+
+          <img
+            src="{{ .Params.thumbnail | default .Params.feature_image }}"
+            alt="{{ .Title }}">
+
+        </div>
+
+        <div class="film-meta-single">
+
+          <h1 class="film-title-single">
+
+            {{ .Title }}
+
+            {{ with .Params.subtitle }}
+              <p class="film-title-org"
+                 style="display:block; font-size:1.2rem; margin-top:0.2rem;">
+                {{ . }}
+              </p>
+            {{ end }}
+
+          </h1>
+
+          <p class="film-details">
+
+            {{ with .Params.event_date }}
+              {{ . }}
+            {{ end }}
+
+            {{ with .Params.event_time }}
+              · {{ . }}
+            {{ end }}
+
+            {{ with .Params.location }}
+              · {{ . }}
+            {{ end }}
+
+          </p>
+
+          {{ with .Params.description }}
+            <p class="film-description">
+              {{ . }}
+            </p>
+          {{ end }}
+
+          <div class="film-credits-grid">
+
+            {{ with .Params.venue }}
+              <div class="credit">
+                <span class="credit-label">Място</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.address }}
+              <div class="credit">
+                <span class="credit-label">Адрес</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.participants }}
+              <div class="credit">
+                <span class="credit-label">Участници</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+            {{ with .Params.entry }}
+              <div class="credit">
+                <span class="credit-label">Вход</span>
+                <span class="credit-value">{{ . }}</span>
+              </div>
+            {{ end }}
+
+          </div>
+          {{ if and .Params.button_link .Params.button_text }}
+          <div class="watch-button-wrapper">
+            <a
+              class="watch-button"
+              href="{{ .Params.button_link }}"
+              target="_blank"
+              rel="noopener">
+              {{ .Params.button_text }}
+            </a>
+          </div>
+        {{ end }}
+
+        </div>
+
+      </div>
+
+      {{ $hasBody := ne (trim (plainify .Content) " \n\r\t") "" }}
+
+      {{ if $hasBody }}
+        <div class="film-body">
+          {{ .Content }}
+        </div>
+      {{ end }}
+
+    </div>
+
+  </article>
+
+{{ end }}

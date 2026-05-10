@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+<section class="film-archive">
+  <div class="film-list">
+
+    <div style="border:2px solid red; padding:1rem; margin-bottom:2rem;">
+      <p>EVENT LIST TEMPLATE HIT</p>
+      <p>Current section: {{ .Section }}</p>
+      <p>Pages in this section: {{ len .Pages }}</p>
+      <p>RegularPages in events: {{ len (where .Site.RegularPages "Section" "events") }}</p>
+    </div>
+
+    {{ $events := where .Site.RegularPages "Section" "events" }}
+    {{ $events = where $events ".Params.unlisted" "ne" true }}
+
+    {{ range $element := $events.ByDate.Reverse }}
+      <article class="film-entry">
+        <div class="film-image">
+          <a href="{{ $element.RelPermalink }}">
+            <img src="{{ $element.Params.feature_image | default $element.Params.thumbnail }}" alt="{{ $element.Title }}">
+          </a>
+        </div>
+
+        <div class="film-text">
+          <a href="{{ $element.RelPermalink }}" style="color:inherit; text-decoration:none;">
+            <div class="film-title-list">
+              {{ $element.Title }}
+
+              <p class="film-details-hero" style="margin:0.2em 0 0 0;">
+                {{ with $element.Params.event_date }}
+                  <span style="display:block;">{{ . }}</span>
+                {{ end }}
+
+                {{ with $element.Params.location }}
+                  <span style="display:block;">{{ . }}</span>
+                {{ end }}
+
+                {{ with $element.Params.organizer }}
+                  <span style="display:block;">{{ . }}</span>
+                {{ end }}
+
+                {{ with $element.Params.description }}
+                  <span style="display:block; font-size:0.85em; opacity:0.8; margin-top:0.1em;">
+                    {{ . }}
+                  </span>
+                {{ end }}
+              </p>
+            </div>
+          </a>
+
+          {{ with $element.Params.event_date }}
+            <div class="stream-label">{{ . }}</div>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}
