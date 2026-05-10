@@ -6,6 +6,14 @@
     <description>Recent content in Events on Планктон</description>
     <generator>Hugo</generator>
     <language>bg-bg</language>
+    <lastBuildDate>Wed, 01 Jan 2025 12:00:00 +0300</lastBuildDate>
     <atom:link href="http://192.168.1.27:1313/events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Танцови фрагменти III</title>
+      <link>http://192.168.1.27:1313/events/2025-test-event/</link>
+      <pubDate>Wed, 01 Jan 2025 12:00:00 +0300</pubDate>
+      <guid>http://192.168.1.27:1313/events/2025-test-event/</guid>
+      <description>За събитието „Танцови фрагменти III“ събира серия от кратки хореографски и аудиовизуални работи, развиващи се между пърформанс, видео и експериментален звук.&#xA;Програма 19:30 — Отваряне&#xA;20:00 — Пърформанс&#xA;20:45 — Видео прожекции&#xA;21:15 — Разговор с участниците</description>
+    </item>
   </channel>
 </rss>
