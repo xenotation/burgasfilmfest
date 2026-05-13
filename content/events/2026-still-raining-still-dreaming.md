@@ -7,7 +7,7 @@ event_date: 19.05.2026
 event_time: 19:30 ч.
 location: ""
 venue: Bobbina Cultural Space
-address: ул. Триадица 5А
+address: ул. Триадица 5А, София
 participants: Дискусия след прожекцията със Северина Станкев и Марио Томчев
 entry: Свободно дарение
 description: "Започваме да представяме и филми на живо, от време на време. Ще се
