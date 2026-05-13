@@ -15,7 +15,7 @@ description: "Започваме да представяме и филми на 
   филмите на Фил Соломон и книгата, която е вдъхновение за това събитие, а
   именно двуезичното издание Still Raining, Still Dreaming: Film Meets Video
   Game."
-thumbnail: /img/6kbv4dkyckb3b3e8gajww0olb7w.webp
+thumbnail: /img/rfr-ps-2.png
 feature_image: /img/rfr-ps-1.png
 button_link: https://www.instagram.com/p/DYCql7fyIpF/
 button_text: повече
