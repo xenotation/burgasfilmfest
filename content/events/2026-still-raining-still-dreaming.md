@@ -1,6 +1,6 @@
 ---
 unlisted: false
-title: Still Raining, Still Dreaming
+title: "Still Raining, Still Dreaming: Експерименталните филми на Фил Соломон"
 subtitle: Експерименталните филми на Фил Соломон
 date: 2026-05-13 22:02:00+0300
 event_date: 19.05.2026
