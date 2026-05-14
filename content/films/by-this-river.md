@@ -7,7 +7,7 @@ film_title_org: By This River
 country: САЩ (неиздаден)
 year: "2018"
 minutes: "3"
-description: Неиздаден официално филм на Фил Соломон, който той прави в GTA и
+description: Неиздаден (официално) филм на Фил Соломон, който той прави в GTA и
   публикува във Vimeo през 2018.
 stream_duration: 15.05.2026 - 22.05.2026
 Director: Фил Соломон
