@@ -20,7 +20,7 @@ feature_image: /img/rfr-ps-1.png
 button_link: https://www.facebook.com/events/2381561425682710/?active_tab=about
 button_text: повече
 ---
-# Plankton goes offline!
+# Plankton.bg goes offline!
 
 Започваме да представяме и филми на живо, от време на време. Ще се видим на 19 май в Културно пространство Бобина, където ще представим част от филмите на Фил Соломон и книгата, която е вдъхновение за това събитие, а именно двуезичното издание Still Raining, Still Dreaming: Film Meets Video Game.
 
