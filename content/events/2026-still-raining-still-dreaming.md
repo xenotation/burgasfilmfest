@@ -17,7 +17,7 @@ description: "Започваме да представяме и филми на 
   Game."
 thumbnail: /img/rfr-ps-2.png
 feature_image: /img/rfr-ps-1.png
-button_link: https://www.instagram.com/p/DYCql7fyIpF/
+button_link: https://www.facebook.com/events/2381561425682710/?active_tab=about
 button_text: повече
 ---
 # Plankton goes offline!
