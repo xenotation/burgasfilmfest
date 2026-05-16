@@ -19,10 +19,6 @@ home = ["HTML", "RSS"]
 [params]
 description = "Дигитална платформа за представяне на късометражни и среднометражни филми, насочена към българската публика. Всяка седмица по един нов филм, достъпен за гледане безплатно."
 
-[taxonomies]
-film_category = "film_categories"
-
-
 [params.seo]
 site_name = "Планктон"
 defaultImage = "/img/og-default.jpg"
@@ -34,7 +30,7 @@ twitterSite = "@your_account"
 name = "Plankton"
 url = "https://plankton.bg/"
 logo = "/img/og-default.jpg"
-sameAs = ["https://www.facebook.com/burgasfilmfest", "https://www.instagram.com/plankton_space/"]
+sameAs = ["https://www.facebook.com/people/Planktonbg/61581441954159/", "https://www.instagram.com/plankton_space/"]
 
 [[params.partners]]
 url = "https://ncf.bg/bg"
@@ -70,3 +66,6 @@ alt = "European Union Funding (Alt)"
 img = "/img/лого-нпву.png"
 alt = "нпву"
 url = "https://ncf.bg/bg/za-nfk/plan-za-vyzstanovjavane-i-ustojchivost"
+
+[taxonomies]
+film_category = "film_categories"
