@@ -44,17 +44,15 @@ The Emblazoned Apparitions (2013)
 
 След прожекцията ще проведем дискусия със Северина Станкева, докторантка по философия и с изследвания върху видеоигрите, както и небезизвестния киноман Марио Томчев.
 
-Специални благодарности на Phil Solomon Project и Austrian Film Museum за предоставените права и файлове.
+Специални благодарности на Phil Solomon Project и Austrian Film Museum за предоставените права и файлове.\
+---------------------------------------------------------------------------------------------------------
 
-\---------------------------------------------------------------------------------------------------------
-
-
-
+\
 We’re starting to host live film screenings from time to time. We’ll see you on May 19 at the Bobbina Cultural Space, where we’ll be screening some of Phil Solomon’s films and presenting the book that inspired this event: the bilingual edition \*Still Raining, Still Dreaming: Film Meets Video Game\*.
 
 Phil Solomon is a director whose films we’ve wanted to show before, but couldn’t because of his desire for his films to be viewed in the familiar darkened space, illuminated by the beam of the projector. But times are changing, and the people responsible for preserving and distributing Phil Solomon’s films have decided to collaborate with the Austrian distributors Sixpack to publish Still Raining, Still Dreaming: Film Meets Video Game, which contains a couple of essays on Phil Solomon’s films related to his experiments with video games, as well as a link to download some of these films. 
 
-Solomon’s films, which we will screen on May 19 at Bobbina, are part of precisely these experiments with video games, and more specifically, GTA - most of which he created following the death of his close friend and colleague, director Mark Lapore, and can be viewed as an attempt to process grief.
+Solomon’s films, which we will screen on May 19 at Bobbina, are part of precisely these experiments with video games, and more specifically, GTA - most of which he created following the death of his close friend and colleague, director Mark LaPore, and can be viewed as an attempt to process grief.
 
 One could say that Phil Solomon’s works are imbued with poetry, but poetry without words, a poetry that depicts the inexplicable, intertwining dark beauty with a dose of surrealist existentialism. His internationally acclaimed body of work spans 45 years and is dedicated to exploring cinema as an art form. He is a student of the renowned experimental filmmaker Ken Jacobs, as well as a friend and collaborator of Stan Brakhage.
 
