@@ -44,8 +44,9 @@ The Emblazoned Apparitions (2013)
 
 След прожекцията ще проведем дискусия със Северина Станкева, докторантка по философия и с изследвания върху видеоигрите, както и небезизвестния киноман Марио Томчев.
 
-Специални благодарности на Phil Solomon Project и Austrian Film Museum за предоставените права и файлове.\
----------------------------------------------------------------------------------------------------------
+Специални благодарности на Phil Solomon Project и Austrian Film Museum за предоставените права и файлове.
+
+\-------------------------------------------------------------------------------------------------------------------
 
 \
 We’re starting to host live film screenings from time to time. We’ll see you on May 19 at the Bobbina Cultural Space, where we’ll be screening some of Phil Solomon’s films and presenting the book that inspired this event: the bilingual edition \*Still Raining, Still Dreaming: Film Meets Video Game\*.
