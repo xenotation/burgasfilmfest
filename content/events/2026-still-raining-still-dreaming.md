@@ -24,15 +24,15 @@ button_text: повече
 
 ###### (English translation below)
 
-Започваме да представяме и филми на живо, от време на време. Ще се видим на 19 май в Културно пространство Бобина, където ще представим част от филмите на Фил Соломон и книгата, която е вдъхновение за това събитие, а именно двуезичното издание Still Raining, Still Dreaming: Film Meets Video Game.
+Започваме да представяме и филми на живо, от време на време. Ще се видим на 19 май в Културно пространство Бобина, където ще представим част от филмите на Фил Соломон и книгата, която е вдъхновение за това събитие, а именно двуезичното издание *Still Raining, Still Dreaming: Film Meets Video Game.*
 
-Фил Соломон е режисьор, чиито филми сме искали да покажем и преди, но не сме могли поради неговото желание филмите му да бъдат гледани в добре познатото ни затъмнено пространство, осеяно със светлината на лъча от проектора. Но времената се менят и хората, които се грижат за запазването и разпространяването на филмите на Фил Соломон са решили да участват в колаборация със австрийските дистрибутори Sixpack, за да издадат публикацията Still Raining, Still Dreaming: Film Meets Video Game, която съдържа няколко текста за филмите на Фил Соломон, свързани с експериментите му с видео игри, както и линк за изтегляне на част от тези филми. 
+Фил Соломон е режисьор, чиито филми сме искали да покажем и преди, но не сме могли поради неговото желание филмите му да бъдат гледани в добре познатото ни затъмнено пространство, осеяно със светлината на лъча от проектора. Но времената се менят и хората, които се грижат за запазването и разпространяването на филмите на Фил Соломон са решили да участват в колаборация със австрийските дистрибутори Sixpack, за да издадат публикацията *Still Raining, Still Dreaming: Film Meets Video Game,* която съдържа няколко текста за филмите на Фил Соломон, свързани с експериментите му с видео игри, както и линк за изтегляне на част от тези филми. 
 
 Филмите на Соломон, които ще покажем на 19 май в Бобина са част от точно тези негови експерименти с видео игри, и по-специфично GTA, повечето, от които той прави след смъртта на негов близък приятел и колега, режисьорът Марк Лапор, и могат да бъдат разгледани като опит за преодоляване на скръбта.
 
 Може да се каже, че творбите на Фил Соломон са изпълнени с поезия, но поезия без думи, такава, която изобразява необяснимото, преплитайки мрачна красота и доза сюрреалистичен екзистенциализъм. Неговото международно признато творчество обхваща период от 45 години, и се посвещава на това да изследва киното като изкуство. Той е ученик на известния експериментален режисьор Кен Джейкъбс, както и приятел и колаборатор на Стан Бракедж. 
 
-За по-любопитните, ето и списък с филмите, които ще покажем на 19.05. Те също са част от книжката Still Raining, Still Dreaming: Film Meets Video Game като линк за изтегляне, която ще може да си купите.
+За по-любопитните, ето и списък с филмите, които ще покажем на 19.05. Те също са част от книжката *Still Raining, Still Dreaming: Film Meets Video Game* като линк за изтегляне. Ще може да си купите и книгата на събитието.
 
 Crossroad (2005)\
 In Memoriam (Mark LaPore) (2007-2008, 43 min)\
@@ -57,7 +57,7 @@ Solomon’s films, which we will screen on May 19 at Bobbina, are part of precis
 
 One could say that Phil Solomon’s works are imbued with poetry, but poetry without words, a poetry that depicts the inexplicable, intertwining dark beauty with a dose of surrealist existentialism. His internationally acclaimed body of work spans 45 years and is dedicated to exploring cinema as an art form. He is a student of the renowned experimental filmmaker Ken Jacobs, as well as a friend and collaborator of Stan Brakhage.
 
-For the curious, here is a list of the films we will be screening on May 19. They are also included in the book *Still Raining, Still Dreaming: Film Meets Video Game* as a downloadable link, which will be available for purchase.
+For the curious, here is a list of the films we will be screening on May 19. They are also included in the book *Still Raining, Still Dreaming: Film Meets Video Game* as a downloadable link. The book will be available for purchase.
 
 **Crossroad (2005)**\
 **In Memoriam (Mark LaPore) (2007-2008, 43 min)**\
