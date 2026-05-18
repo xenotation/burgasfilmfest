@@ -32,7 +32,7 @@ button_text: повече
 
 Може да се каже, че творбите на Фил Соломон са изпълнени с поезия, но поезия без думи, такава, която изобразява необяснимото, преплитайки мрачна красота и доза сюрреалистичен екзистенциализъм. Неговото международно признато творчество обхваща период от 45 години, и се посвещава на това да изследва киното като изкуство. Той е ученик на известния експериментален режисьор Кен Джейкъбс, както и приятел и колаборатор на Стан Бракедж. 
 
-Zа по-любопитните, ето и списък с филмите, които ще покажем на 19.05. Те също са част от книжката Still Raining, Still Dreaming: Film Meets Video Game като линк за изтегляне, която ще може да си купите.
+За по-любопитните, ето и списък с филмите, които ще покажем на 19.05. Те също са част от книжката Still Raining, Still Dreaming: Film Meets Video Game като линк за изтегляне, която ще може да си купите.
 
 Crossroad (2005)\
 In Memoriam (Mark LaPore) (2007-2008, 43 min)\
@@ -49,23 +49,23 @@ The Emblazoned Apparitions (2013)
 \-------------------------------------------------------------------------------------------------------------------
 
 \
-We’re starting to host live film screenings from time to time. We’ll see you on May 19 at the Bobbina Cultural Space, where we’ll be screening some of Phil Solomon’s films and presenting the book that inspired this event: the bilingual edition \*Still Raining, Still Dreaming: Film Meets Video Game\*.
+We’re starting to host live film screenings from time to time. We’ll see you on May 19 at the Bobbina Cultural Space, where we’ll be screening some of Phil Solomon’s films and presenting the book that inspired this event: the bilingual edition *Still Raining, Still Dreaming: Film Meets Video Game.*
 
-Phil Solomon is a director whose films we’ve wanted to show before, but couldn’t because of his desire for his films to be viewed in the familiar darkened space, illuminated by the beam of the projector. But times are changing, and the people responsible for preserving and distributing Phil Solomon’s films have decided to collaborate with the Austrian distributors Sixpack to publish Still Raining, Still Dreaming: Film Meets Video Game, which contains a couple of essays on Phil Solomon’s films related to his experiments with video games, as well as a link to download some of these films. 
+Phil Solomon is a director whose films we’ve wanted to show before, but couldn’t because of his desire for his films to be viewed in the familiar darkened space, illuminated by the beam of the projector. But times are changing, and the people responsible for preserving and distributing Phil Solomon’s films have decided to collaborate with the Austrian distributors Sixpack to publish *Still Raining, Still Dreaming: Film Meets Video Game*, which contains a couple of essays on Phil Solomon’s films related to his experiments with video games, as well as a link to download some of these films. 
 
 Solomon’s films, which we will screen on May 19 at Bobbina, are part of precisely these experiments with video games, and more specifically, GTA - most of which he created following the death of his close friend and colleague, director Mark LaPore, and can be viewed as an attempt to process grief.
 
 One could say that Phil Solomon’s works are imbued with poetry, but poetry without words, a poetry that depicts the inexplicable, intertwining dark beauty with a dose of surrealist existentialism. His internationally acclaimed body of work spans 45 years and is dedicated to exploring cinema as an art form. He is a student of the renowned experimental filmmaker Ken Jacobs, as well as a friend and collaborator of Stan Brakhage.
 
-For the curious, here is a list of the films we will be screening on May 19. They are also included in the book \*Still Raining, Still Dreaming: Film Meets Video Game\* as a downloadable link, which will be available for purchase.
+For the curious, here is a list of the films we will be screening on May 19. They are also included in the book *Still Raining, Still Dreaming: Film Meets Video Game* as a downloadable link, which will be available for purchase.
 
-Crossroad (2005)\
-In Memoriam (Mark LaPore) (2007-2008, 43 min)\
- *\    Rehearsals for Retirement (2007)*\
- *\    Last Days in a Lonely Place (2007)*\
- *\    Still Raining, Still Dreaming (2008)*\
-Psalm IV: Valley of the Shadow (2013)\
-The Emblazoned Apparitions (2013)
+**Crossroad (2005)**\
+**In Memoriam (Mark LaPore) (2007-2008, 43 min)**\
+ ** *   Rehearsals for Retirement (2007)***\
+ ** *   Last Days in a Lonely Place (2007)***\
+ ** *   Still Raining, Still Dreaming (2008)***\
+**Psalm IV: Valley of the Shadow (2013)**\
+**The Emblazoned Apparitions (2013)**
 
 Following the screening, we will hold a discussion with Severina Stankeva, a PhD candidate in philosophy specializing in video game studies, as well as the well-known cinephile Mario Tomchev.
 
