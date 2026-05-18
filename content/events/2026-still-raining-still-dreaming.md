@@ -59,13 +59,13 @@ One could say that Phil Solomon’s works are imbued with poetry, but poetry wit
 
 For the curious, here is a list of the films we will be screening on May 19. They are also included in the book *Still Raining, Still Dreaming: Film Meets Video Game* as a downloadable link. The book will be available for purchase.
 
-**Crossroad (2005)**\
-**In Memoriam (Mark LaPore) (2007-2008, 43 min)**\
- ** *   Rehearsals for Retirement (2007)***\
- ** *   Last Days in a Lonely Place (2007)***\
- ** *   Still Raining, Still Dreaming (2008)***\
-**Psalm IV: Valley of the Shadow (2013)**\
-**The Emblazoned Apparitions (2013)**
+Crossroad (2005)\
+In Memoriam (Mark LaPore) (2007-2008, 43 min)\
+   *  Rehearsals for Retirement (2007)*\
+   *  Last Days in a Lonely Place (2007)*\
+   *  Still Raining, Still Dreaming (2008)*\
+Psalm IV: Valley of the Shadow (2013)\
+The Emblazoned Apparitions (2013)
 
 Following the screening, we will hold a discussion with Severina Stankeva, a PhD candidate in philosophy specializing in video game studies, as well as the well-known cinephile Mario Tomchev.
 
