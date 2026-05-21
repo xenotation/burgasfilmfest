@@ -94,7 +94,7 @@ collections:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
-      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." }
+      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." } 
       - { label: "Event date (на станицата)", name: "event_date", widget: "string", required: false }
       - { label: "Event time (на страницата)", name: "event_time", widget: "string", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
