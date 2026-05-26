@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.1.27:1313/films/parade-de-satie/</loc>
-    <lastmod>2026-05-22T14:56:00+03:00</lastmod>
-  </url><url>
     <loc>http://192.168.1.27:1313/films/</loc>
-    <lastmod>2026-05-22T14:56:00+03:00</lastmod>
+    <lastmod>2026-05-29T14:52:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.1.27:1313/</loc>
+    <lastmod>2026-05-29T14:52:00+03:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.27:1313/films/parade-de-satie/</loc>
     <lastmod>2026-05-22T14:56:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.1.27:1313/posters/2026-parade-de-satie/</loc>
@@ -46,12 +46,6 @@
   </url><url>
     <loc>http://192.168.1.27:1313/films/pochivka-2/</loc>
     <lastmod>2026-05-01T21:56:00+03:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.27:1313/films/what-we-ask-of-a-statue-is-that-it-doesnt-move/</loc>
-    <lastmod>2026-04-29T14:52:00+03:00</lastmod>
-  </url><url>
-    <loc>http://192.168.1.27:1313/film_categories/new-greek-cinema-x-plankton.bg/</loc>
-    <lastmod>2026-04-29T14:52:00+03:00</lastmod>
   </url><url>
     <loc>http://192.168.1.27:1313/films/yet-another-family-drama/</loc>
     <lastmod>2026-04-17T21:06:00+03:00</lastmod>
@@ -250,5 +244,7 @@
   </url><url>
     <loc>http://192.168.1.27:1313/about/</loc>
     <lastmod>2023-12-29T11:43:54-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.27:1313/film_categories/new-greek-cinema-x-plankton.bg/</loc>
   </url>
 </urlset>
