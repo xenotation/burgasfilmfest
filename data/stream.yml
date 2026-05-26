@@ -1,3 +1,3 @@
-geo_blocking_enabled: true
+geo_blocking_enabled: false
 allowed_countries:
   - BG
