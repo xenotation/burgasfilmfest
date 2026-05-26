@@ -20,6 +20,7 @@ Music: Ерик Сати, Willem Breuker Kollektief
 thumbnail: /img/parade-de-satie-a2-poster-comp.webp
 feature_image: /img/parade-de-satie-04.jpg
 show_watch_button: true
+HLS: ""
 video_id: 21998053b56eb6d4e7fa96499f75f1a9
 signed_token: 
 hero_video_id: d3bc9b1918f9e8591be7e1d64c9b90ad

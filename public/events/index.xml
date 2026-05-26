@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Планктон</title>
+    <link>http://192.168.1.27:1313/events/</link>
+    <description>Recent content in Events on Планктон</description>
+    <generator>Hugo</generator>
+    <language>bg-bg</language>
+    <lastBuildDate>Thu, 21 May 2026 14:42:00 +0300</lastBuildDate>
+    <atom:link href="http://192.168.1.27:1313/events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Мъчения (Vexations): Продължителен пърформанс на Божана Карадалиева </title>
+      <link>http://192.168.1.27:1313/events/2026-%D0%BC%D1%8A%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-vexations-%D0%BF%D1%80%D0%BE%D0%B4%D1%8A%D0%BB%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%BD-%D0%BF%D1%8A%D1%80%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D0%BD%D1%81-%D0%BD%D0%B0-%D0%B1%D0%BE%D0%B6%D0%B0%D0%BD%D0%B0-%D0%BA%D0%B0%D1%80%D0%B0%D0%B4%D0%B0%D0%BB%D0%B8%D0%B5%D0%B2%D0%B0/</link>
+      <pubDate>Thu, 21 May 2026 14:42:00 +0300</pubDate>
+      <guid>http://192.168.1.27:1313/events/2026-%D0%BC%D1%8A%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-vexations-%D0%BF%D1%80%D0%BE%D0%B4%D1%8A%D0%BB%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%BD-%D0%BF%D1%8A%D1%80%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D0%BD%D1%81-%D0%BD%D0%B0-%D0%B1%D0%BE%D0%B6%D0%B0%D0%BD%D0%B0-%D0%BA%D0%B0%D1%80%D0%B0%D0%B4%D0%B0%D0%BB%D0%B8%D0%B5%D0%B2%D0%B0/</guid>
+      <description>Според указанията на автора, експериментална музикална миниатюра Mъчения (Vexations) трябва да бъде повторена 840 пъти. С продължителност между една и две минути на повторение, произведението се превръща в бавно разгръщащо се звуково преживяване, изследващо пределите на концентрацията, издръжливостта и възприятието. Повторенията ще бъдат структурирани в последователни цикли от 100, 140, 200, 180, 120 и 100 изпълнения, прекъсвани от паузи.&#xA;В паузите, като част от пърформанса ще бъде прожектиран и Антракт (Entr’acte, 1924) на Рене Клер.</description>
+    </item>
+    <item>
+      <title>Still Raining, Still Dreaming</title>
+      <link>http://192.168.1.27:1313/events/2026-still-raining-still-dreaming/</link>
+      <pubDate>Wed, 13 May 2026 22:02:00 +0300</pubDate>
+      <guid>http://192.168.1.27:1313/events/2026-still-raining-still-dreaming/</guid>
+      <description>Plankton.bg goes offline! (English translation below) Започваме да представяме и филми на живо, от време на време. Ще се видим на 19 май в Културно пространство Бобина, където ще представим част от филмите на Фил Соломон и книгата, която е вдъхновение за това събитие, а именно двуезичното издание Still Raining, Still Dreaming: Film Meets Video Game.&#xA;Фил Соломон е режисьор, чиито филми сме искали да покажем и преди, но не сме могли поради неговото желание филмите му да бъдат гледани в добре познатото ни затъмнено пространство, осеяно със светлината на лъча от проектора.</description>
+    </item>
+  </channel>
+</rss>

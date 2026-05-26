@@ -1,0 +1,245 @@
+backend:
+  name: git-gateway
+  local_backend: true
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  # -------------------------
+  # Posters
+  # -------------------------
+  - name: "posters"
+    label: "Posters"
+    folder: "content/posters"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Films
+  # -------------------------
+  - name: "films"
+    label: "Films"
+    folder: "content/films"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug_name}}"
+    summary: "{{film_title}} ({{year}})"
+    fields:
+      - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
+      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
+      - { label: "Film title", name: "film_title", widget: "string", required: true }
+      - { label: "Original title", name: "film_title_org", widget: "string", required: false }
+      - { label: "Country", name: "country", widget: "string", required: true }
+      - { label: "Year", name: "year", widget: "string", required: true }
+      - { label: "Minutes", name: "minutes", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false }
+      - { label: "Text author", name: "text_author", widget: "string", required: false }
+
+      - label: "Film categories"
+        name: "film_categories"
+        widget: "list"
+        required: false
+        allow_add: true
+        summary: "{{fields.item}}"
+        field:
+          { label: "Category", name: "item", widget: "string" }
+
+      - { label: "Stream duration", name: "stream_duration", widget: "string", required: true }
+      - { label: "Director", name: "Director", widget: "string", required: false }
+      - { label: "Production", name: "Production", widget: "string", required: false }
+      - { label: "Screenwriter", name: "Screenwriter", widget: "string", required: false }
+      - { label: "Choreography", name: "Choreography", widget: "string", required: false }
+      - { label: "Editing", name: "Editing", widget: "string", required: false }
+      - { label: "Cinematography", name: "Cinematography", widget: "string", required: false }
+      - { label: "Sound", name: "Sound", widget: "string", required: false }
+      - { label: "Music", name: "Music", widget: "string", required: false }
+      - { label: "Voiceover", name: "Voiceover", widget: "string", required: false }
+      - { label: "Lead actors", name: "LeadActors", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: true }
+      - { label: "Feature image", name: "feature_image", widget: "image", required: true }
+      - { label: "Show watch button", name: "show_watch_button", widget: "boolean", default: true }
+      - { label: "Cloudflare video ID", name: "video_id", widget: "string", required: false }
+      - { label: "Cloudflare HLS link", name: "HLS", widget: "string", required: false }
+      - { label: "Signed token (auto)", name: "signed_token", widget: "string", required: false }
+      - { label: "Hero video ID", name: "hero_video_id", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Events
+  # -------------------------
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
+      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." } 
+      - { label: "Event date (на станицата)", name: "event_date", widget: "string", required: false }
+      - { label: "Event time (на страницата)", name: "event_time", widget: "string", required: false }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Venue", name: "venue", widget: "string", required: false }
+      - { label: "Address", name: "address", widget: "string", required: false }
+      - { label: "Participants", name: "participants", widget: "string", required: false }
+      - { label: "Entry", name: "entry", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Feature image", name: "feature_image", widget: "image", required: false }
+
+      - { label: "Button link", name: "button_link", widget: "string", required: false }
+      - { label: "Button text", name: "button_text", widget: "string", required: false, default: "повече" }
+
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Blog
+  # -------------------------
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+
+    identifier_field: "name"
+    slug_field: "name"
+    slug: "{{year}}-{{slug}}"
+    summary: "{{name}}"
+
+    fields:
+      - { label: "Unlisted (builds but hidden)", name: "unlisted", widget: "boolean", default: false, required: false }
+      - { label: "Title", name: "name", widget: "string", required: true }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        allow_add: true
+        summary: "{{fields.item}}"
+        field:
+          { label: "Category", name: "item", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Stream Settings
+  # -------------------------
+  - name: "stream_settings"
+    label: "Stream Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Cloudflare Stream Geo Blocking"
+        name: "cloudflare_stream"
+        file: "data/stream.yml"
+        format: "yaml"
+        fields:
+          - { label: "Enable geo blocking", name: "geo_blocking_enabled", widget: "boolean", default: false, required: false }
+
+          - label: "Allowed countries"
+            name: "allowed_countries"
+            widget: "list"
+            required: false
+            allow_add: true
+            field:
+              { label: "Country code", name: "item", widget: "string", hint: "Use ISO country codes, e.g. BG, DE, FR" }
+
+  # -------------------------
+  # Pages (About)
+  # -------------------------
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About"
+        file: "content/about/_index.md"
+        format: "frontmatter"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Image", name: "header_image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # -------------------------
+  # Site Configuration
+  # -------------------------
+  - name: "config"
+    label: "Site Configuration"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "General Settings"
+        name: "site"
+        file: "hugo.toml"
+        format: "toml"
+        fields:
+          - { label: "Base URL", name: "baseURL", widget: "string" }
+          - { label: "Language Code", name: "languageCode", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Theme", name: "theme", widget: "string" }
+
+          - label: "Params"
+            name: "params"
+            widget: "object"
+            fields:
+              - { label: "Site Description", name: "description", widget: "text" }
+
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - { label: "Site Name (og:site_name)", name: "site_name", widget: "string", required: false }
+                  - { label: "Default OG Image", name: "defaultImage", widget: "image", media_folder: "static/img", public_folder: "/img", required: false }
+                  - { label: "og:locale", name: "locale", widget: "string", default: "bg_BG" }
+                  - label: "Twitter Card"
+                    name: "twitterCard"
+                    widget: "select"
+                    options: ["summary", "summary_large_image"]
+                    default: "summary_large_image"
+                    required: false
+                  - { label: "Twitter @site", name: "twitterSite", widget: "string", required: false }
+                  - { label: "Robots (site-wide)", name: "robots", widget: "string", required: false }
+
+              - label: "Organization"
+                name: "org"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Logo", name: "logo", widget: "image", media_folder: "static/img", public_folder: "/img" }
+                  - label: "Same As (profiles)"
+                    name: "sameAs"
+                    widget: "list"
+                    field:
+                      { label: "Profile URL", name: "item", widget: "string" }
+
+              - label: "Partners (ticker)"
+                name: "partners"
+                widget: "list"
+                allow_add: true
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "URL", name: "url", widget: "string", required: false }
+                  - { label: "Image", name: "img", widget: "image", media_folder: "static/img", public_folder: "/img" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
