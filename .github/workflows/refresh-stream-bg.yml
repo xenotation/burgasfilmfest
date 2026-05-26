@@ -179,6 +179,7 @@ jobs:
             {
               exp: $exp,
               downloadable: true,
+
             }')
           echo "Token request:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
