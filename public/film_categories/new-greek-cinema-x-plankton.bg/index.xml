@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>New Greek Cinema X Plankton.bg on Планктон</title>
+    <link>http://192.168.1.27:1313/film_categories/new-greek-cinema-x-plankton.bg/</link>
+    <description>Recent content in New Greek Cinema X Plankton.bg on Планктон</description>
+    <generator>Hugo</generator>
+    <language>bg-bg</language>
+    <lastBuildDate>Wed, 29 Apr 2026 14:52:00 +0300</lastBuildDate>
+    <atom:link href="http://192.168.1.27:1313/film_categories/new-greek-cinema-x-plankton.bg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://192.168.1.27:1313/films/what-we-ask-of-a-statue-is-that-it-doesnt-move/</link>
+      <pubDate>Wed, 29 Apr 2026 14:52:00 +0300</pubDate>
+      <guid>http://192.168.1.27:1313/films/what-we-ask-of-a-statue-is-that-it-doesnt-move/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
