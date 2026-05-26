@@ -1,9 +1,8 @@
-name: Refresh Cloudflare Stream Token (BG-only)
+name: Refresh Cloudflare Stream Token
 
 on:
   workflow_dispatch:
   schedule:
-    # run daily at 01:00 UTC
     - cron: "0 1 * * *"
   push:
     branches: [ "main" ]
@@ -166,7 +165,7 @@ jobs:
             exit 1
           }
 
-      - name: Create signed playback token (BG only, 24h)
+      - name: Create signed playback token (24h)
         id: sign
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -178,8 +177,7 @@ jobs:
           BODY=$(jq -n --argjson exp "$EXP" '
             {
               exp: $exp,
-              downloadable: true,
-
+              downloadable: true
             }')
           echo "Token request:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
@@ -254,7 +252,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(stream): BG token refresh (newest by date)"
+            git commit -m "chore(stream): refresh token"
             git push origin HEAD:main
           else
             echo "Nothing to commit."
