@@ -180,8 +180,7 @@ jobs:
               exp: $exp,
               downloadable: true,
               accessRules: [
-                { "type": "ip.geoip.country", "action": "allow", "country": ["BG"] },
-                { "type": "any", "action": "block" }
+
               ]
             }')
           echo "Token request:"; echo "$BODY" | jq .
