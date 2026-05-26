@@ -39,104 +39,124 @@ jobs:
       - name: Find newest film (by date only) + extract video_id
         id: pick
         run: |
-          python - <<'PY'
-          import re, os, glob, yaml, sys, datetime
-          from dateutil import parser as dp
+          python -c 'import re, os, glob, yaml, sys, datetime
+from dateutil import parser as dp
 
-          def clean(s):
-              return s.replace('\ufeff', '').replace('\u200b', '').replace('\xa0', '')
+def clean(s):
+    return s.replace("\ufeff", "").replace("\u200b", "").replace("\xa0", "")
 
-          def read_front_matter(path):
-              with open(path, 'r', encoding='utf-8') as f:
-                  txt = f.read()
-              lines = txt.splitlines()
-              start = None
-              for i, l in enumerate(lines):
-                  if clean(l).strip() == '---':
-                      start = i
-                      break
-              if start is None:
-                  print(f"skip (no front matter): {path}")
-                  return None, txt
-              end = None
-              for i in range(start + 1, len(lines)):
-                  if clean(lines[i]).strip() == '---':
-                      end = i
-                      break
-              if end is None:
-                  print(f"skip (no closing ---): {path}")
-                  return None, txt
-              block = '\n'.join(lines[start + 1:end])
-              try:
-                  fm = yaml.safe_load(block) or {}
-              except Exception as e:
-                  print(f"skip (YAML error): {path}: {e}")
-                  return None, txt
-              body = '\n'.join(lines[end + 1:])
-              if txt.endswith('\n') and not body.endswith('\n'):
-                  body += '\n'
-              return fm, body
+def read_front_matter(path):
+    with open(path, "r", encoding="utf-8") as f:
+        txt = f.read()
 
-          def normalize_date_str(s):
-              s = clean(str(s)).strip()
-              s = re.sub(r'^(\d{4}-\d{2}-\d{2})[T\s]+(\d{2}:\d{2}:\d{2})', r'\1 \2', s)
-              s = re.sub(r'Z([+-]\d{2}:\d{2})$', r'\1', s)
-              if s.endswith('Z'):
-                  s = s[:-1] + '+00:00'
-              return s
+    lines = txt.splitlines()
+    start = None
 
-          def parse_date_only(fm, path):
-              v = fm.get('date')
-              if v is None:
-                  print(f"skip (no 'date'): {path}")
-                  return None
-              raw = str(v)
-              norm = normalize_date_str(raw)
-              try:
-                  dt = datetime.datetime.strptime(norm, "%Y-%m-%d %H:%M:%S%z")
-              except Exception:
-                  try:
-                      dt = dp.parse(norm)
-                  except Exception as e:
-                      print(f"skip (bad 'date'): {path}: raw='{raw}' norm='{norm}' err={e}")
-                      return None
-              if dt.tzinfo is None:
-                  dt = dt.replace(tzinfo=datetime.timezone.utc)
-              else:
-                  dt = dt.astimezone(datetime.timezone.utc)
-              print(f"candidate: {path}  date_raw='{raw}'  date_norm='{norm}'  parsed='{dt.isoformat()}'")
-              return dt
+    for i, l in enumerate(lines):
+        if clean(l).strip() == "---":
+            start = i
+            break
 
-          files = sorted(glob.glob('content/films/*.md'))
-          if not files:
-              print("::error::No files in content/films")
-              sys.exit(1)
+    if start is None:
+        print(f"skip (no front matter): {path}")
+        return None, txt
 
-          candidates = []
-          for p in files:
-              fm, _ = read_front_matter(p)
-              if not fm:
-                  continue
-              vid = (fm.get('video_id') or fm.get('video') or '').strip()
-              if not vid:
-                  print(f"skip (no video_id): {p}")
-                  continue
-              dt = parse_date_only(fm, p)
-              if not dt:
-                  continue
-              candidates.append((dt, p, vid))
+    end = None
+    for i in range(start + 1, len(lines)):
+        if clean(lines[i]).strip() == "---":
+            end = i
+            break
 
-          if not candidates:
-              print("::error::No film with valid 'date' and 'video_id' found")
-              sys.exit(1)
+    if end is None:
+        print(f"skip (no closing ---): {path}")
+        return None, txt
 
-          candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
-          dt, latest_path, vid = candidates[0]
+    block = "\n".join(lines[start + 1:end])
 
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
-              fh.write(f"path={latest_path}\n")
-              fh.write(f"video_id={vid}\n")
-          PY
+    try:
+        fm = yaml.safe_load(block) or {}
+    except Exception as e:
+        print(f"skip (YAML error): {path}: {e}")
+        return None, txt
+
+    return fm, txt
+
+def normalize_date_str(s):
+    s = clean(str(s)).strip()
+    s = re.sub(r"^(\d{4}-\d{2}-\d{2})[T\s]+(\d{2}:\d{2}:\d{2})", r"\1 \2", s)
+    s = re.sub(r"Z([+-]\d{2}:\d{2})$", r"\1", s)
+
+    if s.endswith("Z"):
+        s = s[:-1] + "+00:00"
+
+    return s
+
+def parse_date_only(fm, path):
+    v = fm.get("date")
+
+    if v is None:
+        print(f"skip (no date): {path}")
+        return None
+
+    raw = str(v)
+    norm = normalize_date_str(raw)
+
+    try:
+        dt = datetime.datetime.strptime(norm, "%Y-%m-%d %H:%M:%S%z")
+    except Exception:
+        try:
+            dt = dp.parse(norm)
+        except Exception as e:
+            print(f"skip (bad date): {path}: raw={raw} norm={norm} err={e}")
+            return None
+
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=datetime.timezone.utc)
+    else:
+        dt = dt.astimezone(datetime.timezone.utc)
+
+    return dt
+
+files = sorted(glob.glob("content/films/*.md"))
+
+if not files:
+    print("::error::No files in content/films")
+    sys.exit(1)
+
+candidates = []
+
+for p in files:
+    fm, _ = read_front_matter(p)
+
+    if not fm:
+        continue
+
+    vid = (fm.get("video_id") or fm.get("video") or "").strip()
+
+    if not vid:
+        print(f"skip (no video_id): {p}")
+        continue
+
+    dt = parse_date_only(fm, p)
+
+    if not dt:
+        continue
+
+    candidates.append((dt, p, vid))
+
+if not candidates:
+    print("::error::No film with valid date and video_id found")
+    sys.exit(1)
+
+candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
+dt, latest_path, vid = candidates[0]
+
+print(f"Picked newest: {latest_path} @ {dt.isoformat()} video_id={vid}")
+
+with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+    fh.write(f"path={latest_path}\n")
+    fh.write(f"video_id={vid}\n")
+'
 
       - name: Require signed URLs for this video
         env:
@@ -145,14 +165,23 @@ jobs:
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
+
           BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
+
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
             --data "$BODY")
+
+          echo "Response:"
           echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' > /dev/null
+
+          echo "$RESP" | jq -e '.success == true' > /dev/null || {
+            echo "CF error:"
+            echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
+            exit 1
+          }
 
       - name: Create signed playback token
         id: sign
@@ -163,38 +192,31 @@ jobs:
         run: |
           set -Eeuo pipefail
 
-          python - <<'PY' > token_body.json
-          import yaml, json, time, os
+          python -c 'import yaml, json, time, os
+cfg = {}
 
-          cfg = {}
-          if os.path.exists("data/stream.yml"):
-              with open("data/stream.yml", "r", encoding="utf-8") as f:
-                  cfg = yaml.safe_load(f) or {}
+if os.path.exists("data/stream.yml"):
+    with open("data/stream.yml", "r", encoding="utf-8") as f:
+        cfg = yaml.safe_load(f) or {}
 
-          body = {
-              "exp": int(time.time()) + 24 * 3600,
-              "downloadable": True
-          }
+body = {
+    "exp": int(time.time()) + 24 * 3600,
+    "downloadable": True
+}
 
-          if cfg.get("geo_blocking_enabled"):
-              countries = cfg.get("allowed_countries") or ["BG"]
-              body["accessRules"] = [
-                  {
-                      "type": "ip.geoip.country",
-                      "action": "allow",
-                      "country": countries
-                  },
-                  {
-                      "type": "any",
-                      "action": "block"
-                  }
-              ]
+if cfg.get("geo_blocking_enabled"):
+    countries = cfg.get("allowed_countries") or ["BG"]
+    body["accessRules"] = [
+        {"type": "ip.geoip.country", "action": "allow", "country": countries},
+        {"type": "any", "action": "block"}
+    ]
 
-          print(json.dumps(body))
-          PY
+print(json.dumps(body))' > token_body.json
 
           BODY=$(cat token_body.json)
-          echo "Token request:"; echo "$BODY" | jq .
+
+          echo "Token request:"
+          echo "$BODY" | jq .
 
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
@@ -202,7 +224,9 @@ jobs:
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
             --data "$BODY")
 
-          echo "Token response:"; echo "$RESP" | jq .
+          echo "Token response:"
+          echo "$RESP" | jq .
+
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"
             echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
@@ -216,50 +240,63 @@ jobs:
           FILEPATH: ${{ steps.pick.outputs.path }}
           TOKEN: ${{ steps.sign.outputs.token }}
         run: |
-          python - <<'PY'
-          import yaml, sys, os
+          python -c 'import yaml, os, sys
 
-          def clean(s):
-              return s.replace('\ufeff', '').replace('\u200b', '').replace('\xa0', '')
+def clean(s):
+    return s.replace("\ufeff", "").replace("\u200b", "").replace("\xa0", "")
 
-          path = os.environ['FILEPATH']
-          token = os.environ['TOKEN']
+path = os.environ["FILEPATH"]
+token = os.environ["TOKEN"]
 
-          with open(path, 'r', encoding='utf-8') as f:
-              txt = f.read()
+with open(path, "r", encoding="utf-8") as f:
+    txt = f.read()
 
-          lines = txt.splitlines()
-          start = None
-          for i, l in enumerate(lines):
-              if clean(l).strip() == '---':
-                  start = i
-                  break
+lines = txt.splitlines()
 
-          end = None
-          for i in range(start + 1, len(lines)):
-              if clean(lines[i]).strip() == '---':
-                  end = i
-                  break
+start = None
+for i, l in enumerate(lines):
+    if clean(l).strip() == "---":
+        start = i
+        break
 
-          fm = yaml.safe_load('\n'.join(lines[start + 1:end])) or {}
-          body = '\n'.join(lines[end + 1:])
-          if txt.endswith('\n') and not body.endswith('\n'):
-              body += '\n'
+if start is None:
+    print("::error::Front matter not found in " + path)
+    sys.exit(1)
 
-          fm['signed_token'] = token
+end = None
+for i in range(start + 1, len(lines)):
+    if clean(lines[i]).strip() == "---":
+        end = i
+        break
 
-          new_fm = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
-          new_txt = f"---\n{new_fm}\n---\n{body}"
+if end is None:
+    print("::error::Front matter closing --- not found in " + path)
+    sys.exit(1)
 
-          with open(path, 'w', encoding='utf-8') as f:
-              f.write(new_txt)
-          PY
+fm = yaml.safe_load("\n".join(lines[start + 1:end])) or {}
+body = "\n".join(lines[end + 1:])
+
+if txt.endswith("\n") and not body.endswith("\n"):
+    body += "\n"
+
+fm["signed_token"] = token
+
+new_fm = yaml.safe_dump(fm, sort_keys=False, allow_unicode=True).strip()
+new_txt = f"---\n{new_fm}\n---\n{body}"
+
+with open(path, "w", encoding="utf-8") as f:
+    f.write(new_txt)
+
+print(f"Updated signed_token in {path}")
+'
 
       - name: Commit update back to branch
         run: |
           set -Eeuo pipefail
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
             git commit -m "chore(stream): refresh signed token"
