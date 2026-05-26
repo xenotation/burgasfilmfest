@@ -1,9 +1,8 @@
-name: Refresh Cloudflare Stream Token (BG-only)
+name: Refresh Cloudflare Stream Token
 
 on:
   workflow_dispatch:
   schedule:
-    # run daily at 01:00 UTC
     - cron: "0 1 * * *"
   push:
     branches: [ "main" ]
@@ -131,16 +130,10 @@ jobs:
               print("::error::No film with valid 'date' and 'video_id' found")
               sys.exit(1)
 
-          print("— Candidates (UTC, by 'date'):")
-          for dt, p, vid in candidates:
-              print(f"  {dt.isoformat()}  {p}  (video_id={vid})")
-
           candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
           dt, latest_path, vid = candidates[0]
-          print(f"Picked newest: {latest_path} @ {dt.isoformat()}  (video_id={vid})")
 
-          out = os.environ["GITHUB_OUTPUT"]
-          with open(out, "a", encoding="utf-8") as fh:
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"path={latest_path}\n")
               fh.write(f"video_id={vid}\n")
           PY
@@ -153,20 +146,15 @@ jobs:
         run: |
           set -Eeuo pipefail
           BODY=$(jq -n --arg uid "$VID" '{ uid: $uid, requireSignedURLs: true }')
-          echo "Request body:"; echo "$BODY" | jq .
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}" \
             --data "$BODY")
-          echo "Response:"; echo "$RESP" | jq .
-          echo "$RESP" | jq -e '.success == true' > /dev/null || {
-            echo "CF error:"
-            echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
-            exit 1
-          }
+          echo "$RESP" | jq .
+          echo "$RESP" | jq -e '.success == true' > /dev/null
 
-      - name: Create signed playback token (BG only, 24h)
+      - name: Create signed playback token
         id: sign
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -174,53 +162,56 @@ jobs:
           VID: ${{ steps.pick.outputs.video_id }}
         run: |
           set -Eeuo pipefail
-          EXP=$(( $(date +%s) + 24*3600 ))
+
           python - <<'PY' > token_body.json
-            import yaml, json, time
+          import yaml, json, time, os
 
-            with open("data/stream.yml", "r", encoding="utf-8") as f:
-                cfg = yaml.safe_load(f) or {}
+          cfg = {}
+          if os.path.exists("data/stream.yml"):
+              with open("data/stream.yml", "r", encoding="utf-8") as f:
+                  cfg = yaml.safe_load(f) or {}
 
-            exp = int(time.time()) + 24 * 3600
+          body = {
+              "exp": int(time.time()) + 24 * 3600,
+              "downloadable": True
+          }
 
-            body = {
-                "exp": exp,
-                "downloadable": True
-            }
+          if cfg.get("geo_blocking_enabled"):
+              countries = cfg.get("allowed_countries") or ["BG"]
+              body["accessRules"] = [
+                  {
+                      "type": "ip.geoip.country",
+                      "action": "allow",
+                      "country": countries
+                  },
+                  {
+                      "type": "any",
+                      "action": "block"
+                  }
+              ]
 
-            if cfg.get("geo_blocking_enabled"):
-                countries = cfg.get("allowed_countries") or ["BG"]
-                body["accessRules"] = [
-                    {
-                        "type": "ip.geoip.country",
-                        "action": "allow",
-                        "country": countries
-                    },
-                    {
-                        "type": "any",
-                        "action": "block"
-                    }
-                ]
+          print(json.dumps(body))
+          PY
 
-            print(json.dumps(body))
-            PY
-
-            BODY=$(cat token_body.json)
+          BODY=$(cat token_body.json)
           echo "Token request:"; echo "$BODY" | jq .
+
           RESP=$(curl -sS -X POST \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/stream/${VID}/token" \
             --data "$BODY")
+
           echo "Token response:"; echo "$RESP" | jq .
           echo "$RESP" | jq -e '.success == true' > /dev/null || {
             echo "CF error:"
             echo "$RESP" | jq -r '.errors[]? | (.code|tostring) + " - " + .message'
             exit 1
           }
+
           echo "token=$(echo "$RESP" | jq -r '.result.token')" >> "$GITHUB_OUTPUT"
 
-      - name: Write token into front matter (picked file only)
+      - name: Write token into front matter
         env:
           FILEPATH: ${{ steps.pick.outputs.path }}
           TOKEN: ${{ steps.sign.outputs.token }}
@@ -243,18 +234,12 @@ jobs:
               if clean(l).strip() == '---':
                   start = i
                   break
-          if start is None:
-              print("::error::Front matter not found in " + path)
-              sys.exit(1)
 
           end = None
           for i in range(start + 1, len(lines)):
               if clean(lines[i]).strip() == '---':
                   end = i
                   break
-          if end is None:
-              print("::error::Front matter closing '---' not found in " + path)
-              sys.exit(1)
 
           fm = yaml.safe_load('\n'.join(lines[start + 1:end])) or {}
           body = '\n'.join(lines[end + 1:])
@@ -268,8 +253,6 @@ jobs:
 
           with open(path, 'w', encoding='utf-8') as f:
               f.write(new_txt)
-
-          print(f"Updated signed_token in {path}")
           PY
 
       - name: Commit update back to branch
@@ -279,13 +262,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(stream): BG token refresh (newest by date)"
+            git commit -m "chore(stream): refresh signed token"
             git push origin HEAD:main
           else
             echo "Nothing to commit."
           fi
 
-      - name: Trigger Netlify build (branch deploy)
+      - name: Trigger Netlify build
         if: success()
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
