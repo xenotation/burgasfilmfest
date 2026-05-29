@@ -5,14 +5,14 @@ date: 2026-05-29 14:52:00+0300
 film_title: От една статуя очакваме да не помръдва
 film_title_org: Αυτο που ζηταμε απο ενα αγαλμα ειναι να μην κινειται
 country: Гърция
-year: "2024"
-minutes: "31"
-description: В Атина сякаш нищо не помръдва, а хората са неподвижни като статуи.
-  Но на друго място в града една кариатида бяга от музея, а малка група хора
-  призовава за унищожаването на всички антични паметници. Може би заснемането на
-  филм е единственият начин да не се превърнем в камък.
+year: '2024'
+minutes: '31'
+description: В Атина сякаш нищо не помръдва, а хората са неподвижни като статуи. Но
+  на друго място в града една кариатида бяга от музея, а малка група хора призовава
+  за унищожаването на всички антични паметници. Може би заснемането на филм е единственият
+  начин да не се превърнем в камък.
 film_categories:
-  - Plankton.bg x Ново Гръцко Кино
+- Plankton.bg x Ново Гръцко Кино
 stream_duration: 29.05.2026 - 05.06.2026
 Director: Дафни Херетаки
 Production: bocalupo films, Quartett Production, Allonsanfàn Films
@@ -25,7 +25,7 @@ thumbnail: /img/poster-lite2-pdf-web_compress.jpg
 feature_image: /img/ce-qu-on-demande-à-une-statue_2.jpg
 show_watch_button: true
 video_id: 9474b26c3d6966355ff1298d54228a33
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI5NDc0YjI2YzNkNjk2NjM1NWZmMTI5OGQ1NDIyOGEzMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4MDE1Njc5NSIsIm5iZiI6IjE3ODAwNjY3OTUiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.dek4Tjnj6aUQZ1bpLGuFNQtyA4Jw8YI0YqqYlMW4q--E_SjsXz-POX-NqwmD5tbw2O-RMmbRk7krJ6cLMCcdlim9yCxUvz9E40N0y8_zhpVpQkNqxBJVr3g0tILqVSGqWPYw97FL5nlv6eZSHrlEXaPre1z3WHL2GxWg0MWW9JPtX5tuT_SbEbJ_XmiC4BDwji_WBqgUxShsp_33mWgfCk4E9Skctxs1pO2VBBy9rwVqY4-qeG0W4ebc32IhcE7tRcBiTeD342zgeb5v7ZsMaXeMo9__zedi9tiWIgZ_P-Z84CD9LUVQS6g_2GdZ17OP5R4eRCYdqOtXDIIyGDYuGg
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI5NDc0YjI2YzNkNjk2NjM1NWZmMTI5OGQ1NDIyOGEzMyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4MDE1NzE3MyIsIm5iZiI6IjE3ODAwNjcxNzMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.dnRfS1Eu05OJzm3t6pmT6fMvxfMCDlhCJSRWfKZKzbiVIMtzcgPZ8XJZcmnjJ4p6D9xU6URJ5HeRmVyG-8yTxp9VO2iVqqkCCgfvU7W2-T4duZcEm_iGHWNHlPSN6FpfNZbaxYId1b3KtmxA4r9F1gsFBLcI6stNlZaQwu0rQSZCvqobemY2m94pfVxKO19PyF7xRoe3X1wKq4SA2DiNvhGFhhEb4PqzYzCPbiE1DLPHJGvef_3STTRC95rkdYXiEjt09g8UUjb2tt-9NUbfTRUdEodOjNewguqNjlfT_Fojmiko3tNOkZr1wSThycmNKHOXmvycUQZf2mngV_JQOQ
 hero_video_id: 4c24eadd2b92368b576ea3e4f60f2291
 ---
 В партньорство с [Ново Гръцко Кино](https://www.instagram.com/newgreekcinema/) представяме късометражния филм на Дафни Херетаки *От една статуя очакваме да не помръдва* (2024). 
