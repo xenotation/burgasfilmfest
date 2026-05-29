@@ -1,5 +1,5 @@
 ---
-unlisted: true
+unlisted: false
 slug_name: what-we-ask-of-a-statue-is-that-it-doesnt-move
 date: 2026-05-29 14:52:00+0300
 film_title: От една статуя очакваме да не помръдва
