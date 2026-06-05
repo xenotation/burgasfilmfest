@@ -5,16 +5,16 @@ date: 2026-06-05 21:22:00+0300
 film_title: Дневникът на едно небе
 film_title_org: The Diary of a Sky
 country: Ливан
-year: "2024"
-minutes: "44"
-description: '"Дневникът на едно небе" улавя зловещия контраст от звуци в
-  Бейрут, където бръмченето на генераторите се преплита с израелските военни
-  полети. Този филм-есе улавя атмосферата на монотонностт, в която симфонията на
-  насилието се вписва безпроблемно в ежедневието.'
+year: '2024'
+minutes: '44'
+description: '"Дневникът на едно небе" улавя зловещия контраст от звуци в Бейрут,
+  където бръмченето на генераторите се преплита с израелските военни полети. Този
+  филм-есе улавя атмосферата на монотонностт, в която симфонията на насилието се вписва
+  безпроблемно в ежедневието.'
 stream_duration: 05.06.2026 - 19.06.2026
 Director: Лорънс Абу Хамдан
 Production: Лорънс Абу Хамдан
-Screenwriter: ""
+Screenwriter: ''
 Editing: Мохамад А. Гауад
 Sound: Мое Шукайр
 LeadActors: Мазен Ел-Сайед (Еl Rass)
@@ -22,7 +22,7 @@ thumbnail: /img/1baakaxrtfjnidf27rqqjslhv0b.webp
 feature_image: /img/the-diary-of-a-sky-still-2.jpg
 show_watch_button: true
 video_id: 6935ff344e6522277263475e137eeb3c
-signed_token: ""
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2OTM1ZmYzNDRlNjUyMjI3NzI2MzQ3NWUxMzdlZWIzYyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4MDc3Mzg5MiIsIm5iZiI6IjE3ODA2ODM4OTMiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.LFzffn53d9__HyhPk4WhTLive0o5x7J2hzcBs-qDRz7MUR0n5zsCB1Q4BUQTNB6dkeVH8k5ujxFNYI8Sd4l1-KDIm4mdKeR0HpBfXMV8FTCPYhuekjLGODb-nVuE46SX6vlAnY6AqGXQGT3lAO4b7uByqwE8PXCTfV8Lg08KnlUcuoV89a3yympUdhrVKLjGV6VhTnNwfwJK5eBZwl0NQuhmWKAwQ12FhZrfoXYFGFw7q1qkoxluTJc4k5nnJ3G8i-egKaNoEshzsILRYuXcRjawINahF_EvspsruM5K62Q8Q3cqkEsqgKOErXMdLzv0-ol1BgrTv1ahOLM-MeZfWQ
 hero_video_id: e540754257dd8ae6af545bdb395bfac7
 ---
 **Биография**
