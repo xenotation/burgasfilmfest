@@ -1,5 +1,5 @@
 ---
-unlisted: true
+unlisted: false
 slug_name: the-diary-of-a-sky
 date: 2026-06-05 20:29:00+0300
 film_title: Дневникът на едно небе
