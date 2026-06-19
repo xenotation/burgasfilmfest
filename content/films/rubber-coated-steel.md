@@ -28,15 +28,9 @@ video_id: ""
 hero_video_id: 536e3819cf0a4aafee557778843ebf39
 ---
 <a href="https://www.youtube.com/watch?v=lFIvUV5vmMU" target="_blank" rel="noopener noreferrer">
-
   <img
-
-\    src="https://img.youtube.com/vi/lFIvUV5vmMU/hqdefault.jpg"
-
-\    alt="Watch video on YouTube"
-
-\    style="width:100%; max-width:560px; height:auto; display:block; border-radius:8px;"
-
-\>
-
+    src="https://img.youtube.com/vi/lFIvUV5vmMU/hqdefault.jpg"
+    alt="Watch video on YouTube"
+    style="width:100%; max-width:560px; height:auto; display:block; border-radius:8px;"
+  >
 </a>
