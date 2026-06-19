@@ -7,7 +7,7 @@ film_title_org: Rubber Coated Steel
 country: Германия, Ливан
 year: "2017"
 minutes: "22"
-description: Май 2014 г., двама невъоръжени палестински тийнейджъри са убити от
+description: Май 2014 г. двама невъоръжени палестински тийнейджъри са убити от
   израелски войници в Западния бряг. Абу Хамдан прави аудиоанализ, за да
   установи дали са били използвани гумени или огнестрелни патрони. Филмът се
   фокусира върху стрелбата, но не се чуват изстрели. „Стомана с гумено покритие“
@@ -33,27 +33,25 @@ hero_video_id: 536e3819cf0a4aafee557778843ebf39
 
   <div style="position: relative; display: inline-block; width: 100%; max-width: 560px; height: auto; aspect-ratio: 16/9; background-color: #000; overflow: hidden; border-radius: 8px;">
 
-\    <!-- Official YouTube thumbnail for your video -->
+  <!-- Official YouTube thumbnail for your video -->
 
 \    <img src="https://img.youtube.com/vi/lFIvUV5vmMU/maxresdefault.jpg" alt="Watch video on YouTube" style="width: 100%; height: 100%; object-fit: cover;">
 
 \    <!-- Red Play Button Overlay -->
 
-\    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background-color: rgba(255, 0, 0, 0.9); border-radius: 14px; transition: background-color 0.2s;">
+   <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background-color: rgba(255, 0, 0, 0.9); border-radius: 14px; transition: background-color 0.2s;">
 
 \    <!-- White Triangle Play Icon -->
 
 \    <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #FFFFFF; position: absolute; top: 14px; left: 27px;"></div>
 
-\    </div>
+   </div>
 
   </div>
 
 </a>
 
-
-
-**Биография**
+Биография
 
 Лорънс Абу Хамдан е независим изследовател или просто „Private Ear“. Неговите изследвания се фокусират върху звука и лингвистиката и са били използвани като доказателствен материал пред Трибунала по убежище и имиграция на Обединеното кралство, както и в подкрепа на организации като Amnesty International и Defence for Children International, работейки заедно с колеги изследователи от Forensic Architecture.
 
