@@ -1,5 +1,5 @@
 ---
-unlisted: true
+unlisted: false
 slug_name: rubber-coated-steel
 date: 2026-06-19 17:26:00+0300
 film_title: Стомана с гумено покритие
@@ -42,4 +42,16 @@ show_watch_button: false
 video_id: ""
 hero_video_id: 536e3819cf0a4aafee557778843ebf39
 ---
-<a href="https://www.youtube.com/watch?v=lFIvUV5vmMU" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> <div style="position: relative; display: inline-block; width: 100%; max-width: 560px; height: auto; aspect-ratio: 16/9; background-color: #000; overflow: hidden; border-radius: 8px;"> <!-- Official YouTube thumbnail for your video --> <img src="https://img.youtube.com/vi/lFIvUV5vmMU/maxresdefault.jpg" alt="Watch video on YouTube" style="width: 100%; height: 100%; object-fit: cover;"> <!-- Red Play Button Overlay --> <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background-color: rgba(255, 0, 0, 0.9); border-radius: 14px; transition: background-color 0.2s;"> <!-- White Triangle Play Icon --> <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #FFFFFF; position: absolute; top: 14px; left: 27px;"></div> </div> </div> </a>
+**Биография**
+
+Лорънс Абу Хамдан е независим изследовател или просто „Private Ear“. Неговите изследвания се фокусират върху звука и лингвистиката и са били използвани като доказателствен материал пред Трибунала по убежище и имиграция на Обединеното кралство, както и в подкрепа на организации като Amnesty International и Defence for Children International, работейки заедно с колеги изследователи от Forensic Architecture.
+
+Абу Хамдан получава докторска степен през 2017 г. от Goldsmiths College на Лондонския университет, а през 2021 г. завършва професорска програма в Университета Йоханес Гутенберг в Майнц, където разработва своето изследване airpressure.info. 
+
+**Филмография**
+
+Дневникът на едно небе (2024), 44 мин.\
+45th Parallel (2022), 15 мин.\
+Once Removed (2019), 29 мин.\
+Walled Unwalled (2018), 21 мин.\
+Стомана с гумено покритие (2017), 22 мин.
