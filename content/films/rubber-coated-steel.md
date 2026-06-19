@@ -91,10 +91,6 @@ disclaimer: >-
 
 
   </a>
-
-
-
-  [![Watch video on YouTube](https://img.youtube.com/vi/lFIvUV5vmMU/hqdefault.jpg)](https://www.youtube.com/watch?v=lFIvUV5vmMU)
 film_categories:
   - "Звук и политика: Два филма на Лорънс Абу Хамдан"
 stream_duration: 19.06.2026 - 03.07.2026
@@ -109,58 +105,4 @@ show_watch_button: false
 video_id: ""
 hero_video_id: 536e3819cf0a4aafee557778843ebf39
 ---
-<a href="https://www.youtube.com/watch?v=lFIvUV5vmMU"
-   target="_blank"
-   rel="noopener noreferrer"
-   style="text-decoration: none;">
-
-  <div style="
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 560px;
-      height: auto;
-      aspect-ratio: 16/9;
-      background-color: #000;
-      overflow: hidden;
-      border-radius: 8px;">
-
-
-    <img
-      src="https://img.youtube.com/vi/lFIvUV5vmMU/maxresdefault.jpg"
-      alt="Watch video on YouTube"
-      style="
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      ">
-
-
-    <div style="
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 68px;
-        height: 48px;
-        background-color: rgba(255, 0, 0, 0.9);
-        border-radius: 14px;
-        transition: background-color 0.2s;">
-
-  
-      <div style="
-          width: 0;
-          height: 0;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-left: 18px solid #FFFFFF;
-          position: absolute;
-          top: 14px;
-          left: 27px;">
-      </div>
-
-    </div>
-
-  </div>
-
-</a>
+<a href="https://www.youtube.com/watch?v=lFIvUV5vmMU" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> <div style="position: relative; display: inline-block; width: 100%; max-width: 560px; height: auto; aspect-ratio: 16/9; background-color: #000; overflow: hidden; border-radius: 8px;"> <!-- Official YouTube thumbnail for your video --> <img src="https://img.youtube.com/vi/lFIvUV5vmMU/maxresdefault.jpg" alt="Watch video on YouTube" style="width: 100%; height: 100%; object-fit: cover;"> <!-- Red Play Button Overlay --> <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background-color: rgba(255, 0, 0, 0.9); border-radius: 14px; transition: background-color 0.2s;"> <!-- White Triangle Play Icon --> <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #FFFFFF; position: absolute; top: 14px; left: 27px;"></div> </div> </div> </a>
