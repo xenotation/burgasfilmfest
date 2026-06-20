@@ -10,7 +10,7 @@ theme = "Burgas"
 [markup.goldmark.extensions]
 footnote = true
 
-[markup.renderer]
+[markup.goldmark.renderer]
 unsafe = true
 
 [outputs]
