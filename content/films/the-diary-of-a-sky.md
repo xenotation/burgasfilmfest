@@ -5,18 +5,18 @@ date: 2026-06-05 21:22:00+0300
 film_title: Дневникът на едно небе
 film_title_org: The Diary of a Sky
 country: Ливан
-year: "2024"
-minutes: "44"
-description: '"Дневникът на едно небе" улавя зловещия контраст от звуци в
-  Бейрут, където бръмченето на генераторите се преплита с израелските военни
-  полети. Този филм-есе улавя атмосферата на монотонностт, в която симфонията на
-  насилието се вписва безпроблемно в ежедневието.'
+year: '2024'
+minutes: '44'
+description: '"Дневникът на едно небе" улавя зловещия контраст от звуци в Бейрут,
+  където бръмченето на генераторите се преплита с израелските военни полети. Този
+  филм-есе улавя атмосферата на монотонностт, в която симфонията на насилието се вписва
+  безпроблемно в ежедневието.'
 film_categories:
-  - "Звук, насилие и политика: Два филма на Лорънс Абу Хамдан"
+- 'Звук, насилие и политика: Два филма на Лорънс Абу Хамдан'
 stream_duration: 05.06.2026 - 19.06.2026
 Director: Лорънс Абу Хамдан
 Production: Лорънс Абу Хамдан
-Screenwriter: ""
+Screenwriter: ''
 Editing: Мохамад А. Гауад
 Sound: Мое Шукайр
 LeadActors: Мазен Ел-Сайед (Еl Rass)
@@ -24,7 +24,7 @@ thumbnail: /img/1baakaxrtfjnidf27rqqjslhv0b.webp
 feature_image: /img/the-diary-of-a-sky-still-2.jpg
 show_watch_button: false
 video_id: 6935ff344e6522277263475e137eeb3c
-signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2OTM1ZmYzNDRlNjUyMjI3NzI2MzQ3NWUxMzdlZWIzYyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4MjAxODc2OSIsIm5iZiI6IjE3ODE5Mjg3NjkiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.oW0hDbH6bSVLFVVB_tQo0ymwFGkfmRDVslmKKeKbZGLhT5KomXDly4EbNDPf9VprMKHWgWLtdtkHuWTGoX5he5EG7N-6zWmZsbYEd_7ohP_9BMeWVeETTvlx9KJ7tn-7Sz9Px7R7hULeoPEGagauKAphhRjFMIxMqQr2pHVtCma8qek6W1r2OXE0WnVK7rpnOh_-mE7l81b9g0lSBtm8AbBUjyCL7PV2EcyYSlKXNwuIZeYaAAGCJYnAg4CUneVZSIxxW31C2OvyNF_cMDknN01YyDDj3xzYSyFdv1QIAZjytuV-SfNPQX3951Im8d3UCpZBjQxkuWY5YXPwF79bbg
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiI2OTM1ZmYzNDRlNjUyMjI3NzI2MzQ3NWUxMzdlZWIzYyIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4MjAzMTIyNyIsIm5iZiI6IjE3ODE5NDEyMjciLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.cMF8o5E8lzRnye-LHkd5_CqehwTAmu-aZBt4g2YyABrcftAdLA8b8GVQCwklP2soI58vNyOHbz7t0gEFSOTsM4-nY3C8LYtPKIdsgTatgT6YVJ1kgUwPU1WBW2ckISm_gylCYfteO4TO3XP7r8e3IqTJPHi5qayHw4KljjvsrZLg9bAAfBgJWepR581UEXUL_zoctBWqEuKmmXYOtlaeYQo-L8pojFMyaTGF_ExOREy-v8qrs1EOBUCB_IrjmvQ_WGKsKgrdy8EC-FdNTjDmkyUf_srb3Bf8Wg6ky2aNOQLiOM9TRbuWRT6S8jtYcsBGDC5hAb9wFBzWRUGcsSg4Ng
 hero_video_id: e540754257dd8ae6af545bdb395bfac7
 ---
 **Биография**
