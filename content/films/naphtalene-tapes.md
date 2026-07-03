@@ -1,5 +1,5 @@
 ---
-unlisted: true
+unlisted: false
 slug_name: naphtalene-tapes
 date: 2026-07-03 20:48:00+0300
 film_title: Нафталиновите записи
