@@ -4,13 +4,12 @@ slug_name: naphtalene-tapes
 date: 2026-07-03 20:48:00+0300
 film_title: Нафталиновите записи
 country: България
-year: "2026"
-minutes: "12"
-description: >
-  На границата между филм eсе и аналогов ужас, движейки се между фикцията и
-  документалистиката. „Нафталиновите записи“ използва неразрешения случай с
-  картина, приписвана на Джаксън Полък и открита в България през 2023 г., като
-  основа за постфикционално видео произведение. 
+year: '2026'
+minutes: '12'
+description: "На границата между филм eсе и аналогов ужас, движейки се между фикцията\
+  \ и документалистиката. „Нафталиновите записи“ използва неразрешения случай с картина,\
+  \ приписвана на Джаксън Полък и открита в България през 2023 г., като основа за\
+  \ постфикционално видео произведение. \n"
 stream_duration: 03.07.2026 - 17.07.2026
 Director: Никола Стоянов
 Production: Никола Стоянов
@@ -20,6 +19,7 @@ feature_image: /img/screenshot-107-.png
 show_watch_button: true
 video_id: f7825b6792d808f0b43196e1ab8f1401
 hero_video_id: e7b2ea5e37fdff0ae52efc9ac7de6433
+signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmNzgyNWI2NzkyZDgwOGYwYjQzMTk2ZTFhYjhmMTQwMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4MzE4OTY4NSIsIm5iZiI6IjE3ODMwOTk2ODYiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.QvltTfaIMhR5FOuUrzG8Sn3PenSsJZ2Qfhy3VK5lgvLwCbkoVWCPycGK8ZFfoJXBTekmRaopfQEevxVLJRXYToTwx8fqYGM1vN94YcPzyW8sINLG8MzcfOU0pt3oP3Z1cYc0ZMMZn37tgmgzgPHQe_4fMJP7ftP2ibfHyap4xRlhbwhgxhvEMthIQUThSmSv_N7vvJgM1zKCG-0xhsWexf-Owr8E2m58jrOFFlVwF81XcD5im_DwaH9-3vHFOmHVprf6JHnBwCrZbJGTY50dTMp3pXOhinis8-uEbaqe-zrPVUu2zOFMZKSn7WpurplL6oMlZpJ6aIDydpEHkh3uDg
 ---
 „Нафталиновите записи“ се намира на границата между филм eсе и аналогов ужас, движейски се между фикцията и документалистиката. Видеото използва намерени кадри, монтирани кадри от видеонаблюдение, новинарски емисии, реални и фиктивни документи, записи от бордови камери и материал от българската телевизия от 80-те и 90-те години, в постконспиративна история, пропита от дълбока параноя, постистина, ускорение и срив на истината. Тези фрагменти създават разказ чрез нуждата на зрителя да ги свърже: твърде човешки рефлекс да превръщаме фрагментите в причина, намерение и конспирация. Една на пръв поглед банална сцена става нестабилна под погледа на зрителя. Намерените кадри пресъздават това фрагментирано преживяване на постсъветския колапс не като носталгия, а като метод на възприятие.
 
