@@ -4,19 +4,20 @@ slug_name: naphtalene-tapes
 date: 2026-07-03 20:48:00+0300
 film_title: Нафталиновите записи
 country: България
-year: '2026'
-minutes: '12'
-description: "На границата между филм eсе и аналогов ужас, движейки се между фикцията\
-  \ и документалистиката. „Нафталиновите записи“ използва неразрешения случай с картина,\
-  \ приписвана на Джаксън Полък и открита в България през 2023 г., като основа за\
-  \ постфикционално видео произведение. \n"
+year: "2026"
+minutes: "12"
+description: >
+  На границата между филм eсе и аналогов ужас, движейки се между фикцията и
+  документалистиката. „Нафталиновите записи“ използва неразрешения случай с
+  картина, приписвана на Джаксън Полък и открита в България през 2023 г., като
+  основа за постфикционално видео произведение. 
 stream_duration: 03.07.2026 - 17.07.2026
 Director: Никола Стоянов
 Production: Никола Стоянов
 Sound: Антон Шишков, Никола Стоянов
 thumbnail: /img/nt_poster.png
 feature_image: /img/screenshot-107-.png
-show_watch_button: true
+show_watch_button: false
 video_id: f7825b6792d808f0b43196e1ab8f1401
 signed_token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIn0.eyJzdWIiOiJmNzgyNWI2NzkyZDgwOGYwYjQzMTk2ZTFhYjhmMTQwMSIsImtpZCI6IjMxMzAxMDQ4ZmE2NjkwNTllZmY1ZjFiNGFiNmQxOGMwIiwiZXhwIjoiMTc4NDQzMzIyOSIsIm5iZiI6IjE3ODQzNDMyMjkiLCJhY2Nlc3NSdWxlcyI6W3siYWN0aW9uIjoiYWxsb3ciLCJ0eXBlIjoiaXAuZ2VvaXAuY291bnRyeSIsImNvdW50cnkiOlsiQkciXX0seyJhY3Rpb24iOiJibG9jayIsInR5cGUiOiJhbnkifV0sImRvd25sb2FkYWJsZSI6dHJ1ZX0.f9npviyn_9QYiig6f7Ozp_mtpnn3HsBfmoIA_0kC3ZsO6KHrXlg3ZqfJKh1qSbRF-ZQjsY0N9slfom1orC1qT43vBbr293Jsx4_9EqLlmBfk9UnFzqJQXQ9BRrIke0NQkCs-Z-e0OWis_ZeNpo65D5UhcTRiIEsR7lPb-KVYPzp7ctE3gD7zKc9wK1ShUFYRxtNKBXb0ZcW8YwYghDWG5ZgQnVOaS9qZG9zya-gIdVUYC6MlWqyAmrQryh2hMJgEiKvky82mAEG8C8Vw5w4KYEE7XjbSJpr43ShOIi3P0g5UNuaEa6I-bnnuKMFoyUAKlQZISHlmkg6EQftUEhfpdQ
 hero_video_id: e7b2ea5e37fdff0ae52efc9ac7de6433
