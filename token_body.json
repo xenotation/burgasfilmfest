@@ -1,1 +1,1 @@
-{"exp": 1784433229, "downloadable": true, "accessRules": [{"type": "ip.geoip.country", "action": "allow", "country": ["BG"]}, {"type": "any", "action": "block"}]}
+{"exp": 1784449616, "downloadable": true, "accessRules": [{"type": "ip.geoip.country", "action": "allow", "country": ["BG"]}, {"type": "any", "action": "block"}]}
