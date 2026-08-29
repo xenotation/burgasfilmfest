@@ -30,7 +30,7 @@ twitterSite = "@your_account"
 name = "Plankton"
 url = "https://plankton.bg/"
 logo = "/img/og-default.jpg"
-sameAs = ["https://www.facebook.com/people/Planktonbg/61581441954159/", "https://www.instagram.com/plankton_space/"]
+sameAs = ["https://www.facebook.com/profile.php?id=61581441954159", "https://www.instagram.com/plankton_space/"]
 
 [[params.partners]]
 url = "https://ncf.bg/bg"
