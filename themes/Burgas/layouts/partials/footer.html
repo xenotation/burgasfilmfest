@@ -3,14 +3,14 @@
 
     <!-- social links -->
     <nav class="footer-social" aria-label="social media">
-      <a href="https://burgasfilmfest.com/" target="_blank" rel="noopener noreferrer" aria-label="Burgas International Film Festival Website">
+      <a href="{{ .Site.Params.footer.biff_url | safeURL }}" target="_blank" rel="noopener noreferrer" aria-label="Burgas International Film Festival Website">
         BIFF ↗
       </a><span class="pipe">|</span>
 
-      <a href="https://www.facebook.com/burgasfilmfest" target="_blank" rel="noopener noreferrer" aria-label="Follow Burgas Film Fest on Facebook">
+      <a href="{{ .Site.Params.footer.facebook_url | safeURL }}" target="_blank" rel="noopener noreferrer" aria-label="Follow Burgas Film Fest on Facebook">
         FACEBOOK ↗
       </a><span class="pipe">|</span>
-      <a href="https://www.instagram.com/plankton_space/" target="_blank" rel="noopener noreferrer" aria-label="Follow Burgas Film Fest on Instagram">
+      <a href="{{ .Site.Params.footer.instagram_url | safeURL }}" target="_blank" rel="noopener noreferrer" aria-label="Follow Burgas Film Fest on Instagram">
         INSTAGRAM ↗
       </a>
     </nav>
@@ -18,7 +18,7 @@
     <!-- copyright -->
     <div class="footer-right">
       <span class="pipe">|</span>
-      ВСИЧКИ&nbsp;ПРАВА&nbsp;ЗАПАЗЕНИ&nbsp;©&nbsp;2025
+      ВСИЧКИ&nbsp;ПРАВА&nbsp;ЗАПАЗЕНИ&nbsp;©&nbsp;2026
     </div>
 
   </div>

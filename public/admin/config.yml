@@ -94,7 +94,7 @@ collections:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
-      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." } 
+      - { label: "URL slug", name: "slug_name", widget: "string", required: true, hint: "Lowercase latin letters, numbers, hyphens only." }
       - { label: "Event date (на станицата)", name: "event_date", widget: "string", required: false }
       - { label: "Event time (на страницата)", name: "event_time", widget: "string", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
@@ -205,6 +205,21 @@ collections:
             fields:
               - { label: "Site Description", name: "description", widget: "text" }
 
+              - label: "Footer Links"
+                label_singular: "Footer Link"
+                name: "footer_links"
+                widget: "list"
+                required: false
+                default: []
+                allow_add: true
+                collapsed: true
+                summary: "{{fields.label}}"
+                hint: "Add, remove, or reorder footer buttons. The arrow is added automatically."
+                fields:
+                  - { label: "Button text", name: "label", widget: "string", hint: "For example: FACEBOOK, INSTAGRAM, or BIFF. Do not include the arrow." }
+                  - { label: "URL", name: "url", widget: "string", hint: "Enter the full URL, including https://" }
+                  - { label: "Accessible label", name: "aria_label", widget: "string", required: false, hint: "Optional descriptive label for screen readers. Uses the button text when empty." }
+
               - label: "SEO"
                 name: "seo"
                 widget: "object"
@@ -215,7 +230,7 @@ collections:
                   - label: "Twitter Card"
                     name: "twitterCard"
                     widget: "select"
-                    options: ["summary", "summary_large_image"]
+                    options: ["summary", "large_image"]
                     default: "summary_large_image"
                     required: false
                   - { label: "Twitter @site", name: "twitterSite", widget: "string", required: false }
