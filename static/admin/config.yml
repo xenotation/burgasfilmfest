@@ -212,13 +212,11 @@ collections:
                 required: false
                 default: []
                 allow_add: true
-                collapsed: true
+                collapsed: false
                 summary: "{{fields.label}}"
-                hint: "Add, remove, or reorder footer buttons. The arrow is added automatically."
                 fields:
-                  - { label: "Button text", name: "label", widget: "string", hint: "For example: FACEBOOK, INSTAGRAM, or BIFF. Do not include the arrow." }
-                  - { label: "URL", name: "url", widget: "string", hint: "Enter the full URL, including https://" }
-                  - { label: "Accessible label", name: "aria_label", widget: "string", required: false, hint: "Optional descriptive label for screen readers. Uses the button text when empty." }
+                  - { label: "Button text", name: "label", widget: "string", hint: "For example: BIFF or INSTAGRAM. The arrow is added automatically." }
+                  - { label: "URL", name: "url", widget: "string", hint: "Full URL including https://" }
 
               - label: "SEO"
                 name: "seo"

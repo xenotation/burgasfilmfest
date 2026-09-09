@@ -70,17 +70,14 @@ url = "https://ncf.bg/bg/za-nfk/plan-za-vyzstanovjavane-i-ustojchivost"
 [[params.footer_links]]
 label = "BIFF"
 url = "https://burgasfilmfest.com/"
-aria_label = "Burgas International Film Festival Website"
 
 [[params.footer_links]]
 label = "FACEBOOK"
 url = "https://www.facebook.com/burgasfilmfest"
-aria_label = "Follow Burgas Film Fest on Facebook"
 
 [[params.footer_links]]
 label = "INSTAGRAM"
 url = "https://www.instagram.com/plankton_space/"
-aria_label = "Follow Plankton on Instagram"
 
 [taxonomies]
 film_category = "film_categories"

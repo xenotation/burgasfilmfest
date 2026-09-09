@@ -1,23 +1,28 @@
 <footer class="simple-footer" role="contentinfo">
   <div class="footer-inline">
 
-    <!-- social links -->
-    <nav class="footer-social" aria-label="social media">
-      <a href="{{ .Site.Params.footer.biff_url | safeURL }}" target="_blank" rel="noopener noreferrer" aria-label="Burgas International Film Festival Website">
-        BIFF ↗
-      </a><span class="pipe">|</span>
+    {{ $links := .Site.Params.footer_links }}
 
-      <a href="{{ .Site.Params.footer.facebook_url | safeURL }}" target="_blank" rel="noopener noreferrer" aria-label="Follow Burgas Film Fest on Facebook">
-        FACEBOOK ↗
-      </a><span class="pipe">|</span>
-      <a href="{{ .Site.Params.footer.instagram_url | safeURL }}" target="_blank" rel="noopener noreferrer" aria-label="Follow Burgas Film Fest on Instagram">
-        INSTAGRAM ↗
-      </a>
-    </nav>
+    {{ with $links }}
+      <nav class="footer-social" aria-label="social media">
+        {{ range $index, $link := . }}
+          {{ if $index }}
+            <span class="pipe">|</span>
+          {{ end }}
 
-    <!-- copyright -->
+          <a href="{{ $link.url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            {{ $link.label }} ↗
+          </a>
+        {{ end }}
+      </nav>
+    {{ end }}
+
     <div class="footer-right">
-      <span class="pipe">|</span>
+      {{ with $links }}
+        <span class="pipe">|</span>
+      {{ end }}
       ВСИЧКИ&nbsp;ПРАВА&nbsp;ЗАПАЗЕНИ&nbsp;©&nbsp;{{ now.Year }}
     </div>
 
