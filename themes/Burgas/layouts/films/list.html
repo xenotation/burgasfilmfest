@@ -24,9 +24,15 @@
             {{ end }}
 
             <p class="film-details-hero" style="margin:0.2em 0 0 0;">
-              <span style="display:block;">
-                {{ $element.Params.Director }} · {{ $element.Params.year }} · {{ $element.Params.country }} · {{ $element.Params.minutes }} мин
-              </span>
+              {{ $details := slice }}
+              {{ with $element.Params.Director }}{{ $details = $details | append . }}{{ end }}
+              {{ with $element.Params.year }}{{ $details = $details | append . }}{{ end }}
+              {{ with $element.Params.country }}{{ $details = $details | append . }}{{ end }}
+              {{ with $element.Params.minutes }}{{ $details = $details | append (printf "%v мин" .) }}{{ end }}
+              
+              {{ with $details }}
+                <span style="display:block;">{{ delimit . " · " }}</span>
+              {{ end }}
 
               {{ with $element.Params.text_author }}
                 <span style="display:block;">

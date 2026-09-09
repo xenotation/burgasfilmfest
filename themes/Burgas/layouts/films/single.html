@@ -28,7 +28,7 @@
             {{ end }}
           </h1>
 
-          <p class="film-details">{{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин.</p>
+          <p class="film-details">{{ .Params.year }} · {{ .Params.country }}{{ with .Params.minutes }} · {{ . }} мин.{{ end }}</p>
           {{/* <div class="film-genre">{{ .Params.Genre }}</div> */}}
           <p class="film-description">{{ .Params.description }}</p>
 

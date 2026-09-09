@@ -33,7 +33,10 @@
               <div class="film-author-subtext-hero">
                 <p class="film-details-hero-name">{{ .Params.Director }}</p>
                 <p class="film-details-hero">
-                  {{ .Params.year }} · {{ .Params.country }} · {{ .Params.minutes }} мин
+                  {{ $details := slice }}
+                    {{ range $key := slice "year" "country" "minutes" }}
+                      {{ $value := trim (printf "%v" (index $.Params $key | default "")) " \t\r\n" }}
+                    {{ end }}
                 </p>
                 {{ .Params.text_author }}
               </div>

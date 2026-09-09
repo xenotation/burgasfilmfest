@@ -42,9 +42,9 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ssZZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false, default: "{{now}}", required: true }
       - { label: "Film title", name: "film_title", widget: "string", required: true }
       - { label: "Original title", name: "film_title_org", widget: "string", required: false }
-      - { label: "Country", name: "country", widget: "string", required: true }
-      - { label: "Year", name: "year", widget: "string", required: true }
-      - { label: "Minutes", name: "minutes", widget: "string", required: true }
+      - { label: "Country", name: "country", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Minutes", name: "minutes", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Disclaimer", name: "disclaimer", widget: "text", required: false }
       - { label: "Text author", name: "text_author", widget: "string", required: false }

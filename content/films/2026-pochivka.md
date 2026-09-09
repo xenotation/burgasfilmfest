@@ -4,10 +4,10 @@ unlisted: false
 slug_name: pochivka
 date: 2026-01-16 16:37:00+02:00
 film_title: Почивка💆
-film_title_org: "-"
-country: "-"
-year: "-"
-minutes: "-"
+film_title_org:
+country:
+year:
+minutes:
 description: В кратка почивка до 23.01.2025 :)
 stream_duration: 16.01.2026 - 23.01.2026
 thumbnail: /img/plankton_rozov_pochivka.png
