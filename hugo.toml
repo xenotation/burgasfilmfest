@@ -33,11 +33,6 @@ logo = "/img/og-default.jpg"
 sameAs = ["https://www.facebook.com/profile.php?id=61581441954159", "https://www.instagram.com/plankton_space/"]
 
 [[params.partners]]
-url = "https://ncf.bg/bg"
-img = "/img/NFK LOGO INV in PNG.png"
-alt = "National Culture Fund"
-
-[[params.partners]]
 url = "https://another.example"
 img = "/img/logent.png"
 alt = "Burgas Film Fest"
@@ -46,11 +41,6 @@ alt = "Burgas Film Fest"
 url = "https://another.example"
 img = "/img/пейския_съюз_RGB_WHITE_Outline  - Copy.png"
 alt = "European Union Funding"
-
-[[params.partners]]
-url = "https://ncf.bg/bg"
-img = "/img/NFK LOGO INV in PNG.png"
-alt = "National Culture Fund (Inverse)"
 
 [[params.partners]]
 url = "https://another.example"
@@ -73,7 +63,7 @@ url = "https://burgasfilmfest.com/"
 
 [[params.footer_links]]
 label = "FACEBOOK"
-url = "https://www.facebook.com/burgasfilmfest"
+url = "https://www.facebook.com/profile.php?id=61581441954159&locale=bg_BG"
 
 [[params.footer_links]]
 label = "INSTAGRAM"
