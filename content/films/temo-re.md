@@ -17,6 +17,7 @@ Director: Анка Гуджабидзе
 Production: Анка Гуджабидзе
 Screenwriter: Темо Рехвиашвили, Анка Гуджабидзе, Саломе Асатиани
 Editing: Анка Гуджабидзе, Леван Буткузи
+Cinematography: Анка Гуджабидзе
 Sound: Анка Гуджабидзе, Иракли Иванишвили, Тамта Манджулашвили, Ника Джапаридзе
 LeadActors: Темо Рехвиашвили, Сандро Калададзе
 thumbnail: /img/this_is_a_poster_for_the_movie__temo_re_.webp
