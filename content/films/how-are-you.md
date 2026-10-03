@@ -1,7 +1,7 @@
 ---
 unlisted: false
 slug_name: how-are-you
-date: 2026-10-03 11:38:00+0300
+date: 2026-10-03 13:26:00+0300
 film_title: Как си?
 film_title_org: Comment ça va?
 country: Франция
