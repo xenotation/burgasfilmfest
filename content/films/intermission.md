@@ -6,5 +6,5 @@ film_title: INTERTMISSION
 stream_duration: .
 thumbnail: /img/untitled-design-3-.png
 feature_image: /img/untitled-design-2-.png
-show_watch_button: true
+show_watch_button: false
 ---
